@@ -1,0 +1,80 @@
+import TextCard from "../components/Cards/TextCard";
+
+export default function GetInvolvedPage() {
+  return (
+    <>
+      <div className="w-full h-[32rem] bg-sky-600">&nbsp;</div>
+      <div className="pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white">
+        <TextCard title="Get Involved" titleSize="text-4xl">
+          The European Youth Parliament Cyprus offers its participants a unique
+          learning experience. Every year, 500+ young people from both Cyprus
+          and Europe join our activities. There are various ways to get involved
+          – typically, the first step is to participate in one of our EYP
+          sessions which take place throughout the year. At the same time, we
+          hold various open events, discussion forums, workshops, trainings and
+          panel discussions which you can join! Get in touch and follow us on
+          social media to keep up to date with opportunities to take part in our
+          activities.
+        </TextCard>
+      </div>
+      <div className="pb-28 w-full flex flex-col justify-center gap-y-4 bg-white">
+        <div className="mt-16 flex flex-col justify-center gap-y-20">
+          {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}
+
+          <div className="px-14 flex flex-wrap items-start">
+            <div className="w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white">
+              <div className={`self-center text-3xl text-primary-indigo`}>
+                High-School Students
+              </div>
+              <div className="h-0.5 w-24 self-center bg-primary-indigo">
+                &nbsp;
+              </div>
+
+              <div className="text-justify text-xl">
+                If you are a High-School Student aged 15-18, you can register
+                individually to attend our EYP Day. If your school is interested
+                in applying as a delegation of six students, then you are able
+                to attend our Pre-Selection Days. Both events usually take place
+                in March and April. Through these events, you could be selected
+                to attend EYP Cyprus' annual National Session in the Summer. If
+                you are interested in attending either of these events, you can
+                contact our HR members@eypcyprus.com to declare your interest or
+                ask for further details.
+              </div>
+            </div>
+            <div className="w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white">
+              <div className={`self-center text-3xl text-primary-indigo`}>
+                Young Adults
+              </div>
+              <div className="h-0.5 w-24 self-center bg-primary-indigo">
+                &nbsp;
+              </div>
+
+              <div className="text-justify text-xl">
+                If you are a university student or over 18 years old, you can
+                attend our Youth Summit - a 4 day long conference that often
+                takes place in the Summer. If you are interested in attending
+                this event, you can contact our HR members@eypcyprus.com to
+                declare your interest or ask for further details.
+              </div>
+            </div>
+          </div>
+
+          {/* --------------------------------------------------------------- ORANGE ---------------------------------------------------------------------- */}
+          <TextCard
+            // debugColour="bg-orange-500"
+            title={"General, Open Events"}
+            titleSize="text-3xl"
+          >
+            We hold various events throughout the year that are open to any
+            young person interested. From conferences, to panel discussions,
+            workshops, trainings and other events, you can attend any of these
+            events. To do so keep an eye out in our social media platforms or
+            contact our HR members@eypcyprus.com to declare your interest so you
+            are notified when an opportunity arises.
+          </TextCard>
+        </div>
+      </div>
+    </>
+  );
+}
