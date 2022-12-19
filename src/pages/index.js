@@ -1,6 +1,6 @@
-export { default as Homepage } from "./Homepage";
-export { default as AboutUsPage } from "./AboutUsPage";
-export { default as ImpactPage } from "./ImpactPage";
-export { default as PatronsPage } from "./PatronsPage";
-export { default as EventsPage } from "./EventsPage";
-export { default as GetInvolvedPage } from "./GetInvolvedPage";
+export { default as Home } from "./Home";
+export { default as AboutUs } from "./AboutUs";
+export { default as Impact } from "./Impact";
+export { default as Patrons } from "./Patrons";
+export { default as Events } from "./Events";
+export { default as GetInvolved } from "./GetInvolved";

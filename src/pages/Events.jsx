@@ -7,12 +7,12 @@ import EventsPhoto2 from "../assets/images/EventsPage/EventsPhoto2.jpg";
 import EventsPhoto3 from "../assets/images/EventsPage/EventsPhoto3.jpg";
 import EventsPhoto4 from "../assets/images/EventsPage/EventsPhoto4.jpg";
 
-export default function EventsPage() {
+const Events = () => {
   return (
     <>
-      <div className="w-full h-[32rem] bg-lime-600">&nbsp;</div>
-      <div className="pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white">
-        <TextCard title="What We Do" titleSize="text-4xl">
+      <div className='w-full h-[32rem] bg-lime-600'>&nbsp;</div>
+      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white'>
+        <TextCard title='What We Do' titleSize='text-4xl'>
           With non-formal education at the heart of our activities, we provide
           young people with a non-partisan and independent forum to formulate
           and discuss their opinions about current issues both with each other
@@ -31,21 +31,21 @@ export default function EventsPage() {
       </div>
 
       {/* ------------------------------------------- PURPLE --------------------------------------------------------------------------------------------  */}
-      <div className="w-full py-16 flex flex-col justify-center bg-white">
+      <div className='w-full py-16 flex flex-col justify-center bg-white'>
         <div
           className={`my-2 flex justify-center
-          text-4xl text-primary-indigo`}
+          text-4xl text-primary-indigo-700`}
         >
           Our Events
         </div>
-        <div className=" h-0.5 w-24 my-2 self-center bg-primary-indigo">
+        <div className=' h-0.5 w-24 my-2 self-center bg-primary-indigo-700'>
           &nbsp;
         </div>
 
-        <div className="mt-20 flex flex-col justify-center gap-y-20">
+        <div className='mt-20 flex flex-col justify-center gap-y-20'>
           {/* ----------------------------------------- ORANGE ------------------------------------------------------------ */}
           <ContentCard
-            title="Pre-Selection Days"
+            title='Pre-Selection Days'
             imgSrc={EventsPhoto1}
             // debugColour="bg-orange-500"
           >
@@ -63,7 +63,7 @@ export default function EventsPage() {
 
           {/* ----------------------------------------- CYAN ------------------------------------------------------------ */}
           <ContentCard
-            title="EYP Days"
+            title='EYP Days'
             imgSrc={EventsPhoto2}
             reversed={true}
             // debugColour="bg-cyan-500"
@@ -78,7 +78,7 @@ export default function EventsPage() {
 
           {/* ----------------------------------------- LIME ------------------------------------------------------------ */}
           <ContentCard
-            title="National Sessions"
+            title='National Sessions'
             imgSrc={EventsPhoto3}
             // debugColour="bg-lime-500"
           >
@@ -103,7 +103,7 @@ export default function EventsPage() {
 
           {/* ----------------------------------------- PINK ------------------------------------------------------------ */}
           <ContentCard
-            title="Youth Summits"
+            title='Youth Summits'
             imgSrc={EventsPhoto4}
             reversed={true}
             // debugColour="bg-pink-500"
@@ -128,4 +128,5 @@ export default function EventsPage() {
       </div>
     </>
   );
-}
+};
+export default Events;

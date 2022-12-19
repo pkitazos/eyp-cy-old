@@ -15,46 +15,39 @@ const Header = () => {
             />
           </div>
           <nav
-            className={`h-full hidden lg:w-max lg:flex justify-center
-             lg:gap-5
-            
-            `}
+            className={`h-full hidden lg:w-max lg:flex justify-center lg:gap-5`}
           >
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                text-lg font-medium text-primary-indigo hover:text-primary-blue
+                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer `}
               >
                 <Link to='/'>HOME</Link>
               </div>
             </div>
             <div className='h-full'>
-              <Link to='/about-us'>ABOUT US</Link>
-              {/* <Dropdown
-                onClick={() => handleNavbar("aboutUs")}
-                label='ABOUT US'
-                labelClasses={`w-max h-full flex items-center 
-                text-lg font-medium text-primary-indigo hover:text-primary-blue
+              <Dropdown
+                mainItem='ABOUT US'
+                classes={`w-max h-full flex items-center 
+                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer`}
                 items={["PATRONS", "IMPACT", "NATIONAL COMMITTEE"]}
-              /> */}
+              />
             </div>
             <div className='h-full'>
-              <Link to='/events'>EVENTS</Link>
-              {/* <Dropdown
-                onClick={() => handleNavbar("events")}
-                label='EVENTS'
-                labelClasses={`w-max h-full flex items-center 
-                text-lg font-medium text-primary-indigo hover:text-primary-blue
+              <Dropdown
+                mainItem='EVENTS'
+                classes={`w-max h-full flex items-center 
+                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer`}
                 items={["PRESELECTION", "NATIONAL SESSION", "YOUTH SUMMIT"]}
-              /> */}
+              />
             </div>
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                text-lg font-medium text-primary-indigo hover:text-primary-blue 
+                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue 
                 cursor-pointer`}
               >
                 <Link to='/contact-us'>CONTACT US</Link>
@@ -63,7 +56,7 @@ const Header = () => {
             <div className='h-full flex items-center'>
               <div
                 className={`w-max px-5 py-2 flex items-center bg-primary-dark-blue rounded-3xl
-                text-lg font-medium text-white hover:bg-primary-indigo 
+                text-lg font-medium text-white hover:bg-primary-indigo-700 
                 cursor-pointer`}
               >
                 <Link to='/get-involved'>Get Involved</Link>
@@ -73,7 +66,7 @@ const Header = () => {
         </div>
         <div className='h-2 flex flex-row'>
           <div className='basis-4/12 bg-primary-dark-blue'>&nbsp;</div>
-          <div className='basis-8/12 bg-primary-yellow z-10'>&nbsp;</div>
+          <div className='basis-8/12 bg-primary-yellow-500'>&nbsp;</div>
         </div>
       </div>
     </>

@@ -1,11 +1,11 @@
 import TextCard from "../components/Cards/TextCard";
 
-export default function GetInvolvedPage() {
+const GetInvolved = () => {
   return (
     <>
-      <div className="w-full h-[32rem] bg-sky-600">&nbsp;</div>
-      <div className="pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white">
-        <TextCard title="Get Involved" titleSize="text-4xl">
+      <div className='w-full h-[32rem] bg-sky-600'>&nbsp;</div>
+      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white'>
+        <TextCard title='Get Involved' titleSize='text-4xl'>
           The European Youth Parliament Cyprus offers its participants a unique
           learning experience. Every year, 500+ young people from both Cyprus
           and Europe join our activities. There are various ways to get involved
@@ -17,20 +17,20 @@ export default function GetInvolvedPage() {
           activities.
         </TextCard>
       </div>
-      <div className="pb-28 w-full flex flex-col justify-center gap-y-4 bg-white">
-        <div className="mt-16 flex flex-col justify-center gap-y-20">
+      <div className='pb-28 w-full flex flex-col justify-center gap-y-4 bg-white'>
+        <div className='mt-16 flex flex-col justify-center gap-y-20'>
           {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}
 
-          <div className="px-14 flex flex-wrap items-start">
-            <div className="w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white">
-              <div className={`self-center text-3xl text-primary-indigo`}>
+          <div className='px-14 flex flex-wrap items-start'>
+            <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white'>
+              <div className={`self-center text-3xl text-primary-indigo-700`}>
                 High-School Students
               </div>
-              <div className="h-0.5 w-24 self-center bg-primary-indigo">
+              <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
                 &nbsp;
               </div>
 
-              <div className="text-justify text-xl">
+              <div className='text-justify text-xl'>
                 If you are a High-School Student aged 15-18, you can register
                 individually to attend our EYP Day. If your school is interested
                 in applying as a delegation of six students, then you are able
@@ -42,15 +42,15 @@ export default function GetInvolvedPage() {
                 ask for further details.
               </div>
             </div>
-            <div className="w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white">
-              <div className={`self-center text-3xl text-primary-indigo`}>
+            <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white'>
+              <div className={`self-center text-3xl text-primary-indigo-700`}>
                 Young Adults
               </div>
-              <div className="h-0.5 w-24 self-center bg-primary-indigo">
+              <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
                 &nbsp;
               </div>
 
-              <div className="text-justify text-xl">
+              <div className='text-justify text-xl'>
                 If you are a university student or over 18 years old, you can
                 attend our Youth Summit - a 4 day long conference that often
                 takes place in the Summer. If you are interested in attending
@@ -64,7 +64,7 @@ export default function GetInvolvedPage() {
           <TextCard
             // debugColour="bg-orange-500"
             title={"General, Open Events"}
-            titleSize="text-3xl"
+            titleSize='text-3xl'
           >
             We hold various events throughout the year that are open to any
             young person interested. From conferences, to panel discussions,
@@ -77,4 +77,6 @@ export default function GetInvolvedPage() {
       </div>
     </>
   );
-}
+};
+
+export default GetInvolved;

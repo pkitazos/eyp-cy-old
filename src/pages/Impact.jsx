@@ -7,12 +7,12 @@ import ImpactPhoto4 from "../assets/images/ImpactPage/ImpactPhoto4.jpg";
 import ImpactPhoto5 from "../assets/images/ImpactPage/ImpactPhoto5.jpg";
 import ImpactPhoto6 from "../assets/images/ImpactPage/ImpactPhoto6.jpg";
 
-export default function ImpactPage() {
+const Impact = () => {
   return (
     <>
-      <div className="w-full h-[32rem] bg-cyan-500">&nbsp;</div>
-      <div className="pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white">
-        <TextCard title="Our Impact" titleSize="text-4xl">
+      <div className='w-full h-[32rem] bg-cyan-500'>&nbsp;</div>
+      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white'>
+        <TextCard title='Our Impact' titleSize='text-4xl'>
           The European Youth Parliament Cyprus provides a unique educational
           experience to young people from both Cyprus and Europe to develop
           crucial skills, but also to discuss current issues in a safe,
@@ -29,13 +29,15 @@ export default function ImpactPage() {
           measurable impact on young people across Europe.
         </TextCard>
       </div>
-      <div className="pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white">
-        <div className="flex justify-center text-4xl text-primary-indigo">
+      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white'>
+        <div className='flex justify-center text-4xl text-primary-indigo-700'>
           What our impact looks like
         </div>
-        <div className="h-0.5 w-24 self-center bg-primary-indigo">&nbsp;</div>
+        <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
+          &nbsp;
+        </div>
 
-        <div className="mt-16 flex flex-col justify-center gap-y-20">
+        <div className='mt-16 flex flex-col justify-center gap-y-20'>
           {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}
           <ContentCard
             // debugColour="bg-lime-500"
@@ -139,4 +141,5 @@ export default function ImpactPage() {
       </div>
     </>
   );
-}
+};
+export default Impact;

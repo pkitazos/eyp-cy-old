@@ -1,18 +1,23 @@
 import TextCard from "../components/Cards/TextCard";
 
-export default function AboutUsPage() {
+const AboutUs = () => {
   return (
     <>
-      <div className="w-full h-[32rem] bg-orange-600">&nbsp;</div>
-      <div className="pt-28 pb-16 bg-white flex flex-row">
-        <div className="basis-6/12 flex flex-row flex-wrap bg-sky-500">
-          <div className="h-60 w-60 bg-lime-500">&nbsp;</div>
-          <div className="h-60 w-60 bg-lime-500">&nbsp;</div>
-          <div className="h-60 w-60 bg-lime-500">&nbsp;</div>
-          <div className="h-60 w-60 bg-lime-500">&nbsp;</div>
+      <div className='w-full h-[32rem] bg-orange-600'>&nbsp;</div>
+      <div className='pt-28 pb-16 bg-white flex flex-row'>
+        <div className='basis-6/12 flex flex-col gap-10 bg-sky-500'>
+          <div className='flex flex-row gap-10'>
+            <div className='h-60 w-60 bg-lime-500'>&nbsp;</div>
+            <div className='h-60 w-60 bg-lime-500'>&nbsp;</div>
+          </div>
+
+          <div className='flex flex-row gap-10'>
+            <div className='h-60 w-60 bg-lime-500'>&nbsp;</div>
+            <div className='h-60 w-60 bg-lime-500'>&nbsp;</div>
+          </div>
         </div>
-        <div className="basis-8/12">
-          <TextCard title="About Us" titleSize="text-4xl">
+        <div className='basis-8/12'>
+          <TextCard title='About Us' titleSize='text-4xl'>
             The European Youth Parliament (EYP) Cyprus is a non-partisan and
             non-governmental organisation, which aims to encourage independent
             thinking, personal initiative and intercultural encounters amongst
@@ -39,4 +44,6 @@ export default function AboutUsPage() {
       </div>
     </>
   );
-}
+};
+
+export default AboutUs;
