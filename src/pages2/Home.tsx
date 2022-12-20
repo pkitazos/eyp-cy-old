@@ -4,7 +4,7 @@ import { BlankPage } from "../components2";
 const Home: FC = () => {
   return (
     <>
-      <BlankPage pageNumber={0} />
+      <div className='h-screen bg-white'>&nbsp;</div>
     </>
   );
 };

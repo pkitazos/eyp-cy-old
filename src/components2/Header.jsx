@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <div className='sticky top-0 z-50 shadow-md'>
+      <div className='sticky top-0 z-50'>
         <div className='w-full h-24 md:h-32 px-10 bg-white flex flex-row justify-between'>
           <div className='lg:w-max flex  flex-initial sm:flex-none justify-center items-center'>
             <img
@@ -15,49 +15,45 @@ const Header = () => {
             />
           </div>
           <nav
-            className={`h-full hidden lg:w-max lg:flex justify-center lg:gap-5`}
+            className={`h-full hidden lg:w-max lg:flex justify-center lg:gap-5
+            text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue`}
           >
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer `}
               >
-                <Link to='/'>HOME</Link>
+                <Link to='/'>Home</Link>
               </div>
             </div>
             <div className='h-full'>
               <Dropdown
-                mainItem='ABOUT US'
+                mainItem='About Us'
                 classes={`w-max h-full flex items-center 
-                text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer`}
-                items={["PATRONS", "IMPACT", "NATIONAL COMMITTEE"]}
+                items={["Patrons", "Impact", "National Committee"]}
               />
             </div>
             <div className='h-full'>
               <Dropdown
-                mainItem='EVENTS'
+                mainItem='Events'
                 classes={`w-max h-full flex items-center 
-                text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue
                 cursor-pointer`}
-                items={["PRESELECTION", "NATIONAL SESSION", "YOUTH SUMMIT"]}
+                items={["Preselection", "National Session", "Youth Summit"]}
               />
             </div>
             <div className='h-full'>
               <div
-                className={`w-max h-full flex items-center
-                text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue 
+                className={`w-max h-full flex items-center 
                 cursor-pointer`}
               >
-                <Link to='/contact-us'>CONTACT US</Link>
+                <Link to='/contact-us'>Contact Us</Link>
               </div>
             </div>
             <div className='h-full flex items-center'>
               <div
                 className={`w-max px-5 py-2 flex items-center bg-primary-dark-blue rounded-3xl
-                text-lg font-semibold text-white hover:bg-primary-indigo-700 
-                cursor-pointer`}
+                text-white hover:bg-blue-400 cursor-pointer`}
               >
                 <Link to='/get-involved'>Get Involved</Link>
               </div>
