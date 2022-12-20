@@ -17,30 +17,18 @@ module.exports = {
     },
     extend: {
       colors: {
-        "primary-dark-blue": "#0E3963",
-        "primary-indigo": {
-          100: "#cffafe",
-          200: "#8caad8",
-          300: "#628bc9",
-          400: "#4270bb",
-          500: "#265aaf",
-          600: "#1f53ac",
-          700: "#1549a7",
-          800: "#093e9f",
-          900: "#13327a",
+        primary: {
+          600: "#3654FF",
+          700: "#2B43CC",
+          800: "#253AB0",
+          900: "#1F3091",
         },
-        "primary-blue": {
-          100: "#ace0f5",
-          200: "#82ceef",
-          300: "#5fb9e5",
-          400: "#4aa8dc",
-          500: "#3997d3",
-          600: "#328acb",
-          700: "#257ac2",
-          800: "#13327a",
-          900: "#084faa",
+        secondary: {
+          700: "#66D4FF",
+          800: "#33C5FF",
+          900: "#00B7FF",
         },
-        "primary-yellow": {
+        accent: {
           100: "#fff6c3",
           200: "#fff3a2",
           300: "#ffef83",
