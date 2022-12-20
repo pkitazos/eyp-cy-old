@@ -1,4 +1,4 @@
-import TextCard from "../components/Cards/TextCard";
+import TextCard from "../../components/Cards/TextCard";
 // assets
 import Patron4 from "../assets/images/PatronsPage/Patron4.jpg";
 import Patron5 from "../assets/images/PatronsPage/Patron5.jpg";
