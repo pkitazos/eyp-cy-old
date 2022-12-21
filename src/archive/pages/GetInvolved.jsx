@@ -23,10 +23,10 @@ const GetInvolved = () => {
 
           <div className='px-14 flex flex-wrap items-start'>
             <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white'>
-              <div className={`self-center text-3xl text-primary-indigo-700`}>
+              <div className={`self-center text-3xl text-primary-700`}>
                 High-School Students
               </div>
-              <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
+              <div className='h-0.5 w-24 self-center bg-primary-700'>
                 &nbsp;
               </div>
 
@@ -43,10 +43,10 @@ const GetInvolved = () => {
               </div>
             </div>
             <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-white'>
-              <div className={`self-center text-3xl text-primary-indigo-700`}>
+              <div className={`self-center text-3xl text-primary-700`}>
                 Young Adults
               </div>
-              <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
+              <div className='h-0.5 w-24 self-center bg-primary-700'>
                 &nbsp;
               </div>
 

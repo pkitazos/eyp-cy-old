@@ -9,7 +9,7 @@ const WhatWeDoCard = (props) => {
         <WhiteStar />
       </div>
       <div className='flex flex-col gap-y-6'>
-        <div className='text-primary-indigo-700 text-xl text-center font-semibold'>
+        <div className='text-primary-700 text-xl text-center font-semibold'>
           {title}
         </div>
         <div className='text-lg text-center'>{children}</div>

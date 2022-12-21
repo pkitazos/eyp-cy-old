@@ -70,9 +70,7 @@ const Patrons = () => {
         </div>
       </div>
       <div className='py-16 px-10 md:px-24 flex flex-col justify-center bg-white'>
-        <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
-          &nbsp;
-        </div>
+        <div className='h-0.5 w-24 self-center bg-primary-700'>&nbsp;</div>
         <div className='my-8 text-center text-xl'>
           Our patrons' support highlights the value of our organisation's work.
           They also provide invaluable guidance and active support for our

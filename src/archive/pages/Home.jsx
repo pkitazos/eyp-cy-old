@@ -49,10 +49,8 @@ const Home = () => {
       </div>
 
       <div className='w-full flex flex-col justify-center text-4xl gap-y-4 py-16 bg-white'>
-        <div className='flex justify-center text-primary-indigo-700'>
-          What We Do
-        </div>
-        <div className='justify self-center h-0.5 w-24 bg-primary-indigo-700'>
+        <div className='flex justify-center text-primary-700'>What We Do</div>
+        <div className='justify self-center h-0.5 w-24 bg-primary-700'>
           &nbsp;
         </div>
         <div className='mt-4 px-10 flex flex-wrap gap-14 justify-center'>
@@ -100,11 +98,9 @@ const Home = () => {
             has shaped the way I work and conduct myself in a professional
             setting.
           </div>
-          <div className='self-start h-0.5 w-32 bg-primary-indigo-700'>
-            &nbsp;
-          </div>
+          <div className='self-start h-0.5 w-32 bg-primary-700'>&nbsp;</div>
           <div className='text-base text-justify'>
-            <span className='text-primary-indigo-700 font-semibold'>
+            <span className='text-primary-700 font-semibold'>
               Elena Odysseos
             </span>
             , 24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls
@@ -126,11 +122,9 @@ const Home = () => {
             of responsibility I learnt a lot, met amazing people from all over
             Europe and stepped out of my comfort zone.
           </div>
-          <div className='self-start h-0.5 w-32 bg-primary-indigo-700'>
-            &nbsp;
-          </div>
+          <div className='self-start h-0.5 w-32 bg-primary-700'>&nbsp;</div>
           <div className='text-base text-justify'>
-            <span className='text-primary-indigo-700 font-semibold'>
+            <span className='text-primary-700 font-semibold'>
               Theodoulos Hadjimatheou
             </span>
             , 23, Member of EYP Cyprus since 2017, Engineering Student at the
@@ -153,11 +147,9 @@ const Home = () => {
             different experiences. Having EYP organise such events, even in
             times of disarray, is something that I am truly thankful for.
           </div>
-          <div className='self-start h-0.5 w-32 bg-primary-indigo-700'>
-            &nbsp;
-          </div>
+          <div className='self-start h-0.5 w-32 bg-primary-700'>&nbsp;</div>
           <div className='text-base text-justify'>
-            <span className='text-primary-indigo-700 font-semibold'>
+            <span className='text-primary-700 font-semibold'>
               Maddie Theodoulou
             </span>
             , 17, Member since 2020, High school student

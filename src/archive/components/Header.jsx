@@ -20,7 +20,7 @@ const Header = () => {
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
+                text-lg font-medium text-primary-700 hover:text-primary-blue
                 cursor-pointer `}
               >
                 <Link to='/'>HOME</Link>
@@ -30,7 +30,7 @@ const Header = () => {
               <Dropdown
                 mainItem='ABOUT US'
                 classes={`w-max h-full flex items-center 
-                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
+                text-lg font-medium text-primary-700 hover:text-primary-blue
                 cursor-pointer`}
                 items={["PATRONS", "IMPACT", "NATIONAL COMMITTEE"]}
               />
@@ -39,7 +39,7 @@ const Header = () => {
               <Dropdown
                 mainItem='EVENTS'
                 classes={`w-max h-full flex items-center 
-                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue
+                text-lg font-medium text-primary-700 hover:text-primary-blue
                 cursor-pointer`}
                 items={["PRESELECTION", "NATIONAL SESSION", "YOUTH SUMMIT"]}
               />
@@ -47,7 +47,7 @@ const Header = () => {
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                text-lg font-medium text-primary-indigo-700 hover:text-primary-blue 
+                text-lg font-medium text-primary-700 hover:text-primary-blue 
                 cursor-pointer`}
               >
                 <Link to='/contact-us'>CONTACT US</Link>
@@ -56,7 +56,7 @@ const Header = () => {
             <div className='h-full flex items-center'>
               <div
                 className={`w-max px-5 py-2 flex items-center bg-primary-dark-blue rounded-3xl
-                text-lg font-medium text-white hover:bg-primary-indigo-700 
+                text-lg font-medium text-white hover:bg-primary-700 
                 cursor-pointer`}
               >
                 <Link to='/get-involved'>Get Involved</Link>

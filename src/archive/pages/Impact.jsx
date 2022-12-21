@@ -30,12 +30,10 @@ const Impact = () => {
         </TextCard>
       </div>
       <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-white'>
-        <div className='flex justify-center text-4xl text-primary-indigo-700'>
+        <div className='flex justify-center text-4xl text-primary-700'>
           What our impact looks like
         </div>
-        <div className='h-0.5 w-24 self-center bg-primary-indigo-700'>
-          &nbsp;
-        </div>
+        <div className='h-0.5 w-24 self-center bg-primary-700'>&nbsp;</div>
 
         <div className='mt-16 flex flex-col justify-center gap-y-20'>
           {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}

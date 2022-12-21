@@ -6,7 +6,7 @@ import { Home, AboutUs, Impact, Patrons, Events, GetInvolved } from "./pages2";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path='/contact-us' element={<BlankPage />} />
         <Route path='/get-involved' element={<GetInvolved />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

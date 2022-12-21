@@ -34,11 +34,11 @@ const Events = () => {
       <div className='w-full py-16 flex flex-col justify-center bg-white'>
         <div
           className={`my-2 flex justify-center
-          text-4xl text-primary-indigo-700`}
+          text-4xl text-primary-700`}
         >
           Our Events
         </div>
-        <div className=' h-0.5 w-24 my-2 self-center bg-primary-indigo-700'>
+        <div className=' h-0.5 w-24 my-2 self-center bg-primary-700'>
           &nbsp;
         </div>
 

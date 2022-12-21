@@ -1,5 +1,5 @@
 import Dropdown from "./Dropdown";
-import headerLogo from "../assets/headerLogo.png";
+import headerLogo from "../assets/icons/headerLogo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -16,12 +16,12 @@ const Header = () => {
           </div>
           <nav
             className={`h-full hidden lg:w-max lg:flex justify-center lg:gap-5
-            text-lg font-semibold text-primary-indigo-700 hover:text-primary-blue`}
+            text-lg font-semibold text-primary-700 hover:text-primary-blue`}
           >
             <div className='h-full'>
               <div
                 className={`w-max h-full flex items-center
-                cursor-pointer `}
+                cursor-pointer`}
               >
                 <Link to='/'>Home</Link>
               </div>
@@ -52,7 +52,7 @@ const Header = () => {
             </div>
             <div className='h-full flex items-center'>
               <div
-                className={`w-max px-5 py-2 flex items-center bg-primary-dark-blue rounded-3xl
+                className={`w-max px-5 py-2 flex items-center bg-primary-900 rounded-3xl
                 text-white hover:bg-blue-400 cursor-pointer`}
               >
                 <Link to='/get-involved'>Get Involved</Link>
