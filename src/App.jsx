@@ -1,7 +1,7 @@
 import "./index.css";
 import { Route, Routes } from "react-router-dom";
-import { Header, Footer, BlankPage } from "./components2";
-import { Home, AboutUs, Impact, Patrons, Events, GetInvolved } from "./pages2";
+import { Header, Footer, BlankPage } from "./components";
+import { Home, AboutUs, Impact, Patrons, Events, GetInvolved } from "./pages";
 
 function App() {
   return (

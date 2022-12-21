@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { BlankPage } from "../components2";
+import { BlankPage } from "../components";
 
-const Impact: FC = () => {
+const GetInvolved: FC = () => {
   return (
     <>
       <BlankPage pageNumber={3} />
@@ -9,4 +9,4 @@ const Impact: FC = () => {
   );
 };
 
-export default Impact;
+export default GetInvolved;

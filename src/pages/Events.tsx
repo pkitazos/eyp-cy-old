@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { BlankPage } from "../components2";
+import { BlankPage } from "../components";
 
 const Events: FC = () => {
   return (
