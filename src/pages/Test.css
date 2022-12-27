@@ -1,0 +1,7 @@
+.action-btn {
+  border-radius: 2rem;
+  transition: border-radius 0.3s;
+}
+.action-btn:hover {
+  border-radius: 0.75rem;
+}

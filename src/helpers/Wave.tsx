@@ -12,7 +12,7 @@ const wave: FC<props> = ({ pathArr, fill, dur = "9s" }) => {
       <path fill={fill}>
         <animate
           attributeName='d'
-          values={pathArr.join(";")}
+          values={pathArr.join("; ")}
           dur={dur}
           repeatCount='indefinite'
         />
