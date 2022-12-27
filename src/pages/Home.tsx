@@ -10,7 +10,7 @@ const Home: FC = () => {
           {/* <Wave fill='#66D4FF' pathArr={makePath(wavePaths.l1)} />
           <Wave fill='#00B7FF' pathArr={makePath(wavePaths.l2)} />
           <Wave fill='#3654FF' pathArr={makePath(wavePaths.l3)} /> */}
-          <Wave fill='#253AB0' pathArr={makePath(wavePaths.v5)} />
+          <Wave fill='#253AB0' pathArr={makePath(wavePaths.v4)} />
         </svg>
       </div>
       <div
