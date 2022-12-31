@@ -15,7 +15,6 @@ const App: FC = () => {
         <Route path='/patrons' element={<Patrons />} />
         <Route path='/get-involved' element={<GetInvolved />} />
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 };
