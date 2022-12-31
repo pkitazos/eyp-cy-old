@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 :root {
-  background-color: azure;
+  background-color: #f9f9f9;
   font-family: "Source Sans Pro";
 }

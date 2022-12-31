@@ -36,6 +36,9 @@ module.exports = {
       fontFamily: {
         sans: ['"Source Sans Pro"', "sans-serif"],
       },
+      borderRadius: {
+        "4xl": "2rem",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

@@ -1,34 +1,33 @@
 import React, { FC } from "react";
-import { makePath, wavePaths, Wave } from "../helpers";
-import "./Test.css";
+import { makePath, wavePaths } from "../helpers";
+import { Header, Wave } from "../components";
 
 const Home: FC = () => {
   return (
     <>
       <div className='w-full'>
         <svg viewBox='0 0 1057 676'>
-          {/* <Wave fill='#66D4FF' pathArr={makePath(wavePaths.l1)} />
-          <Wave fill='#00B7FF' pathArr={makePath(wavePaths.l2)} />
-          <Wave fill='#3654FF' pathArr={makePath(wavePaths.l3)} /> */}
-          <Wave fill='#253AB0' pathArr={makePath(wavePaths.v4)} />
+          <Wave fill='#66D4FF' pathArr={wavePaths.l4} />
+          <Wave fill='#00b7ff' pathArr={wavePaths.l3} />
+          <Wave fill='#3654FF' pathArr={wavePaths.l2} />
+          <Wave fill='#253AB0' pathArr={wavePaths.l1} />
         </svg>
       </div>
-      <div
-        className={`my-2 px-16 w-full h-16 top-0 absolute 
-                    flex justify-end items-center gap-10 
-                    text-xl font-semibold`}
-      >
-        <div className='py-2 px-5 cursor-pointer hover:bg-accent-900 hover:text-black rounded-xl'>
-          Home
-        </div>
-        <div className='py-2 px-5 cursor-pointer hover:bg-accent-900 hover:text-black rounded-xl'>
-          About Us
-        </div>
-        <div className='py-2 px-5 cursor-pointer hover:bg-accent-900 hover:text-black rounded-xl'>
-          Events
-        </div>
-        <div className='py-3 px-6 cursor-pointer bg-amber-400 text-black action-btn'>
-          Get Involved
+      <div className={`w-full top-0 absolute flex flex-col`}>
+        <Header />
+        <div>
+          <div className='mt-32 ml-28 text-white text-7xl font-bold'>
+            Welcome to
+          </div>
+          <div className='ml-60 text-accent-900 text-7xl font-bold'>
+            Young Europe
+          </div>
+          <div
+            className={`mt-14 mx-auto w-max py-5 px-9 text-2xl font-semibold bg-accent-900 cursor-pointer
+            rounded-full hover:py-6 hover:px-10 transition-all duration-300`}
+          >
+            Join Us
+          </div>
         </div>
       </div>
     </>
