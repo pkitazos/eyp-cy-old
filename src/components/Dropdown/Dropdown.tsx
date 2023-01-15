@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import NavLink from "../NavLink";
+import { NavLink } from "..";
 import "./Extra.css";
 
 interface props {
