@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { makePath } from "../helpers";
+import { makePath } from "../../helpers";
 
 interface props {
   pathArr: string[];
