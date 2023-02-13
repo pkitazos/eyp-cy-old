@@ -11,6 +11,19 @@ import {
   UpcomingEventCard,
 } from "../components";
 
+// TODO: add footer content
+// TODO: replace anchor arrows with custom curved arrows
+// TODO: fix testimonial section component
+// TODO: add microinteractions to section heading underline
+// TODO: fix main diagonal wave
+// TODO: animate remaining waves
+// TODO: fix call to action button hover effect
+// TODO: fix nav menu hover effect
+// TODO: make main logo bigger
+// TODO: increase jump to top duration
+// TODO: add masked image to the side of "Who We Are" section
+// TODO: add parallax background (similar to Railway.app)
+
 const Home: FC = () => {
   return (
     <>
@@ -51,7 +64,7 @@ const Home: FC = () => {
         className='-mb-16 pt-16 min-h-[60vh] max-h-max grid grid-cols-12'
       >
         <div className='z-20 col-start-3 col-span-6'>
-          <TextCard title='Who We Are' titleSize='text-3xl'>
+          <TextCard title='Who We Are' titleSize='font-semibold text-4xl'>
             The European Youth Parliament (EYP) is a non-partisan and
             independent educational platform bringing together thousands of
             young people from all over Europe to discuss current issues, develop
