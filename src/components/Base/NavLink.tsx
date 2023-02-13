@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { stringToRoute } from "../helpers";
+import { stringToRoute } from "../../helpers";
 
 interface props {
   item: string;

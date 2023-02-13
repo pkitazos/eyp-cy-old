@@ -1,8 +1,15 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { AnchorArrow, CaretLeft, CaretRight, Footer } from "../components";
-import { TestimonialCard, TextCard } from "../components/Cards";
-import { DividerBottom1, DividerTop1 } from "../components/Dividers";
+import {
+  AnchorArrow,
+  DividerBottom1,
+  DividerTop1,
+  Footer,
+  TestimonialSection,
+  TextCard,
+  Underline,
+  UpcomingEventCard,
+} from "../components";
 
 const Home: FC = () => {
   return (
@@ -67,18 +74,51 @@ const Home: FC = () => {
       <DividerBottom1 />
       <div id='section3' className='pt-12 min-h-[60vh] bg-primary-600'>
         <div className='mx-32'>
-          <div className='mb-16 text-right text-white text-3xl font-semibold'>
-            Upcoming Events
+          <div className='mb-16 flex justify-end'>
+            <div className='flex flex-col items-center gap-4 w-max h-max'>
+              <div className='text-white text-4xl font-semibold'>
+                Upcoming Events
+              </div>
+              <Underline className='w-14 rotate-180 text-accent-900' />
+            </div>
           </div>
           <div className='flex'>
             <div className='w-1/6'>
               <AnchorArrow anchorRef='#section4' />
             </div>
-            <div className='w-5/6 flex flex-row gap-9'>
-              <div className='basis-1/4 bg-amber-500 w-40 h-40'>&nbsp;</div>
-              <div className='basis-1/4 bg-amber-500 w-40 h-40'>&nbsp;</div>
-              <div className='basis-1/4 bg-amber-500 w-40 h-40'>&nbsp;</div>
-              <div className='basis-1/4 bg-amber-500 w-40 h-40'>&nbsp;</div>
+            <div className='p-5 w-5/6 overflow-x-scroll h-max flex flex-row gap-9'>
+              <div className='basis-1/4'>
+                <UpcomingEventCard
+                  title='Pre-Selection Days'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+                  imageURL='/EventsPage/EventsPhoto1.jpg'
+                  date={"20/03/2023"}
+                />
+              </div>
+              <div className='basis-1/4'>
+                <UpcomingEventCard
+                  title='Days of EYP'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+                  imageURL='/EventsPage/EventsPhoto2.jpg'
+                  date={"27/03/2023"}
+                />
+              </div>
+              <div className='basis-1/4'>
+                <UpcomingEventCard
+                  title='Youth Summit'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+                  imageURL='/EventsPage/EventsPhoto3.jpg'
+                  date={"16/07/2023"}
+                />
+              </div>
+              <div className='basis-1/4'>
+                <UpcomingEventCard
+                  title='National Session'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+                  imageURL='/EventsPage/EventsPhoto4.jpg'
+                  date={"24/08/2023"}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -87,36 +127,15 @@ const Home: FC = () => {
       {/* ------------------------------------------------------------ */}
       <div id='section4' className='pt-12 min-h-[50vh] max-h-max'>
         <div className='-mb-20 mx-32'>
-          <h2 className='mb-16 text-4xl font-semibold text-primary-800'>
-            Testimonials
-          </h2>
-          <div className='z-20 grid grid-cols-12 gap-3'>
-            <button className='justify-self-end col-span-1 w-1/3 text-slate-400 cursor-pointer hover:text-primary-600 transition-colors duration-200'>
-              <CaretLeft />
-            </button>
-            <div className='col-span-10'>
-              <TestimonialCard
-                name='Theodoulos Hadjimatheou'
-                info={`23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge`}
-                imageURL='/TheodoulosPhoto.jpg'
-              >
-                EYP has changed my life literally. There's a plethora of areas
-                that I was unaware or indifferent to, that through EYP I now
-                find fascinating. By discussing topics ranging from climate
-                change to human medical gene-editing, I have become more aware
-                of current issues around me.
-                <br />
-                <br />
-                Beyond all these, the extent to which I personally develop in
-                EYP keeps surprising me. Through taking on various roles of
-                responsibility I learnt a lot, met amazing people from all over
-                Europe and stepped out of my comfort zone.
-              </TestimonialCard>
+          <div className='mb-16 flex justify-start'>
+            <div className='flex flex-col items-center gap-4 w-max h-max'>
+              <h2 className='text-primary-800 text-4xl font-semibold'>
+                Testimonials
+              </h2>
+              <Underline className='w-14 h-max text-orange-600 rotate-12' />
             </div>
-            <button className='justify-self-start col-span-1 w-1/3 text-slate-400 cursor-pointer hover:text-primary-600 transition-colors duration-200'>
-              <CaretRight />
-            </button>
           </div>
+          <TestimonialSection />
         </div>
         <AnchorArrow anchorRef='#section1' />
       </div>

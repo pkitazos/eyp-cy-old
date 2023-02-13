@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { NavLink } from "..";
-import "./Extra.css";
+import { NavLink } from ".";
 
 interface props {
   mainItem: string;

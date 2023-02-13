@@ -16,6 +16,33 @@ html {
   outline-color: hsl(14, 80%, 50%);
 }
 
+/* dropdown functionality ------------------------------------------------------------ */
+
+/* container needed to position the dropdown content */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+/* items inside the dropdown */
+.dropdown-content .menu-item {
+  display: block;
+}
+
+/* show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* wave styling ------------------------------------------------------------ */
+
 .wave-div-1 {
   position: absolute;
   bottom: 0;
@@ -56,4 +83,31 @@ html {
 
 .wave-div-2 .shape-fill {
   fill: #3654ff;
+}
+
+/* carousel functionality ------------------------------------------------------------ */
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  box-sizing: content-box;
+  display: flex;
+  flex: none;
+  scroll-snap-align: start;
+}
+.carousel-center .carousel-item {
+  scroll-snap-align: center;
+}
+.carousel-end .carousel-item {
+  scroll-snap-align: end;
 }
