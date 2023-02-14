@@ -15,6 +15,7 @@ import { PatronCard } from "../components";
 // fix on each page
 // TODO: animate remaining waves
 // TODO: add microinteractions to section heading underline
+// TODO: make and vary underlines
 
 const PatronsAndPartners: FC = () => {
   return (

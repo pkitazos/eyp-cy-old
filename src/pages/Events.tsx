@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { ContentCard, TextCard } from "../components";
 
+// TODO: seperate text into relevant pages
+// TODO: set up sections and base components of page
+
 const Events: FC = () => {
   return (
     <>
