@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Wave } from "..";
-import { wavePaths } from "../../helpers";
+import { wavePaths } from "../../data";
 
 const FooterWaves: FC = () => {
   return (

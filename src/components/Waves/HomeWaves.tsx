@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { wavePaths } from "../../helpers";
+import { wavePaths } from "../../data";
 import { Wave } from "..";
 
 const HomeWaves: FC = () => {
