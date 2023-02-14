@@ -3,7 +3,7 @@ import { TextCard } from "../components";
 import { PatronCard } from "../components";
 import { StandardLayout } from "../layouts";
 
-const Patrons: FC = () => {
+const PatronsAndPartners: FC = () => {
   return (
     <StandardLayout>
       <div className='pt-28 pb-16 bg-default-white'>
@@ -77,4 +77,4 @@ const Patrons: FC = () => {
   );
 };
 
-export default Patrons;
+export default PatronsAndPartners;

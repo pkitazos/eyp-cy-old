@@ -4,13 +4,16 @@ import {
   Home,
   AboutUs,
   Impact,
-  Patrons,
+  PatronsAndPartners,
   Events,
   GetInvolved,
   NationalCommittee,
-  YouthSummit,
   PreSelections,
+  DaysOfEYP,
+  YouthSummit,
   NationalSession,
+  PressReleases,
+  PrSection,
 } from "./pages";
 import { Header, HomeWaves, HorizontalWaves } from "./components";
 import "./index.css";
@@ -29,13 +32,16 @@ const App: FC = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/events' element={<Events />} />
+        <Route path='/patrons-and-partners' element={<PatronsAndPartners />} />
         <Route path='/impact' element={<Impact />} />
-        <Route path='/patrons' element={<Patrons />} />
         <Route path='/national-committee' element={<NationalCommittee />} />
-        <Route path='/national-session' element={<NationalSession />} />
+        <Route path='/events' element={<Events />} />
         <Route path='/pre-selection-days' element={<PreSelections />} />
+        <Route path='/days-of-eyp' element={<DaysOfEYP />} />
         <Route path='/youth-summit' element={<YouthSummit />} />
+        <Route path='/national-session' element={<NationalSession />} />
+        <Route path='/pr-section' element={<PrSection />} />
+        <Route path='/press-releases' element={<PressReleases />} />
         <Route path='/get-involved' element={<GetInvolved />} />
       </Routes>
     </>
