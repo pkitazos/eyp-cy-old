@@ -11,17 +11,19 @@ import {
   UpcomingEventCard,
 } from "../components";
 
-// TODO: add footer content
-// TODO: replace anchor arrows with custom curved arrows
-// TODO: fix testimonial section component
-// TODO: add microinteractions to section heading underline
 // TODO: fix main diagonal wave
-// TODO: animate remaining waves
+// TODO: fix testimonial section component
 // TODO: fix call to action button hover effect
-// TODO: fix nav menu hover effect
-// TODO: make main logo bigger
 // TODO: increase jump to top duration
 // TODO: add masked image to the side of "Who We Are" section
+// fix on each page
+// TODO: animate remaining waves
+// TODO: add microinteractions to section heading underline
+// TODO: replace anchor arrows with custom curved arrows
+// fix once, applied everywhere
+// TODO: add footer content
+// TODO: fix nav menu hover effect
+// TODO: make main logo bigger
 // TODO: add parallax background (similar to Railway.app)
 
 const Home: FC = () => {
