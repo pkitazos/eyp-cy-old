@@ -25,6 +25,7 @@ import {
 // TODO: fix nav menu hover effect
 // TODO: make main logo bigger
 // TODO: add parallax background (similar to Railway.app)
+// TODO: fix header positioning/make sticky
 
 const Home: FC = () => {
   return (

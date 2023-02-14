@@ -4,15 +4,26 @@ interface props {
   name: string;
   title: string;
   imgSrc?: string;
+  invert?: boolean;
 }
 
-const PatronCard: FC<props> = ({ name, title, imgSrc }) => {
+const PatronCard: FC<props> = ({ name, title, imgSrc, invert }) => {
   return (
     <>
-      <div className='w-60 flex flex-col'>
-        <div className='mb-3 h-60 w-60 bg-teal-600 rounded-full'>&nbsp;</div>
-        <div className='mb-3 text-lg text-center'>{name}</div>
-        <div className='text-sm text-center text-gray-600 break-normal'>
+      <div className='flex w-60 flex-col'>
+        <div className='mb-4 h-60 w-60 rounded-full bg-teal-500'>&nbsp;</div>
+        <div
+          className={`mb-3 text-center text-lg ${
+            invert ? "text-zinc-200" : "text-black"
+          }`}
+        >
+          {name}
+        </div>
+        <div
+          className={`break-normal text-center text-sm ${
+            invert ? "text-zinc-300" : "text-gray-600"
+          }`}
+        >
           {title}
         </div>
       </div>

@@ -1,77 +1,100 @@
 import React, { FC } from "react";
-import { TextCard } from "../components";
+import {
+  DividerBottom1,
+  DividerTop1,
+  Footer,
+  TextCard,
+  Underline,
+} from "../components";
 import { PatronCard } from "../components";
+
+// TODO: add ArrowAnchors to other page sections
+// TODO: add Patron Images
+// TODO: add Partners info in Partners Section
+// TODO: design and add correct arrows for middle section
+// fix on each page
+// TODO: animate remaining waves
+// TODO: add microinteractions to section heading underline
 
 const PatronsAndPartners: FC = () => {
   return (
     <>
-      <div className='bg-default-white pt-28 pb-16'>
-        <TextCard title='Patrons' titleSize='text-4xl' center={true}>
-          EYP Cyprus's work and impact is recognised by various high profile
-          stakeholders in Cyprus, including our board of patrons which includes:
-        </TextCard>
-      </div>
-      <div className='flex flex-wrap justify-center gap-14 bg-default-white px-10 pb-16'>
-        <PatronCard
-          name='Mr. Andreas Kettis'
-          title='Head of the European Parliament Liaison Office in Cyprus'
-        />
-        <PatronCard
-          name='Mr. Panagiotis Sentonas'
-          title='Commissioner for the Citizen'
-        />
-        <PatronCard
-          name='Ms. Antigoni Papaphilippou'
-          title='Head of Public Relations of Antenna and President of THOC'
-        />
-        <div className='flex w-60 flex-col'>
-          <img
-            className='mb-3 h-60 w-60 rounded-full object-cover'
-            src={"Patron4"}
-            alt='...'
-          />
-          <div className='mb-3 text-center text-lg'>
-            Mr. Constantinos Yiorkadjis
-          </div>
-          <div className='break-normal text-center text-sm text-gray-600'>
-            Mayor of Nicosia
-          </div>
+      <div className='max-h-max min-h-[60vh] px-40'>
+        <div className='mb-16 flex flex-col items-center gap-2'>
+          <h2 className='text-4xl font-semibold text-primary-800'>
+            Our Patrons & Partners
+          </h2>
+          <Underline className='w-14 text-accent-900' />
         </div>
-      </div>
-      <div className='flex flex-col justify-center bg-default-white py-16 px-10 md:px-24'>
-        <div className='h-0.5 w-24 self-center bg-primary-700'>&nbsp;</div>
-        <div className='my-8 text-center text-xl'>
+        <div className='mb-16 flex flex-col items-center gap-2'>
+          <h2 className='text-3xl font-semibold text-primary-800'>
+            Board of Patrons
+          </h2>
+          <Underline className='w-12 text-accent-900' />
+          <p className='mt-6 text-center text-lg'>
+            EYP Cyprus's work and impact is recognised by various high profile
+            stakeholders in Cyprus, including our board of patrons which
+            includes
+          </p>
+        </div>
+        <div className='flex flex-wrap justify-center gap-16'>
+          <PatronCard
+            name='Mr. Andreas Kettis'
+            title='Head of the European Parliament Liaison Office in Cyprus'
+          />
+          <PatronCard
+            name='Mr. Yiannis Yiannaki'
+            title='Commissioner of Volunteerism and NGOs'
+          />
+          <PatronCard
+            name='Ms. Antigoni Papaphilippou'
+            title='Head of Public Relations of Antenna and President of THOC'
+          />
+          <PatronCard
+            name='Mr. Constantinos Yiorkadjis'
+            title='Mayor of Nicosia'
+          />
+        </div>
+        <p className='mt-16 text-center text-lg'>
           Our patrons' support highlights the value of our organisation's work.
           They also provide invaluable guidance and active support for our
           events and our workings, both by providing advice, support and also
           attending various of our events.
+        </p>
+      </div>
+      <DividerBottom1 />
+      <div className='max-h-max min-h-[60vh] bg-primary-800 px-40 pt-16 pb-24'>
+        <div className='mb-16 flex w-max flex-col items-center'>
+          <h2 className='text-4xl font-semibold text-white'>EU Wide Patrons</h2>
+          <Underline className='w-14 rotate-12 text-orange-600' />
         </div>
-        <div className='mt-8 text-center text-xl'>
+        <p className='my-16 text-lg text-zinc-200'>
           The international EYP Network also has some key high profile
           stakeholders that are engaged with and recognise the importance of its
-          activities. These patrons include:
-        </div>
-      </div>
-      <div className='flex flex-wrap justify-center gap-14 bg-default-white px-10 pb-28'>
-        <div className='flex w-60 flex-col'>
-          <img
-            className='mb-3 h-60 w-60 rounded-full object-cover'
-            src={"Patron5"}
-            alt='...'
+          activities.
+        </p>
+        <div className='flex flex-wrap justify-evenly'>
+          <PatronCard
+            name='Ursula von der Leyen'
+            title='President of the European Commission'
+            invert={true}
           />
-          <div className='mb-3 text-center text-lg'>Ursula von der Leyen</div>
-          <div className='break-normal text-center text-sm text-gray-600'>
-            President of the European Commission
-          </div>
-        </div>
-        <div className='flex w-60 flex-col'>
-          <div className='mb-3 h-60 w-60 rounded-full bg-teal-400'>&nbsp;</div>
-          <div className='mb-3 text-center text-lg'>Roberta Metsola</div>
-          <div className='break-normal text-center text-sm text-gray-600'>
-            President of the European Parliament
-          </div>
+          <PatronCard
+            name='Roberta Metsola'
+            title='President of the European Parliament'
+            invert={true}
+          />
         </div>
       </div>
+      <DividerTop1 />
+      <div className='max-h-max min-h-[60vh] px-40'>
+        <h2 className='text-4xl font-semibold text-primary-800'>
+          Our Partners
+        </h2>
+        <Underline className='w-14 rotate-12 text-accent-900' />
+        <div>&nbsp;</div>
+      </div>
+      <Footer />
     </>
   );
 };
