@@ -1,11 +1,10 @@
 import React, { FC } from "react";
 import { ContentCard, TextCard } from "../components";
-import { StandardLayout } from "../layouts";
 
 const Events: FC = () => {
   return (
-    <StandardLayout>
-      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-default-white'>
+    <>
+      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
         <TextCard title='What We Do' titleSize='text-4xl'>
           With non-formal education at the heart of our activities, we provide
           young people with a non-partisan and independent forum to formulate
@@ -25,14 +24,14 @@ const Events: FC = () => {
       </div>
 
       {/* ------------------------------------------- PURPLE --------------------------------------------------------------------------------------------  */}
-      <div className='w-full py-16 flex flex-col justify-center bg-default-white'>
+      <div className='flex w-full flex-col justify-center bg-default-white py-16'>
         <div
           className={`my-2 flex justify-center
           text-4xl text-primary-700`}
         >
           Our Events
         </div>
-        <div className=' h-0.5 w-24 my-2 self-center bg-primary-700'>
+        <div className=' my-2 h-0.5 w-24 self-center bg-primary-700'>
           &nbsp;
         </div>
 
@@ -120,7 +119,7 @@ const Events: FC = () => {
           </ContentCard>
         </div>
       </div>
-    </StandardLayout>
+    </>
   );
 };
 

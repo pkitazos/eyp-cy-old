@@ -1,11 +1,10 @@
 import React, { FC } from "react";
 import { TextCard } from "../components";
-import { StandardLayout } from "../layouts";
 
 const GetInvolved: FC = () => {
   return (
-    <StandardLayout>
-      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-default-white'>
+    <>
+      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
         <TextCard title='Get Involved' titleSize='text-4xl'>
           The European Youth Parliament Cyprus offers its participants a unique
           learning experience. Every year, 500+ young people from both Cyprus
@@ -18,12 +17,12 @@ const GetInvolved: FC = () => {
           activities.
         </TextCard>
       </div>
-      <div className='pb-28 w-full flex flex-col justify-center gap-y-4 bg-default-white'>
+      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pb-28'>
         <div className='mt-16 flex flex-col justify-center gap-y-20'>
           {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}
 
-          <div className='px-14 flex flex-wrap items-start'>
-            <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-default-white'>
+          <div className='flex flex-wrap items-start px-14'>
+            <div className='items-middle flex w-1/2 flex-col justify-center gap-y-4 bg-default-white px-10'>
               <div className={`self-center text-3xl text-primary-700`}>
                 High-School Students
               </div>
@@ -43,7 +42,7 @@ const GetInvolved: FC = () => {
                 ask for further details.
               </div>
             </div>
-            <div className='w-1/2 px-10 flex flex-col justify-center items-middle gap-y-4 bg-default-white'>
+            <div className='items-middle flex w-1/2 flex-col justify-center gap-y-4 bg-default-white px-10'>
               <div className={`self-center text-3xl text-primary-700`}>
                 Young Adults
               </div>
@@ -76,7 +75,7 @@ const GetInvolved: FC = () => {
           </TextCard>
         </div>
       </div>
-    </StandardLayout>
+    </>
   );
 };
 

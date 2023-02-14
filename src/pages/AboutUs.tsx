@@ -7,7 +7,6 @@ import {
   Underline,
 } from "../components";
 import WhatWeDoSection from "../components/Blocks/WhatWeDoSection";
-import { StandardLayout } from "../layouts";
 
 // TODO: add underline under header in "WhatWeDoCard"
 // TODO: see if other "What We Do" paragraph needs to be added and how
@@ -18,7 +17,7 @@ import { StandardLayout } from "../layouts";
 
 const AboutUs: FC = () => {
   return (
-    <StandardLayout>
+    <>
       <div id='about-us-section1' className='px-40'>
         <TextCard title='Our Mission' titleSize='text-4xl'>
           The European Youth Parliament is a peer-to-peer educational programme
@@ -30,10 +29,10 @@ const AboutUs: FC = () => {
       <DividerBottom1 />
       <div
         id='about-us-section2'
-        className='px-32 pb-20 pt-8 min-h-[60vh] max-h-max bg-primary-600'
+        className='max-h-max min-h-[60vh] bg-primary-600 px-32 pb-20 pt-8'
       >
         <div className='mb-16'>
-          <h2 className='text-white text-4xl font-semibold'>What We Do</h2>
+          <h2 className='text-4xl font-semibold text-white'>What We Do</h2>
           <Underline className='mt-2 w-14 text-accent-800' />
         </div>
         <WhatWeDoSection />
@@ -67,7 +66,7 @@ const AboutUs: FC = () => {
         </TextCard>
       </div>
       <Footer />
-    </StandardLayout>
+    </>
   );
 };
 

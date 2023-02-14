@@ -31,27 +31,27 @@ const Home: FC = () => {
     <>
       <div
         id='section1'
-        className={`w-full h-[90vh] top-[10%] absolute flex flex-col gap-6`}
+        className={`absolute top-[10%] flex h-[90vh] w-full flex-col gap-6`}
       >
-        <div className='mt-16 xl:mt-24 2xl:mt-32 gap-10 grid grid-cols-12 grid-rows-2'>
-          <div className='w-max row-start-1 col-start-2 text-white text-7xl font-bold'>
+        <div className='mt-16 grid grid-cols-12 grid-rows-2 gap-10 xl:mt-24 2xl:mt-32'>
+          <div className='col-start-2 row-start-1 w-max text-7xl font-bold text-white'>
             Welcome to
           </div>
-          <div className='w-max row-start-2 col-start-3 text-accent-900 text-7xl font-bold'>
+          <div className='col-start-3 row-start-2 w-max text-7xl font-bold text-accent-900'>
             Young Europe
           </div>
         </div>
-        <div className='mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32 flex items-center'>
+        <div className='mt-10 flex items-center md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32'>
           <Link
             to='/get-involved'
             className={` 
           mx-auto w-max
-          py-5 px-9 text-xl hover:py-6 hover:px-10
-          md:py-6 md:px-9 md:text-2xl md:hover:py-7 md:hover:px-10 
-          lg:py-7 lg:px-10 lg:text-2xl lg:hover:py-8 lg:hover:px-12 
-          xl:py-7 xl:px-10 xl:text-3xl xl:hover:py-8 xl:hover:px-12  
-          transition-all duration-300 
-          font-semibold bg-accent-900 cursor-pointer rounded-full`}
+          cursor-pointer rounded-full bg-accent-900 py-5 px-9
+          text-xl font-semibold transition-all duration-300 hover:py-6 
+          hover:px-10 md:py-6 md:px-9 md:text-2xl md:hover:py-7 
+          md:hover:px-10 lg:py-7 lg:px-10 lg:text-2xl lg:hover:py-8  
+          lg:hover:px-12 xl:py-7 
+          xl:px-10 xl:text-3xl xl:hover:py-8 xl:hover:px-12`}
           >
             Join Us
           </Link>
@@ -63,9 +63,9 @@ const Home: FC = () => {
       {/* ------------------------------------------------------------ */}
       <div
         id='section2'
-        className='-mb-16 pt-16 min-h-[60vh] max-h-max grid grid-cols-12'
+        className='-mb-16 grid max-h-max min-h-[60vh] grid-cols-12 pt-16'
       >
-        <div className='z-20 col-start-3 col-span-6'>
+        <div className='z-20 col-span-6 col-start-3'>
           <TextCard title='Who We Are' titleSize='font-semibold text-4xl'>
             The European Youth Parliament (EYP) is a non-partisan and
             independent educational platform bringing together thousands of
@@ -87,11 +87,11 @@ const Home: FC = () => {
       </div>
       {/* ------------------------------------------------------------ */}
       <DividerBottom1 />
-      <div id='section3' className='pt-12 min-h-[60vh] bg-primary-600'>
+      <div id='section3' className='min-h-[60vh] bg-primary-600 pt-12'>
         <div className='mx-32'>
           <div className='mb-16 flex justify-end'>
-            <div className='flex flex-col items-center gap-4 w-max h-max'>
-              <div className='text-white text-4xl font-semibold'>
+            <div className='flex h-max w-max flex-col items-center gap-4'>
+              <div className='text-4xl font-semibold text-white'>
                 Upcoming Events
               </div>
               <Underline className='w-14 rotate-180 text-accent-900' />
@@ -101,7 +101,7 @@ const Home: FC = () => {
             <div className='w-1/6'>
               <AnchorArrow anchorRef='#section4' />
             </div>
-            <div className='p-5 w-5/6 overflow-x-scroll h-max flex flex-row gap-9'>
+            <div className='flex h-max w-5/6 flex-row gap-9 overflow-x-scroll p-5'>
               <div className='basis-1/4'>
                 <UpcomingEventCard
                   title='Pre-Selection Days'
@@ -140,14 +140,14 @@ const Home: FC = () => {
       </div>
       <DividerTop1 />
       {/* ------------------------------------------------------------ */}
-      <div id='section4' className='pt-12 min-h-[50vh] max-h-max'>
-        <div className='-mb-20 mx-32'>
+      <div id='section4' className='max-h-max min-h-[50vh] pt-12'>
+        <div className='mx-32 -mb-20'>
           <div className='mb-16 flex justify-start'>
-            <div className='flex flex-col items-center gap-4 w-max h-max'>
-              <h2 className='text-primary-800 text-4xl font-semibold'>
+            <div className='flex h-max w-max flex-col items-center gap-4'>
+              <h2 className='text-4xl font-semibold text-primary-800'>
                 Testimonials
               </h2>
-              <Underline className='w-14 h-max text-orange-600 rotate-12' />
+              <Underline className='h-max w-14 rotate-12 text-orange-600' />
             </div>
           </div>
           <TestimonialSection />

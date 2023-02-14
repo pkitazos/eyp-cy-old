@@ -1,11 +1,10 @@
 import React, { FC } from "react";
 import { ContentCard, TextCard } from "../components";
-import { StandardLayout } from "../layouts";
 
 const Impact: FC = () => {
   return (
-    <StandardLayout>
-      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-default-white'>
+    <>
+      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
         <TextCard title='Our Impact' titleSize='text-4xl'>
           The European Youth Parliament Cyprus provides a unique educational
           experience to young people from both Cyprus and Europe to develop
@@ -23,7 +22,7 @@ const Impact: FC = () => {
           measurable impact on young people across Europe.
         </TextCard>
       </div>
-      <div className='pt-28 pb-16 w-full flex flex-col justify-center gap-y-4 bg-default-white'>
+      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
         <div className='flex justify-center text-4xl text-primary-700'>
           What our impact looks like
         </div>
@@ -131,7 +130,7 @@ const Impact: FC = () => {
           </ContentCard>
         </div>
       </div>{" "}
-    </StandardLayout>
+    </>
   );
 };
 
