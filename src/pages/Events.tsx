@@ -53,14 +53,13 @@ const Events: FC = () => {
         </div>
       </div>
       <DividerBottom1 />
-      <div className='max-h-max min-h-[60vh] bg-primary-600 px-40 text-white'>
-        <div className='mb-16 flex flex-col gap-2'>
+      <div className='flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 px-40 pt-10 text-white'>
+        <div className='-mt-16 flex flex-col items-center gap-2'>
           <h2 className='text-4xl font-semibold text-white'>
-            I want to participate
+            I want to participate as a ..
           </h2>
           <Underline className='w-14 rotate-180 text-orange-400' />
         </div>
-        <p className='mb-16 text-lg'>I want to take part as a ... </p>
         <div className='flex flex-row justify-center gap-24'>
           <ActionButton text='School' />
           <ActionButton text='Individual' />
