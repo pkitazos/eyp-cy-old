@@ -16,6 +16,7 @@ import {
 // TODO: fix call to action button hover effect
 // TODO: increase jump to top duration
 // TODO: add masked image to the side of "Who We Are" section
+// TODO: fix "Upcoming Events" section
 // fix on each page
 // TODO: animate remaining waves
 // TODO: add microinteractions to section heading underline
@@ -45,14 +46,10 @@ const Home: FC = () => {
         <div className='mt-10 flex items-center md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32'>
           <Link
             to='/get-involved'
-            className={` 
-          mx-auto w-max
-          cursor-pointer rounded-full bg-accent-900 py-5 px-9
-          text-xl font-semibold transition-all duration-300 hover:py-6 
-          hover:px-10 md:py-6 md:px-9 md:text-2xl md:hover:py-7 
-          md:hover:px-10 lg:py-7 lg:px-10 lg:text-2xl lg:hover:py-8  
-          lg:hover:px-12 xl:py-7 
-          xl:px-10 xl:text-3xl xl:hover:py-8 xl:hover:px-12`}
+            className={` mx-auto w-max cursor-pointer rounded-full bg-accent-900 
+            py-5 px-9 text-xl font-semibold 
+            transition-all duration-300 hover:scale-110 
+            md:py-6 md:px-9  md:text-2xl lg:py-7 lg:px-10 lg:text-2xl xl:py-7 xl:px-10 xl:text-3xl`}
           >
             Join Us
           </Link>
