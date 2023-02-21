@@ -4,13 +4,15 @@ export { AnchorArrow } from "./Base";
 export { Dropdown } from "./Base";
 export { NavLink } from "./Base";
 
-export { TestimonialSection } from "./Blocks";
+export { TestimonialCarousel } from "./Blocks";
+export { WhatWeDoSection } from "./Blocks";
 
 export { ContentCard } from "./Cards";
 export { PatronCard } from "./Cards";
 export { TextCard } from "./Cards";
 export { TestimonialCard } from "./Cards";
 export { UpcomingEventCard } from "./Cards";
+export { WhatWeDoCard } from "./Cards";
 
 export { WaveDivider1 } from "./Dividers";
 export { WaveDivider2 } from "./Dividers";

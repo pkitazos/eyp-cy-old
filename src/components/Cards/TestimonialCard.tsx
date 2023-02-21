@@ -19,13 +19,13 @@ const TestimonialCard: FC<props> = ({
     <>
       <div
         className={`testimonial-card ${className}
-       bg-slate-200 px-12 py-8 rounded-4xl h-max flex flex-row gap-8 shadow-md`}
+       flex h-max flex-row gap-8 rounded-4xl bg-slate-200 px-12 py-8 shadow-md`}
       >
         <img
           src={imageURL}
-          className='rounded-full object-cover aspect-square w-1/4 my-auto'
+          className='my-auto aspect-square w-1/4 rounded-full object-cover'
         />
-        <div className='w-3/4 flex flex-col gap-3 justify-center'>
+        <div className='flex w-3/4 flex-col justify-center gap-3'>
           <h2 className='text-2xl font-bold text-primary-800'>{name}</h2>
           <h3 className='-mt-4 text-lg font-semibold text-primary-800/50 '>
             {info}

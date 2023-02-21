@@ -1,2 +1,2 @@
-export { default as TestimonialsBlock } from "./UNUSED-TestimonialsBlock";
-export { default as TestimonialSection } from "./TestimonialSection";
+export { default as TestimonialCarousel } from "./TestimonialCarousel";
+export { default as WhatWeDoSection } from "./WhatWeDoSection";
