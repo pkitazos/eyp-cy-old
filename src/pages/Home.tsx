@@ -95,11 +95,11 @@ const Home: FC = () => {
               <Underline className='w-14 rotate-180 text-accent-900' />
             </div>
           </div>
-          <div className='flex'>
+          <div className='flex justify-between'>
             <div className='w-1/6'>
               <AnchorArrow anchorRef='#section4' />
             </div>
-            <div className='flex h-max w-5/6 flex-row gap-9 overflow-x-scroll p-5'>
+            <div className='flex h-max w-5/6 max-w-max flex-row gap-9 overflow-x-scroll p-5'>
               <div className='basis-1/4'>
                 <UpcomingEventCard
                   title='Pre-Selection Days'
