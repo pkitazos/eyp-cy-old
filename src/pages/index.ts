@@ -5,7 +5,7 @@ export { default as PatronsAndPartners } from "./PatronsAndPartners";
 export { default as Events } from "./Events";
 export { default as GetInvolved } from "./GetInvolved";
 export { default as NationalCommittee } from "./NationalCommittee";
-export { default as PreSelections } from "./PreSelections";
+export { default as PreSelectionDays } from "./PreSelectionDays";
 export { default as DaysOfEYP } from "./DaysOfEYP";
 export { default as YouthSummit } from "./YouthSummit";
 export { default as NationalSession } from "./NationalSession";

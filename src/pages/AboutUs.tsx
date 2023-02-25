@@ -19,7 +19,7 @@ const AboutUs: FC = () => {
   return (
     <>
       <div id='about-us-section1' className='px-40'>
-        <TextCard title='Our Mission' titleSize='text-4xl'>
+        <TextCard title='Our Mission' titleSize='text-4xl font-semibold'>
           The European Youth Parliament is a peer-to-peer educational programme
           that brings together young people from across Europe to debate the
           pressing issues of our time. Our mission is to inspire and empower
@@ -60,7 +60,7 @@ const AboutUs: FC = () => {
       </div>
       <DividerTop1 />
       <div id='about-us-section3' className='px-40'>
-        <TextCard title='About Us' titleSize='text-4xl'>
+        <TextCard title='About Us' titleSize='text-4xl font-semibold'>
           The European Youth Parliament (EYP) Cyprus is a non-partisan and
           non-governmental organisation, which aims to encourage independent
           thinking, personal initiative and intercultural encounters amongst the

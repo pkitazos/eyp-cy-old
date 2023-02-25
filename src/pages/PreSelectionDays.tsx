@@ -7,18 +7,25 @@ import {
   Underline,
 } from "../components";
 
-const DaysOfEYP: FC = () => {
+const PreSelectionDays: FC = () => {
   return (
     <>
       <div className='grid max-h-max min-h-[60vh] grid-cols-12 px-40'>
         <div className='col-span-8 col-start-3'>
-          <TextCard title='Days of EYP' titleSize='text-4xl font-semibold'>
-            The EYP Day was established in 2019 and takes place annually. It
-            welcomed approximately 50 - 80 young people to a one day conference
-            where they can discuss current issues. This event allows young
-            people to join EYP's activities without having to attend as a school
-            delegation. EYP Day 2021 will take place between the 3rd and 4th of
-            April. You can get information on how to register by contacting us.
+          <TextCard
+            title='Pre-Selection Days'
+            titleSize='text-4xl font-semibold'
+          >
+            The Pre-Selection Days of EYP Cyprus have been organised annually
+            since 2010 and welcome about 22-26 school delegations for a 2 day
+            conference where young people have the opportunity to discuss
+            current European issues through a General Assembly. With about 180
+            participants every year taking part in the event, the Pre-Selection
+            Days serve as the first contact of young people with the
+            organisation and it's an opportunity for 16 school delegations to be
+            selected to attend our National Session. Pre-Selection Days 2021
+            will take place between the 5th and 7th of March. You can get
+            information on how to register by contacting us.
           </TextCard>
         </div>
       </div>
@@ -38,7 +45,7 @@ const DaysOfEYP: FC = () => {
           </h2>
           <Underline className='w-14 text-accent-900' />
         </div>
-        <div className='grid grid-cols-11 grid-rows-3 items-center gap-10'>
+        <div className='grid grid-cols-11 grid-rows-2 items-center gap-10'>
           <SessionElementCard
             className='col-span-9 col-start-2 row-span-1'
             title='Teambuilding'
@@ -51,17 +58,6 @@ const DaysOfEYP: FC = () => {
             Chairperson, the delegates will participate in a series of group
             dynamic exercises and problem-solving tasks, in order to get to know
             each other and begin functioning as a group.
-          </SessionElementCard>
-          <SessionElementCard
-            className='col-span-9 col-start-2 row-span-1'
-            title='Committee Work'
-          >
-            This is the central part of any EYP session. After team-building,
-            the delegates come together to discuss their allocated topics, and
-            will explore the skills needed to discuss, debate and communicate
-            effectively within their committee. The goal of Committee work is
-            the production of a strong and meaningful resolution, that will be
-            debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
             className='col-span-9 col-start-2 row-span-1'
@@ -79,4 +75,4 @@ const DaysOfEYP: FC = () => {
   );
 };
 
-export default DaysOfEYP;
+export default PreSelectionDays;

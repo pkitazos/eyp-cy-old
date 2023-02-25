@@ -1,6 +1,7 @@
 export { Header } from "./Base";
 export { Footer } from "./Base";
 export { AnchorArrow } from "./Base";
+export { ActionButton } from "./Base";
 export { Dropdown } from "./Base";
 export { NavLink } from "./Base";
 
@@ -8,7 +9,9 @@ export { TestimonialCarousel } from "./Blocks";
 export { WhatWeDoSection } from "./Blocks";
 
 export { ContentCard } from "./Cards";
+export { EventTypeCard } from "./Cards";
 export { PatronCard } from "./Cards";
+export { SessionElementCard } from "./Cards";
 export { TextCard } from "./Cards";
 export { TestimonialCard } from "./Cards";
 export { UpcomingEventCard } from "./Cards";

@@ -8,7 +8,7 @@ import {
   Events,
   GetInvolved,
   NationalCommittee,
-  PreSelections,
+  PreSelectionDays,
   DaysOfEYP,
   YouthSummit,
   NationalSession,
@@ -26,7 +26,7 @@ const App: FC = () => {
   return (
     <>
       {location.pathname == "/" ? <HomeWaves /> : <HorizontalWaves />}
-      <div className='top-0 absolute'>
+      <div className='absolute top-0'>
         <Header />
       </div>
       <Routes>
@@ -36,7 +36,7 @@ const App: FC = () => {
         <Route path='/impact' element={<Impact />} />
         <Route path='/national-committee' element={<NationalCommittee />} />
         <Route path='/events' element={<Events />} />
-        <Route path='/pre-selection-days' element={<PreSelections />} />
+        <Route path='/pre-selection-days' element={<PreSelectionDays />} />
         <Route path='/days-of-eyp' element={<DaysOfEYP />} />
         <Route path='/youth-summit' element={<YouthSummit />} />
         <Route path='/national-session' element={<NationalSession />} />
