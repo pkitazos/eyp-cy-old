@@ -65,7 +65,7 @@ const PatronsAndPartners: FC = () => {
       </div>
       <DividerBottom1 />
       <div className='max-h-max min-h-[60vh] bg-primary-800 px-40 pt-16 pb-24'>
-        <div className='mb-16 flex w-max flex-col items-center'>
+        <div className='flex h-max w-max flex-col items-center gap-4'>
           <h2 className='text-4xl font-semibold text-white'>EU Wide Patrons</h2>
           <Underline className='w-14 rotate-12 text-orange-600' />
         </div>
