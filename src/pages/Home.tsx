@@ -16,7 +16,6 @@ import {
 // TODO: fix testimonial section component
 // TODO: increase jump to top duration
 // TODO: add masked image to the side of "Who We Are" sectionóó
-// TODO: fix "Upcoming Events" section
 // fix on each page
 // TODO: animate remaining waves
 // TODO: add microinteractions to section heading underline
