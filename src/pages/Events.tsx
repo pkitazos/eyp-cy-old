@@ -24,7 +24,7 @@ const Events: FC = () => {
         <div className='grid shrink grid-cols-12 grid-rows-4 gap-16'>
           <div className='col-span-9 col-start-1 row-span-1'>
             <EventTypeCard
-              title='Pre-Selections'
+              title='Pre-Selection Days'
               image_url='/EventLogos/pre-selections.png'
               info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
             />
@@ -45,7 +45,7 @@ const Events: FC = () => {
           </div>
           <div className='col-span-9 col-start-4 row-span-1'>
             <EventTypeCard
-              title='National Selection'
+              title='National Session'
               info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
               image_url='/EventLogos/national-session.png'
             />

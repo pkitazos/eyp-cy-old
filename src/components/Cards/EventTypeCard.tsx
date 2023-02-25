@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
+import { stringToRoute } from "../../helpers";
 
 interface props {
   title: string;
@@ -14,10 +16,13 @@ const EventTypeCard: FC<props> = ({ title, info, image_url }) => {
           className='object-fit aspect-auto w-1/3 px-4 transition-all duration-300 hover:-translate-y-2.5'
           src={image_url}
         />
-        <div className='w-2/3 transition-all duration-300 hover:-translate-y-2.5'>
+        <Link
+          to={stringToRoute(title)}
+          className='w-2/3 transition-all duration-300 hover:-translate-y-2.5'
+        >
           <h2 className='text-3xl'>{title}</h2>
           <p className='text-lg'>{info}</p>
-        </div>
+        </Link>
       </div>
     </>
   );
