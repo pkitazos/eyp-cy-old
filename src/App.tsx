@@ -40,7 +40,7 @@ const App: FC = () => {
         <Route path='/days-of-eyp' element={<DaysOfEYP />} />
         <Route path='/youth-summit' element={<YouthSummit />} />
         <Route path='/national-session' element={<NationalSession />} />
-        <Route path='/pr-section' element={<PublicRelations />} />
+        <Route path='/public-relations' element={<PublicRelations />} />
         <Route path='/press-releases' element={<PressReleases />} />
         <Route path='/get-involved' element={<GetInvolved />} />
       </Routes>
