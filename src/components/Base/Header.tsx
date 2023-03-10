@@ -32,7 +32,7 @@ const Header: FC = () => {
               "National Session",
             ]}
           />
-          <Dropdown mainItem='PR Section' items={["Press Releases"]} />
+          <Dropdown mainItem='Public Relations' items={["Press Releases"]} />
 
           <Link
             className={`transition-rounded cursor-pointer rounded-4xl bg-accent-900 py-3 

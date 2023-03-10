@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { BlankPage } from "../components";
 
-const PrSection: FC = () => {
+const PublicRelations: FC = () => {
   return (
     <>
       <>
@@ -11,4 +11,4 @@ const PrSection: FC = () => {
   );
 };
 
-export default PrSection;
+export default PublicRelations;

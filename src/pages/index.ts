@@ -9,5 +9,5 @@ export { default as PreSelectionDays } from "./PreSelectionDays";
 export { default as DaysOfEYP } from "./DaysOfEYP";
 export { default as YouthSummit } from "./YouthSummit";
 export { default as NationalSession } from "./NationalSession";
-export { default as PrSection } from "./PrSection";
+export { default as PublicRelations } from "./PublicRelations";
 export { default as PressReleases } from "./PressReleases";
