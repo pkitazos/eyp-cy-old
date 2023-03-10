@@ -18,7 +18,19 @@ import {
 const AboutUs: FC = () => {
   return (
     <>
-      <div id='about-us-section1' className='px-40'>
+      <div id='about-us-section0' className='mt-16 px-40'>
+        <TextCard title='About Us' titleSize='text-4xl font-semibold'>
+          The European Youth Parliament (EYP) Cyprus is a non-partisan and
+          non-governmental organisation, which aims to encourage independent
+          thinking, personal initiative and intercultural encounters amongst the
+          young people of Cyprus. EYP Cyprus is one of the 40 European
+          organisations that operate as part of the pan-European network of EYP
+          International. The organisation was founded in 2006 and over the years
+          has organised over 100 events with more than 3,500 young people being
+          involved in the activities and workings of the organisation.
+        </TextCard>
+      </div>
+      <div id='about-us-section1' className='mt-32 px-40'>
         <TextCard title='Our Mission' titleSize='text-4xl font-semibold'>
           The European Youth Parliament is a peer-to-peer educational programme
           that brings together young people from across Europe to debate the
@@ -59,18 +71,32 @@ const AboutUs: FC = () => {
         </WhatWeDoSection>
       </div>
       <DividerTop1 />
+      <div className='max-h-max min-h-[60vh] px-40'>
+        <TextCard
+          title='How we do What we do'
+          titleSize='text-4xl font-semibold'
+        >
+          With non-formal education at the heart of our activities, we provide
+          young people with a non-partisan and independent forum to formulate
+          and discuss their opinions about current issues both with each other
+          and relevant policy makers - all while developing vital skills!
+          Through a wide range of activities - from conferences, workshops,
+          think tanks, trainings, panel discussions among others EYP Cyprus also
+          provides young people with spaces to connect with each other and build
+          intercultural understanding and friendships across Cyprus and Europe.
+          With 15+ events annually, and 500+ participants at our activities each
+          year, our organisation is growing and reaching more and more young
+          people! And with EYP Cyprus being part of the wider EYP Network
+          present in 40+ countries in Europe, our members and alumni have the
+          opportunity to join over 30,000 young people who take part in more
+          than 500 EYP events organised across Europe every year.
+        </TextCard>
+      </div>
       <div id='about-us-section3' className='px-40'>
-        <TextCard title='About Us' titleSize='text-4xl font-semibold'>
-          The European Youth Parliament (EYP) Cyprus is a non-partisan and
-          non-governmental organisation, which aims to encourage independent
-          thinking, personal initiative and intercultural encounters amongst the
-          young people of Cyprus. EYP Cyprus is one of the 40 European
-          organisations that operate as part of the pan-European network of EYP
-          International. The organisation was founded in 2006 and over the years
-          has organised over 100 events with more than 3,500 young people being
-          involved in the activities and workings of the organisation.
-          <br />
-          <br />
+        <TextCard
+          title='A Little More About Us'
+          titleSize='text-4xl font-semibold'
+        >
           Our activities provide a unique educational experience to young people
           and allow them to develop transferable professional skills.
           Participants in our events have the opportunity to engage in

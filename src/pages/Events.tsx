@@ -20,24 +20,6 @@ const Events: FC = () => {
   return (
     <>
       <div className='max-h-max min-h-[60vh] px-40'>
-        <TextCard title='What We Do' titleSize='text-4xl font-semibold'>
-          With non-formal education at the heart of our activities, we provide
-          young people with a non-partisan and independent forum to formulate
-          and discuss their opinions about current issues both with each other
-          and relevant policy makers - all while developing vital skills!
-          Through a wide range of activities - from conferences, workshops,
-          think tanks, trainings, panel discussions among others EYP Cyprus also
-          provides young people with spaces to connect with each other and build
-          intercultural understanding and friendships across Cyprus and Europe.
-          With 15+ events annually, and 500+ participants at our activities each
-          year, our organisation is growing and reaching more and more young
-          people! And with EYP Cyprus being part of the wider EYP Network
-          present in 40+ countries in Europe, our members and alumni have the
-          opportunity to join over 30,000 young people who take part in more
-          than 500 EYP events organised across Europe every year.
-        </TextCard>
-      </div>
-      <div className='max-h-max min-h-[60vh] px-40'>
         <div className='mb-16 flex flex-col gap-2'>
           <h2 className='text-4xl font-semibold text-primary-800'>
             Our Events
