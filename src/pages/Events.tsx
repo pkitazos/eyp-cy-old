@@ -21,7 +21,7 @@ const Events: FC = () => {
     <>
       <div className='max-h-max min-h-[60vh] px-40'>
         <div className='mb-16 flex flex-col gap-2'>
-          <h2 className='text-4xl font-semibold text-primary-800'>
+          <h2 className='text-5xl font-semibold text-primary-800'>
             Our Events
           </h2>
           <Underline className='w-14 text-accent-900' />
