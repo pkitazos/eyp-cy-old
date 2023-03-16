@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Underline } from "../SVGs";
 
 interface props {
   title: string;
@@ -9,10 +10,14 @@ interface props {
 
 const TextCard: FC<props> = ({ title, titleSize, center, children }) => {
   return (
-    <div className='mx-10 flex flex-col justify-center items-middle gap-4'>
-      <div className={`self-center ${titleSize} text-primary-700`}>{title}</div>
-      <div className='h-0.5 w-24 self-center bg-primary-700'>&nbsp;</div>
-      <div className={`${center ? "text-center" : "text-justify"} text-xl`}>
+    <div className='flex flex-col items-center justify-center gap-4'>
+      <div className={`self-center ${titleSize} text-primary-800`}>{title}</div>
+      <Underline className='-mt-2 w-16 rotate-[190deg] text-accent-900' />
+      <div
+        className={`${
+          center ? "text-center" : "text-justify"
+        } text-xl leading-relaxed`}
+      >
         {children}
       </div>
     </div>
