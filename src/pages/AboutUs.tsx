@@ -19,7 +19,7 @@ const AboutUs: FC = () => {
   return (
     <>
       <div id='about-us-section0' className='mt-16 px-40'>
-        <TextCard title='About Us' titleSize='text-4xl font-semibold'>
+        <TextCard title='About Us' titleSize='text-5xl font-semibold'>
           The European Youth Parliament (EYP) Cyprus is a non-partisan and
           non-governmental organisation, which aims to encourage independent
           thinking, personal initiative and intercultural encounters amongst the
