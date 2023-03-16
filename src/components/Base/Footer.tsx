@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import FacebookIcon from "../SVGs/FacebookIcon";
 import InstagramIcon from "../SVGs/InstagramIcon";
 
+// TODO: make phone number and email get copied to clipboard when clicked
+// TODO: try out icons instead of text in Contact us section
+
 const Footer: FC = () => (
   <div className=''>
     <svg id='visual' viewBox='0 0 1000 250'>
