@@ -104,7 +104,6 @@ const NationalSession: FC = () => {
           </SessionElementCard>
         </div>
       </div>
-      <Footer />{" "}
     </>
   );
 };

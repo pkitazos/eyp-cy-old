@@ -3,6 +3,7 @@ import {
   DividerBottom1,
   DividerTop1,
   Footer,
+  PageTitle,
   TextCard,
   Underline,
 } from "../components";
@@ -21,14 +22,12 @@ const PatronsAndPartners: FC = () => {
   return (
     <>
       <div className='max-h-max min-h-[60vh] px-40'>
+        <PageTitle
+          title='Our Patrons & Partners'
+          className='mb-16 items-center'
+        />
         <div className='mb-16 flex flex-col items-center gap-2'>
           <h2 className='text-4xl font-semibold text-primary-800'>
-            Our Patrons & Partners
-          </h2>
-          <Underline className='w-14 text-accent-900' />
-        </div>
-        <div className='mb-16 flex flex-col items-center gap-2'>
-          <h2 className='text-3xl font-semibold text-primary-800'>
             Board of Patrons
           </h2>
           <Underline className='w-12 text-accent-900' />
@@ -95,7 +94,6 @@ const PatronsAndPartners: FC = () => {
         <Underline className='w-14 rotate-12 text-accent-900' />
         <div>&nbsp;</div>
       </div>
-      <Footer />
     </>
   );
 };

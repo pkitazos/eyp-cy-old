@@ -116,7 +116,6 @@ const Impact: FC = () => {
           </ImpactFlipCard>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -112,7 +112,6 @@ const AboutUs: FC = () => {
           impact!
         </TextCard>
       </div>
-      <Footer />
     </>
   );
 };

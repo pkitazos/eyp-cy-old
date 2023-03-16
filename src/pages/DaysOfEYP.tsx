@@ -74,7 +74,6 @@ const DaysOfEYP: FC = () => {
           </SessionElementCard>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

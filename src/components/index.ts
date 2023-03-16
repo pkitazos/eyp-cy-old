@@ -4,6 +4,8 @@ export { AnchorArrow } from "./Base";
 export { ActionButton } from "./Base";
 export { Dropdown } from "./Base";
 export { NavLink } from "./Base";
+export { Breadcrumbs } from "./Base";
+export { PageTitle } from "./Base";
 
 export { TestimonialCarousel } from "./Blocks";
 export { WhatWeDoSection } from "./Blocks";

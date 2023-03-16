@@ -198,7 +198,6 @@ const Home: FC = () => {
         </div>
         <AnchorArrow anchorRef='#section1' />
       </div>
-      <Footer />
     </>
   );
 };

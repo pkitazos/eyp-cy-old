@@ -121,7 +121,6 @@ const NationalCommittee: FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

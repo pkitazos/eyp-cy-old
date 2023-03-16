@@ -15,7 +15,7 @@ import {
   PressReleases,
   PublicRelations,
 } from "./pages";
-import { Header, HomeWaves, HorizontalWaves } from "./components";
+import { Footer, Header, HomeWaves, HorizontalWaves } from "./components";
 import "./index.css";
 
 const App: FC = () => {
@@ -44,6 +44,7 @@ const App: FC = () => {
         <Route path='/press-releases' element={<PressReleases />} />
         <Route path='/get-involved' element={<GetInvolved />} />
       </Routes>
+      <Footer />
     </>
   );
 };

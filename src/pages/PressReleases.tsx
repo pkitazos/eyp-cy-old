@@ -1,19 +1,13 @@
 import React, { FC } from "react";
+import { PageTitle } from "../components";
 
 const PressReleases: FC = () => {
   return (
     <>
-      <>
-        <div className='flex p-3'>
-          <div className='px-2 text-slate-500'>Home</div>
-          <div className='px-2'>&gt; </div>
-          <div className='px-2 text-slate-500'>Public Relations </div>
-          <div className='px-2'>&gt; </div>
-          <div className='px-2 font-semibold text-primary-800'>
-            Press Releases
-          </div>
-        </div>
-      </>
+      <PageTitle title='Press Releases' />
+      <div className='mt-20 p-6 text-center text-5xl font-semibold '>
+        Coming Soon ...
+      </div>
     </>
   );
 };

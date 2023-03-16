@@ -5,6 +5,7 @@ import {
   DividerTop1,
   EventTypeCard,
   Footer,
+  PageTitle,
   SessionElementCard,
   TextCard,
   Underline,
@@ -20,12 +21,7 @@ const Events: FC = () => {
   return (
     <>
       <div className='max-h-max min-h-[60vh] px-40'>
-        <div className='mb-16 flex flex-col gap-2'>
-          <h2 className='text-5xl font-semibold text-primary-800'>
-            Our Events
-          </h2>
-          <Underline className='w-14 text-accent-900' />
-        </div>
+        <PageTitle title='Our Events' className='mb-16 items-start' />
         <div className='grid shrink grid-cols-12 grid-rows-4 gap-16'>
           <div className='col-span-9 col-start-1 row-span-1'>
             <EventTypeCard
@@ -114,7 +110,6 @@ const Events: FC = () => {
           </SessionElementCard>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

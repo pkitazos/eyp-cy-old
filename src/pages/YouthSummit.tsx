@@ -93,7 +93,6 @@ const YouthSummit: FC = () => {
           </SessionElementCard>
         </div>
       </div>
-      <Footer />{" "}
     </>
   );
 };

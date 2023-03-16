@@ -70,7 +70,6 @@ const PreSelectionDays: FC = () => {
           </SessionElementCard>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
