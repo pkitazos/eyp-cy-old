@@ -3,11 +3,11 @@ import React, { FC } from "react";
 interface props {
   name: string;
   title: string;
-  imgSrc?: string;
+  imageURL?: string;
   invert?: boolean;
 }
 
-const PatronCard: FC<props> = ({ name, title, imgSrc, invert }) => {
+const PatronCard: FC<props> = ({ name, title, imageURL, invert }) => {
   return (
     <>
       <div className='flex w-60 flex-col'>
