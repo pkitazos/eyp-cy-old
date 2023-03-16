@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { Dropdown, NavLink } from ".";
+import { Dropdown, NavLink } from "..";
 
 const Header: FC = () => {
   return (
