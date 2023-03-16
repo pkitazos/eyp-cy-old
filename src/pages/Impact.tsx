@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import { ContentCard, TextCard } from "../components";
+import { ImpactFlipCard, Footer, TextCard, Underline } from "../components";
 
 const Impact: FC = () => {
   return (
     <>
-      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
-        <TextCard title='Our Impact' titleSize='text-4xl'>
+      <div className='mb-20 flex flex-col justify-center gap-20 px-40'>
+        <TextCard title='Our Impact' titleSize='text-5xl font-semibold'>
           The European Youth Parliament Cyprus provides a unique educational
           experience to young people from both Cyprus and Europe to develop
           crucial skills, but also to discuss current issues in a safe,
@@ -21,33 +21,30 @@ const Impact: FC = () => {
           planning, and analytical skills. As such, our activities have a
           measurable impact on young people across Europe.
         </TextCard>
-      </div>
-      <div className='flex w-full flex-col justify-center gap-y-4 bg-default-white pt-28 pb-16'>
-        <div className='flex justify-center text-4xl text-primary-700'>
-          What our impact looks like
-        </div>
-        <div className='h-0.5 w-24 self-center bg-primary-700'>&nbsp;</div>
 
-        <div className='mt-16 flex flex-col justify-center gap-y-20'>
-          {/* --------------------------------------------------------------- LIME ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-lime-500"
-            title={"Forming opinions and solving current challenges"}
-            imgSrc={"ImpactPhoto1"}
+        <div className='mt-10 flex flex-col gap-32'>
+          <div className='-mb-10 flex flex-col items-center gap-2'>
+            <h2 className='text-4xl font-semibold text-primary-800'>
+              What our Impact looks like
+            </h2>
+            <Underline className='w-12 text-accent-900' />
+          </div>
+          <ImpactFlipCard
+            title='Forming opinions and solving current challenges'
+            imageURL='/Impact/ImpactPhoto2.jpg'
+            underline='text-sky-500 rotate-[6deg]'
           >
             Every year, the EYP Cyprus engages 500+ young people from across
             Cyprus and Europe in a welcoming, independent, non-partisan
             environment to develop and express their opinions and put forth
             their suggestions to tackle current social, economic, legal,
             political and environmental challenges.
-          </ContentCard>
-
-          {/* --------------------------------------------------------------- PURPLE ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-purple-500"
-            title={"Developing skills and growing as a person"}
-            imgSrc={"ImpactPhoto2"}
+          </ImpactFlipCard>
+          <ImpactFlipCard
+            title='Developing skills and growing as a person'
+            imageURL='/Impact/ImpactPhoto1.jpg'
             reversed={true}
+            underline='text-lime-500 rotate-[186deg]'
           >
             EYP Cyprus encourages independent thinking and initiative amongst
             young people and facilitates the learning of crucial social and
@@ -58,15 +55,11 @@ const Impact: FC = () => {
             events, to leading teams and facilitating discussions. These are
             unique opportunities for each participant to develop and grow their
             skillset.
-          </ContentCard>
-
-          {/* --------------------------------------------------------------- ORANGE ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-orange-500"
-            title={
-              "Engaging with current topics in dialogue with decision-makers"
-            }
-            imgSrc={"ImpactPhoto3"}
+          </ImpactFlipCard>
+          <ImpactFlipCard
+            title='Engaging with current topics in dialogue with decision-makers'
+            imageURL='/Impact/ImpactPhoto3.jpg'
+            underline='text-orange-500 rotate-[12deg]'
           >
             During most of our events, we work hard to bring young people
             together with decision makers and experts. Participants at our
@@ -76,16 +69,12 @@ const Impact: FC = () => {
             High-ranking national and European politicians and decision-makers
             regularly attend our events and interact with our participants and
             hear what young people's opinions and vision for the future are.
-          </ContentCard>
-
-          {/* --------------------------------------------------------------- BLUE ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-blue-500"
-            title={
-              "Building a network and facilitating intercultural understanding"
-            }
-            imgSrc={"ImpactPhoto4"}
+          </ImpactFlipCard>
+          <ImpactFlipCard
+            title='Building a network and facilitating intercultural understanding'
+            imageURL='/Impact/ImpactPhoto4.jpg'
             reversed={true}
+            underline='text-emerald-500'
           >
             Through taking part in an EYP Cyprus event, young people have the
             chance to join a network of active alumni and volunteers both in
@@ -96,13 +85,11 @@ const Impact: FC = () => {
             young people through our activities also have a chance to develop
             their intercultural understanding and build international
             friendships.
-          </ContentCard>
-
-          {/* --------------------------------------------------------------- PINK ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-pink-500"
-            title={"Empowering young, active citizens"}
-            imgSrc={"ImpactPhoto5"}
+          </ImpactFlipCard>
+          <ImpactFlipCard
+            title='Empowering young, active citizens'
+            imageURL='/Impact/ImpactPhoto5.jpg'
+            underline='text-fuchsia-500 rotate-[178deg]'
           >
             As a result of our events, more than 90% of participants indicate an
             increased willingness to actively get involved in society and
@@ -112,14 +99,13 @@ const Impact: FC = () => {
             they feel a renewed sense of active citizenship which translates to
             many of them becoming volunteers in our organisation, helping run
             and facilitate our events.
-          </ContentCard>
+          </ImpactFlipCard>
 
-          {/* --------------------------------------------------------------- AMBER ---------------------------------------------------------------------- */}
-          <ContentCard
-            // debugColour="bg-amber-500"
-            title={"Traveling and International Opportunities"}
-            imgSrc={"ImpactPhoto6"}
+          <ImpactFlipCard
+            title='Traveling and International Opportunities'
+            imageURL='/Impact/ImpactPhoto6.jpg'
             reversed={true}
+            underline='rotate-[20deg] text-accent-900'
           >
             Through joining some of our events, participants have the chance to
             be selected and participate in International Sessions in 40+
@@ -127,9 +113,10 @@ const Impact: FC = () => {
             participants and alumni to travel abroad to international
             conferences and events to take part in unique educational
             experiences and make international friendships.
-          </ContentCard>
+          </ImpactFlipCard>
         </div>
-      </div>{" "}
+      </div>
+      <Footer />
     </>
   );
 };

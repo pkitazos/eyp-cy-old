@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import FacebookIcon from "../SVGs/FacebookIcon";
-import InstagramIcon from "../SVGs/InstagramIcon";
+import { FacebookIcon, InstagramIcon } from "..";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section

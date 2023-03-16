@@ -1,7 +1,10 @@
 import React, { FC } from "react";
-import { Footer, Underline } from "../components";
-import NCMemberCard from "../components/Cards/NCMemberCard";
-import PreviousBoardButton from "../components/PreviousBoardButton";
+import {
+  Footer,
+  NCMemberCard,
+  PreviousBoardButton,
+  Underline,
+} from "../components";
 
 const NationalCommittee: FC = () => {
   return (
