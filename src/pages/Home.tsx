@@ -21,10 +21,9 @@ import {
 // TODO: add microinteractions to section heading underline
 // TODO: replace anchor arrows with custom curved arrows
 // fix once, applied everywhere
-// TODO: add footer content
 // TODO: fix nav menu hover effect
 // TODO: make main logo bigger
-// TODO: add parallax background (similar to Railway.app)
+// TODO: add parallax background (similar to Railway)
 // TODO: fix header positioning/make sticky
 
 const Home: FC = () => {

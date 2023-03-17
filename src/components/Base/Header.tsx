@@ -5,7 +5,7 @@ import { Dropdown, NavLink } from "..";
 const Header: FC = () => {
   return (
     <>
-      <div className='flex h-[10vh] flex-row items-center justify-between px-16'>
+      <div className='fixed top-0 z-50 flex h-[10vh] flex-row items-center justify-between bg-primary-800 px-16'>
         <Link className='w-1/6' to='/'>
           <img
             className='h-auto w-full cursor-pointer'
@@ -13,12 +13,8 @@ const Header: FC = () => {
             alt=' '
           />
         </Link>
-        <div
-          className={`flex items-center justify-end gap-10 
-          text-xl font-semibold text-white`}
-        >
+        <div className='flex items-center justify-end gap-10 text-xl font-semibold text-white'>
           <NavLink item='Home' to='/' />
-
           <Dropdown
             mainItem='About Us'
             items={["Patrons & Partners", "Impact", "National Committee"]}

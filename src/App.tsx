@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import {
   Home,
@@ -20,15 +20,10 @@ import "./index.css";
 
 const App: FC = () => {
   let location = useLocation();
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
   return (
     <>
+      <Header />
       {location.pathname == "/" ? <HomeWaves /> : <HorizontalWaves />}
-      <div className='absolute top-0'>
-        <Header />
-      </div>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
