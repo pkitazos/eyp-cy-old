@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #f9f9f9;
+  font-family: "Source Sans Pro";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.debug {
+  outline: 2px solid;
+  outline-color: hsl(14, 80%, 50%);
+}
+
+.my-glass {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+}
+
+/* dropdown functionality ------------------------------------------------------------ */
+
+/* container needed to position the dropdown content */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+/* items inside the dropdown */
+.dropdown-content .menu-item {
+  display: block;
+}
+
+/* show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* wave styling ------------------------------------------------------------ */
+
+.wave-div-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-div-1 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 196px;
+  transform: rotateY(180deg);
+}
+
+.wave-div-1 .shape-fill {
+  fill: #3654ff;
+}
+
+.wave-div-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-div-2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 250px;
+}
+
+.wave-div-2 .shape-fill {
+  fill: #3654ff;
+}
+
+/* carousel functionality ------------------------------------------------------------ */
+
+.carousel-content {
+  transition: all 0.5s ease;
+  -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+.carousel-content::-webkit-scrollbar,
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-content > * {
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.carousel-content.left {
+  transform: translateX(-100%);
+}
+
+.carousel-content.right {
+  transform: translateX(100%);
+}
