@@ -6,7 +6,11 @@ const DiagonalWaves: FC = () => {
   return (
     <>
       <div className='w-full'>
-        <svg viewBox='0 0 1057 676'>
+        <svg
+          preserveAspectRatio='xMidYMid meet'
+          viewBox='0 0 1057 676'
+          className='w-full overflow-visible'
+        >
           <Wave fill='#66D4FF' pathArr={wavePaths.l4} />
           <Wave fill='#00b7ff' pathArr={wavePaths.l3} />
           <Wave fill='#3654FF' pathArr={wavePaths.l2} />
