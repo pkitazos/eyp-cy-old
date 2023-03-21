@@ -1,6 +1,6 @@
 import type { FC } from "react";
+import "~/styles/Dropdown.css";
 import { NavLink } from ".";
-import { stringToRoute } from "../../utils";
 
 interface props {
   mainItem: string;

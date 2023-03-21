@@ -1,0 +1,4 @@
+.debug {
+  outline: 2px solid;
+  outline-color: hsl(14, 80%, 50%);
+}

@@ -16,36 +16,15 @@ html {
   outline-color: hsl(14, 80%, 50%);
 }
 
+.media-debug {
+  @apply bg-lime-300 xs:bg-amber-300 sm:bg-orange-400 md:bg-red-500 md-lg:bg-fuchsia-300 lg:bg-purple-500 lg-xl:bg-sky-400 xl:bg-emerald-400;
+}
+
 .my-glass {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(11px);
-}
-
-/* dropdown functionality ------------------------------------------------------------ */
-
-/* container needed to position the dropdown content */
-.dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* dropdown content hidden by default */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
-/* items inside the dropdown */
-.dropdown-content .menu-item {
-  display: block;
-}
-
-/* show the dropdown menu on hover */
-.dropdown-container:hover .dropdown-content {
-  display: block;
 }
 
 /* wave styling ------------------------------------------------------------ */

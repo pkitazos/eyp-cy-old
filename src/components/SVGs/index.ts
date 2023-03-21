@@ -1,6 +1,9 @@
 export { default as WhiteStar } from "./WhiteStar";
 export { default as CaretLeft } from "./CaretLeft";
 export { default as CaretRight } from "./CaretRight";
+export { default as CloseIcon } from "./CloseIcon";
+export { default as ChevronDown } from "./ChevronDown";
 export { default as Underline } from "./Underline";
 export { default as InstagramIcon } from "./InstagramIcon";
+export { default as MenuIcon } from "./MenuIcon";
 export { default as FacebookIcon } from "./FacebookIcon";

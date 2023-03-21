@@ -1,8 +1,8 @@
 ---
 import { Header } from "../../components";
-import Dev from "../../layouts/TestLayout.astro";
+import TestLayout from "../../layouts/TestLayout.astro";
 ---
 
-<Dev title='test'>
-  <Header />
-</Dev>
+<TestLayout title='test'>
+  <Header client:load />
+</TestLayout>
