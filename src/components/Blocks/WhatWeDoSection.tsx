@@ -5,7 +5,11 @@ interface props {
 }
 
 const WhatWeDoSection: FC<props> = ({ children }) => {
-  return <div className='flex flex-row justify-between'>{children}</div>;
+  return (
+    <div className='flex flex-row flex-wrap justify-evenly gap-7'>
+      {children}
+    </div>
+  );
 };
 
 export default WhatWeDoSection;

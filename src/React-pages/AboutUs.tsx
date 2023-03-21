@@ -7,6 +7,7 @@ import {
   WhatWeDoCard,
   WhatWeDoSection,
 } from "../components";
+import "~/styles/index.css";
 
 // TODO: see if other "What We Do" paragraph needs to be added and how
 // fix on each page
@@ -17,7 +18,7 @@ import {
 const AboutUs: FC = () => {
   return (
     <>
-      <div id='about-us-section0' className='mt-16 px-40'>
+      <div id='about-us-section0' className='page-margin mt-16'>
         <TextCard title='About Us' titleSize='text-5xl font-semibold'>
           The European Youth Parliament (EYP) Cyprus is a non-partisan and
           non-governmental organisation, which aims to encourage independent
@@ -29,7 +30,7 @@ const AboutUs: FC = () => {
           involved in the activities and workings of the organisation.
         </TextCard>
       </div>
-      <div id='about-us-section1' className='mt-32 px-40'>
+      <div id='about-us-section1' className='page-margin mt-32'>
         <TextCard title='Our Mission' titleSize='text-4xl font-semibold'>
           The European Youth Parliament is a peer-to-peer educational programme
           that brings together young people from across Europe to debate the
@@ -70,7 +71,7 @@ const AboutUs: FC = () => {
         </WhatWeDoSection>
       </div>
       <DividerTop1 />
-      <div className='max-h-max min-h-[60vh] px-40'>
+      <div className='page-margin mt-8 max-h-max min-h-[60vh]'>
         <TextCard
           title='How we do What we do'
           titleSize='text-4xl font-semibold'
@@ -91,7 +92,10 @@ const AboutUs: FC = () => {
           than 500 EYP events organised across Europe every year.
         </TextCard>
       </div>
-      <div id='about-us-section3' className='px-40'>
+      <div
+        id='about-us-section3'
+        className='page-margin mt-16 max-h-max min-h-[60vh]'
+      >
         <TextCard
           title='A Little More About Us'
           titleSize='text-4xl font-semibold'
