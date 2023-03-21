@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 
 interface props {
   name: string;
@@ -18,8 +18,7 @@ const TestimonialCard: FC<props> = ({
   return (
     <>
       <div
-        className={`testimonial-card ${className}
-       flex h-max flex-row gap-8 rounded-4xl bg-slate-200 px-12 py-8 shadow-md`}
+        className={`${className} flex h-max flex-row gap-8 rounded-4xl bg-slate-200 px-12 py-8 shadow-md`}
       >
         <img
           src={imageURL}

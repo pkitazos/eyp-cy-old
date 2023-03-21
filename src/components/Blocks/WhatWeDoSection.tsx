@@ -1,5 +1,4 @@
-import React, { FC, ReactNode } from "react";
-import WhatWeDoCard from "../Cards/WhatWeDoCard";
+import type { FC, ReactNode } from "react";
 
 interface props {
   children: ReactNode[];

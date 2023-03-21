@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { makePath } from "../../helpers";
+import type { FC } from "react";
+import { makePath } from "../../utils";
 
 interface props {
   pathArr: string[];

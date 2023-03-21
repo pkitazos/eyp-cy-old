@@ -1,0 +1,44 @@
+---
+import { Footer, Header, HorizontalWaves } from "../components";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+    </style>
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header client:load />
+    <HorizontalWaves />
+    <slot />
+  </body>
+  <Footer />
+</html>
+<style is:global>
+  :root {
+    background-color: #f9f9f9;
+    font-family: "Source Sans Pro";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .debug {
+    outline: 2px solid;
+    outline-color: hsl(14, 80%, 50%);
+  }
+</style>

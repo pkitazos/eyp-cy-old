@@ -1,6 +1,5 @@
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
-import { stringToRoute } from "../../helpers";
+import type { FC } from "react";
+import { stringToRoute } from "../../utils";
 
 interface props {
   title: string;
@@ -16,7 +15,7 @@ const UpcomingEventCard: FC<props> = ({
   imageURL,
 }) => {
   return (
-    <Link to={stringToRoute(title)}>
+    <a href={stringToRoute(title)}>
       <div className='group w-60 max-w-xs h-full bg-slate-200 hover:scale-[1.02] transition-all duration-300 rounded-2xl overflow-hidden shadow-lg'>
         <img src={imageURL} className='h-2/5 w-full object-cover' />
         <div className='p-6 h-3/5'>
@@ -30,7 +29,7 @@ const UpcomingEventCard: FC<props> = ({
           <p className='pb-6 leading-normal'>{description}</p>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

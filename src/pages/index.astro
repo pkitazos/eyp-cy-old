@@ -1,0 +1,135 @@
+---
+import {
+  AnchorArrow,
+  DividerBottom1,
+  DividerTop1,
+  TestimonialCarousel,
+  TextCard,
+  Underline,
+  UpcomingEventCard,
+} from "../components";
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout title='EYP Cyprus'>
+  <div
+    id='section1'
+    class='absolute top-[10vh] flex h-[90vh] w-full flex-col gap-6'
+  >
+    <div class='mt-16 grid grid-cols-12 grid-rows-2 gap-10 xl:mt-24 2xl:mt-32'>
+      <div class='col-start-2 row-start-1 w-max text-7xl font-bold text-white'>
+        Welcome to
+      </div>
+      <div
+        class='col-start-3 row-start-2 w-max text-7xl font-bold text-accent-900'
+      >
+        Young Europe
+      </div>
+    </div>
+    <div class='mt-10 flex items-center md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32'>
+      <a
+        href='/get-involved'
+        class={` mx-auto w-max cursor-pointer rounded-full bg-accent-900 text-black
+            py-5 px-9 text-xl font-semibold transition-all duration-300 hover:scale-110 
+            md:py-6 md:px-9  md:text-2xl lg:py-7 lg:px-10 lg:text-2xl xl:py-7 xl:px-10 xl:text-3xl`}
+      >
+        Join Us
+      </a>
+    </div>
+    <div class='mr-64 flex justify-end'>
+      <AnchorArrow anchorRef='#section2' />
+    </div>
+  </div>
+  {/* ------------------------------------------------------------ */}
+  <div
+    id='section2'
+    class='-mb-16 grid max-h-max min-h-[60vh] grid-cols-12 pt-16'
+  >
+    <div class='z-20 col-span-6 col-start-3'>
+      <TextCard title='Who We Are' titleSize='font-semibold text-4xl'>
+        The European Youth Parliament (EYP) is a non-partisan and independent
+        educational platform bringing together thousands of young people from
+        all over Europe to discuss current issues, develop their skills through
+        dialogue and cooperation, as well as empower them to positively shape
+        the world around them..
+        <br />
+        <br />
+        The European Youth Parliament Cyprus is a non-governmental, non-partisan
+        organisation and one of the 41 National Committees that come under the umbrella
+        of the Pan-European EYP Network. EYP Cyprus was established in 2006 and has
+        been actively working to organise events and activities catered towards the
+        youth of Cyprus.
+      </TextCard>
+    </div>
+    <div class='z-20 col-start-10 place-self-end'>
+      <AnchorArrow anchorRef='#section3' />
+    </div>
+  </div>
+  {/* ------------------------------------------------------------ */}
+  <DividerBottom1 />
+  <div id='section3' class='min-h-[60vh] bg-primary-600 pt-12'>
+    <div class='mx-32'>
+      <div class='mb-16 flex justify-end'>
+        <div class='flex h-max w-max flex-col items-center gap-4'>
+          <div class='text-4xl font-semibold text-white'>Upcoming Events</div>
+          <Underline className='w-14 rotate-180 text-accent-900' />
+        </div>
+      </div>
+      <div class='flex justify-between'>
+        <div class='w-1/6'>
+          <AnchorArrow anchorRef='#section4' />
+        </div>
+        <div
+          class='flex h-max w-5/6 max-w-max flex-row gap-9 overflow-x-scroll p-5'
+        >
+          <div class='basis-1/4'>
+            <UpcomingEventCard
+              title='Pre-Selection Days'
+              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+              imageURL='/EventsPage/EventsPhoto1.jpg'
+              date={"20/03/2023"}
+            />
+          </div>
+          <div class='basis-1/4'>
+            <UpcomingEventCard
+              title='Days of EYP'
+              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+              imageURL='/EventsPage/EventsPhoto2.jpg'
+              date={"27/03/2023"}
+            />
+          </div>
+          <div class='basis-1/4'>
+            <UpcomingEventCard
+              title='Youth Summit'
+              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+              imageURL='/EventsPage/EventsPhoto3.jpg'
+              date={"16/07/2023"}
+            />
+          </div>
+          <div class='basis-1/4'>
+            <UpcomingEventCard
+              title='National Session'
+              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
+              imageURL='/EventsPage/EventsPhoto4.jpg'
+              date={"24/08/2023"}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <DividerTop1 />
+  {/* ------------------------------------------------------------ */}
+  <div id='section4' class='max-h-max min-h-[50vh] pt-12'>
+    <div class='mx-32 -mb-20'>
+      <div class='mb-16 flex justify-start'>
+        <div class='flex h-max w-max flex-col items-center gap-4'>
+          <h2 class='text-4xl font-semibold text-primary-800'>Testimonials</h2>
+          <Underline className='h-max w-14 rotate-12 text-orange-600' />
+        </div>
+      </div>
+      <TestimonialCarousel client:visible />
+    </div>
+    <AnchorArrow anchorRef='#section1' />
+  </div>
+</HomeLayout>

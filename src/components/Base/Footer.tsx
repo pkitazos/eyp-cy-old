@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import type { FC } from "react";
 import { FacebookIcon, InstagramIcon } from "..";
 
 // TODO: make phone number and email get copied to clipboard when clicked

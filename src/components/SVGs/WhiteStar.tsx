@@ -1,5 +1,4 @@
-import React from "react";
-import { FC } from "react";
+import type { FC } from "react";
 
 const WhiteStar: FC = () => {
   return (

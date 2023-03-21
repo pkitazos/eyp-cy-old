@@ -33,7 +33,7 @@ export { InstagramIcon } from "./SVGs";
 export { FacebookIcon } from "./SVGs";
 
 export { Wave } from "./Waves";
-export { HomeWaves } from "./Waves";
+export { DiagonalWaves } from "./Waves";
 export { HorizontalWaves } from "./Waves";
 export { FooterWaves } from "./Waves";
 
