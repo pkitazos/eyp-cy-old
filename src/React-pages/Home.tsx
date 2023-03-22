@@ -7,11 +7,14 @@ import {
   Underline,
   UpcomingEventCard,
 } from "../components";
+import "~/styles/Home.css";
 
 // TODO: fix main diagonal wave
 // TODO: fix testimonial section component
 // TODO: increase jump to top duration
-// TODO: add masked image to the side of "Who We Are" sectionóó
+// TODO: add masked image to the side of "Who We Are" section
+// TODO: hide scrollbar except on hover in UpcomingEvents section
+
 // fix on each page
 // TODO: animate remaining waves
 // TODO: add microinteractions to section heading underline
@@ -19,10 +22,8 @@ import {
 // TODO: vary underlines
 
 // fix once, applied everywhere
-// TODO: fix nav menu hover effect
-// TODO: make main logo bigger
 // TODO: add parallax background (similar to Railway)
-// TODO: fix header positioning/make sticky
+// TODO: add shadow to header on-scroll
 
 const Home: FC = () => {
   return (
@@ -95,7 +96,7 @@ const Home: FC = () => {
             <div className='w-1/6'>
               <AnchorArrow anchorRef='#section4' />
             </div>
-            <div className='flex h-max w-5/6 max-w-max flex-row gap-9 overflow-x-scroll p-5'>
+            <div className='upcoming-events-container flex h-max w-5/6 max-w-max flex-row gap-9 p-5'>
               <div className='basis-1/4'>
                 <UpcomingEventCard
                   title='Pre-Selection Days'

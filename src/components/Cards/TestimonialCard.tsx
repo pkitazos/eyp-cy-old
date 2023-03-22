@@ -1,5 +1,8 @@
 import type { FC } from "react";
 
+// TODO: improve design
+// TODO: make responsive
+
 interface props {
   name: string;
   info: string;

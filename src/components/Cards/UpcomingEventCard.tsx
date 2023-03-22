@@ -1,6 +1,8 @@
 import type { FC } from "react";
 import { stringToRoute } from "../../utils";
 
+// TODO: improve design
+
 interface props {
   title: string;
   date: string;
@@ -16,10 +18,10 @@ const UpcomingEventCard: FC<props> = ({
 }) => {
   return (
     <a href={stringToRoute(title)}>
-      <div className='group w-60 max-w-xs h-full bg-slate-200 hover:scale-[1.02] transition-all duration-300 rounded-2xl overflow-hidden shadow-lg'>
+      <div className='group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-200 shadow-lg transition-all duration-300 hover:scale-[1.02]'>
         <img src={imageURL} className='h-2/5 w-full object-cover' />
-        <div className='p-6 h-3/5'>
-          <h3 className='w-max text-xl text-primary-800 font-semibold'>
+        <div className='h-3/5 p-6'>
+          <h3 className='w-max text-xl font-semibold text-primary-800'>
             {title}
           </h3>
           <h4 className='text-blue-600'>{date}</h4>
