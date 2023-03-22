@@ -12,10 +12,6 @@ import {
 // TODO: add Patron Images
 // TODO: add Partners info in Partners Section
 // TODO: design and add correct arrows for middle section
-// fix on each page
-// TODO: animate remaining waves
-// TODO: add microinteractions to section heading underline
-// TODO: make and vary underlines
 
 const PatronsAndPartners: FC = () => {
   return (

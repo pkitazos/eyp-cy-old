@@ -16,6 +16,8 @@ import {
 // TODO: animate remaining waves
 // TODO: add microinteractions to section heading underline
 // TODO: replace anchor arrows with custom curved arrows
+// TODO: vary underlines
+
 // fix once, applied everywhere
 // TODO: fix nav menu hover effect
 // TODO: make main logo bigger

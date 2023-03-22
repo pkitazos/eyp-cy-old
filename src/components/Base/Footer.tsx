@@ -22,8 +22,8 @@ const Footer: FC = () => (
         fill='#3654ff'
       ></path>
     </svg>
-    <div className='flex h-40 justify-between bg-primary-600 px-40'>
-      <div className='ml-20'>
+    <div className='page-padding grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 bg-primary-600 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0'>
+      <div className='w-max'>
         <h3 className='mb-2 text-2xl font-semibold text-white'>Contact us</h3>
         <p className='ml-1 text-slate-100'>
           email:{" "}
@@ -38,7 +38,7 @@ const Footer: FC = () => (
           </span>
         </p>
       </div>
-      <div className='mr-20'>
+      <div className='w-max'>
         <h3 className='text-2xl font-semibold text-white'>Follow us</h3>
         <div className='ml-1 mt-3 flex gap-4'>
           <a href='https://www.instagram.com/eypcyprus/' target='_blank'>

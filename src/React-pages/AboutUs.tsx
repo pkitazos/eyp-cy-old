@@ -9,12 +9,6 @@ import {
 } from "../components";
 import "~/styles/index.css";
 
-// TODO: see if other "What We Do" paragraph needs to be added and how
-// fix on each page
-// TODO: animate remaining waves
-// TODO: add microinteractions to section heading underline
-// TODO: replace anchor arrows with custom curved arrows
-
 const AboutUs: FC = () => {
   return (
     <>
