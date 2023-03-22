@@ -7,7 +7,6 @@ import {
   Underline,
   UpcomingEventCard,
 } from "../components";
-import "~/styles/Home.css";
 
 // TODO: fix main diagonal wave
 // TODO: fix testimonial section component
