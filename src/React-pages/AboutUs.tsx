@@ -2,6 +2,7 @@ import type { FC } from "react";
 import {
   DividerBottom1,
   DividerTop1,
+  PageTitle,
   TextCard,
   Underline,
   WhatWeDoCard,
@@ -37,7 +38,7 @@ const AboutUs: FC = () => {
         id='about-us-section2'
         className='page-padding max-h-max min-h-[60vh] bg-primary-600 pb-20 pt-8'
       >
-        <div className='mb-16'>
+        <div className='mb-16 flex flex-col items-center md:items-start'>
           <h2 className='text-4xl font-semibold text-white'>What We Do</h2>
           <Underline className='mt-2 w-14 text-accent-800' />
         </div>
