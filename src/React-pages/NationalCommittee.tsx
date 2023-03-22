@@ -1,10 +1,5 @@
 import type { FC } from "react";
-import {
-  Footer,
-  NCMemberCard,
-  PreviousBoardButton,
-  Underline,
-} from "../components";
+import { NCMemberCard, PreviousBoardButton, Underline } from "../components";
 
 const NationalCommittee: FC = () => {
   return (

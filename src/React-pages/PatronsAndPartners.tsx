@@ -2,12 +2,10 @@ import type { FC } from "react";
 import {
   DividerBottom1,
   DividerTop1,
-  Footer,
   PageTitle,
-  TextCard,
+  PatronCard,
   Underline,
 } from "../components";
-import { PatronCard } from "../components";
 
 // TODO: add ArrowAnchors to other page sections
 // TODO: add Patron Images

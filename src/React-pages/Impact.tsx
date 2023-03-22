@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { ImpactFlipCard, Footer, TextCard, Underline } from "../components";
+import { ImpactFlipCard, TextCard, Underline } from "../components";
 
 const Impact: FC = () => {
   return (

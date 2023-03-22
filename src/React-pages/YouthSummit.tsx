@@ -1,11 +1,5 @@
 import type { FC } from "react";
-import {
-  BlankPage,
-  Footer,
-  SessionElementCard,
-  TextCard,
-  Underline,
-} from "../components";
+import { SessionElementCard, TextCard, Underline } from "../components";
 
 const YouthSummit: FC = () => {
   return (

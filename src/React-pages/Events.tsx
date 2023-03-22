@@ -4,14 +4,11 @@ import {
   DividerBottom1,
   DividerTop1,
   EventTypeCard,
-  Footer,
   PageTitle,
   SessionElementCard,
-  TextCard,
   Underline,
 } from "../components";
 
-// TODO: set up sections and base components of page
 // TODO: add blobs behind SessionElementCards
 // TODO: add images to SessionElementCards
 // TODO: finish "I want to participate" section
