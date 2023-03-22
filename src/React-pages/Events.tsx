@@ -11,15 +11,17 @@ import {
 
 // TODO: add blobs behind SessionElementCards
 // TODO: add images to SessionElementCards
-// TODO: finish "I want to participate" section
 // TODO: create wave dividers
 
 const Events: FC = () => {
   return (
     <>
-      <div className='max-h-max min-h-[60vh] px-40'>
-        <PageTitle title='Our Events' className='mb-16 items-start' />
-        <div className='grid shrink grid-cols-12 grid-rows-4 gap-16'>
+      <div className='page-margin max-h-max min-h-[60vh]'>
+        <PageTitle
+          title='Our Events'
+          className='mb-16 items-center text-center lg:items-start lg:text-left'
+        />
+        <div className='flex shrink flex-col gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4'>
           <div className='col-span-9 col-start-1 row-span-1'>
             <EventTypeCard
               title='Pre-Selection Days'
@@ -51,7 +53,7 @@ const Events: FC = () => {
         </div>
       </div>
       <DividerBottom1 />
-      <div className='flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 px-40 pt-10 text-white'>
+      <div className='page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 pt-10 text-white'>
         <div className='-mt-16 flex flex-col items-center gap-2'>
           <h2 className='text-4xl font-semibold text-white'>
             I want to participate as a ..
@@ -64,7 +66,7 @@ const Events: FC = () => {
         </div>
       </div>
       <DividerTop1 />
-      <div className='max-h-max min-h-[60vh] px-40 pb-20'>
+      <div className='page-margin max-h-max min-h-[60vh] pb-20'>
         <div className='mb-16 flex flex-col items-center gap-2'>
           <h2 className='text-4xl font-semibold text-primary-800'>
             Session Elements
