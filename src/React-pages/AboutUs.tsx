@@ -18,7 +18,7 @@ import "~/styles/index.css";
 const AboutUs: FC = () => {
   return (
     <>
-      <div id='about-us-section0' className='page-margin mt-16'>
+      <div id='about-us-section0' className='page-margin mt-16 px-4'>
         <TextCard title='About Us' titleSize='text-5xl font-semibold'>
           The European Youth Parliament (EYP) Cyprus is a non-partisan and
           non-governmental organisation, which aims to encourage independent
@@ -30,7 +30,7 @@ const AboutUs: FC = () => {
           involved in the activities and workings of the organisation.
         </TextCard>
       </div>
-      <div id='about-us-section1' className='page-margin mt-32'>
+      <div id='about-us-section1' className='page-margin mt-32 px-4'>
         <TextCard title='Our Mission' titleSize='text-4xl font-semibold'>
           The European Youth Parliament is a peer-to-peer educational programme
           that brings together young people from across Europe to debate the
@@ -41,7 +41,7 @@ const AboutUs: FC = () => {
       <DividerBottom1 />
       <div
         id='about-us-section2'
-        className='max-h-max min-h-[60vh] bg-primary-600 px-32 pb-20 pt-8'
+        className='page-padding max-h-max min-h-[60vh] bg-primary-600 pb-20 pt-8'
       >
         <div className='mb-16'>
           <h2 className='text-4xl font-semibold text-white'>What We Do</h2>
@@ -71,7 +71,7 @@ const AboutUs: FC = () => {
         </WhatWeDoSection>
       </div>
       <DividerTop1 />
-      <div className='page-margin mt-8 max-h-max min-h-[60vh]'>
+      <div className='page-margin mt-8 max-h-max min-h-[60vh] px-4'>
         <TextCard
           title='How we do What we do'
           titleSize='text-4xl font-semibold'
@@ -94,7 +94,7 @@ const AboutUs: FC = () => {
       </div>
       <div
         id='about-us-section3'
-        className='page-margin mt-16 max-h-max min-h-[60vh]'
+        className='page-margin my-16 max-h-max min-h-[60vh] px-4'
       >
         <TextCard
           title='A Little More About Us'

@@ -1,16 +1,21 @@
 import type { FC } from "react";
-import { NCMemberCard, PreviousBoardButton, Underline } from "../components";
+import {
+  NCMemberCard,
+  PageTitle,
+  PreviousBoardButton,
+  Underline,
+} from "../components";
 
 const NationalCommittee: FC = () => {
   return (
     <>
-      <div className='flex justify-center px-40'>
+      <div className='page-margin flex justify-center'>
         <div className='flex flex-col gap-20'>
           <div className='flex flex-col items-center gap-2'>
-            <h2 className='text-5xl font-semibold text-primary-800'>
-              The National Committee
-            </h2>
-            <Underline className='mt-1 w-16 text-accent-900' />
+            <PageTitle
+              title='The National Committee'
+              className='mb-16 items-center text-center'
+            />
             <h2 className='mt-4 text-4xl font-semibold text-primary-800'>
               2023
             </h2>
@@ -59,58 +64,58 @@ const NationalCommittee: FC = () => {
             />
           </div>
           <div className='mt-10 flex flex-col items-center gap-2'>
-            <h2 className='text-4xl font-semibold text-primary-800'>
+            <h2 className='text-center text-4xl font-semibold text-primary-800'>
               Previous Boards
             </h2>
             <Underline className='mt-1 w-16 text-accent-900' />
           </div>
-          <div className='grid grid-cols-4 grid-rows-4 gap-5'>
-            <div className='flex justify-center'>
+          <div className='grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2022' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2021' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2020' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2019' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2018' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2017' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2016' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2015' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2014' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2013' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2012' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2011' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2010' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2009' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2008' />
             </div>
-            <div className='flex justify-center'>
+            <div className='flex shrink justify-center'>
               <PreviousBoardButton year='2007' />
             </div>
           </div>

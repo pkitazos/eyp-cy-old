@@ -7,6 +7,7 @@ import {
   Underline,
 } from "../components";
 
+// TODO: add quantity query functionality
 // TODO: add ArrowAnchors to other page sections
 // TODO: add Patron Images
 // TODO: add Partners info in Partners Section
@@ -19,10 +20,10 @@ import {
 const PatronsAndPartners: FC = () => {
   return (
     <>
-      <div className='max-h-max min-h-[60vh] px-40'>
+      <div className='page-margin max-h-max min-h-[60vh]'>
         <PageTitle
           title='Our Patrons & Partners'
-          className='mb-16 items-center'
+          className='mb-16 items-center text-center'
         />
         <div className='mb-16 flex flex-col items-center gap-2'>
           <h2 className='text-4xl font-semibold text-primary-800'>
@@ -61,8 +62,8 @@ const PatronsAndPartners: FC = () => {
         </p>
       </div>
       <DividerBottom1 />
-      <div className='max-h-max min-h-[60vh] bg-primary-800 px-40 pt-16 pb-24'>
-        <div className='flex h-max w-max flex-col items-center gap-4'>
+      <div className='page-padding max-h-max min-h-[60vh] bg-primary-800 pt-16 pb-24'>
+        <div className='flex h-max w-full flex-col items-center justify-center gap-4 md-lg:w-max'>
           <h2 className='text-4xl font-semibold text-white'>EU Wide Patrons</h2>
           <Underline className='w-14 rotate-12 text-orange-600' />
         </div>
@@ -71,7 +72,7 @@ const PatronsAndPartners: FC = () => {
           stakeholders that are engaged with and recognise the importance of its
           activities.
         </p>
-        <div className='flex flex-wrap justify-evenly'>
+        <div className='flex flex-wrap justify-evenly gap-x-5 gap-y-14'>
           <PatronCard
             name='Ursula von der Leyen'
             title='President of the European Commission'
@@ -85,7 +86,7 @@ const PatronsAndPartners: FC = () => {
         </div>
       </div>
       <DividerTop1 />
-      <div className='max-h-max min-h-[60vh] px-40'>
+      <div className='page-margin max-h-max min-h-[60vh]'>
         <h2 className='text-4xl font-semibold text-primary-800'>
           Our Partners
         </h2>

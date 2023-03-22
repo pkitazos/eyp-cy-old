@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { FacebookIcon, InstagramIcon } from "..";
 
+// TODO: make responsive
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
 
