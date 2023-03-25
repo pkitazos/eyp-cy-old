@@ -1,7 +1,7 @@
-import { FC, ReactNode, useState } from "react";
-import { CaretLeft, CaretRight } from "../SVGs";
-import "../../styles/index.css";
+import { FC, useState } from "react";
+import "~/styles/Home.css";
 import { TestimonialCard } from "../Cards";
+import { CaretLeft, CaretRight } from "../SVGs";
 
 const TestimonialCarousel: FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

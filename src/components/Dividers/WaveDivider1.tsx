@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import "~/styles/WaveDiv.css";
 
 const WaveDivider1: FC = () => {
   return (

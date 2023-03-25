@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
+import "~/styles/index.css";
 import { stringToRoute } from "~/utils";
-import ChevronDown from "../SVGs/ChevronDown";
-import "~/styles/Drawer.css";
+import { ChevronDown } from "..";
 
 interface props {
   mainItem: string;
@@ -14,7 +14,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
 
   return (
     <>
-      <div className='-mr-8 collapse '>
+      <div className='collapse -mr-8 '>
         <input
           type='checkbox'
           className='peer'
@@ -23,7 +23,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
         <div
           className={`${
             expanded ? "line-through" : ""
-          } collapse-title text-primary-content peer-checked:text-secondary-content flex flex-row gap-x-2 items-center justify-end`}
+          } collapse-title flex flex-row items-center justify-end gap-x-2 text-primary-content peer-checked:text-secondary-content`}
         >
           <ChevronDown
             className={`w-3 text-default-white ${
@@ -32,9 +32,9 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
           />
           <p> {mainItem}</p>
         </div>
-        <div className='mr-3 collapse-content text-primary-content peer-checked:text-secondary-content flex flex-col gap-1.5 items-end'>
+        <div className='collapse-content mr-3 flex flex-col items-end gap-1.5 text-primary-content peer-checked:text-secondary-content'>
           <a
-            className='px-5 hover:text-slate-300 cursor-pointer text-lg'
+            className='cursor-pointer px-5 text-lg hover:text-slate-300'
             href={stringToRoute(mainItem)}
           >
             {mainItem}
@@ -42,7 +42,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
           {items.map((item, i) => (
             <div key={i}>
               <a
-                className='px-5 hover:text-slate-300 cursor-pointer text-lg'
+                className='cursor-pointer px-5 text-lg hover:text-slate-300'
                 href={`${prefix}${stringToRoute(item)}`}
               >
                 {item}
