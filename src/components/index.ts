@@ -9,7 +9,7 @@ export {
   NavLink,
   PageTitle,
 } from "./Base";
-export { default as BlankPage } from "./BlankPage";
+export { BlankPage, DebugOverlay } from "./Debug";
 export { TestimonialCarousel, WhatWeDoSection } from "./Blocks";
 export {
   EventTypeCard,
