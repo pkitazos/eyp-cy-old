@@ -1,0 +1,8 @@
+.debug {
+  outline: 2px solid;
+  outline-color: hsl(14, 80%, 50%);
+}
+
+.media-debug {
+  @apply bg-lime-300 xs:bg-amber-300 sm:bg-orange-400 md:bg-red-500 md-lg:bg-fuchsia-300 lg:bg-purple-500 lg-xl:bg-sky-400 xl:bg-emerald-400;
+}
