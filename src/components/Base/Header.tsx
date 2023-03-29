@@ -7,10 +7,10 @@ const HeaderLogo = () => {
   return (
     <a
       href='/'
-      className='w-3/4 max-w-[15rem] xs:max-w-[17rem] sm:max-w-none xs:w-3/5 sm:w-2/5 md:w-1/3 lg:w-1/5 lg-xl:w-80 xl:w-80'
+      className='w-3/4 max-w-[15rem] xs:w-3/5 xs:max-w-[17rem] sm:w-2/5 sm:max-w-none md:w-1/3 lg:w-1/5 lg-xl:w-80 xl:w-80'
     >
       <img
-        className='h-auto my-2cursor-pointer '
+        className='my-2cursor-pointer h-auto '
         src='/logos/white-long.png'
         alt='EYP Cyprus logo'
       />
@@ -20,7 +20,7 @@ const HeaderLogo = () => {
 
 const DesktopNav = () => {
   return (
-    <div className='flex items-center justify-end gap-4 xl:gap-10 text-xl font-semibold text-white'>
+    <div className='flex items-center justify-end gap-4 text-xl font-semibold text-white xl:gap-10'>
       <NavLink item='Home' to='/' />
       <Dropdown
         mainItem='About Us'
@@ -43,7 +43,7 @@ const DesktopNav = () => {
       />
 
       <a
-        className='transition-all cursor-pointer rounded-4xl bg-accent-900 py-3 px-6 text-black duration-300 hover:rounded-2xl hover:scale-[1.05]'
+        className='cursor-pointer rounded-4xl bg-accent-900 py-3 px-6 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl'
         href='/get-involved'
       >
         Get Involved
@@ -58,7 +58,7 @@ const MobileNav = () => {
   return (
     <>
       <button
-        className='h-8 right-8 absolute'
+        className='absolute right-8 h-8'
         onClick={() => setMenuVisibile(!menuVisibile)}
       >
         <div className={`${menuVisibile ? "open" : "close"} menu-btn`}>
@@ -66,8 +66,8 @@ const MobileNav = () => {
         </div>
       </button>
       <div
-        className={`menu-list flex flex-col px-10 pt-10 text-xl gap-3 items-end
-        mt-[10vh] h-[90vh] bg-primary-600/75 ${menuVisibile ? "visible" : ""}`}
+        className={`menu-list mt-[10vh] flex h-[90vh] flex-col items-end gap-3 bg-primary-600/75
+        px-10 pt-10 text-xl ${menuVisibile ? "visible" : ""}`}
       >
         <a href='/' className='px-4 text-primary-content'>
           Home
@@ -108,7 +108,7 @@ const Header: FC = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   return (
     <>
-      <div className='w-full fixed top-0 z-50 flex h-[10vh] flex-row items-center justify-between bg-primary-800 px-4 xl:px-16'>
+      <div className='fixed top-0 z-50 flex h-[10vh] w-full flex-row items-center justify-between bg-primary-800 px-4 xl:px-16'>
         <HeaderLogo />
         {isDesktop ? <DesktopNav /> : <MobileNav />}
       </div>

@@ -16,7 +16,7 @@ const TextCard: FC<props> = ({ title, titleSize, center, children }) => {
       <div
         className={`${
           center ? "text-center" : "text-justify"
-        } text-xl leading-relaxed`}
+        } text-lg leading-relaxed sm:text-xl`}
       >
         {children}
       </div>

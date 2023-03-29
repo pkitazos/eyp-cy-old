@@ -9,7 +9,6 @@ export {
   NavLink,
   PageTitle,
 } from "./Base";
-export { BlankPage, DebugOverlay } from "./Debug";
 export { TestimonialCarousel, WhatWeDoSection } from "./Blocks";
 export {
   EventTypeCard,
@@ -22,6 +21,7 @@ export {
   UpcomingEventCard,
   WhatWeDoCard,
 } from "./Cards";
+export { BlankPage, DebugOverlay } from "./Debug";
 export {
   DividerBottom1,
   DividerTop1,
@@ -31,11 +31,15 @@ export {
 export { default as MaskedImage } from "./MaskedImage";
 export { default as PreviousBoardButton } from "./PreviousBoardButton";
 export {
+  BookIcon,
   CaretLeft,
   CaretRight,
   ChevronDown,
+  ConversationIcon,
   FacebookIcon,
   InstagramIcon,
+  NetworkIcon,
+  PenIcon,
   Underline,
   WhiteStar,
 } from "./SVGs";

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import "~/styles/Home.css";
+import "~/styles/TestimonialCarousel.css";
 import { TestimonialCard } from "../Cards";
 import { CaretLeft, CaretRight } from "../SVGs";
 

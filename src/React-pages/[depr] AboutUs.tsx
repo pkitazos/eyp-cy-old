@@ -2,7 +2,6 @@ import type { FC } from "react";
 import {
   DividerBottom1,
   DividerTop1,
-  PageTitle,
   TextCard,
   Underline,
   WhatWeDoCard,

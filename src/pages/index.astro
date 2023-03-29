@@ -1,9 +1,9 @@
 ---
+import "~/styles/Home.css";
 import {
   AnchorArrow,
   DividerBottom1,
   DividerTop1,
-  TestimonialCarousel,
   TextCard,
   Underline,
   UpcomingEventCard,
@@ -12,38 +12,51 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 ---
 
 <HomeLayout title='EYP Cyprus'>
-  <div
-    id='section1'
-    class='absolute top-[10vh] flex h-[90vh] w-full flex-col gap-6'
+  <section
+    id='welcome'
+    class='relative top-[10vh] flex h-[90vh] w-full flex-col justify-center gap-6'
   >
-    <div class='mt-16 grid grid-cols-12 grid-rows-2 gap-10 xl:mt-24 2xl:mt-32'>
-      <div class='col-start-2 row-start-1 w-max text-7xl font-bold text-white'>
-        Welcome to
+    <div
+      class='flex flex-col gap-10 px-6 xs:px-10 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0'
+    >
+      <div
+        class='flex w-full justify-start sm:col-start-2 sm:row-start-1 sm:w-max'
+      >
+        <h2 class='text-5xl font-bold text-white sm:text-6xl md-lg:text-7xl'>
+          Welcome to
+        </h2>
       </div>
       <div
-        class='col-start-3 row-start-2 w-max text-7xl font-bold text-accent-900'
+        class='flex w-full justify-end sm:col-start-3 sm:row-start-2 sm:w-max'
       >
-        Young Europe
+        <h2
+          class='text-5xl font-bold text-accent-900 sm:text-6xl md-lg:text-7xl'
+        >
+          Young Europe
+        </h2>
       </div>
     </div>
-    <div class='mt-10 flex items-center md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32'>
+    <div
+      class='mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32'
+    >
       <a
         href='/get-involved'
-        class={` mx-auto w-max cursor-pointer rounded-full bg-accent-900 text-black
-            py-5 px-9 text-xl font-semibold transition-all duration-300 hover:scale-110 
-            md:py-6 md:px-9  md:text-2xl lg:py-7 lg:px-10 lg:text-2xl xl:py-7 xl:px-10 xl:text-3xl`}
+        class={`mx-auto w-max rounded-full bg-accent-900 text-black font-semibold 
+        cursor-pointer transition-all duration-300 hover:scale-110
+        py-5 px-9 text-xl  
+        md:py-6 md:px-9  md:text-2xl lg:py-7 lg:px-10 lg:text-2xl xl:py-7 xl:px-10 xl:text-3xl`}
       >
         Join Us
       </a>
     </div>
-    <div class='mr-64 flex justify-end'>
-      <AnchorArrow anchorRef='#section2' />
+    <div class='absolute bottom-[10%] right-[10%]'>
+      <AnchorArrow anchorRef='#who-we-are' />
     </div>
-  </div>
+  </section>
   {/* ------------------------------------------------------------ */}
-  <div
-    id='section2'
-    class='-mb-16 grid max-h-max min-h-[60vh] grid-cols-12 pt-16'
+  <section
+    id='who-we-are'
+    class='-mb-16 grid max-h-max min-h-[60vh] grid-cols-12 pt-[10rem]'
   >
     <div class='z-20 col-span-6 col-start-3'>
       <TextCard title='Who We Are' titleSize='font-semibold text-4xl'>
@@ -62,12 +75,12 @@ import HomeLayout from "../layouts/HomeLayout.astro";
       </TextCard>
     </div>
     <div class='z-20 col-start-10 place-self-end'>
-      <AnchorArrow anchorRef='#section3' />
+      <AnchorArrow anchorRef='#upcoming-events' />
     </div>
-  </div>
+  </section>
   {/* ------------------------------------------------------------ */}
   <DividerBottom1 />
-  <div id='section3' class='min-h-[60vh] bg-primary-600 pt-12'>
+  <div id='upcoming-events' class='min-h-[60vh] bg-primary-600 pt-[10rem]'>
     <div class='mx-32'>
       <div class='mb-16 flex justify-end'>
         <div class='flex h-max w-max flex-col items-center gap-4'>
@@ -77,7 +90,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
       </div>
       <div class='flex justify-between'>
         <div class='w-1/6'>
-          <AnchorArrow anchorRef='#section4' />
+          <AnchorArrow anchorRef='#testimonials' />
         </div>
         <div
           class='flex h-max w-5/6 max-w-max flex-row gap-9 overflow-x-scroll p-5'
@@ -120,7 +133,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
   </div>
   <DividerTop1 />
   {/* ------------------------------------------------------------ */}
-  <div id='section4' class='max-h-max min-h-[50vh] pt-12'>
+  <div id='testimonials' class='max-h-max min-h-[50vh] pt-12'>
     <div class='mx-32 -mb-20'>
       <div class='mb-16 flex justify-start'>
         <div class='flex h-max w-max flex-col items-center gap-4'>
@@ -128,8 +141,8 @@ import HomeLayout from "../layouts/HomeLayout.astro";
           <Underline className='h-max w-14 rotate-12 text-orange-600' />
         </div>
       </div>
-      <TestimonialCarousel client:visible />
+      <!-- <TestimonialCarousel client:visible /> -->
     </div>
-    <AnchorArrow anchorRef='#section1' />
+    <AnchorArrow anchorRef='#welcome' />
   </div>
 </HomeLayout>

@@ -1,5 +1,5 @@
-export { default as Home } from "./Home";
-export { default as AboutUs } from "./AboutUs";
+export { default as Home } from "./[depr] Home";
+export { default as AboutUs } from "./[depr] AboutUs";
 export { default as Impact } from "./Impact";
 export { default as PatronsAndPartners } from "./PatronsAndPartners";
 export { default as Events } from "./Events";
