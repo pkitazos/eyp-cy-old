@@ -10,16 +10,38 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```
 /
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+├───assets
+│   ├───elements
+│   │   ├───footer
+│   │   └───wave-dividers
+│   └───icons
+├───components
+│   ├───Base
+│   ├───Blocks
+│   ├───Cards
+│   ├───Dividers
+│   ├───SVGs
+│   └───Waves
+├───data
+├───hooks
+├───layouts
+├───pages
+│   ├───about-us
+│   ├───events
+│   │   ├───days-of-eyp
+│   │   ├───national-session
+│   │   ├───pre-selection-days
+│   │   └───youth-summit
+│   ├───get-involved
+│   ├───impact
+│   ├───national-committee
+│   ├───patrons-and-partners
+│   ├───public-relations
+│   │   └───press-releases
+│   └───test
+├───React-pages
+├───styles
+└───utils
 ```
 
 ## Commands
