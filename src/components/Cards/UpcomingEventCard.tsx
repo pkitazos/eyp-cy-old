@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { stringToRoute } from "../../utils";
+import { slugify } from "../../utils";
 
 // TODO: improve design
 
@@ -17,7 +17,7 @@ const UpcomingEventCard: FC<props> = ({
   imageURL,
 }) => {
   return (
-    <a href={stringToRoute(title)}>
+    <a href={slugify(title)}>
       <div className='group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-200 shadow-lg transition-all duration-300 hover:scale-[1.02]'>
         <img src={imageURL} className='h-2/5 w-full object-cover' />
         <div className='h-3/5 p-6'>

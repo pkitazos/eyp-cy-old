@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
-import "~/styles/index.css";
-import { stringToRoute } from "~/utils";
+import { slugify } from "~/utils";
 import { ChevronDown } from "..";
 
 interface props {
@@ -35,7 +34,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
         <div className='collapse-content mr-3 flex flex-col items-end gap-1.5 text-primary-content peer-checked:text-secondary-content'>
           <a
             className='cursor-pointer px-5 text-lg hover:text-slate-300'
-            href={stringToRoute(mainItem)}
+            href={slugify(mainItem)}
           >
             {mainItem}
           </a>
@@ -43,7 +42,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
             <div key={i}>
               <a
                 className='cursor-pointer px-5 text-lg hover:text-slate-300'
-                href={`${prefix}${stringToRoute(item)}`}
+                href={`/${prefix}${slugify(item)}`}
               >
                 {item}
               </a>

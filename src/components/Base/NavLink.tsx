@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { stringToRoute } from "../../utils";
+import { slugify } from "../../utils";
 
 interface props {
   item: string;
@@ -14,9 +14,9 @@ const NavLink: FC<props> = ({ item, to, prefix = "", className }) => {
   }
   return (
     <a
-      className={`py-2 px-5 cursor-pointer hover:bg-accent-900 hover:text-black rounded-xl
+      className={`cursor-pointer rounded-xl py-2 px-5 hover:bg-accent-900 hover:text-black
         ${className}`}
-      href={`${prefix}${to ? to : stringToRoute(item)}`}
+      href={`${prefix}${to ? to : slugify(item)}`}
     >
       {item}
     </a>

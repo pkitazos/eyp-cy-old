@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { stringToRoute } from "../../utils";
+import { slugify } from "../../utils";
 
 interface props {
   title: string;
@@ -16,7 +16,7 @@ const EventTypeCard: FC<props> = ({ title, info, image_url }) => {
           src={image_url}
         />
         <a
-          href={`/events${stringToRoute(title)}`}
+          href={`/events${slugify(title)}`}
           className='w-2/3 transition-all duration-300 xs:hover:-translate-y-2.5'
         >
           <h2 className='text-3xl'>{title}</h2>
