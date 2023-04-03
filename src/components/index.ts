@@ -42,5 +42,7 @@ export {
   PenIcon,
   Underline,
   WhiteStar,
+  QuoteLeftIcon,
+  QuoteRightIcon,
 } from "./SVGs";
 export { DiagonalWaves, FooterWaves, HorizontalWaves, Wave } from "./Waves";

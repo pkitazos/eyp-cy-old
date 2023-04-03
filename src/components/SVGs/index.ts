@@ -11,3 +11,5 @@ export { default as NetworkIcon } from "./NetworkIcon";
 export { default as PenIcon } from "./PenIcon";
 export { default as Underline } from "./Underline";
 export { default as WhiteStar } from "./WhiteStar";
+export { default as QuoteRightIcon } from "./QuoteRightIcon";
+export { default as QuoteLeftIcon } from "./QuoteLeftIcon";
