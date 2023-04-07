@@ -1,13 +1,13 @@
-export { default as DaysOfEYP } from "./DaysOfEYP";
 export { default as Events } from "./Events";
 export { default as GetInvolved } from "./GetInvolved";
-export { default as NationalSession } from "./NationalSession";
 export { default as PatronsAndPartners } from "./PatronsAndPartners";
 export { default as PressReleases } from "./PressReleases";
 export { default as PublicRelations } from "./PublicRelations";
-export { default as YouthSummit } from "./YouthSummit";
 export { default as AboutUs } from "./[depr] AboutUs";
+export { default as DaysOfEYP } from "./[depr] DaysOfEYP";
 export { default as Home } from "./[depr] Home";
 export { default as Impact } from "./[depr] Impact";
 export { default as NationalCommittee } from "./[depr] NationalCommittee";
+export { default as NationalSession } from "./[depr] NationalSession";
 export { default as PreSelectionDays } from "./[depr] PreSelectionDays";
+export { default as YouthSummit } from "./[depr] YouthSummit";
