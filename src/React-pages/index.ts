@@ -1,4 +1,4 @@
-export { default as Events } from "./Events";
+export { default as Events } from "./[depr] Events";
 export { default as GetInvolved } from "./GetInvolved";
 export { default as PatronsAndPartners } from "./PatronsAndPartners";
 export { default as PressReleases } from "./PressReleases";
