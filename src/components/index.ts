@@ -8,8 +8,10 @@ export {
   Header,
   NavLink,
   PageTitle,
+  Title,
 } from "./Base";
 export { TestimonialCarousel, WhatWeDoSection } from "./Blocks";
+export { default as BoardPosition } from "./BoardPosition";
 export {
   EventTypeCard,
   ImpactFlipCard,
@@ -40,9 +42,9 @@ export {
   InstagramIcon,
   NetworkIcon,
   PenIcon,
-  Underline,
-  WhiteStar,
   QuoteLeftIcon,
   QuoteRightIcon,
+  Underline,
+  WhiteStar,
 } from "./SVGs";
 export { DiagonalWaves, FooterWaves, HorizontalWaves, Wave } from "./Waves";
