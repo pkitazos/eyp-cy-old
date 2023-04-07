@@ -5,7 +5,7 @@ interface props {
   title: string;
   titleSize?: string;
   titleColor?: string;
-  titlePosition?: "items-start" | "items-center" | "items-end";
+  titlePosition?: string;
   underlineWidth?: string;
   underlineColor?: string;
 }

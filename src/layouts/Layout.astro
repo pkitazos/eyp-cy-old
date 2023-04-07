@@ -22,6 +22,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <DebugOverlay client:load />
     <Header client:load />
     <HorizontalWaves />
     <slot />

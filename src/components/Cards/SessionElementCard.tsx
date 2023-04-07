@@ -1,7 +1,9 @@
 import type { FC, ReactNode } from "react";
+import "~/styles/SessionElementCard.css";
 
 interface props {
   title: string;
+  titlePosition?: "text-left" | "text-center" | "text-right";
   children: ReactNode;
   image_URL?: string;
   className?: string;
@@ -9,6 +11,7 @@ interface props {
 
 const SessionElementCard: FC<props> = ({
   title,
+  titlePosition = "text-left",
   children,
   image_URL,
   className,
@@ -16,12 +19,17 @@ const SessionElementCard: FC<props> = ({
   return (
     <>
       <div
-        className={`${className}  flex h-max flex-row items-center gap-5 
-        rounded-2xl bg-default-white px-8 py-8 transition-all duration-200 hover:scale-[1.01] hover:bg-sky-200/50`}
+        className={`${className} flex h-max flex-row items-center gap-5 
+        rounded-3xl bg-white shadow-sm transition-all duration-300 hover:scale-[1.02]`}
       >
-        <img src={image_URL} className='' />
-        <div>
-          <h2 className='mb-4 text-3xl'>{title}</h2>
+        {/* <img src={image_URL} className='' /> */}
+
+        <div className='z-10 m-5 sm:m-6  md:m-8'>
+          <h2
+            className={`mb-4 ${titlePosition} text-xl font-bold underline decoration-secondary-900 decoration-wavy underline-offset-2 xs:text-2xl xs:font-semibold xl:text-3xl`}
+          >
+            {title}
+          </h2>
           <p className='text-justify text-lg'>{children}</p>
         </div>
       </div>

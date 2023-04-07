@@ -13,13 +13,13 @@ const TextCard: FC<props> = ({ title, titleSize, center, children }) => {
     <div className='flex flex-col items-center justify-center gap-4'>
       <div className={`self-center ${titleSize} text-primary-800`}>{title}</div>
       <Underline className='-mt-2 w-16 rotate-[190deg] text-accent-900' />
-      <div
+      <p
         className={`${
           center ? "text-center" : "text-justify"
         } text-lg leading-relaxed sm:text-xl`}
       >
         {children}
-      </div>
+      </p>
     </div>
   );
 };
