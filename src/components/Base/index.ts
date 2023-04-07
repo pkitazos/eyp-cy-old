@@ -7,3 +7,4 @@ export { default as Drawer } from "./Drawer";
 export { default as Dropdown } from "./Dropdown";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as PageTitle } from "./PageTitle";
+export { default as Title } from "./Title";

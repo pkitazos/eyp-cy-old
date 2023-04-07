@@ -17,7 +17,7 @@ const UpcomingEventCard: FC<props> = ({
   imageURL,
 }) => {
   return (
-    <a href={slugify(title)}>
+    <a href={`/events${slugify(title)}`}>
       <div className='group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]'>
         <img src={imageURL} className='h-2/5 w-full object-cover' />
         <div className='h-3/5 p-6'>

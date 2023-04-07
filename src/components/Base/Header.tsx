@@ -24,6 +24,7 @@ const DesktopNav = () => {
       <NavLink item='Home' to='/' />
       <Dropdown
         mainItem='About Us'
+        prefix='about-us'
         items={["Patrons & Partners", "Impact", "National Committee"]}
       />
       <Dropdown
@@ -43,7 +44,7 @@ const DesktopNav = () => {
       />
 
       <a
-        className='cursor-pointer rounded-4xl bg-accent-900 py-3 px-6 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl'
+        className='cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl'
         href='/get-involved'
       >
         Get Involved
@@ -73,6 +74,7 @@ const MobileNav = () => {
           Home
         </a>
         <Drawer
+          prefix='about-us'
           mainItem='About Us'
           items={["Patrons & Partners", "Impact", "National Committee"]}
         />
@@ -93,8 +95,8 @@ const MobileNav = () => {
         />
 
         <a
-          className={`transition-rounded cursor-pointer rounded-4xl bg-accent-900 py-3
-      px-6 text-black duration-300 hover:scale-[1.01]`}
+          className={`transition-rounded cursor-pointer rounded-4xl bg-accent-900 px-6
+      py-3 text-black duration-300 hover:scale-[1.01]`}
           href='/get-involved'
         >
           Get Involved
