@@ -1,6 +1,5 @@
 const slugify: (label: string) => string = (label) => {
-  label = label.replace("&", "and");
-  const route = label.toLowerCase().split(" ").join("-");
+  let route = label.replace("&", "and").replace(" ", "-").toLowerCase();
   return `/${route}`;
 };
 export default slugify;
