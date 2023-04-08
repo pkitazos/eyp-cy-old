@@ -1,176 +1,170 @@
 ---
-import {
-  NCMemberCard,
-  PageTitle,
-  PreviousBoardButton,
-  Title,
-  Underline,
-} from "~/components";
+import { NCMemberCard, PreviousBoardButton, Title } from "~/components";
 import { previousBoards } from "~/data";
 import Layout from "~/layouts/Layout.astro";
 ---
 
-<Layout title='National Committee'>
-  <section class='page-margin flex flex-col pb-16'>
+<Layout title="National Committee">
+  <section class="page-margin flex flex-col pb-16">
     <Title
-      title='Our National Committee'
-      titlePosition='justify-center'
-      titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
-      underlineWidth='w-12 xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+      title="Our National Committee"
+      titlePosition="justify-center"
+      titleSize="text-3xl xs:text-4xl md-lg:text-5xl "
+      underlineWidth="w-12 xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6"
     />
     <Title
-      title='2023'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl'
-      underlineWidth='w-11 xs:w-12 md-lg:w-14 mb-3 xs:mb-4 md-lg:mb-6'
+      title="2023"
+      titlePosition="justify-center"
+      titleSize="text-2xl xs:text-3xl md-lg:text-4xl"
+      underlineWidth="w-11 xs:w-12 md-lg:w-14 mb-3 xs:mb-4 md-lg:mb-6"
     />
-    <div class='mt-10 flex flex-wrap justify-center gap-16'>
+    <div class="mt-10 flex flex-wrap justify-center gap-16">
       <NCMemberCard
-        name='Lazaros Hadjiforados'
-        title='President'
-        imageURL='/assets/nc-presi.jpg'
+        name="Lazaros Hadjiforados"
+        title="President"
+        imageURL="/assets/nc-presi.jpg"
       />
       <NCMemberCard
-        name='Polyna Antoniou'
-        title='Vice President'
-        imageURL='/assets/nc-vp.jpg'
+        name="Polyna Antoniou"
+        title="Vice President"
+        imageURL="/assets/nc-vp.jpg"
       />
       <NCMemberCard
-        name='Dimitrios Meris'
-        title='Secretary and Social Media Officer'
-        imageURL='/assets/nc-secretary.jpg'
+        name="Dimitrios Meris"
+        title="Secretary and Social Media Officer"
+        imageURL="/assets/nc-secretary.jpg"
       />
       <NCMemberCard
-        name='Georgios Papaconstantinou'
-        title='Treasurer'
-        imageURL='/assets/nc-treasurer.jpg'
+        name="Georgios Papaconstantinou"
+        title="Treasurer"
+        imageURL="/assets/nc-treasurer.jpg"
       />
       <NCMemberCard
-        name='Kornelia Kitazou'
-        title='PR Officer'
-        imageURL='/assets/nc-pr.jpg'
+        name="Kornelia Kitazou"
+        title="PR Officer"
+        imageURL="/assets/nc-pr.jpg"
       />
       <NCMemberCard
-        name='Antreas Psaltis'
-        title='HR Officer'
-        imageURL='/assets/nc-hr.jpg'
+        name="Antreas Psaltis"
+        title="HR Officer"
+        imageURL="/assets/nc-hr.jpg"
       />
       <NCMemberCard
-        name='Athina'
-        title='National Coordinator'
-        imageURL='/assets/nc-natco-1.jpg'
+        name="Athina"
+        title="National Coordinator"
+        imageURL="/assets/nc-natco-1.jpg"
       />
       <NCMemberCard
-        name='Theodoulos Hadjimatheou'
-        title='National Coordinator'
-        imageURL='/assets/nc-natco-2.jpg'
+        name="Theodoulos Hadjimatheou"
+        title="National Coordinator"
+        imageURL="/assets/nc-natco-2.jpg"
       />
     </div>
   </section>
-  <section class='page-margin mt-16 flex flex-col justify-center gap-2'>
+  <section class="page-margin mt-16 flex flex-col justify-center gap-2">
     <Title
-      title='Previous Boards'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl'
-      underlineWidth='w-11 xs:w-12 md-lg:w-14 mb-3 xs:mb-4 md-lg:mb-6'
+      title="Previous Boards"
+      titlePosition="justify-center"
+      titleSize="text-2xl xs:text-3xl md-lg:text-4xl"
+      underlineWidth="w-11 xs:w-12 md-lg:w-14 mb-3 xs:mb-4 md-lg:mb-6"
     />
 
     <div
-      class='mt-10 grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4'
+      class="mt-10 grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4"
     >
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2022'
+          year="2022"
           boardMembers={previousBoards.year_2022}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2021'
+          year="2021"
           boardMembers={previousBoards.year_2021}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2020'
+          year="2020"
           boardMembers={previousBoards.year_2020}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2019'
+          year="2019"
           boardMembers={previousBoards.year_2019}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2018'
+          year="2018"
           boardMembers={previousBoards.year_2018}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2017'
+          year="2017"
           boardMembers={previousBoards.year_2017}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2016'
+          year="2016"
           boardMembers={previousBoards.year_2016}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2015'
+          year="2015"
           boardMembers={previousBoards.year_2015}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2014'
+          year="2014"
           boardMembers={previousBoards.year_2014}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2013'
+          year="2013"
           boardMembers={previousBoards.year_2013}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2012'
+          year="2012"
           boardMembers={previousBoards.year_2012}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2011'
+          year="2011"
           boardMembers={previousBoards.year_2011}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2010'
+          year="2010"
           boardMembers={previousBoards.year_2010}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2009'
+          year="2009"
           boardMembers={previousBoards.year_2009}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2008'
+          year="2008"
           boardMembers={previousBoards.year_2008}
         />
       </div>
-      <div class='flex shrink justify-center'>
+      <div class="flex shrink justify-center">
         <PreviousBoardButton
-          year='2007'
+          year="2007"
           boardMembers={previousBoards.year_2007}
         />
       </div>

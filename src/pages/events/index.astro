@@ -10,73 +10,74 @@ import {
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title='Events'>
-  <section class='page-margin max-h-max min-h-[60vh]'>
+<Layout title="Events">
+  <section class="page-margin max-h-max min-h-[60vh]">
     <Title
-      title='Our Events'
-      titlePosition='justify-center lg:justify-start'
-      titleSize='text-3xl xs:text-4xl md-lg:text-5xl'
-      underlineWidth='w-12 xs:w-14 md-lg:w-16 rotate-180 mb-16'
+      title="Our Events"
+      titlePosition="justify-center lg:justify-start"
+      titleSize="text-3xl xs:text-4xl md-lg:text-5xl"
+      underlineWidth="w-12 xs:w-14 md-lg:w-16 rotate-180 mb-16"
     />
     <div
-      class='flex shrink flex-col gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4'
+      class="flex shrink flex-col gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4"
     >
-      <div class='col-span-9 col-start-1 row-span-1'>
+      <div class="col-span-9 col-start-1 row-span-1">
         <EventTypeCard
-          title='Pre-Selection Days'
-          image_url='/assets/logo-pre-selections.png'
-          info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+          title="Pre-Selection Days"
+          image_url="/assets/logo-pre-selections.png"
+          info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
       </div>
-      <div class='col-span-9 col-start-2 row-span-1'>
+      <div class="col-span-9 col-start-2 row-span-1">
         <EventTypeCard
-          title='Days of EYP'
-          info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          image_url='/assets/logo-days-of-eyp.png'
+          title="Days of EYP"
+          info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          image_url="/assets/logo-days-of-eyp.png"
         />
       </div>
-      <div class='col-span-9 col-start-3 row-span-1'>
+      <div class="col-span-9 col-start-3 row-span-1">
         <EventTypeCard
-          title='Youth Summit'
-          info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          image_url='/assets/logo-youth-summit.png'
+          title="Youth Summit"
+          info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          image_url="/assets/logo-youth-summit.png"
         />
       </div>
-      <div class='col-span-9 col-start-4 row-span-1'>
+      <div class="col-span-9 col-start-4 row-span-1">
         <EventTypeCard
-          title='National Session'
-          info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          image_url='/assets/logo-national-session.png'
+          title="National Session"
+          info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          image_url="/assets/logo-national-session.png"
         />
       </div>
     </div>
   </section>
   <DividerBottom1 />
   <section
-    class='page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 pt-10 text-white'
+    class="page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 pt-10 text-white"
   >
     <Title
-      title='I want to participate as a ..'
-      titlePosition='justify-center'
-      titleSize='text-white text-2xl xs:text-3xl md-lg:text-4xl'
-      underlineWidth='w-14 rotate-180 mb-6'
-      underlineColor='text-orange-400'
+      title="I want to participate as a .."
+      titlePosition="justify-center"
+      titleSize="text-2xl xs:text-3xl md-lg:text-4xl "
+      titleColor="text-white "
+      underlineWidth="w-14 rotate-180 mb-6"
+      underlineColor="text-orange-400"
     />
-    <div class='flex flex-row justify-center gap-24'>
-      <ActionButton text='School' />
-      <ActionButton text='Individual' />
+    <div class="flex flex-row justify-center gap-24">
+      <ActionButton text="School" />
+      <ActionButton text="Individual" />
     </div>
   </section>
   <DividerTop1 />
-  <section class='page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32'>
+  <section class="page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32">
     <Title
-      title='Session Program'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl'
-      underlineWidth='w-16 mb-6'
+      title="Session Program"
+      titlePosition="justify-center"
+      titleSize="text-2xl xs:text-3xl md-lg:text-4xl"
+      underlineWidth="w-16 mb-6"
     />
-    <div class='flex flex-col items-center justify-center gap-10'>
-      <SessionElementCard className='w-5/6 max-w-5xl' title='Teambuilding'>
+    <div class="flex flex-col items-center justify-center gap-10">
+      <SessionElementCard className="w-5/6 max-w-5xl" title="Teambuilding">
         Team building in the context of the European Youth Parliament, means
         communication training, focused on group dynamics. The fundamental
         purpose of team building is to get a disparate group of individuals
@@ -87,9 +88,9 @@ import Layout from "../../layouts/Layout.astro";
         and begin functioning as a group.
       </SessionElementCard>
       <SessionElementCard
-        className='w-5/6 max-w-5xl'
-        title='Committee Work'
-        titlePosition='text-right'
+        className="w-5/6 max-w-5xl"
+        title="Committee Work"
+        titlePosition="text-right"
       >
         This is the central part of any EYP session. After team-building, the
         delegates come together to discuss their allocated topics, and will
@@ -98,7 +99,7 @@ import Layout from "../../layouts/Layout.astro";
         a strong and meaningful resolution, that will be debated upon during the
         General Assembly.
       </SessionElementCard>
-      <SessionElementCard className='w-5/6 max-w-5xl' title='General Assembly'>
+      <SessionElementCard className="w-5/6 max-w-5xl" title="General Assembly">
         The General Assembly reunites all the participants of the session to
         consider the results of committee work. Each committee presents and
         defends their motion for a resolution, which is then debated according
