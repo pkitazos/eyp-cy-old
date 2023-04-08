@@ -1,6 +1,6 @@
 export { default as Events } from "./[depr] Events";
 export { default as GetInvolved } from "./GetInvolved";
-export { default as PatronsAndPartners } from "./PatronsAndPartners";
+export { default as PatronsAndPartners } from "./[depr] PatronsAndPartners";
 export { default as PressReleases } from "./PressReleases";
 export { default as PublicRelations } from "./PublicRelations";
 export { default as AboutUs } from "./[depr] AboutUs";

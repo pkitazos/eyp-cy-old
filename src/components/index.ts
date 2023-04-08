@@ -17,6 +17,7 @@ export {
   ImpactFlipCard,
   NCMemberCard,
   PatronCard,
+  PartnerCard,
   SessionElementCard,
   TestimonialCard,
   TextCard,

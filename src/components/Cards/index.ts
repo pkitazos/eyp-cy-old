@@ -1,6 +1,7 @@
 export { default as EventTypeCard } from "./EventTypeCard";
 export { default as ImpactFlipCard } from "./ImpactFlipCard";
 export { default as NCMemberCard } from "./NCMemberCard";
+export { default as PartnerCard } from "./PartnerCard";
 export { default as PatronCard } from "./PatronCard";
 export { default as SessionElementCard } from "./SessionElementCard";
 export { default as TestimonialCard } from "./TestimonialCard";
