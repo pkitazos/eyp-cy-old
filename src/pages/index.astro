@@ -3,18 +3,14 @@ import {
   DividerBottom1,
   DividerTop1,
   TestimonialCarousel,
-  TextCard,
-  Underline,
+  Title,
   UpcomingEventCard,
 } from "~/components";
 import HomeLayout from "~/layouts/HomeLayout.astro";
 ---
 
 <HomeLayout title='EYP Cyprus'>
-  <section
-    id='welcome'
-    class='mt-[10vh] flex h-[90vh] w-full flex-col justify-center gap-6'
-  >
+  <section class='mt-[10vh] flex h-[90vh] w-full flex-col justify-center gap-6'>
     <div
       class='flex flex-col gap-10 px-6 xs:px-10 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0'
     >
@@ -48,17 +44,19 @@ import HomeLayout from "~/layouts/HomeLayout.astro";
         Join Us
       </a>
     </div>
-    <!-- <div class='absolute bottom-[10%] right-[10%]'>
-      <AnchorArrow anchorRef='#who-we-are' />
-    </div> -->
   </section>
   {/* ------------------------------------------------------------ */}
   <section
-    id='who-we-are'
     class='page-margin mb-0 flex max-h-max min-h-[70vh] sm:-mb-20 sm:text-xl md-lg:grid md-lg:grid-cols-12'
   >
     <div class='z-20 col-span-6 mt-16'>
-      <TextCard title='Who We Are' titleSize='font-semibold text-4xl'>
+      <Title
+        title='Who We Are'
+        titlePosition='justify-center'
+        titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
+        underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+      />
+      <p class='text-justify text-lg leading-relaxed md:text-xl'>
         The European Youth Parliament (EYP) is a non-partisan and independent
         educational platform bringing together thousands of young people from
         all over Europe to discuss current issues, develop their skills through
@@ -71,26 +69,18 @@ import HomeLayout from "~/layouts/HomeLayout.astro";
         of the Pan-European EYP Network. EYP Cyprus was established in 2006 and has
         been actively working to organise events and activities catered towards the
         youth of Cyprus.
-      </TextCard>
+      </p>
     </div>
-    <!-- <div class='z-20 col-start-10 place-self-end'>
-      <AnchorArrow anchorRef='#upcoming-events' />
-    </div> -->
   </section>
   {/* ------------------------------------------------------------ */}
   <DividerBottom1 />
-  <section
-    id='upcoming-events'
-    class='page-padding min-h-[60vh] bg-primary-600 pt-[10rem]'
-  >
-    <div class='mb-16 flex justify-center md:justify-end'>
-      <div class='flex h-max w-max flex-col items-center gap-4 md:items-end'>
-        <div class='text-center text-4xl font-semibold text-white'>
-          Upcoming Events
-        </div>
-        <Underline className='w-14 rotate-180 text-accent-900' />
-      </div>
-    </div>
+  <section class='page-padding min-h-[60vh] bg-primary-600'>
+    <Title
+      title='Upcoming Events'
+      titlePosition='justify-center md:justify-end'
+      titleSize='text-2xl text-white xs:text-3xl md-lg:text-4xl '
+      underlineWidth='w-12 mt-2 rotate-180 xs:w-14 md-lg:w-16 mb-12 xs:mb-14 md-lg:mb-16'
+    />
     <div class='flex justify-end'>
       <div
         class='no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5'
@@ -133,18 +123,17 @@ import HomeLayout from "~/layouts/HomeLayout.astro";
   <DividerTop1 />
   {/* ------------------------------------------------------------ */}
   <section
-    id='testimonials'
-    class='page-margin mb-12 h-[60rem] pt-12 xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]'
+    class='page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]'
   >
-    <div class='-mb-20 flex flex-col gap-5'>
-      <div class='mb-16 flex justify-start'>
-        <div class='flex h-max w-max flex-col items-center gap-4'>
-          <h2 class='text-4xl font-semibold text-primary-800'>Testimonials</h2>
-          <Underline className='h-max w-14 rotate-12 text-orange-600' />
-        </div>
-      </div>
+    <div class='flex flex-col gap-5'>
+      <Title
+        title='Testimonials'
+        titlePosition='justify-center md:justify-start'
+        titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
+        underlineWidth='w-12 mt-2 rotate-12 xs:w-14 md-lg:w-16 mb-12 xs:mb-14 md-lg:mb-16'
+        underlineColor='text-orange-600'
+      />
       <TestimonialCarousel client:visible />
     </div>
-    <!-- <AnchorArrow anchorRef='#welcome' /> -->
   </section>
 </HomeLayout>

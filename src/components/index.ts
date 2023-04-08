@@ -19,7 +19,6 @@ export {
   PatronCard,
   SessionElementCard,
   TestimonialCard,
-  TextCard,
   UpcomingEventCard,
   WhatWeDoCard,
 } from "./Cards";

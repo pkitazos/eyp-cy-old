@@ -5,6 +5,5 @@ export { default as PartnerCard } from "./PartnerCard";
 export { default as PatronCard } from "./PatronCard";
 export { default as SessionElementCard } from "./SessionElementCard";
 export { default as TestimonialCard } from "./TestimonialCard";
-export { default as TextCard } from "./TextCard";
 export { default as UpcomingEventCard } from "./UpcomingEventCard";
 export { default as WhatWeDoCard } from "./WhatWeDoCard";
