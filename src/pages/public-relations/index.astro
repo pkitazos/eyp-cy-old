@@ -1,8 +1,18 @@
 ---
+import { Title } from "~/components";
 import Layout from "~/layouts/Layout.astro";
-import PublicRelations from "~/React-pages/PublicRelations";
 ---
 
 <Layout title='Public Relations'>
-  <PublicRelations />
+  <Title
+    title='Public Relations'
+    titlePosition='justify-center'
+    titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
+    underlineWidth='w-12 xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+  />
+  <div
+    class='mt-20 p-6 text-center text-xl font-semibold xs:text-3xl md-lg:text-4xl'
+  >
+    Coming Soon ...
+  </div>
 </Layout>
