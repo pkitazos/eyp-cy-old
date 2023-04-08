@@ -1,8 +1,83 @@
 ---
+import { ActionButton, Title } from "~/components";
 import Layout from "~/layouts/Layout.astro";
-import GetInvolved from "~/React-pages/GetInvolved";
 ---
 
 <Layout title='Get Involved'>
-  <GetInvolved />
+  <section class='page-margin mb-28 flex flex-col px-5'>
+    <Title
+      title='Get Involved'
+      titlePosition='justify-center'
+      titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
+      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+    />
+    <p class='text-justify text-lg leading-relaxed md:text-xl'>
+      The European Youth Parliament Cyprus offers its participants a unique
+      learning experience. Every year, 500+ young people from both Cyprus and
+      Europe join our activities. There are various ways to get involved -
+      typically, the first step is to participate in one of our EYP sessions
+      which take place throughout the year. At the same time, we hold various
+      open events, discussion forums, workshops, trainings and panel discussions
+      which you can join! Get in touch and follow us on social media to keep up
+      to date with opportunities to take part in our activities.
+    </p>
+  </section>
+  <section
+    class='page-margin mb-32 grid grid-cols-1 gap-16 px-5 md:grid-cols-2'
+  >
+    <div class='flex flex-col items-center gap-4'>
+      <Title
+        title='High-School Students'
+        titlePosition='justify-center'
+        titleSize='text-xl xs:text-2xl md-lg:text-3xl'
+        underlineWidth='w-9 xs:w-10 md-lg:w-12 rotate-[176deg] mb-3 xs:mb-4 md-lg:mb-6'
+        underlineColor='text-orange-500'
+      />
+      <p class='mb-4 text-justify text-xl'>
+        If you are a High-School Student aged 15-18, you can register
+        individually to attend our EYP Day. If your school is interested in
+        applying as a delegation of six students, then you are able to attend
+        our Pre-Selection Days. Both events usually take place in March and
+        April. Through these events, you could be selected to attend EYP Cyprus'
+        annual National Session in the Summer. If you are interested in
+        attending either of these events, you can contact our HR
+        members@eypcyprus.com to declare your interest or ask for further
+        details.
+      </p>
+      <ActionButton text='Join' />
+    </div>
+    <div class='flex flex-col items-center gap-4'>
+      <Title
+        title='Young Adults'
+        titlePosition='justify-center'
+        titleSize='text-xl xs:text-2xl md-lg:text-3xl'
+        underlineWidth='w-9 xs:w-10 md-lg:w-12 rotate-6 mb-3 xs:mb-4 md-lg:mb-6'
+        underlineColor='text-fuchsia-500'
+      />
+      <p class='mb-1 text-justify text-xl lg:mb-4'>
+        If you are a university student or over 18 years old, you can attend our
+        Youth Summit - a 4 day long conference that often takes place in the
+        Summer. If you are interested in attending this event, you can contact
+        our HR members@eypcyprus.com to declare your interest or ask for further
+        details.
+      </p>
+      <ActionButton text='Join' />
+    </div>
+  </section>
+  <section class='page-margin mb-16 flex flex-col px-5'>
+    <Title
+      title='General, Open Events'
+      titlePosition='justify-center'
+      titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
+      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+    />
+    <p class='text-justify text-lg leading-relaxed md:text-xl'>
+      We hold various events throughout the year that are open to any young
+      person interested. From conferences, to panel discussions, workshops,
+      trainings and other events, you can attend any of these events. To do so
+      keep an eye out in our social media platforms or contact our HR
+      members@eypcyprus.com to declare your interest so you are notified when an
+      opportunity arises.
+    </p>
+  </section>
 </Layout>
