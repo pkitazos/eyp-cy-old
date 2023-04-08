@@ -20,15 +20,19 @@ const Title: FC<props> = ({
 }) => {
   return (
     <>
-      <div className={`flex flex-col ${titlePosition} gap-2`}>
-        <h1 className={`${titleSize} ${titleColor} text-center font-semibold `}>
-          {title}
-        </h1>
-        <Underline
-          className='mt-1'
-          underlineWidth={underlineWidth}
-          underlineColor={underlineColor}
-        />
+      <div className={`flex ${titlePosition} gap-2`}>
+        <div className='flex flex-col items-center'>
+          <h1
+            className={`${titleSize} ${titleColor} text-center font-semibold `}
+          >
+            {title}
+          </h1>
+          <Underline
+            className='mt-1'
+            underlineWidth={underlineWidth}
+            underlineColor={underlineColor}
+          />
+        </div>
       </div>
     </>
   );
