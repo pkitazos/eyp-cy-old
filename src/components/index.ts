@@ -14,7 +14,7 @@ export { TestimonialCarousel, WhatWeDoSection } from "./Blocks";
 export { default as BoardPosition } from "./BoardPosition";
 export {
   EventTypeCard,
-  ImpactFlipCard,
+  ImpactCard,
   NCMemberCard,
   PatronCard,
   PartnerCard,

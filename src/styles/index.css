@@ -33,6 +33,18 @@
   -webkit-backdrop-filter: blur(11px);
 }
 
+.masked-image {
+  mask-image: url("/diamond-mask.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("/diamond-mask.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
 .no-scrollbar {
   -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
   scrollbar-width: none; /* hide scrollbar in Firefox */

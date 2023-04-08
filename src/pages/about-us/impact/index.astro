@@ -1,11 +1,18 @@
 ---
-import { ImpactFlipCard, TextCard, Underline } from "~/components";
+import { DebugOverlay, ImpactCard, Title } from "~/components";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title='Impact'>
-  <div class='page-margin mb-20 flex flex-col justify-center gap-20'>
-    <TextCard title='Our Impact' titleSize='text-5xl font-semibold'>
+  <DebugOverlay client:load />
+  <section class='page-margin mb-32 flex flex-col justify-center'>
+    <Title
+      title='Our Impact'
+      titlePosition='justify-center'
+      titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
+      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
+    />
+    <p class='text-justify text-lg leading-relaxed md:text-xl'>
       The European Youth Parliament Cyprus provides a unique educational
       experience to young people from both Cyprus and Europe to develop crucial
       skills, but also to discuss current issues in a safe, non-partisan and
@@ -19,16 +26,16 @@ import Layout from "~/layouts/Layout.astro";
       professional life including among others their communication, leadership,
       team work, planning, and analytical skills. As such, our activities have a
       measurable impact on young people across Europe.
-    </TextCard>
-
-    <div class='mt-10 flex flex-col gap-32'>
-      <div class='-mb-10 flex flex-col items-center gap-2'>
-        <h2 class='text-4xl font-semibold text-primary-800'>
-          What our Impact looks like
-        </h2>
-        <Underline className='w-12 text-accent-900' />
-      </div>
-      <ImpactFlipCard
+    </p>
+  </section>
+  <section class='page-margin flex max-h-max min-h-[60vh] flex-col gap-5'>
+    <Title
+      title='What our Impact looks like'
+      titlePosition='justify-center'
+      titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
+      underlineWidth='w-12 xs:w-14 md-lg:w-16 mb-12 xs:mb-14 md-lg:mb-16'
+    />
+    <!-- <ImpactCard
         title='Forming opinions and solving current challenges'
         imageURL='/Impact/ImpactPhoto2.jpg'
         underline='text-sky-500 rotate-[6deg]'
@@ -38,23 +45,23 @@ import Layout from "~/layouts/Layout.astro";
         develop and express their opinions and put forth their suggestions to
         tackle current social, economic, legal, political and environmental
         challenges.
-      </ImpactFlipCard>
-      <ImpactFlipCard
-        title='Developing skills and growing as a person'
-        imageURL='/Impact/ImpactPhoto1.jpg'
-        reversed={true}
-        underline='text-lime-500 rotate-[186deg]'
-      >
-        EYP Cyprus encourages independent thinking and initiative amongst young
-        people and facilitates the learning of crucial social and professional
-        skills. These include teamwork, tolerance and problem-solving, as well
-        as communication and leadership skills. Through our activities, young
-        people get the chance to take on various roles of responsibilities -
-        from managing projects and events, to leading teams and facilitating
-        discussions. These are unique opportunities for each participant to
-        develop and grow their skillset.
-      </ImpactFlipCard>
-      <ImpactFlipCard
+      </ImpactCard> -->
+    <ImpactCard
+      title='Developing skills and growing as a person'
+      imageURL='/Impact/impact-photo-1.png'
+      reversed={true}
+      underlineColor='text-lime-500'
+    >
+      EYP Cyprus encourages independent thinking and initiative amongst young
+      people and facilitates the learning of crucial social and professional
+      skills. These include teamwork, tolerance and problem-solving, as well as
+      communication and leadership skills. Through our activities, young people
+      get the chance to take on various roles of responsibilities - from
+      managing projects and events, to leading teams and facilitating
+      discussions. These are unique opportunities for each participant to
+      develop and grow their skillset.
+    </ImpactCard>
+    <!-- <ImpactCard
         title='Engaging with current topics in dialogue with decision-makers'
         imageURL='/Impact/ImpactPhoto3.jpg'
         underline='text-orange-500 rotate-[12deg]'
@@ -67,8 +74,8 @@ import Layout from "~/layouts/Layout.astro";
         politicians and decision-makers regularly attend our events and interact
         with our participants and hear what young people's opinions and vision
         for the future are.
-      </ImpactFlipCard>
-      <ImpactFlipCard
+      </ImpactCard> -->
+    <!-- <ImpactCard
         title='Building a network and facilitating intercultural understanding'
         imageURL='/Impact/ImpactPhoto4.jpg'
         reversed={true}
@@ -82,8 +89,8 @@ import Layout from "~/layouts/Layout.astro";
         our events coming from 40+ European countries, young people through our
         activities also have a chance to develop their intercultural
         understanding and build international friendships.
-      </ImpactFlipCard>
-      <ImpactFlipCard
+      </ImpactCard> -->
+    <!-- <ImpactCard
         title='Empowering young, active citizens'
         imageURL='/Impact/ImpactPhoto5.jpg'
         underline='text-fuchsia-500 rotate-[178deg]'
@@ -95,9 +102,8 @@ import Layout from "~/layouts/Layout.astro";
         involved in other relevant NGOs. At the same time, they feel a renewed
         sense of active citizenship which translates to many of them becoming
         volunteers in our organisation, helping run and facilitate our events.
-      </ImpactFlipCard>
-
-      <ImpactFlipCard
+      </ImpactCard> -->
+    <!-- <ImpactCard
         title='Traveling and International Opportunities'
         imageURL='/Impact/ImpactPhoto6.jpg'
         reversed={true}
@@ -108,7 +114,6 @@ import Layout from "~/layouts/Layout.astro";
         countries. We give the chance to over 50+ of our participants and alumni
         to travel abroad to international conferences and events to take part in
         unique educational experiences and make international friendships.
-      </ImpactFlipCard>
-    </div>
-  </div>
+      </ImpactCard> -->
+  </section>
 </Layout>

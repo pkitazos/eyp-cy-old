@@ -25,7 +25,7 @@ const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
         >
           <Title
             title={`National Committee ${year}`}
-            titlePosition='items-center'
+            titlePosition='justify-center'
             titleSize='text-2xl sm:text-3xl'
             titleColor='text-primary-700'
             underlineWidth='w-14'

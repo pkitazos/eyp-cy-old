@@ -1,5 +1,5 @@
 export { default as EventTypeCard } from "./EventTypeCard";
-export { default as ImpactFlipCard } from "./ImpactFlipCard";
+export { default as ImpactCard } from "./ImpactCard";
 export { default as NCMemberCard } from "./NCMemberCard";
 export { default as PartnerCard } from "./PartnerCard";
 export { default as PatronCard } from "./PatronCard";
