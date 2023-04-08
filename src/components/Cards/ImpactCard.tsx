@@ -19,10 +19,10 @@ const ImpactCard: FC<props> = ({
   return (
     <div
       className={`flex ${
-        reversed ? "flex-row-reverse" : "flex-row"
+        reversed ? "sm:flex-row-reverse" : "sm:flex-row"
       } items-center gap-10`}
     >
-      <div className='flex h-full lg:w-1/2 xl:w-2/5'>
+      <div className='hidden h-full sm:flex lg:w-1/2 xl:w-2/5'>
         <MaskedImage imageURL={imageURL} />
       </div>
       <div className=' flex flex-col justify-center gap-y-4 lg:w-1/2 xl:w-3/5'>
