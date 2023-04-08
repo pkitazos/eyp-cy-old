@@ -10,7 +10,7 @@ export {
   PageTitle,
   Title,
 } from "./Base";
-export { TestimonialCarousel, WhatWeDoSection } from "./Blocks";
+export { TestimonialCarousel } from "./Blocks";
 export { default as BoardPosition } from "./BoardPosition";
 export {
   EventTypeCard,

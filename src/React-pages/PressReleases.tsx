@@ -5,7 +5,7 @@ const PressReleases: FC = () => {
   return (
     <>
       <PageTitle title='Press Releases' />
-      <div className='mt-20 p-6 text-center text-5xl font-semibold '>
+      <div className='mt-20 p-6 text-center text-xl font-semibold xs:text-3xl md-lg:text-4xl '>
         Coming Soon ...
       </div>
     </>

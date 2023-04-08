@@ -1,13 +1,3 @@
-export { default as Events } from "./[depr] Events";
 export { default as GetInvolved } from "./GetInvolved";
-export { default as PatronsAndPartners } from "./[depr] PatronsAndPartners";
 export { default as PressReleases } from "./PressReleases";
 export { default as PublicRelations } from "./PublicRelations";
-export { default as AboutUs } from "./[depr] AboutUs";
-export { default as DaysOfEYP } from "./[depr] DaysOfEYP";
-export { default as Home } from "./[depr] Home";
-export { default as Impact } from "./[depr] Impact";
-export { default as NationalCommittee } from "./[depr] NationalCommittee";
-export { default as NationalSession } from "./[depr] NationalSession";
-export { default as PreSelectionDays } from "./[depr] PreSelectionDays";
-export { default as YouthSummit } from "./[depr] YouthSummit";

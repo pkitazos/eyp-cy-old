@@ -29,7 +29,7 @@ const TestimonialCarousel: FC = () => {
           <TestimonialCard
             name='Theodoulos Hadjimatheou'
             info='23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge'
-            imageURL='/HomePage/TheodoulosPhoto.jpg'
+            imageURL='/assets/testimonial-theo.jpg'
           >
             EYP has changed my life literally. There's a plethora of areas that
             I was unaware or indifferent to, that through EYP I now find
@@ -49,7 +49,7 @@ const TestimonialCarousel: FC = () => {
           <TestimonialCard
             name='Elena Odysseos'
             info='24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK'
-            imageURL='/HomePage/ElenaPhoto.jpg'
+            imageURL='/assets/testimonial-elena.jpg'
           >
             Through my involvement in the organisation I have developed both
             organisational and leadership skills which are appreciated in any
@@ -67,7 +67,7 @@ const TestimonialCarousel: FC = () => {
           <TestimonialCard
             name='Maddie Theodoulou'
             info='17, Member since 2020, High school student'
-            imageURL='/HomePage/MaddiePhoto.png'
+            imageURL='/assets/testimonial-maddie.png'
           >
             Lockdown in 2020 was a peculiar time for all of us. Everything from
             work to school became digital. At the beginning I honestly couldn't
