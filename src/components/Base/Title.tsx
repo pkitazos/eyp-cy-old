@@ -10,6 +10,13 @@ interface props {
   underlineColor?: string;
 }
 
+// new props
+interface newProps {
+  title: string;
+  class?: string; // = "h1", could be h2, h3, etc.
+  color?: string; //daisy ui shit, i.e. primary, secondary, etc.
+}
+
 const Title: FC<props> = ({
   title,
   titleSize = "text-3xl",
@@ -21,14 +28,14 @@ const Title: FC<props> = ({
   return (
     <>
       <div className={`flex ${titlePosition} gap-2`}>
-        <div className='flex flex-col items-center'>
+        <div className="flex flex-col items-center">
           <h1
             className={`${titleSize} ${titleColor} text-center font-semibold `}
           >
             {title}
           </h1>
           <Underline
-            className='mt-1'
+            className="mt-1"
             underlineWidth={underlineWidth}
             underlineColor={underlineColor}
           />

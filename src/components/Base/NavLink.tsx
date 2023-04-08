@@ -1,20 +1,22 @@
 import type { FC } from "react";
-import { slugify } from "../../utils";
+import { slugify } from "~/utils";
 
 interface props {
-  item: string;
+  item: string; // make children?
   to?: string;
   prefix?: string;
   className?: string;
 }
 
+// TODO remove prefix @petro
+
 const NavLink: FC<props> = ({ item, to, prefix = "", className }) => {
   if (prefix) {
-    prefix = "/" + prefix;
+    prefix = "/" + slugify(item);
   }
   return (
     <a
-      className={`cursor-pointer rounded-xl py-2 px-5 hover:bg-accent-900 hover:text-black
+      className={`cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black
         ${className}`}
       href={`${prefix}${to ? to : slugify(item)}`}
     >
