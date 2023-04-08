@@ -1,5 +1,4 @@
 import type { FC, ReactNode } from "react";
-import "~/styles/SessionElementCard.css";
 
 interface props {
   title: string;

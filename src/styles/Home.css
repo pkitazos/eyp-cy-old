@@ -1,8 +1,0 @@
-.upcoming-events-container {
-  margin: auto 0;
-  overflow-x: hidden;
-}
-
-.upcoming-events-container:hover {
-  overflow-x: scroll;
-}
