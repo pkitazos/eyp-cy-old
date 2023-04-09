@@ -1,12 +1,10 @@
 export {
-  AnchorArrow,
   Breadcrumbs,
   Drawer,
   Dropdown,
   Footer,
   Header,
   MaskedImage,
-  NavLink,
   Title,
 } from "./Base";
 export { BoardPosition, TestimonialCarousel } from "./Blocks";

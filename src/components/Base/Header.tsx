@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useMediaQuery } from "~/hooks";
 import "~/styles/Header.css";
-import { Drawer, Dropdown, NavLink } from ".";
+import { Drawer, Dropdown } from ".";
 
 const HeaderLogo = () => {
   return (
@@ -21,15 +21,19 @@ const HeaderLogo = () => {
 const DesktopNav = () => {
   return (
     <div className='flex items-center justify-end gap-4 text-xl font-semibold text-white xl:gap-10'>
-      <NavLink item='Home' to='/' />
+      <a
+        href='/'
+        className='cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black'
+      >
+        Home
+      </a>
+
       <Dropdown
         mainItem='About Us'
-        prefix='about-us'
         items={["Patrons & Partners", "Impact", "National Committee"]}
       />
       <Dropdown
         mainItem='Events'
-        prefix='events'
         items={[
           "Pre-Selection Days",
           "Days of EYP",
@@ -37,11 +41,7 @@ const DesktopNav = () => {
           "National Session",
         ]}
       />
-      <Dropdown
-        prefix='public-relations'
-        mainItem='Public Relations'
-        items={["Press Releases"]}
-      />
+      <Dropdown mainItem='Public Relations' items={["Press Releases"]} />
 
       <a
         className='cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl'
@@ -74,13 +74,11 @@ const MobileNav = () => {
           Home
         </a>
         <Drawer
-          prefix='about-us'
           mainItem='About Us'
           items={["Patrons & Partners", "Impact", "National Committee"]}
         />
         <Drawer
           mainItem='Events'
-          prefix='events'
           items={[
             "Pre-Selection Days",
             "Days of EYP",
@@ -88,11 +86,7 @@ const MobileNav = () => {
             "National Session",
           ]}
         />
-        <Drawer
-          prefix='public-relations'
-          mainItem='Public Relations'
-          items={["Press Releases"]}
-        />
+        <Drawer mainItem='Public Relations' items={["Press Releases"]} />
 
         <a
           className={`transition-rounded cursor-pointer rounded-4xl bg-accent-900 px-6

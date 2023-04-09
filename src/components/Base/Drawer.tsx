@@ -42,7 +42,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
             <div key={i}>
               <a
                 className='cursor-pointer px-5 text-lg hover:text-slate-300'
-                href={`/${prefix}${slugify(item)}`}
+                href={`${slugify(mainItem)}${slugify(item)}`}
               >
                 {item}
               </a>

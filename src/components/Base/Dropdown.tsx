@@ -1,28 +1,32 @@
 import type { FC } from "react";
 import "~/styles/Dropdown.css";
-import { NavLink } from ".";
+import { slugify } from "~/utils";
 
 interface props {
   mainItem: string;
   items: string[];
-  prefix?: string;
 }
 
-const Dropdown: FC<props> = ({ mainItem, items, prefix = "" }) => {
+const Dropdown: FC<props> = ({ mainItem, items }) => {
   return (
     <>
       <div className='dropdown-container'>
-        <NavLink className='z-5' item={mainItem} />
-        <div className='pt-2 dropdown-content'>
-          <div className='mt-2 z-2 p-2 rounded-xl top-9 bg-primary-900/60'>
+        <a
+          className='cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black'
+          href={slugify(mainItem)}
+        >
+          {mainItem}
+        </a>
+        <div className='dropdown-content pt-2'>
+          <div className='z-2 top-9 mt-2 rounded-xl bg-primary-900/60 p-2'>
             {items.map((item, i) => (
-              <div key={i}>
-                <NavLink
-                  className='w-max menu-item'
-                  item={item}
-                  prefix={prefix}
-                />
-              </div>
+              <a
+                key={i}
+                className='menu-item w-max cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black'
+                href={`${slugify(mainItem)}${slugify(item)}`}
+              >
+                {item}
+              </a>
             ))}
           </div>
         </div>
