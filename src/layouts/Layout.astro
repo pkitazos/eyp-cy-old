@@ -11,22 +11,22 @@ const { title, home = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
     </style>
-    <meta name="generator" content={Astro.generator} />
+    <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <!-- <DebugOverlay client:load /> -->
     {
       home && (
-        <div class="absolute left-0 top-[10vh] -z-10 w-full">
+        <div class='absolute left-0 top-[10vh] -z-10 w-full'>
           <DiagonalWaves />
         </div>
       )

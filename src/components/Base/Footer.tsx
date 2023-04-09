@@ -6,7 +6,7 @@ import { FacebookIcon, InstagramIcon } from "..";
 // TODO: try out icons instead of text in Contact us section
 
 const Footer: FC = () => (
-  <div className='bottom-0'>
+  <div className='bottom-0 w-full'>
     <svg id='visual' viewBox='0 0 1000 250'>
       <rect x='0' y='0' width='1000' height='250' fill='#f9f9f9'></rect>
       <path
