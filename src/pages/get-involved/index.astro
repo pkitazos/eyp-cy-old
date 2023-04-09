@@ -5,12 +5,13 @@ import Layout from "~/layouts/Layout.astro";
 
 <Layout title='Get Involved'>
   <section class='page-margin mb-28 flex flex-col px-5'>
-    <Title
-      title='Get Involved'
-      titlePosition='justify-center'
-      titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
-      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
-    />
+    <div class='flex justify-center'>
+      <Title
+        text='Get Involved'
+        order='h1'
+        underlineRotation='rotate-[190deg]'
+      />
+    </div>
     <p class='text-justify text-lg leading-relaxed md:text-xl'>
       The European Youth Parliament Cyprus offers its participants a unique
       learning experience. Every year, 500+ young people from both Cyprus and
@@ -26,13 +27,14 @@ import Layout from "~/layouts/Layout.astro";
     class='page-margin mb-32 grid grid-cols-1 gap-16 px-5 md:grid-cols-2'
   >
     <div class='flex flex-col items-center gap-4'>
-      <Title
-        title='High-School Students'
-        titlePosition='justify-center'
-        titleSize='text-xl xs:text-2xl md-lg:text-3xl'
-        underlineWidth='w-9 xs:w-10 md-lg:w-12 rotate-[176deg] mb-3 xs:mb-4 md-lg:mb-6'
-        underlineColor='text-orange-500'
-      />
+      <div class='flex justify-center'>
+        <Title
+          text='High-School Students'
+          order='h3'
+          underlineRotation='rotate-[176deg]'
+          underlineColor='text-orange-500'
+        />
+      </div>
       <p class='mb-4 text-justify text-xl'>
         If you are a High-School Student aged 15-18, you can register
         individually to attend our EYP Day. If your school is interested in
@@ -47,13 +49,14 @@ import Layout from "~/layouts/Layout.astro";
       <ActionButton text='Join' />
     </div>
     <div class='flex flex-col items-center gap-4'>
-      <Title
-        title='Young Adults'
-        titlePosition='justify-center'
-        titleSize='text-xl xs:text-2xl md-lg:text-3xl'
-        underlineWidth='w-9 xs:w-10 md-lg:w-12 rotate-6 mb-3 xs:mb-4 md-lg:mb-6'
-        underlineColor='text-fuchsia-500'
-      />
+      <div class='flex justify-center'>
+        <Title
+          text='Young Adults'
+          order='h3'
+          underlineRotation='rotate-6'
+          underlineColor='text-fuchsia-500'
+        />
+      </div>
       <p class='mb-1 text-justify text-xl lg:mb-4'>
         If you are a university student or over 18 years old, you can attend our
         Youth Summit - a 4 day long conference that often takes place in the
@@ -65,12 +68,14 @@ import Layout from "~/layouts/Layout.astro";
     </div>
   </section>
   <section class='page-margin mb-16 flex flex-col px-5'>
-    <Title
-      title='General, Open Events'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
-      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
-    />
+    <div class='flex justify-center'>
+      <Title
+        text='General, Open Events'
+        order='h2'
+        underlineRotation='rotate-[190deg]'
+        underlineColor='text-fuchsia-500'
+      />
+    </div>
     <p class='text-justify text-lg leading-relaxed md:text-xl'>
       We hold various events throughout the year that are open to any young
       person interested. From conferences, to panel discussions, workshops,

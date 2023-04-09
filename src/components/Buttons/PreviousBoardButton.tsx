@@ -23,13 +23,7 @@ const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
           className='no-scrollbar modal-box relative bg-white sm:w-11/12 sm:max-w-5xl'
           htmlFor=''
         >
-          <Title
-            title={`National Committee ${year}`}
-            titlePosition='justify-center'
-            titleSize='text-2xl sm:text-3xl'
-            titleColor='text-primary-700'
-            underlineWidth='w-14'
-          />
+          <Title text={`National Committee ${year}`} order='h2' />
 
           <div className='mt-6 grid grid-cols-1 gap-4 pb-3 xs:grid-cols-2 lg:grid-cols-3 lg-xl:grid-cols-4'>
             <>

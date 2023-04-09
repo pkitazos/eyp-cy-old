@@ -8,12 +8,9 @@ import Layout from "~/layouts/Layout.astro";
     class='page-margin mb-32 flex max-h-max min-h-[60vh] flex-col items-center justify-center'
   >
     <div class='w-5/6 max-w-4xl xl:w-2/3'>
-      <Title
-        title='National Session'
-        titlePosition='justify-center'
-        titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
-        underlineWidth='w-12 xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
-      />
+      <div class='flex justify-center'>
+        <Title text='National Session' order='h1' />
+      </div>
       <p class='text-justify text-lg leading-relaxed md:text-xl'>
         National Sessions are our flagship, annual event which welcomes
         approximately 200 participants from all over Cyprus as well as
@@ -35,12 +32,9 @@ import Layout from "~/layouts/Layout.astro";
     </div>
   </section>
   <section class='page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32'>
-    <Title
-      title='Session Program'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl'
-      underlineWidth='w-11 xs:w-12 md-lg:w-14 mb-6 md-lg:mb-10 xl:mb-16'
-    />
+    <div class='flex justify-center'>
+      <Title text='Session Program' order='h2' />
+    </div>
     <div class='flex flex-col items-center justify-center gap-10'>
       <SessionElementCard className='w-5/6 max-w-5xl' title='Teambuilding'>
         Team building in the context of the European Youth Parliament, means

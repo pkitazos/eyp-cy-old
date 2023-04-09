@@ -2,44 +2,57 @@ import type { FC } from "react";
 import { Underline } from "..";
 
 interface props {
-  title: string;
-  titleSize?: string;
-  titleColor?: string;
-  titlePosition?: string;
-  underlineWidth?: string;
+  text: string;
+  order: "h1" | "h2" | "h3";
+  variant?: "dark" | "light";
   underlineColor?: string;
-}
-
-// new props
-interface newProps {
-  title: string;
-  class?: string; // = "h1", could be h2, h3, etc.
-  color?: string; //daisy ui shit, i.e. primary, secondary, etc.
+  underlineRotation?: string;
 }
 
 const Title: FC<props> = ({
-  title,
-  titleSize = "text-3xl",
-  titleColor = "text-primary-800",
-  titlePosition = "items-center",
-  underlineWidth = "w-16",
+  text,
+  order,
+  variant = "dark",
   underlineColor = "text-accent-900",
+  underlineRotation = "rotate-180",
 }) => {
+  let size: string;
+  let underlineWidth: string;
+  let color: string;
+
+  switch (order) {
+    case "h1":
+      size = "text-3xl xs:text-4xl md-lg:text-5xl";
+      underlineWidth = "w-12 xs:w-14 md-lg:w-16";
+      break;
+    case "h2":
+      size = "text-2xl xs:text-3xl md-lg:text-4xl";
+      underlineWidth = "w-10 xs:w-12 md-lg:w-14";
+      break;
+    case "h3":
+      size = "text-xl xs:text-2xl md-lg:text-3xl";
+      underlineWidth = "w-9 xs:w-10 md-lg:w-12";
+      break;
+  }
+
+  switch (variant) {
+    case "dark":
+      color = "text-primary-900";
+      break;
+    case "light":
+      color = "text-white";
+      break;
+  }
+
   return (
     <>
-      <div className={`flex ${titlePosition} gap-2`}>
-        <div className="flex flex-col items-center">
-          <h1
-            className={`${titleSize} ${titleColor} text-center font-semibold `}
-          >
-            {title}
-          </h1>
-          <Underline
-            className="mt-1"
-            underlineWidth={underlineWidth}
-            underlineColor={underlineColor}
-          />
-        </div>
+      <div className='flex flex-col items-center'>
+        <h1 className={`${size} ${color} text-center font-semibold`}>{text}</h1>
+        <Underline
+          className={`mb-3 mt-1 xs:mb-4 md-lg:mb-6 ${underlineWidth}`}
+          color={underlineColor}
+          tilt={underlineRotation}
+        />
       </div>
     </>
   );

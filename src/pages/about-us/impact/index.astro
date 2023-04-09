@@ -6,12 +6,9 @@ import Layout from "~/layouts/Layout.astro";
 <Layout title='Impact'>
   <!-- <DebugOverlay client:load /> -->
   <section class='page-margin mb-32 flex flex-col justify-center'>
-    <Title
-      title='Our Impact'
-      titlePosition='justify-center'
-      titleSize='text-3xl xs:text-4xl md-lg:text-5xl '
-      underlineWidth='w-12 rotate-[190deg] xs:w-14 md-lg:w-16 mb-3 xs:mb-4 md-lg:mb-6'
-    />
+    <div class='flex justify-center'>
+      <Title text='Our Impact' order='h1' />
+    </div>
     <p class='text-justify text-lg leading-relaxed md:text-xl'>
       The European Youth Parliament Cyprus provides a unique educational
       experience to young people from both Cyprus and Europe to develop crucial
@@ -31,12 +28,13 @@ import Layout from "~/layouts/Layout.astro";
   <section
     class='page-margin mb-16 flex max-h-max min-h-[60vh] flex-col gap-16'
   >
-    <Title
-      title='What our Impact looks like'
-      titlePosition='justify-center'
-      titleSize='text-2xl xs:text-3xl md-lg:text-4xl '
-      underlineWidth='w-12 xs:w-14 md-lg:w-16 mb-2 xs:mb-14 md-lg:mb-16'
-    />
+    <div class='flex justify-center'>
+      <Title
+        text='What our Impact looks like'
+        order='h2'
+        underlineRotation='rotate-[190deg]'
+      />
+    </div>
     <ImpactCard
       title='Forming opinions and solving current challenges'
       imageURL='/assets/impact-1.png'
