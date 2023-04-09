@@ -17,6 +17,9 @@ dist-ssr
 # generated types
 .astro/
 
+# test files
+src/pages/test/*
+
 # environment variables
 .env
 .env.production
