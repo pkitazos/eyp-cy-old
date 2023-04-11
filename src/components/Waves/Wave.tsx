@@ -1,19 +1,22 @@
 import type { FC } from "react";
-import { makePath } from "../../utils";
+import { makePath } from "~/utils";
+import generateKeyTimes from "~/utils/generateKeyTimes";
 
 interface props {
   pathArr: string[];
   fill: string;
 }
 
-const Wave: FC<props> = ({ fill, pathArr }) => {
+const Wave: FC<props> = ({ pathArr, fill }) => {
+  let steps = pathArr.length * 2 - 1;
+  let keyTimes = generateKeyTimes(steps);
   return (
     <path fill={fill}>
       <animate
         attributeName='d'
         values={makePath(pathArr).join("; ")}
-        keyTimes='0; 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1'
-        dur='11s'
+        keyTimes={keyTimes}
+        dur={`${steps}s`}
         repeatCount='indefinite'
       />
     </path>

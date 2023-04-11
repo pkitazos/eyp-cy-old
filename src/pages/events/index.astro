@@ -11,35 +11,37 @@ import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title='Events'>
-  <section class='page-margin max-h-max min-h-[60vh]'>
-    <div class='flex justify-center lg:justify-start'>
+  <section
+    class='page-margin flex max-h-max min-h-[60vh] flex-col items-center'
+  >
+    <div class='mb-3 flex justify-center lg:justify-start'>
       <Title text='Our Events' order='h1' />
     </div>
     <div
-      class='flex shrink flex-col gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4'
+      class='flex w-max shrink flex-col items-center gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4'
     >
-      <div class='col-span-9 col-start-1 row-span-1'>
+      <div class='col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl'>
         <EventTypeCard
           title='Pre-Selection Days'
           imageURL='/assets/logo-pre-selections.png'
           info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
         />
       </div>
-      <div class='col-span-9 col-start-2 row-span-1'>
+      <div class='col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl'>
         <EventTypeCard
           title='Days of EYP'
           info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
           imageURL='/assets/logo-days-of-eyp.png'
         />
       </div>
-      <div class='col-span-9 col-start-3 row-span-1'>
+      <div class='col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl'>
         <EventTypeCard
           title='Youth Summit'
           info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
           imageURL='/assets/logo-youth-summit.png'
         />
       </div>
-      <div class='col-span-9 col-start-4 row-span-1'>
+      <div class='col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl'>
         <EventTypeCard
           title='National Session'
           info='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'

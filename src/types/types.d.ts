@@ -19,3 +19,11 @@ type years =
   | 2022;
 
 type yearString = `year_${years}`;
+
+type waveLayers = {
+  [layer: string]: string[];
+};
+
+type wavePaths = {
+  [dividerName: string]: waveLayers;
+};

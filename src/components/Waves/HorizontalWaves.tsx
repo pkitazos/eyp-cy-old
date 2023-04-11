@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { Wave } from "..";
-import { wavePaths } from "../../data";
+import { oldWavePaths } from "../../data";
 
 const HorizontalWaves: FC = () => {
   return (
@@ -8,10 +8,10 @@ const HorizontalWaves: FC = () => {
       <div className='w-full '>
         <div className='h-12 bg-primary-800'>&nbsp;</div>
         <svg viewBox='0 0 900 200'>
-          <Wave fill='#66D4FF' pathArr={wavePaths.h1} />
-          <Wave fill='#00b7ff' pathArr={wavePaths.h2} />
-          <Wave fill='#3654FF' pathArr={wavePaths.h3} />
-          <Wave fill='#253AB0' pathArr={wavePaths.h4} />
+          <Wave fill='#66D4FF' pathArr={oldWavePaths.h1} />
+          <Wave fill='#00b7ff' pathArr={oldWavePaths.h2} />
+          <Wave fill='#3654FF' pathArr={oldWavePaths.h3} />
+          <Wave fill='#253AB0' pathArr={oldWavePaths.h4} />
         </svg>
       </div>
     </>

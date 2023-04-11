@@ -42,4 +42,4 @@ export {
   Underline,
   WhiteStar,
 } from "./SVGs";
-export { DiagonalWaves, FooterWaves, HorizontalWaves, Wave } from "./Waves";
+export { HorizontalWaves, Wave, WaveDivider } from "./Waves";
