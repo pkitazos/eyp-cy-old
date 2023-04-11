@@ -19,6 +19,7 @@ dist-ssr
 
 # test files
 src/pages/test/*
+src/assets/*
 
 # environment variables
 .env
