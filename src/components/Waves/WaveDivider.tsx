@@ -2,21 +2,24 @@ import type { FC } from "react";
 import { Wave } from "~/components";
 
 interface props {
-  waveLayers: waveLayers;
-  colors: string[];
+  waveLayers: singleWave;
   viewBox?: string;
 }
 
-const WaveDivider: FC<props> = ({
-  waveLayers,
-  colors,
-  viewBox = "0 0 1000 250",
-}) => {
+const getWaveData = (w: singleWave) => {
+  let layers = w.layers;
+  let colors = w.colors;
+  return layers.map(function (layer, i) {
+    return [layer, colors[i]] as [string[], string];
+  });
+};
+
+const WaveDivider: FC<props> = ({ waveLayers, viewBox = "0 0 1000 250" }) => {
   return (
     <>
       <svg id='visual' viewBox={viewBox}>
-        {Object.keys(waveLayers).map((waveLayer, i) => (
-          <Wave fill={colors[i]} pathArr={waveLayers[waveLayer]} />
+        {getWaveData(waveLayers).map(([path, color]) => (
+          <Wave fill={color} pathArr={path} />
         ))}
       </svg>
     </>

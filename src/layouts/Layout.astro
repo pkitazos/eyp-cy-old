@@ -7,7 +7,7 @@ import {
   HorizontalWaves,
   WaveDivider,
 } from "~/components";
-import { wavePaths } from "~/data";
+import { paths } from "~/data";
 
 export interface Props {
   title: string;
@@ -35,8 +35,7 @@ const { title, home = false } = Astro.props;
       home && (
         <div class='absolute left-0 top-[10vh] -z-10 w-full'>
           <WaveDivider
-            waveLayers={wavePaths.headerDiagonal}
-            colors={["#66D4FF", "#16B2FF", "#008AFF", "#3654FF", "#253AB0"]}
+            waveLayers={paths.headerDiagonal}
             viewBox='0 0 1000 650'
           />
         </div>

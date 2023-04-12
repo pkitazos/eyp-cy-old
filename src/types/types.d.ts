@@ -20,10 +20,11 @@ type years =
 
 type yearString = `year_${years}`;
 
-type waveLayers = {
-  [layer: string]: string[];
+type singleWave = {
+  layers: string[][];
+  colors: string[];
 };
 
-type wavePaths = {
-  [dividerName: string]: waveLayers;
+type waveData = {
+  [dividerName: string]: singleWave;
 };
