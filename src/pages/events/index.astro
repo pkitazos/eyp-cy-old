@@ -1,12 +1,12 @@
 ---
 import {
+  WaveDivider,
   ActionButton,
-  DividerBottom1,
-  DividerTop1,
   EventTypeCard,
   SessionElementCard,
   Title,
 } from "~/components";
+import { paths } from "~/data";
 import Layout from "~/layouts/Layout.astro";
 ---
 
@@ -50,9 +50,9 @@ import Layout from "~/layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <DividerBottom1 />
+  <WaveDivider waveLayers={paths.eventsTop} />
   <section
-    class='page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-600 pt-10'
+    class='page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-700 pt-10'
   >
     <div class='flex justify-center'>
       <Title
@@ -67,7 +67,7 @@ import Layout from "~/layouts/Layout.astro";
       <ActionButton text='Individual' />
     </div>
   </section>
-  <DividerTop1 />
+  <WaveDivider waveLayers={paths.eventsBottom} />
   <section class='page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32'>
     <div class='flex justify-center'>
       <Title text='Session Program' order='h2' />

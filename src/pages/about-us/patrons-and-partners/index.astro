@@ -1,12 +1,12 @@
 ---
 import {
-  DividerBottom1,
-  DividerTop1,
+  WaveDivider,
   Title,
   PatronCard,
   Underline,
   PartnerCard,
 } from "~/components";
+import { paths } from "~/data";
 import Layout from "~/layouts/Layout.astro";
 ---
 
@@ -19,7 +19,7 @@ import Layout from "~/layouts/Layout.astro";
       <div class='flex justify-center'>
         <Title text='Board of Patrons' order='h2' />
       </div>
-      <p class='mt-6 text-center text-lg'>
+      <p class='mt-6 text-center text-lg leading-relaxed md:text-xl'>
         EYP Cyprus's work and impact is recognised by various high profile
         stakeholders in Cyprus, including our board of patrons which includes
       </p>
@@ -39,14 +39,14 @@ import Layout from "~/layouts/Layout.astro";
       />
       <PatronCard name='Mr. Constantinos Yiorkadjis' title='Mayor of Nicosia' />
     </div>
-    <p class='mt-16 text-center text-lg'>
+    <p class='mt-16 text-center text-lg leading-relaxed md:text-xl'>
       Our patrons' support highlights the value of our organisation's work. They
       also provide invaluable guidance and active support for our events and our
       workings, both by providing advice, support and also attending various of
       our events.
     </p>
   </section>
-  <DividerBottom1 />
+  <WaveDivider waveLayers={paths.patronsTop} />
   <section
     class='page-padding max-h-max min-h-[60vh] bg-primary-800 pb-24 pt-16'
   >
@@ -77,7 +77,7 @@ import Layout from "~/layouts/Layout.astro";
       />
     </div>
   </section>
-  <DividerTop1 />
+  <WaveDivider waveLayers={paths.patronsBottom} />
   <section class='page-margin max-h-max min-h-[60vh]'>
     <div class='flex justify-center sm:justify-start'>
       <Title text='Our Partners' order='h2' underlineRotation='rotate-12' />
