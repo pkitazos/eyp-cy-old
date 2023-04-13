@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Underline } from "..";
+import { Underline } from "~/components";
 
 interface props {
   text: string;

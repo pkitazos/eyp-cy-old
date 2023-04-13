@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { slugify } from "../../utils";
+import { slugify } from "~/utils";
 
 // TODO: improve design
 

@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { MaskedImage, Title } from "..";
+import { MaskedImage, Title } from "~/components";
 
 interface props {
   title: string;

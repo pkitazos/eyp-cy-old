@@ -1,6 +1,5 @@
 import type { FC } from "react";
-import { makePath } from "~/utils";
-import { generateKeyTimes } from "~/utils";
+import { generateKeyTimes, makePath } from "~/utils";
 
 interface props {
   pathArr: string[];

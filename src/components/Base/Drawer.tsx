@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { slugify } from "~/utils";
-import { ChevronDown } from "..";
+import { ChevronDown } from "~/components";
 
 interface props {
   mainItem: string;

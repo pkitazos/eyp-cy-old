@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { CaretLeft, CaretRight, TestimonialCard } from "..";
+import { CaretLeft, CaretRight, TestimonialCard } from "~/components";
 
 const TestimonialCarousel: FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

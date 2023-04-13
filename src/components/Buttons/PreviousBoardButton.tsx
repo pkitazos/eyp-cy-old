@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { BoardPosition, Title } from "..";
+import { BoardPosition, Title } from "~/components";
 
 interface props {
   year: string;

@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import { Wave } from "..";
-import { oldWavePaths } from "../../data";
+import { Wave } from "~/components";
+import { oldWavePaths } from "~/data";
 
 const HorizontalWaves: FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useMediaQuery } from "~/hooks";
 import "~/styles/Header.css";
-import { Drawer, Dropdown } from ".";
+import { Drawer, Dropdown } from "~/components";
 
 const HeaderLogo = () => {
   return (
