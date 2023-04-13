@@ -53,7 +53,9 @@ import Layout from "~/layouts/Layout.astro";
       <div class='hide-left flex justify-center'>
         <Title text='Who We Are' order='h2' />
       </div>
-      <p class='text-justify text-lg leading-relaxed md:text-xl'>
+      <p
+        class='hide-left delay-card text-justify text-lg leading-relaxed md:text-xl'
+      >
         The European Youth Parliament (EYP) is a non-partisan and independent
         educational platform bringing together thousands of young people from
         all over Europe to discuss current issues, develop their skills through
@@ -79,7 +81,7 @@ import Layout from "~/layouts/Layout.astro";
       <div
         class='no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5'
       >
-        <div class='basis-1/4'>
+        <div class='hide-right delay-card basis-1/4'>
           <UpcomingEventCard
             title='Pre-Selection Days'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
@@ -87,7 +89,7 @@ import Layout from "~/layouts/Layout.astro";
             date={"20/03/2023"}
           />
         </div>
-        <div class='basis-1/4'>
+        <div class='hide-right delay-card basis-1/4'>
           <UpcomingEventCard
             title='Days of EYP'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
@@ -95,7 +97,7 @@ import Layout from "~/layouts/Layout.astro";
             date={"27/03/2023"}
           />
         </div>
-        <div class='basis-1/4'>
+        <div class='hide-right delay-card basis-1/4'>
           <UpcomingEventCard
             title='Youth Summit'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
@@ -103,7 +105,7 @@ import Layout from "~/layouts/Layout.astro";
             date={"16/07/2023"}
           />
         </div>
-        <div class='basis-1/4'>
+        <div class='hide-right delay-card basis-1/4'>
           <UpcomingEventCard
             title='National Session'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua.'
@@ -128,8 +130,9 @@ import Layout from "~/layouts/Layout.astro";
           underlineRotation='rotate-12'
         />
       </div>
-
-      <TestimonialCarousel client:visible />
+      <div class='hide-right delay-card'>
+        <TestimonialCarousel client:visible />
+      </div>
     </div>
   </section>
 </Layout>
