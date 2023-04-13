@@ -32,4 +32,4 @@ def extractStuff(filename):
 
 
 print("const paths = ", end="")
-print(extractStuff("header-diagonal"))
+print(extractStuff("footer"))
