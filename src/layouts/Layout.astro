@@ -21,7 +21,6 @@ const { title, home = false } = Astro.props;
       @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
     </style>
     <meta name='generator' content={Astro.generator} />
-    <script defer src='./src/utils/intersectionObserver.ts'></script>
     <title>{title}</title>
   </head>
   <body class='overflow-x-clip'>
@@ -39,5 +38,25 @@ const { title, home = false } = Astro.props;
     {!home && <HorizontalWaves />}
     <slot />
     <Footer />
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+            if (entry.isIntersecting) observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0 }
+      );
+
+      const hiddenLeft = document.querySelectorAll(".hide-left");
+      hiddenLeft.forEach((el) => observer.observe(el));
+
+      const hiddenRight = document.querySelectorAll(".hide-right");
+      hiddenRight.forEach((el) => observer.observe(el));
+
+      const hiddenBottom = document.querySelectorAll(".hide-bottom");
+      hiddenBottom.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
