@@ -10,9 +10,9 @@ def toCamelCase(str):
     return "".join(lst)
 
 
-def extractStuff(filename):
+def extractStuff(filename, num):
     frames = []
-    for i in range(1, 6):
+    for i in range(1, num):
         doc = minidom.parse(f"./src/assets/{filename}-{i}.svg")
         path_strings = [path.getAttribute("d") for path in doc.getElementsByTagName("path")]
         doc.unlink()
@@ -32,4 +32,4 @@ def extractStuff(filename):
 
 
 print("const paths = ", end="")
-print(extractStuff("footer"))
+print(extractStuff("patrons-bottom", num=2))

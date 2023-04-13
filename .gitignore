@@ -20,6 +20,7 @@ dist-ssr
 # test files
 src/pages/test/*
 src/assets/*
+src/data/temp.ts
 
 # environment variables
 .env
