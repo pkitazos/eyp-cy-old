@@ -1,3 +1,5 @@
+// TODO: create separate observer for UpcomingEventcards that has a positive rootMargin of X to be able to load all potentially visible cards
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -16,5 +18,3 @@ hiddenRight.forEach((el) => observer.observe(el));
 
 const hiddenBottom = document.querySelectorAll(".hide-bottom");
 hiddenBottom.forEach((el) => observer.observe(el));
-
-// TODO: create separate observer for UpcomingEventcards that has a positive rootMargin of X to be able to load all potentially visible cards

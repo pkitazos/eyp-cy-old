@@ -45,25 +45,6 @@ const { title, home = false } = Astro.props;
     }
     <slot />
     <Footer />
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            entry.target.classList.toggle("show", entry.isIntersecting);
-            if (entry.isIntersecting) observer.unobserve(entry.target);
-          });
-        },
-        { threshold: 0 }
-      );
-
-      const hiddenLeft = document.querySelectorAll(".hide-left");
-      hiddenLeft.forEach((el) => observer.observe(el));
-
-      const hiddenRight = document.querySelectorAll(".hide-right");
-      hiddenRight.forEach((el) => observer.observe(el));
-
-      const hiddenBottom = document.querySelectorAll(".hide-bottom");
-      hiddenBottom.forEach((el) => observer.observe(el));
-    </script>
+    <script is:inline src='/scripts/animations.js'></script>
   </body>
 </html>
