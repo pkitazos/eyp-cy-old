@@ -4,14 +4,14 @@ import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title='National Session'>
-  <section
-    class='page-margin mb-32 flex max-h-max min-h-[60vh] flex-col items-center justify-center'
-  >
+  <section class='page-margin mt-16 flex max-h-max min-h-[60vh] justify-center'>
     <div class='w-5/6 max-w-4xl xl:w-2/3'>
-      <div class='flex justify-center'>
+      <div class='hide-left flex justify-center'>
         <Title text='National Session' order='h1' />
       </div>
-      <p class='text-justify text-lg leading-relaxed md:text-xl'>
+      <p
+        class='hide-left delay-card text-justify text-lg leading-relaxed md:text-xl'
+      >
         National Sessions are our flagship, annual event which welcomes
         approximately 200 participants from all over Cyprus as well as
         participants from all over Europe. The conference takes place over 5
@@ -31,12 +31,15 @@ import Layout from "~/layouts/Layout.astro";
       </p>
     </div>
   </section>
-  <section class='page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32'>
-    <div class='flex justify-center'>
+  <section class='page-margin mt-32 max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32'>
+    <div class='hide-bottom mb-3 flex justify-center'>
       <Title text='Session Program' order='h2' />
     </div>
     <div class='flex flex-col items-center justify-center gap-10'>
-      <SessionElementCard className='w-5/6 max-w-5xl' title='Teambuilding'>
+      <SessionElementCard
+        className='hide-right delay-card w-5/6 max-w-5xl'
+        title='Teambuilding'
+      >
         Team building in the context of the European Youth Parliament, means
         communication training, focused on group dynamics. The fundamental
         purpose of team building is to get a disparate group of individuals
@@ -47,7 +50,7 @@ import Layout from "~/layouts/Layout.astro";
         and begin functioning as a group.
       </SessionElementCard>
       <SessionElementCard
-        className='w-5/6 max-w-5xl'
+        className='hide-left delay-card w-5/6 max-w-5xl'
         title='Committee Work'
         titlePosition='text-right'
       >
@@ -59,7 +62,7 @@ import Layout from "~/layouts/Layout.astro";
         General Assembly.
       </SessionElementCard>
       <SessionElementCard
-        className='w-5/6 max-w-5xl'
+        className='hide-right delay-card w-5/6 max-w-5xl'
         title='Evening Activities'
       >
         To complement the academic elements of our sessions, our organising
@@ -68,7 +71,7 @@ import Layout from "~/layouts/Layout.astro";
         inter-team interactions
       </SessionElementCard>
       <SessionElementCard
-        className='w-5/6 max-w-5xl'
+        className='hide-left delay-card w-5/6 max-w-5xl'
         title='Discussing Europe'
         titlePosition='text-right'
       >
@@ -78,7 +81,10 @@ import Layout from "~/layouts/Layout.astro";
         the opportunity to interact with professionals with expertise in the
         field, as well as experienced political figures.
       </SessionElementCard>
-      <SessionElementCard className='w-5/6 max-w-5xl' title='General Assembly'>
+      <SessionElementCard
+        className='hide-right delay-card w-5/6 max-w-5xl'
+        title='General Assembly'
+      >
         The General Assembly reunites all the participants of the session to
         consider the results of committee work. Each committee presents and
         defends their motion for a resolution, which is then debated according
