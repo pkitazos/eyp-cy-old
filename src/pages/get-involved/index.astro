@@ -5,28 +5,31 @@ import Layout from "~/layouts/Layout.astro";
 
 <Layout title='Get Involved'>
   <section class='page-margin mb-28 flex flex-col px-5'>
-    <div class='flex justify-center'>
-      <Title
-        text='Get Involved'
-        order='h1'
-        underlineRotation='rotate-[190deg]'
-      />
+    <div class='hide-bottom'>
+      <div class='flex justify-center'>
+        <Title
+          text='Get Involved'
+          order='h1'
+          underlineRotation='rotate-[190deg]'
+        />
+      </div>
+      <p class='text-justify text-lg leading-relaxed md:text-xl'>
+        The European Youth Parliament Cyprus offers its participants a unique
+        learning experience. Every year, 500+ young people from both Cyprus and
+        Europe join our activities. There are various ways to get involved -
+        typically, the first step is to participate in one of our EYP sessions
+        which take place throughout the year. At the same time, we hold various
+        open events, discussion forums, workshops, trainings and panel
+        discussions which you can join! Get in touch and follow us on social
+        media to keep up to date with opportunities to take part in our
+        activities.
+      </p>
     </div>
-    <p class='text-justify text-lg leading-relaxed md:text-xl'>
-      The European Youth Parliament Cyprus offers its participants a unique
-      learning experience. Every year, 500+ young people from both Cyprus and
-      Europe join our activities. There are various ways to get involved -
-      typically, the first step is to participate in one of our EYP sessions
-      which take place throughout the year. At the same time, we hold various
-      open events, discussion forums, workshops, trainings and panel discussions
-      which you can join! Get in touch and follow us on social media to keep up
-      to date with opportunities to take part in our activities.
-    </p>
   </section>
   <section
     class='page-margin mb-32 grid grid-cols-1 gap-16 px-5 md:grid-cols-2'
   >
-    <div class='flex flex-col items-center gap-4'>
+    <div class='hide-left flex flex-col items-center gap-4'>
       <div class='flex justify-center'>
         <Title
           text='High-School Students'
@@ -48,7 +51,7 @@ import Layout from "~/layouts/Layout.astro";
       </p>
       <ActionButton text='Join' />
     </div>
-    <div class='flex flex-col items-center gap-4'>
+    <div class='hide-right flex flex-col items-center gap-4'>
       <div class='flex justify-center'>
         <Title
           text='Young Adults'
@@ -68,21 +71,23 @@ import Layout from "~/layouts/Layout.astro";
     </div>
   </section>
   <section class='page-margin mb-16 flex flex-col px-5'>
-    <div class='flex justify-center'>
-      <Title
-        text='General, Open Events'
-        order='h2'
-        underlineRotation='rotate-[190deg]'
-        underlineColor='text-fuchsia-500'
-      />
+    <div class='hide-right'>
+      <div class='flex justify-center'>
+        <Title
+          text='General, Open Events'
+          order='h2'
+          underlineRotation='rotate-[190deg]'
+          underlineColor='text-fuchsia-500'
+        />
+      </div>
+      <p class='text-justify text-lg leading-relaxed md:text-xl'>
+        We hold various events throughout the year that are open to any young
+        person interested. From conferences, to panel discussions, workshops,
+        trainings and other events, you can attend any of these events. To do so
+        keep an eye out in our social media platforms or contact our HR
+        members@eypcyprus.com to declare your interest so you are notified when
+        an opportunity arises.
+      </p>
     </div>
-    <p class='text-justify text-lg leading-relaxed md:text-xl'>
-      We hold various events throughout the year that are open to any young
-      person interested. From conferences, to panel discussions, workshops,
-      trainings and other events, you can attend any of these events. To do so
-      keep an eye out in our social media platforms or contact our HR
-      members@eypcyprus.com to declare your interest so you are notified when an
-      opportunity arises.
-    </p>
   </section>
 </Layout>
