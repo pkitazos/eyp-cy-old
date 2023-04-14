@@ -22,12 +22,6 @@ export {
 } from "./Cards";
 export { DebugOverlay } from "./Debug";
 export {
-  DividerBottom1,
-  DividerTop1,
-  WaveDivider1,
-  WaveDivider2,
-} from "./Dividers";
-export {
   BookIcon,
   CaretLeft,
   CaretRight,
@@ -42,4 +36,4 @@ export {
   Underline,
   WhiteStar,
 } from "./SVGs";
-export { HorizontalWaves, Wave, WaveDivider } from "./Waves";
+export { Wave, WaveDivider } from "./Waves";

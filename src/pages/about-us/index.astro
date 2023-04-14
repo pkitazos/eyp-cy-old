@@ -2,16 +2,14 @@
 import {
   BookIcon,
   ConversationIcon,
-  DividerBottom1,
-  DividerTop1,
   NetworkIcon,
   PenIcon,
   Title,
+  WaveDivider,
   WhatWeDoCard,
 } from "~/components";
+import { paths } from "~/data";
 import Layout from "../../layouts/Layout.astro";
-
-// TODO: add new wave dividers
 ---
 
 <Layout title='About Us'>
@@ -45,7 +43,7 @@ import Layout from "../../layouts/Layout.astro";
       to be open-minded, tolerant and active citizens.
     </p>
   </section>
-  <DividerBottom1 />
+  <WaveDivider waveLayers={paths.aboutTop} />
   <section
     id='about-us-section2'
     class='page-padding max-h-max min-h-[60vh] bg-primary-600 pb-20 pt-8'
@@ -99,7 +97,7 @@ import Layout from "../../layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <DividerTop1 />
+  <WaveDivider waveLayers={paths.aboutBottom} />
   <section class='page-margin mt-8 max-h-max min-h-[60vh] px-4 pb-16'>
     <div class='flex justify-center'>
       <Title

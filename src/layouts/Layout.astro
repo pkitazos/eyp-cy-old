@@ -1,6 +1,6 @@
 ---
 import "~/styles/index.css";
-import { Footer, Header, HorizontalWaves, WaveDivider } from "~/components";
+import { Footer, Header, WaveDivider } from "~/components";
 import { paths } from "~/data";
 
 export interface Props {
@@ -35,7 +35,14 @@ const { title, home = false } = Astro.props;
       )
     }
     <Header client:load />
-    {!home && <HorizontalWaves />}
+    {
+      !home && (
+        <div class='-mb-40'>
+          <div class='bg-primary-800 h-12'>&nbsp;</div>
+          <WaveDivider waveLayers={paths.headerHorizontal} />
+        </div>
+      )
+    }
     <slot />
     <Footer />
     <script>
