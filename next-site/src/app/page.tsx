@@ -1,113 +1,121 @@
-import Image from 'next/image'
+import {
+  Title,
+  WaveDivider,
+  UpcomingEventCard,
+  TestimonialCarousel,
+} from "~/components";
+import { paths } from "~/data";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+      <section className="mt-[10vh] flex h-[90vh] w-full flex-col justify-center gap-6">
+        <div className="xs:px-10 flex flex-col gap-10 px-6 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0">
+          <div className="flex w-full justify-start sm:col-start-2 sm:row-start-1 sm:w-max">
+            <h2 className="md-lg:text-7xl text-5xl font-bold text-white sm:text-6xl">
+              Welcome to
+            </h2>
+          </div>
+          <div className="flex w-full justify-end sm:col-start-3 sm:row-start-2 sm:w-max">
+            <h2 className="text-accent-900 md-lg:text-7xl text-5xl font-bold sm:text-6xl">
+              Young Europe
+            </h2>
+          </div>
+        </div>
+        <div className="mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32">
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/get-involved"
+            className={`bg-accent-900 mx-auto w-max cursor-pointer rounded-full px-9 
+        py-5 text-xl font-semibold text-black
+        transition-all duration-300 hover:scale-110  
+        md:px-9 md:py-6  md:text-2xl lg:px-10 lg:py-7 lg:text-2xl xl:px-10 xl:py-7 xl:text-3xl`}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            Join Us
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      <section className="page-margin md-lg:grid md-lg:grid-cols-12 mb-0 flex max-h-max min-h-[70vh] sm:-mb-20 sm:text-xl">
+        <div className="z-20 col-span-6 mt-16">
+          <div className="hide-left flex justify-center">
+            <Title text="Who We Are" order="h2" />
+          </div>
+          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            The European Youth Parliament (EYP) is a non-partisan and
+            independent educational platform bringing together thousands of
+            young people from all over Europe to discuss current issues, develop
+            their skills through dialogue and cooperation, as well as empower
+            them to positively shape the world around them..
+            <br />
+            <br />
+            The European Youth Parliament Cyprus is a non-governmental,
+            non-partisan organisation and one of the 41 National Committees that
+            come under the umbrella of the Pan-European EYP Network. EYP Cyprus
+            was established in 2006 and has been actively working to organise
+            events and activities catered towards the youth of Cyprus.
           </p>
-        </a>
+        </div>
+      </section>
+      <WaveDivider waveLayers={paths.homeTop} />
+      <section className="page-padding bg-primary-600 min-h-[60vh]">
+        <div className="hide-right flex justify-center md:justify-end">
+          <Title text="Upcoming Events" order="h2" variant="light" />
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="flex justify-end">
+          <div className="no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5">
+            <div className="hide-right delay-card basis-1/4">
+              <UpcomingEventCard
+                title="Pre-Selection Days"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-1.jpg"
+                date={"20/03/2023"}
+              />
+            </div>
+            <div className="hide-right delay-card basis-1/4">
+              <UpcomingEventCard
+                title="Days of EYP"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-2.jpg"
+                date={"27/03/2023"}
+              />
+            </div>
+            <div className="hide-right delay-card basis-1/4">
+              <UpcomingEventCard
+                title="Youth Summit"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-3.jpg"
+                date={"16/07/2023"}
+              />
+            </div>
+            <div className="hide-right delay-card basis-1/4">
+              <UpcomingEventCard
+                title="National Session"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-4.jpg"
+                date={"24/08/2023"}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <WaveDivider waveLayers={paths.homeBottom} />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="page-margin xs:h-[50rem] mb-12 h-[60rem] sm:max-h-max sm:min-h-[50vh]">
+        <div className="flex flex-col gap-5">
+          <div className="hide-left flex justify-center md:justify-start">
+            <Title
+              text="Testimonials"
+              order="h2"
+              underlineColor="text-orange-600"
+              underlineRotation="rotate-12"
+            />
+          </div>
+          <div className="hide-right delay-card">
+            <TestimonialCarousel />
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
