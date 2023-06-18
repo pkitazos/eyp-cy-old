@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, useState } from "react";
 import { CaretLeft, CaretRight, TestimonialCard } from "~/components";
 
@@ -10,16 +12,16 @@ const TestimonialCarousel: FC = () => {
   let p3 = ["translate-x-[220%]", "translate-x-[110%]", ""];
 
   return (
-    <div className=' flex h-[30rem] w-full max-w-6xl flex-row items-center '>
+    <div className=" flex h-[30rem] w-full max-w-6xl flex-row items-center ">
       <button
         onClick={() =>
           setCurrentIndex((prevState) => (prevState - 1 + length) % length)
         }
-        className='z-10 flex flex-initial basis-[5%] items-center justify-start  text-slate-700 hover:text-slate-500'
+        className="z-10 flex flex-initial basis-[5%] items-center justify-start  text-slate-700 hover:text-slate-500"
       >
-        <CaretLeft className='w-4' />
+        <CaretLeft className="w-4" />
       </button>
-      <div className='relative grid h-full basis-[96%] items-start justify-center overflow-x-clip'>
+      <div className="relative grid h-full basis-[96%] items-start justify-center overflow-x-clip">
         &nbsp;
         <div
           className={`transistion-all absolute duration-500  ${p1.at(
@@ -27,9 +29,9 @@ const TestimonialCarousel: FC = () => {
           )}`}
         >
           <TestimonialCard
-            name='Theodoulos Hadjimatheou'
-            info='23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge'
-            imageURL='/assets/testimonial-theo.jpg'
+            name="Theodoulos Hadjimatheou"
+            info="23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge"
+            imageURL="/assets/testimonial-theo.jpg"
           >
             EYP has changed my life literally. There's a plethora of areas that
             I was unaware or indifferent to, that through EYP I now find
@@ -47,9 +49,9 @@ const TestimonialCarousel: FC = () => {
           )}`}
         >
           <TestimonialCard
-            name='Elena Odysseos'
-            info='24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK'
-            imageURL='/assets/testimonial-elena.jpg'
+            name="Elena Odysseos"
+            info="24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK"
+            imageURL="/assets/testimonial-elena.jpg"
           >
             Through my involvement in the organisation I have developed both
             organisational and leadership skills which are appreciated in any
@@ -65,9 +67,9 @@ const TestimonialCarousel: FC = () => {
           )}`}
         >
           <TestimonialCard
-            name='Maddie Theodoulou'
-            info='17, Member since 2020, High school student'
-            imageURL='/assets/testimonial-maddie.png'
+            name="Maddie Theodoulou"
+            info="17, Member since 2020, High school student"
+            imageURL="/assets/testimonial-maddie.png"
           >
             Lockdown in 2020 was a peculiar time for all of us. Everything from
             work to school became digital. At the beginning I honestly couldn't
@@ -87,9 +89,9 @@ const TestimonialCarousel: FC = () => {
       </div>
       <button
         onClick={() => setCurrentIndex((prevState) => (prevState + 1) % length)}
-        className=' z-10 flex flex-initial basis-[5%] items-center justify-end  text-slate-700 hover:text-slate-500'
+        className=" z-10 flex flex-initial basis-[5%] items-center justify-end  text-slate-700 hover:text-slate-500"
       >
-        <CaretRight className='w-4' />
+        <CaretRight className="w-4" />
       </button>
     </div>
   );

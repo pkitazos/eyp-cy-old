@@ -36,7 +36,7 @@ module.exports = {
           800: "#FFDE4D",
           900: "#FFD200",
         },
-        "default-white": "#F9F9F9",
+        "base-white": "#F9F9F9",
       },
       fontFamily: {
         sans: ['"Source Sans Pro"', "sans-serif"],

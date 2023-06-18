@@ -1,13 +1,11 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Source_Sans_Pro } from "next/font/google";
 import { Footer, Header, WaveDivider } from "~/components";
 import { paths } from "~/data";
 import "./globals.css";
-import { Head } from "next/document";
-
-export const metadata = {
-  title: "EYP CY",
-};
+import Head from "next/head";
 
 const sourceSansPro = Source_Sans_Pro({
   subsets: ["latin"],
@@ -20,16 +18,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
-  const path = router.pathname;
+  const path = usePathname();
 
   return (
-    <html lang="en" className={`${sourceSansPro.variable} font-sans`}>
+    <html
+      lang="en"
+      className={`${sourceSansPro.variable} bg-base-white font-sans`}
+    >
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>{metadata.title}</title>
+        <title>EYP CY</title>
       </Head>
       <body className="overflow-x-clip">
         {path == "/" && (
@@ -43,7 +43,7 @@ export default function RootLayout({
         <Header />
         {path != "/" && (
           <div className="-mb-40">
-            <div className="bg-primary-800 h-12">&nbsp;</div>
+            <div className="h-12 bg-primary-800">&nbsp;</div>
             <WaveDivider waveLayers={paths.headerHorizontal} />
           </div>
         )}
