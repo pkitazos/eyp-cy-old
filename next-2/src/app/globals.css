@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page-margin {
+  @apply mx-5 sm:mx-7 md:mx-10 md-lg:mx-20 lg:mx-28 lg-xl:mx-40;
+}
+
+.page-padding {
+  @apply px-5 sm:px-7 md:px-10 md-lg:px-20 lg:px-28 lg-xl:px-40;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+.my-glass {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+}
+
+/* hide scrollbar in webkit browser */
+.no-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* dropdown functionality ------------------------------------------------------------ */
+
+/* container needed to position the dropdown content */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* dropdown content hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+/* items inside the dropdown */
+.dropdown-content .menu-item {
+  display: block;
+}
+
+/* show the dropdown menu on hover */
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
