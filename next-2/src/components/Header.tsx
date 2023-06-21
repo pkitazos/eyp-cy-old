@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown";
 import Drawer from "./Drawer";
 import { useMediaQuery } from "~/hooks";
 import { WaveDivider } from "./Waves";
-import { paths } from "~/data";
+import { wavePaths } from "~/data";
 import { usePathname } from "next/navigation";
 import { debounce } from "~/utils";
 
@@ -127,7 +127,7 @@ export default function Header() {
       {home && (
         <div className="absolute left-0 -z-10 w-full">
           <WaveDivider
-            waveLayers={paths.headerDiagonal}
+            waveLayers={wavePaths.headerDiagonal}
             viewBox="0 0 1000 650"
           />
         </div>
@@ -143,7 +143,7 @@ export default function Header() {
       {!home && (
         <div className="-mb-40">
           <div className="h-12 bg-primary-800">&nbsp;</div>
-          <WaveDivider waveLayers={paths.headerHorizontal} />
+          <WaveDivider waveLayers={wavePaths.headerHorizontal} />
         </div>
       )}
     </>

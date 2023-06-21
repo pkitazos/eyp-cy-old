@@ -1,4 +1,4 @@
-const paths = {
+const wavePaths = {
   headerDiagonal: {
     layers: [
       [
@@ -282,4 +282,4 @@ const paths = {
     colors: ["#66D4FF", "#16B2FF", "#008AFF", "#3654FF"],
   },
 };
-export default paths;
+export default wavePaths;

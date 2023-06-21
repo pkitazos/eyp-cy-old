@@ -1,6 +1,5 @@
-import type { FC } from "react";
 import { FacebookIcon, InstagramIcon, WaveDivider } from "~/components";
-import { paths } from "~/data";
+import { wavePaths } from "~/data";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
@@ -8,7 +7,7 @@ import { paths } from "~/data";
 const Footer = () => {
   return (
     <div className="bottom-0 w-full">
-      <WaveDivider waveLayers={paths.footer} viewBox="0 0 1000 250" />
+      <WaveDivider waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
       <div className="page-padding grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 bg-primary-800 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0">
         <div className="w-max">
           <h3 className="mb-2 text-2xl font-semibold text-white">Contact us</h3>

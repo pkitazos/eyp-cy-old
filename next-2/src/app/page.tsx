@@ -4,7 +4,7 @@ import {
   UpcomingEventCard,
   WaveDivider,
 } from "~/components";
-import { paths } from "~/data";
+import { wavePaths } from "~/data";
 import Layout from "./layout";
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <WaveDivider waveLayers={paths.homeTop} />
+          <WaveDivider waveLayers={wavePaths.homeTop} />
           <section className="page-padding min-h-[60vh] bg-primary-600">
             <div className="hide-right flex justify-center md:justify-end">
               <Title text="Upcoming Events" order="h2" variant="light" />
@@ -102,7 +102,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <WaveDivider waveLayers={paths.homeBottom} />
+          <WaveDivider waveLayers={wavePaths.homeBottom} />
           <section className="page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]">
             <div className="flex flex-col gap-5">
               <div className="hide-left flex justify-center md:justify-start">
