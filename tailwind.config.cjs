@@ -21,6 +21,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "base-white": "#F9F9F9",
         primary: {
           600: "#3654FF",
           700: "#2B43CC",
@@ -36,7 +37,6 @@ module.exports = {
           800: "#FFDE4D",
           900: "#FFD200",
         },
-        "base-white": "#F9F9F9",
       },
       fontFamily: {
         sans: ['"Source Sans Pro"', "sans-serif"],
