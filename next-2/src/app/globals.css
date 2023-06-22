@@ -28,6 +28,19 @@
   display: none;
 }
 
+.underliner {
+  /* I don't know why this is needed, I just added it and it worked in IE Edge. If we remove this width, the gradient breaks in IE Edge */
+  width: calc(100%);
+  background-image: linear-gradient(transparent calc(100% - 10px), orange 5px);
+  background-repeat: no-repeat;
+  background-size: 0% 105%;
+  transition: background-size 0.5s;
+}
+
+.linker:hover .underliner {
+  background-size: 100% 105%;
+}
+
 /* dropdown functionality ------------------------------------------------------------ */
 
 /* container needed to position the dropdown content */

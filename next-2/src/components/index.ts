@@ -6,5 +6,22 @@ export { default as TestimonialCard } from "./TestimonialCard";
 export { default as TestimonialCarousel } from "./TestimonialCarousel";
 export { default as Title } from "./Title";
 export { default as UpcomingEventCard } from "./UpcomingEventCard";
-export { BookIcon, CaretLeft, CaretRight, ChevronDown, CloseIcon, ConversationIcon, FacebookIcon, InstagramIcon, MenuIcon, NetworkIcon, PenIcon, QuoteLeftIcon, QuoteRightIcon, Underline, WhiteStar } from "./SVGs";
+export { default as UpcomingEventCardWrapper } from "./UpcomingEventCardWrapper";
+export {
+  BookIcon,
+  CaretLeft,
+  CaretRight,
+  ChevronDown,
+  CloseIcon,
+  ConversationIcon,
+  FacebookIcon,
+  InstagramIcon,
+  MenuIcon,
+  NetworkIcon,
+  PenIcon,
+  QuoteLeftIcon,
+  QuoteRightIcon,
+  Underline,
+  WhiteStar,
+} from "./SVGs";
 export { Wave, WaveDivider } from "./Waves";
