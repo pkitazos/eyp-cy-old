@@ -21,7 +21,6 @@ const TestimonialCarousel: FC = () => {
         <CaretLeft className="w-4" />
       </button>
       <div className="relative grid h-full basis-[96%] items-start justify-center overflow-x-clip">
-        &nbsp;
         <div
           className={`transistion-all absolute duration-500  ${p1.at(
             currentIndex
