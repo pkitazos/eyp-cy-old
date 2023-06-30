@@ -11,13 +11,13 @@ const Focus = ({ images, flow }: props) => {
   const cols = flow === "lhs" ? [7, 1, 7] : [1, 3, 1];
   const spans = ratio.map((n) => n * 4);
 
-  const zIndex = ["z-0", "z-20", "z-0"];
+  const zIndex = ["z-0", "z-10", "z-0"];
 
   const makeClassNames = (col: number, row: number, span: number) =>
     `col-span-${span} col-start-${col} row-span-${span} row-start-${row}`;
 
   return (
-    <div className="grid grid-cols-10 grid-rows-[12]">
+    <div className="grid h-full w-full grid-cols-10 grid-rows-12">
       {images.map((image, i) => (
         <div
           key={i}

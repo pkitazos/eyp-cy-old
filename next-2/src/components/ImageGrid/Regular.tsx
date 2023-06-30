@@ -15,7 +15,7 @@ const Regular = ({ images, flow }: props) => {
     `col-span-4 col-start-${col} row-span-4 row-start-${row}`;
 
   return (
-    <div className="grid h-full grid-cols-7 grid-rows-[10]">
+    <div className="grid h-full w-11/12 grid-cols-7 grid-rows-[10]">
       {images.map((image, i) => (
         <div
           key={i}

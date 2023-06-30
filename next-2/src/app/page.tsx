@@ -37,8 +37,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center outline outline-lime-600">
-          <div className="z-20 w-1/2 outline outline-orange-500">
+        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
+          <div className="z-20 w-1/2">
             <div className="hide-left flex justify-center">
               <Title text="Who We Are" order="h2" />
             </div>
@@ -58,8 +58,8 @@ export default function Home() {
               Cyprus.
             </p>
           </div>
-          <div className="grid h-[40rem] w-[28rem] place-items-center">
-            <ImageGrid.Regular
+          <div className="ml-20 grid w-[45%] place-items-center">
+            <ImageGrid.Focus
               flow={"rhs"}
               images={[
                 { src: "/assets/test-image.png", alt: "" },
