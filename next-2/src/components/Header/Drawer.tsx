@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { slugify } from "~/utils";
-import { ChevronDown } from ".";
+import { ChevronDown } from "..";
 
 interface props {
   mainItem: string;

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Dropdown from "./Dropdown";
 import Drawer from "./Drawer";
 import { useMediaQuery } from "~/hooks";
-import { WaveDivider } from "./Waves";
+import { WaveDivider } from "../Waves";
 import { wavePaths } from "~/data";
 import { usePathname } from "next/navigation";
 import { debounce } from "~/utils";
