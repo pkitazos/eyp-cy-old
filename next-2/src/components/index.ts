@@ -10,6 +10,7 @@ export { default as TestimonialCarousel } from "./TestimonialCarousel";
 export { default as Title } from "./Title";
 export { default as UpcomingEventCard } from "./UpcomingEventCard";
 export { default as UpcomingEventCardWrapper } from "./UpcomingEventCardWrapper";
+export { Focus, ImageGrid, Regular } from "./ImageGrid";
 export {
   BookIcon,
   CaretLeft,

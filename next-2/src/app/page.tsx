@@ -1,5 +1,5 @@
 import {
-  ImageChain,
+  ImageGrid,
   TestimonialCarousel,
   Title,
   UpcomingEventCard,
@@ -37,8 +37,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] sm:-mb-20 sm:text-xl md-lg:grid md-lg:grid-cols-12">
-          <div className="z-20 col-span-6 col-start-1 mt-16">
+        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center outline outline-lime-600">
+          <div className="z-20 w-1/2 outline outline-orange-500">
             <div className="hide-left flex justify-center">
               <Title text="Who We Are" order="h2" />
             </div>
@@ -58,15 +58,14 @@ export default function Home() {
               Cyprus.
             </p>
           </div>
-          <div className="col-span-6 col-start-7 ml-20 grid place-items-center">
-            <ImageChain
-              imageURLs={[
-                "/assets/test-image.png",
-                "/assets/test-image.png",
-                "/assets/test-image.png",
+          <div className="grid h-[40rem] w-[28rem] place-items-center">
+            <ImageGrid.Regular
+              flow={"rhs"}
+              images={[
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
               ]}
-              ratio={[1, 2, 1]}
-              flow="rhs"
             />
           </div>
         </section>
