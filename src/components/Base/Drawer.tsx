@@ -13,10 +13,10 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
 
   return (
     <>
-      <div className='collapse -mr-8 '>
+      <div className="collapse -mr-8 ">
         <input
-          type='checkbox'
-          className='peer'
+          type="checkbox"
+          className="peer"
           onChange={() => setExpanded(!expanded)}
         />
         <div
@@ -25,15 +25,15 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
           } collapse-title flex flex-row items-center justify-end gap-x-2 text-primary-content peer-checked:text-secondary-content`}
         >
           <ChevronDown
-            className={`w-3 text-default-white ${
+            className={`w-3 text-base-white ${
               expanded ? "-rotate-90" : ""
             } transition-all duration-200`}
           />
           <p> {mainItem}</p>
         </div>
-        <div className='collapse-content mr-3 flex flex-col items-end gap-1.5 text-primary-content peer-checked:text-secondary-content'>
+        <div className="collapse-content mr-3 flex flex-col items-end gap-1.5 text-primary-content peer-checked:text-secondary-content">
           <a
-            className='cursor-pointer px-5 text-lg hover:text-slate-300'
+            className="cursor-pointer px-5 text-lg hover:text-slate-300"
             href={slugify(mainItem)}
           >
             {mainItem}
@@ -41,7 +41,7 @@ const Drawer: FC<props> = ({ mainItem, items, prefix = "" }) => {
           {items.map((item, i) => (
             <div key={i}>
               <a
-                className='cursor-pointer px-5 text-lg hover:text-slate-300'
+                className="cursor-pointer px-5 text-lg hover:text-slate-300"
                 href={`${slugify(mainItem)}${slugify(item)}`}
               >
                 {item}
