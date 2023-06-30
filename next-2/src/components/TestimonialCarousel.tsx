@@ -1,8 +1,8 @@
 "use client";
-import { FC, useState } from "react";
+import { useState } from "react";
 import { CaretLeft, CaretRight, TestimonialCard } from "~/components";
 
-const TestimonialCarousel: FC = () => {
+const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = 3;
 

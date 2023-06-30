@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { Underline } from "~/components";
 
 interface props {
@@ -9,13 +8,13 @@ interface props {
   underlineRotation?: string;
 }
 
-const Title: FC<props> = ({
+const Title = ({
   text,
   order,
   variant = "dark",
   underlineColor = "text-accent-900",
   underlineRotation = "rotate-180",
-}) => {
+}: props) => {
   let size: string;
   let underlineWidth: string;
   let color: string;
@@ -46,7 +45,7 @@ const Title: FC<props> = ({
 
   return (
     <>
-      <div className='flex flex-col items-center'>
+      <div className="flex flex-col items-center">
         <h1 className={`${size} ${color} text-center font-semibold`}>{text}</h1>
         <Underline
           className={`mb-3 mt-1 xs:mb-4 md-lg:mb-6 ${underlineWidth}`}

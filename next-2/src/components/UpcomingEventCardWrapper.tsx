@@ -1,15 +1,10 @@
-"use client";
-import { ReactNode, useEffect } from "react";
+import type { ReactNode } from "react";
 
 interface props {
   children: ReactNode[];
 }
 
 const UpcomingEventCardWrapper = ({ children }: props) => {
-  useEffect(() => {
-    console.log(children.length);
-  });
-
   return (
     <div className="flex justify-end">
       <ul className="no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5">
