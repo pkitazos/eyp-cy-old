@@ -1,5 +1,4 @@
-import type { FC } from "react";
-import { Wave } from "~/components/Waves";
+import { Wave } from "~/components";
 import { hashCode } from "~/utils";
 
 interface props {
@@ -15,7 +14,7 @@ const getWaveData = (w: singleWave) => {
   });
 };
 
-const WaveDivider: FC<props> = ({ waveLayers, viewBox = "0 0 1000 300" }) => {
+const WaveDivider = ({ waveLayers, viewBox = "0 0 1000 300" }: props) => {
   return (
     <>
       <svg id="visual" viewBox={viewBox}>

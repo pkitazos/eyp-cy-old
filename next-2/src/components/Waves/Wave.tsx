@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { generateKeyTimes, makePath } from "~/utils";
 
 interface props {
@@ -6,17 +5,17 @@ interface props {
   fill: string;
 }
 
-const Wave: FC<props> = ({ pathArr, fill }) => {
+const Wave = ({ pathArr, fill }: props) => {
   let steps = pathArr.length * 2 - 1;
   let keyTimes = generateKeyTimes(steps);
   return (
     <path fill={fill}>
       <animate
-        attributeName='d'
+        attributeName="d"
         values={makePath(pathArr).join("; ")}
         keyTimes={keyTimes}
         dur={`${steps}s`}
-        repeatCount='indefinite'
+        repeatCount="indefinite"
       />
     </path>
   );
