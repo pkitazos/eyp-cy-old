@@ -5,6 +5,8 @@ interface props {
   flow: gridFlow;
 }
 
+// TODO: fix vertical spacing
+
 const Regular = ({ images, flow }: props) => {
   const rows = [1, 4, 7];
   const cols = flow === "lhs" ? [4, 1, 4] : [1, 4, 1];
