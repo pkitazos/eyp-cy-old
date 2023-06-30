@@ -12,15 +12,15 @@ const Footer = () => {
         <div className="w-max">
           <h3 className="mb-2 text-2xl font-semibold text-white">Contact us</h3>
           <p className="ml-1 text-slate-100">
-            email:{" "}
+            Email:{" "}
             <span className="ml-2 hover:text-secondary-700 hover:underline">
-              something@email.com
+              info@eypcyprus.com
             </span>
           </p>
           <p className="ml-1 text-slate-100">
-            phone:{" "}
+            P.O. Box:{" "}
             <span className="ml-2 hover:text-secondary-700 hover:underline">
-              23 123456
+              123 Addres Street, City
             </span>
           </p>
         </div>
