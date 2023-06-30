@@ -24,6 +24,17 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      gridRow: {
+        "span-8": "span 8 / span 8",
+      },
+      gridRowStart: {
+        8: "8",
+        9: "9",
+        10: "10",
+        11: "11",
+        12: "12",
+        13: "13",
+      },
       borderRadius: {
         "4xl": "2rem",
       },
