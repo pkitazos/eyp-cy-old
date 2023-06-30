@@ -28,3 +28,12 @@ type singleWave = {
 type waveData = {
   [dividerName: string]: singleWave;
 };
+
+type ratioArr = [1, 1, 1] | [1, 2, 1];
+
+type gridFlow = "lhs" | "rhs";
+
+interface imageObject {
+  imageURL: string;
+  scale: 1 | 2;
+}
