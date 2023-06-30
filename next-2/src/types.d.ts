@@ -31,9 +31,9 @@ type waveData = {
 
 type ratioArr = [1, 1, 1] | [1, 2, 1];
 
-type gridFlow = "lhs" | "rhs";
-
-interface imageObject {
-  imageURL: string;
-  scale: 1 | 2;
+interface imageObj {
+  src: string;
+  alt: string;
 }
+
+type gridFlow = "lhs" | "rhs";
