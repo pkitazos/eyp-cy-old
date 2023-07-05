@@ -29,7 +29,6 @@ const UpcomingEventCard = ({ title, date, description, imageURL }: props) => {
             <br />
             <span className="font-semibold">{date}</span>
           </span>
-
           <p className="mt-3 pb-6 leading-normal">{description}</p>
         </div>
       </div>
