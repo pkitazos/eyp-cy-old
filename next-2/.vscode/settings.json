@@ -2,6 +2,7 @@
   "material-icon-theme.folders.associations": {
     "events": "",
     "Base": "",
-    "SVGs": ""
+    "SVGs": "",
+    "test": "batch"
   }
 }
