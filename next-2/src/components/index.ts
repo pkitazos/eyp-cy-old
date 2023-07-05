@@ -1,6 +1,12 @@
 export { default as ActionButton } from "./ActionButton";
+export { default as BoardPosition } from "./BoardPosition";
 export { default as EventTypeCard } from "./EventTypeCard";
 export { default as Footer } from "./Footer";
+export { default as ImpactCard } from "./ImpactCard";
+export { default as NCMemberCard } from "./NCMemberCard";
+export { default as PartnerCard } from "./PartnerCard";
+export { default as PatronCard } from "./PatronCard";
+export { default as PreviousBoardButton } from "./PreviousBoardButton";
 export { default as SessionElementCard } from "./SessionElementCard";
 export { default as Title } from "./Title";
 export { default as WhatWeDoCard } from "./WhatWeDoCard";
