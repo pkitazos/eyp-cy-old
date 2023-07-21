@@ -1,4 +1,4 @@
-import { ImpactCard, Title } from "~/components";
+import { InfoCard, Title } from "~/components";
 
 export default function Impact() {
   return (
@@ -28,7 +28,7 @@ export default function Impact() {
             measurable impact on young people across Europe.
           </p>
         </section>
-        <section className="page-margin mb-16 mt-16 flex max-h-max min-h-[60vh] flex-col gap-16">
+        <section className="page-margin mb-16 mt-16 flex max-h-max min-h-[60vh] flex-col gap-20">
           <div className="hide-bottom flex justify-center">
             <Title
               text="What our Impact looks like"
@@ -36,22 +36,22 @@ export default function Impact() {
               underlineRotation="rotate-[190deg]"
             />
           </div>
-          <ImpactCard
+          <InfoCard
             title="Forming opinions and solving current challenges"
             imageURL="/assets/impact-1.png"
-            underlineColor="text-sky-500 rotate-[6deg]"
+            className={""}
           >
             Every year, the EYP Cyprus engages 500+ young people from across
             Cyprus and Europe in a welcoming, independent, non-partisan
             environment to develop and express their opinions and put forth
             their suggestions to tackle current social, economic, legal,
             political and environmental challenges.
-          </ImpactCard>
-          <ImpactCard
+          </InfoCard>
+          <InfoCard
             title="Developing skills and growing as a person"
             imageURL="/assets/impact-2.png"
             reversed={true}
-            underlineColor="text-lime-500"
+            className={""}
           >
             EYP Cyprus encourages independent thinking and initiative amongst
             young people and facilitates the learning of crucial social and
@@ -62,11 +62,11 @@ export default function Impact() {
             events, to leading teams and facilitating discussions. These are
             unique opportunities for each participant to develop and grow their
             skillset.
-          </ImpactCard>
-          <ImpactCard
+          </InfoCard>
+          <InfoCard
             title="Engaging with current topics in dialogue with decision-makers"
             imageURL="/assets/impact-3.png"
-            underlineColor="text-orange-500 rotate-[12deg]"
+            className={""}
           >
             During most of our events, we work hard to bring young people
             together with decision makers and experts. Participants at our
@@ -77,12 +77,12 @@ export default function Impact() {
             regularly attend our events and interact with our participants and
             hear what young people&apos;s opinions and vision for the future
             are.
-          </ImpactCard>
-          <ImpactCard
+          </InfoCard>
+          <InfoCard
             title="Building a network and facilitating intercultural understanding"
             imageURL="/assets/impact-4.png"
             reversed={true}
-            underlineColor="text-emerald-500"
+            className={""}
           >
             Through taking part in an EYP Cyprus event, young people have the
             chance to join a network of active alumni and volunteers both in
@@ -93,11 +93,11 @@ export default function Impact() {
             young people through our activities also have a chance to develop
             their intercultural understanding and build international
             friendships.
-          </ImpactCard>
-          <ImpactCard
+          </InfoCard>
+          <InfoCard
             title="Empowering young, active citizens"
             imageURL="/assets/impact-5.png"
-            underlineColor="text-fuchsia-500 rotate-[178deg]"
+            className={""}
           >
             As a result of our events, more than 90% of participants indicate an
             increased willingness to actively get involved in society and
@@ -107,12 +107,12 @@ export default function Impact() {
             they feel a renewed sense of active citizenship which translates to
             many of them becoming volunteers in our organisation, helping run
             and facilitate our events.
-          </ImpactCard>
-          <ImpactCard
+          </InfoCard>
+          <InfoCard
             title="Traveling and International Opportunities"
             imageURL="/assets/impact-1.png"
             reversed={true}
-            underlineColor="rotate-[20deg] text-accent-900"
+            className={""}
           >
             Through joining some of our events, participants have the chance to
             be selected and participate in International Sessions in 40+
@@ -120,7 +120,7 @@ export default function Impact() {
             participants and alumni to travel abroad to international
             conferences and events to take part in unique educational
             experiences and make international friendships.
-          </ImpactCard>
+          </InfoCard>
         </section>
       </>
     </>

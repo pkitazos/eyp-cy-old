@@ -63,14 +63,15 @@ export default function Events() {
       </section>
       <WaveDivider waveLayers={wavePaths.eventsBottom} />
       <section className="page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom mb-3 flex justify-center">
+        <div className="hide-bottom mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-20">
           <SessionElementCard
             className="hide-left delay-card w-5/6 max-w-5xl"
             title="Teambuilding"
+            imageURL="/assets/events-3.jpg"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -85,6 +86,7 @@ export default function Events() {
             className="hide-right delay-card w-5/6 max-w-5xl"
             title="Committee Work"
             titlePosition="text-right"
+            imageURL="/assets/events-2.jpg"
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -96,6 +98,7 @@ export default function Events() {
           <SessionElementCard
             className="hide-left delay-card w-5/6 max-w-5xl"
             title="General Assembly"
+            imageURL="/assets/events-1.jpg"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and
