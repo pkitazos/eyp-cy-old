@@ -22,7 +22,7 @@ export default function InfoCard({
       <div
         className={`linker flex ${
           reversed ? "flex-row-reverse" : "flex-row"
-        } group`}
+        } group gap-2`}
       >
         <div className="w-1/4 rounded-lg bg-pink-500">
           <Image
