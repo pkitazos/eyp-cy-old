@@ -35,8 +35,9 @@ export default function NationalSession() {
         </div>
         <div className="flex flex-col items-center justify-center gap-10">
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="Teambuilding"
+            className="hide-right delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -48,9 +49,10 @@ export default function NationalSession() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
             title="Committee Work"
             titlePosition="text-right"
+            className="hide-left delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -60,8 +62,9 @@ export default function NationalSession() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="Evening Activities"
+            className="hide-right delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             To complement the academic elements of our sessions, our organising
             teams prepare unique evening programmes each year which engage
@@ -69,9 +72,10 @@ export default function NationalSession() {
             inter-team interactions
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
             title="Discussing Europe"
             titlePosition="text-right"
+            className="hide-left delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             Discussing Europe has been established as an annual happening at our
             sessions - an event welcoming various guests in a panel discussion
@@ -80,8 +84,9 @@ export default function NationalSession() {
             in the field, as well as experienced political figures.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="General Assembly"
+            className="hide-right delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

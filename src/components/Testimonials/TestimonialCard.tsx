@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { QuoteLeftIcon, QuoteRightIcon } from "~/components";
 
 // TODO: improve design
@@ -30,8 +31,11 @@ const MobileLayout = (props: props) => {
             </h3>
           </div>
           <div className="hidden basis-1/4 items-center justify-center md:flex">
-            <img
+            <Image
+              height={300}
+              width={300}
               src={imageURL}
+              alt="..."
               className="my-auto aspect-square w-3/4 rounded-full object-cover object-center"
             />
           </div>
@@ -78,8 +82,11 @@ const DesktopLayout = (props: props) => {
       </div>
       <div className="flex basis-1/4 flex-col">
         <div className="flex basis-7/12 items-center justify-center">
-          <img
+          <Image
+            height={300}
+            width={300}
             src={imageURL}
+            alt=""
             className="my-auto aspect-square w-2/3 rounded-full object-cover object-center"
           />
         </div>

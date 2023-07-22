@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { wavePaths } from "~/data";
 import { debounce } from "~/utils";
@@ -13,7 +13,9 @@ const HeaderLogo = () => {
       href="/"
       className="w-3/4 max-w-[15rem] xs:w-3/5 xs:max-w-[17rem] sm:w-2/5 sm:max-w-none md:w-1/3 lg:w-1/5 lg-xl:w-80 xl:w-80"
     >
-      <img
+      <Image
+        width={400}
+        height={100}
         className="my-2 h-auto cursor-pointer "
         src="/logos/white-long.png"
         alt="EYP Cyprus logo"

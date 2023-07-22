@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from "react";
+import Image from "next/image";
 
 interface props {
   title: string;
@@ -10,8 +11,11 @@ interface props {
 const WhatWeDoCard: FC<props> = ({ title, info, imageURL, children: icon }) => {
   return (
     <div className="group flex w-full sm:grid sm:grid-cols-2 sm:items-center md:w-64 md:grid-cols-1">
-      <img
+      <Image
+        height={250}
+        width={250}
         src={imageURL}
+        alt=""
         className="col-span-1 hidden h-60 rounded-xl object-cover transition-all duration-200 group-hover:scale-[0.97] sm:block"
       />
       <div className="my-glass relative mx-2 rounded-xl px-8 py-6 transition-all duration-200 group-hover:scale-[1.02] sm:col-span-1 sm:-ml-4 md:-mx-1 md:-mt-14">

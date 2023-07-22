@@ -26,8 +26,9 @@ export default function DaysOfEYP() {
         </div>
         <div className="flex flex-col items-center justify-center gap-10">
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="Teambuilding"
+            imageURL="/assets/events-2.jpg"
+            className="hide-right delay-card w-5/6 max-w-5xl"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -39,9 +40,10 @@ export default function DaysOfEYP() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
             title="Committee Work"
             titlePosition="text-right"
+            imageURL="/assets/events-2.jpg"
+            className="hide-left delay-card w-5/6 max-w-5xl"
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -51,8 +53,9 @@ export default function DaysOfEYP() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="General Assembly"
+            imageURL="/assets/events-2.jpg"
+            className="hide-right delay-card w-5/6 max-w-5xl"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

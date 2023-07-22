@@ -29,8 +29,9 @@ export default function PreSelectionDays() {
         </div>
         <div className="flex flex-col items-center justify-center gap-10">
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
             title="Teambuilding"
+            className="hide-right delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -42,9 +43,10 @@ export default function PreSelectionDays() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
             title="General Assembly"
             titlePosition="text-right"
+            className="hide-left delay-card w-5/6 max-w-5xl"
+            imageURL="/assets/events-2.jpg"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and
