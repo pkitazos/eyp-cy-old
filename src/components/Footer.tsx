@@ -1,3 +1,4 @@
+"use client";
 import { FacebookIcon, InstagramIcon, WaveDivider } from "~/components";
 import { wavePaths } from "~/data";
 
@@ -13,13 +14,23 @@ const Footer = () => {
           <h3 className="mb-2 text-2xl font-semibold text-white">Contact us</h3>
           <p className="ml-1 text-slate-100">
             Email:{" "}
-            <span className="ml-2 hover:text-secondary-700 hover:underline">
+            <span
+              className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
+              onClick={() => {
+                navigator.clipboard.writeText("info@eypcyprus.com");
+              }}
+            >
               info@eypcyprus.com
             </span>
           </p>
           <p className="ml-1 text-slate-100">
             P.O. Box:{" "}
-            <span className="ml-2 hover:text-secondary-700 hover:underline">
+            <span
+              className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
+              onClick={() => {
+                navigator.clipboard.writeText("123 Addres Street, City");
+              }}
+            >
               123 Addres Street, City
             </span>
           </p>
