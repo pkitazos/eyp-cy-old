@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { Wave } from "~/components";
 import { hashCode } from "~/utils";
 
@@ -15,10 +14,10 @@ const getWaveData = (w: singleWave) => {
   });
 };
 
-const WaveDivider: FC<props> = ({ waveLayers, viewBox = "0 0 1000 300" }) => {
+const WaveDivider = ({ waveLayers, viewBox = "0 0 1000 300" }: props) => {
   return (
     <>
-      <svg id='visual' viewBox={viewBox}>
+      <svg id="visual" viewBox={viewBox}>
         {getWaveData(waveLayers).map(([path, color]) => (
           <Wave key={hashCode(path[0])} fill={color} pathArr={path} />
         ))}
