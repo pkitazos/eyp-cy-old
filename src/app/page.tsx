@@ -15,7 +15,7 @@ export default function Home() {
         <title>EYP CY - Home</title>
       </head>
       <>
-        <section className="flex h-[90vh] w-full flex-col justify-center gap-6">
+        <section className="flex h-screen w-full flex-col justify-center gap-6">
           <div className="flex flex-col gap-10 px-6 xs:px-10 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0">
             <div className="flex w-full justify-start sm:col-start-2 sm:row-start-1 sm:w-max">
               <h2 className="text-5xl font-bold text-white sm:text-6xl md-lg:text-7xl">
