@@ -61,7 +61,7 @@ function MobileNav() {
               "National Session",
             ]}
           />
-          <Drawer mainItem="Public Relations" items={["Press Releases"]} />
+          {/* <Drawer mainItem="Public Relations" items={["Press Releases"]} /> */}
           <a className="text-white text-2xl" href="/get-involved">
             Get Involved
           </a>
@@ -93,7 +93,7 @@ function DesktopNav() {
           "National Session",
         ]}
       />
-      <Dropdown mainItem="Public Relations" items={["Press Releases"]} />
+      {/* <Dropdown mainItem="Public Relations" items={["Press Releases"]} /> */}
 
       <a
         className="cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl"
