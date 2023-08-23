@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { CaretLeft, CaretRight, TestimonialCard } from "~/components";
+import { CaretLeft, CaretRight } from "~/components";
+import { OldTestimonialCard } from ".";
 
-const TestimonialCarousel = () => {
+export const OldTestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = 3;
 
@@ -26,7 +27,7 @@ const TestimonialCarousel = () => {
             currentIndex
           )}`}
         >
-          <TestimonialCard
+          <OldTestimonialCard
             name="Theodoulos Hadjimatheou"
             info="23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge"
             imageURL="/assets/testimonial-theo.jpg"
@@ -39,14 +40,14 @@ const TestimonialCarousel = () => {
             develop in EYP keeps surprising me. Through taking on various roles
             of responsibility I learnt a lot, met amazing people from all over
             Europe and stepped out of my comfort zone.
-          </TestimonialCard>
+          </OldTestimonialCard>
         </div>
         <div
           className={`transistion-all absolute duration-500 ${p2.at(
             currentIndex
           )}`}
         >
-          <TestimonialCard
+          <OldTestimonialCard
             name="Elena Odysseos"
             info="24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK"
             imageURL="/assets/testimonial-elena.jpg"
@@ -57,14 +58,14 @@ const TestimonialCarousel = () => {
             and how to work as part of a team. It is without a doubt that EYP
             has shaped the way I work and conduct myself in a professional
             setting.
-          </TestimonialCard>
+          </OldTestimonialCard>
         </div>
         <div
           className={`transistion-all absolute duration-500 ${p3.at(
             currentIndex
           )}`}
         >
-          <TestimonialCard
+          <OldTestimonialCard
             name="Maddie Theodoulou"
             info="17, Member since 2020, High school student"
             imageURL="/assets/testimonial-maddie.png"
@@ -83,7 +84,7 @@ const TestimonialCarousel = () => {
             completely different experiences. Having EYP organise such events,
             even in times of disarray, is something that I am truly thankful
             for.
-          </TestimonialCard>
+          </OldTestimonialCard>
         </div>
       </div>
       <button
@@ -95,5 +96,3 @@ const TestimonialCarousel = () => {
     </div>
   );
 };
-
-export default TestimonialCarousel;

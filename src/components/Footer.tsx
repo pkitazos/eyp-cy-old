@@ -5,7 +5,7 @@ import { wavePaths } from "~/data";
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
 
-const Footer = () => {
+export function Footer() {
   return (
     <div className="bottom-0 w-full">
       <WaveDivider waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
@@ -49,6 +49,4 @@ const Footer = () => {
       </div>
     </div>
   );
-};
-
-export default Footer;
+}

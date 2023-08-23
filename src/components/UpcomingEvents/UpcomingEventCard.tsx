@@ -19,7 +19,7 @@ const UpcomingEventCard = ({ title, date, description, imageURL }: props) => {
           height={150}
           src={imageURL}
           className="h-2/5 w-full object-cover"
-          alt={""}
+          alt=""
         />
         <div className="h-3/5 p-6">
           <span className="underliner">

@@ -10,7 +10,7 @@ interface props {
   boardMembers: boardPosition[];
 }
 
-const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
+export const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
   return (
     <>
       <Dialog>
@@ -40,5 +40,3 @@ const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
     </>
   );
 };
-
-export default PreviousBoardButton;

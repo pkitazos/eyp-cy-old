@@ -5,7 +5,7 @@ interface props {
   items: string[];
 }
 
-export default function Dropdown({ mainItem, items }: props) {
+export function Dropdown({ mainItem, items }: props) {
   return (
     <>
       <div className="dropdown-container">

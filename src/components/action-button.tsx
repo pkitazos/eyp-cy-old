@@ -2,7 +2,7 @@ interface props {
   text: string;
 }
 
-const ActionButton = ({ text }: props) => {
+export function ActionButton({ text }: props) {
   return (
     <button
       className={`w-max cursor-pointer rounded-full bg-accent-900 
@@ -13,6 +13,4 @@ const ActionButton = ({ text }: props) => {
       {text}
     </button>
   );
-};
-
-export default ActionButton;
+}

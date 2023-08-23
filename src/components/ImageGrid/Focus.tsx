@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "~/utils";
 
 interface props {
   images: [imageObj, imageObj, imageObj];
@@ -13,19 +14,15 @@ const Focus = ({ images, flow }: props) => {
 
   const zIndex = ["z-0", "z-10", "z-0"];
 
-  const makeClassNames = (col: number, row: number, span: number) =>
-    `col-span-${span} col-start-${col} row-span-${span} row-start-${row}`;
-
   return (
     <div className="grid h-full w-full grid-cols-10 grid-rows-12">
       {images.map((image, i) => (
         <div
           key={i}
-          className={`${zIndex[i]} ${makeClassNames(
-            cols[i],
-            rows[i],
-            spans[i]
-          )}`}
+          className={cn(
+            `${zIndex[i]}`,
+            `col-span-${spans[i]} col-start-${cols[i]} row-span-${spans[i]} row-start-${rows[i]}`
+          )}
         >
           <Image
             src={image.src}

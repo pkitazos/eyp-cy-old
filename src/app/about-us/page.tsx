@@ -6,6 +6,7 @@ import {
   PenIcon,
   NetworkIcon,
   WhatWeDoCard,
+  ImageGrid,
 } from "~/components";
 import { wavePaths } from "~/data";
 
@@ -16,36 +17,58 @@ export default function AboutUs() {
         <title>About Us</title>
       </head>
       <>
-        <section className="page-margin mt-16 px-4">
-          <div className="hide-left flex justify-center">
-            <Title
-              text="About Us"
-              order="h1"
-              underlineRotation="rotate-[190deg]"
+        <section className="page-margin mb-0 mt-40 md-lg:mt-32 lg:mt-0 flex max-h-max min-h-fit lg:min-h-[70vh] items-center">
+          <div className="z-20 w-full md-lg:w-2/3">
+            <div className="hide-left flex justify-center">
+              <Title
+                text="About Us"
+                order="h1"
+                underlineRotation="rotate-[190deg]"
+              />
+            </div>
+            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+              The European Youth Parliament (EYP) Cyprus is a non-partisan and
+              non-governmental organisation, which aims to encourage independent
+              thinking, personal initiative and intercultural encounters amongst
+              the young people of Cyprus. EYP Cyprus is one of the 40 European
+              organisations that operate as part of the pan-European network of
+              EYP International. The organisation was founded in 2006 and over
+              the years has organised over 100 events with more than 3,500 young
+              people being involved in the activities and workings of the
+              organisation.
+            </p>
+          </div>
+          <div className="hidden ml-20 md-lg:grid w-[35%] place-items-center">
+            <ImageGrid.Focus
+              flow="lhs"
+              images={[
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+              ]}
             />
           </div>
-          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
-            The European Youth Parliament (EYP) Cyprus is a non-partisan and
-            non-governmental organisation, which aims to encourage independent
-            thinking, personal initiative and intercultural encounters amongst
-            the young people of Cyprus. EYP Cyprus is one of the 40 European
-            organisations that operate as part of the pan-European network of
-            EYP International. The organisation was founded in 2006 and over the
-            years has organised over 100 events with more than 3,500 young
-            people being involved in the activities and workings of the
-            organisation.
-          </p>
         </section>
-        <section className="page-margin mt-32 px-4">
-          <div className="hide-left">
-            <div className="flex justify-center">
+        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
+          <div className="hidden mr-20 md-lg:grid w-[35%] place-items-center">
+            <ImageGrid.Focus
+              flow="rhs"
+              images={[
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+              ]}
+            />
+          </div>
+          <div className="z-20 w-full md-lg:w-2/3">
+            <div className="hide-left flex justify-center">
               <Title
                 text="Our Mission"
                 order="h2"
                 underlineRotation="rotate-[190deg]"
               />
             </div>
-            <p className="text-justify text-lg leading-relaxed md:text-xl">
+            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament is a peer-to-peer educational
               programme that brings together young people from across Europe to
               debate the pressing issues of our time. Our mission is to inspire
@@ -104,7 +127,7 @@ export default function AboutUs() {
           </div>
         </section>
         <WaveDivider waveLayers={wavePaths.aboutBottom} />
-        <section className="page-margin mt-8 max-h-max min-h-[60vh] px-4 pb-16">
+        <section className="page-margin mt-8 max-h-max min-h-[70vh] px-4 pb-16">
           <div className="hide-left">
             <div className="flex justify-center">
               <Title
@@ -122,13 +145,16 @@ export default function AboutUs() {
               conferences, workshops, think tanks, trainings, panel discussions
               among others EYP Cyprus also provides young people with spaces to
               connect with each other and build intercultural understanding and
-              friendships across Cyprus and Europe. With 15+ events annually,
-              and 500+ participants at our activities each year, our
-              organisation is growing and reaching more and more young people!
-              And with EYP Cyprus being part of the wider EYP Network present in
-              40+ countries in Europe, our members and alumni have the
-              opportunity to join over 30,000 young people who take part in more
-              than 500 EYP events organised across Europe every year.
+              friendships across Cyprus and Europe.
+              <br />
+              <br />
+              With 15+ events annually, and 500+ participants at our activities
+              each year, our organisation is growing and reaching more and more
+              young people! And with EYP Cyprus being part of the wider EYP
+              Network present in 40+ countries in Europe, our members and alumni
+              have the opportunity to join over 30,000 young people who take
+              part in more than 500 EYP events organised across Europe every
+              year.
             </p>
           </div>
         </section>

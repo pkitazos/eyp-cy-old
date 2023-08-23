@@ -1,4 +1,3 @@
-import { clsx } from "clsx";
 import Image from "next/image";
 import { ReactNode } from "react";
 
@@ -9,7 +8,7 @@ interface props {
   children: ReactNode;
 }
 
-export default function TestimonialCard({
+export function TestimonialCard({
   name,
   description,
   imageURL,

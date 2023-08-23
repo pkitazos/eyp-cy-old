@@ -1,7 +1,6 @@
 import { Source_Sans_3 } from "next/font/google";
-import { Footer, Header } from "~/components";
+import { Footer, Header, DebugOverlay } from "~/components";
 import "./app.css";
-import DebugOverlay from "~/components/debug-overlay";
 
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],

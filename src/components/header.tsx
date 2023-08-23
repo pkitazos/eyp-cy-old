@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import { wavePaths } from "~/data";
 import { debounce } from "~/utils";
 import { cn } from "~/utils/utils";
-import { CloseIcon, Dropdown, MenuIcon, WaveDivider } from "..";
-import Drawer from "../drawer";
+import { CloseIcon, Drawer, Dropdown, MenuIcon, WaveDivider } from ".";
 
 const HeaderLogo = () => {
   return (
@@ -106,7 +105,7 @@ function DesktopNav() {
   );
 }
 
-export default function Header() {
+export function Header() {
   const home = usePathname() == "/";
 
   const [isDocked, setIsDocked] = useState(true);
@@ -120,6 +119,7 @@ export default function Header() {
 
     return () => document.removeEventListener("scroll", cb);
   }, []);
+
   return (
     <>
       {home && (

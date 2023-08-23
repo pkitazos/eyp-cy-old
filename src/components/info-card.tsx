@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
-import Title from "./Title";
-import { cn } from "~/utils/utils";
+import { Title } from ".";
+import { cn } from "~/utils";
 
 interface props {
   title: string;
@@ -11,7 +11,7 @@ interface props {
   className?: string;
 }
 
-export default function InfoCard({
+export function InfoCard({
   title,
   reversed = false,
   imageURL,

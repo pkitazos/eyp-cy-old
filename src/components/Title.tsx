@@ -8,7 +8,7 @@ interface props {
   underlineRotation?: string;
 }
 
-const Title = ({
+export const Title = ({
   text,
   order,
   variant = "dark",
@@ -56,5 +56,3 @@ const Title = ({
     </>
   );
 };
-
-export default Title;

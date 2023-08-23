@@ -98,7 +98,7 @@ const DesktopLayout = (props: props) => {
   );
 };
 
-const TestimonialCard = ({
+export const OldTestimonialCard = ({
   name,
   info,
   imageURL,
@@ -126,5 +126,3 @@ const TestimonialCard = ({
     </>
   );
 };
-
-export default TestimonialCard;

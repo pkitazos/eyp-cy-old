@@ -11,7 +11,7 @@ interface props {
   items: string[];
 }
 
-export default function Drawer({ mainItem, items }: props) {
+export function Drawer({ mainItem, items }: props) {
   return (
     <Accordion type="single" collapsible className="w-full min-w-[16rem]">
       <AccordionItem value="item-1">

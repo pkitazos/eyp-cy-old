@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import TestimonialCard from "./testimonial-card-2";
+import { TestimonialCard } from ".";
 import { motion, AnimatePresence } from "framer-motion";
 import { CaretLeft, CaretRight } from "./SVGs";
 
