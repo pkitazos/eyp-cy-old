@@ -7,7 +7,7 @@ export default function Impact() {
         <title>Impact</title>
       </head>
       <>
-        <section className="page-margin mt-16 flex flex-col justify-center">
+        <section className="page-margin mt-40 md:mt-20 lg:mt-16 flex flex-col justify-center">
           <div className="hide-bottom flex justify-center">
             <Title text="Our Impact" order="h1" />
           </div>
@@ -28,8 +28,8 @@ export default function Impact() {
             measurable impact on young people across Europe.
           </p>
         </section>
-        <section className="page-margin mb-16 mt-16 flex max-h-max min-h-[60vh] flex-col gap-20">
-          <div className="hide-bottom flex justify-center">
+        <section className="page-margin mb-16 mt-60 flex max-h-max min-h-[60vh] flex-col gap-20 xl:gap-36 3xl:gap-56">
+          <div className="-mb-10 xl:-mb-20 hide-bottom flex justify-center">
             <Title
               text="What our Impact looks like"
               order="h2"
@@ -39,7 +39,6 @@ export default function Impact() {
           <InfoCard
             title="Forming opinions and solving current challenges"
             imageURL="/assets/impact-1.png"
-            className={""}
           >
             Every year, the EYP Cyprus engages 500+ young people from across
             Cyprus and Europe in a welcoming, independent, non-partisan
@@ -51,7 +50,6 @@ export default function Impact() {
             title="Developing skills and growing as a person"
             imageURL="/assets/impact-2.png"
             reversed={true}
-            className={""}
           >
             EYP Cyprus encourages independent thinking and initiative amongst
             young people and facilitates the learning of crucial social and
@@ -66,7 +64,6 @@ export default function Impact() {
           <InfoCard
             title="Engaging with current topics in dialogue with decision-makers"
             imageURL="/assets/impact-3.png"
-            className={""}
           >
             During most of our events, we work hard to bring young people
             together with decision makers and experts. Participants at our
@@ -82,7 +79,6 @@ export default function Impact() {
             title="Building a network and facilitating intercultural understanding"
             imageURL="/assets/impact-4.png"
             reversed={true}
-            className={""}
           >
             Through taking part in an EYP Cyprus event, young people have the
             chance to join a network of active alumni and volunteers both in
@@ -97,7 +93,6 @@ export default function Impact() {
           <InfoCard
             title="Empowering young, active citizens"
             imageURL="/assets/impact-5.png"
-            className={""}
           >
             As a result of our events, more than 90% of participants indicate an
             increased willingness to actively get involved in society and
@@ -112,7 +107,6 @@ export default function Impact() {
             title="Traveling and International Opportunities"
             imageURL="/assets/impact-1.png"
             reversed={true}
-            className={""}
           >
             Through joining some of our events, participants have the chance to
             be selected and participate in International Sessions in 40+

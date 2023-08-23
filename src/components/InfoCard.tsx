@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 import Title from "./Title";
+import { cn } from "~/utils/utils";
 
 interface props {
   title: string;
   reversed?: boolean;
   imageURL: string;
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 export default function InfoCard({
@@ -20,9 +21,10 @@ export default function InfoCard({
   return (
     <>
       <div
-        className={`linker flex ${
+        className={cn(
+          "flex group gap-2 items-center",
           reversed ? "flex-row-reverse" : "flex-row"
-        } group gap-2`}
+        )}
       >
         <div className="w-1/4 rounded-lg bg-pink-500">
           <Image
@@ -30,13 +32,21 @@ export default function InfoCard({
             height={250}
             src={imageURL}
             alt=""
-            className="h-[97%] w-[97%] -translate-x-4 -translate-y-4 content-center rounded-lg object-cover transition-all duration-300 group-hover:-translate-x-5 group-hover:-translate-y-5"
+            className={cn(
+              "h-[97%] w-[97%] content-center rounded-lg object-cover transition-all duration-300",
+              reversed
+                ? "translate-x-4 translate-y-4 group-hover:translate-x-5 group-hover:translate-y-5"
+                : "-translate-x-4 -translate-y-4 group-hover:-translate-x-5 group-hover:-translate-y-5"
+            )}
           />
         </div>
         <div
-          className={`m-8 mr-12 w-3/4 transition-all duration-300 group-hover:scale-[1.02] ${className}`}
+          className={cn(
+            "m-8 mr-12 w-3/4 transition-all duration-300 group-hover:scale-[1.02]",
+            className
+          )}
         >
-          <Title text={title} order={"h3"} />
+          <Title text={title} order="h3" />
           <p className="text-justify text-lg">{children}</p>
         </div>
       </div>

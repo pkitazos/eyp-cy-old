@@ -1,5 +1,5 @@
 import { NCMemberCard, PreviousBoardButton, Title } from "~/components";
-import { previousBoards } from "~/data";
+import { previousBoardData } from "~/data/previous-boards";
 
 export default function NationalCommittee() {
   return (
@@ -93,102 +93,17 @@ export default function NationalCommittee() {
             />
           </div>
           <div className="mt-10 grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4">
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2022"
-                boardMembers={previousBoards.year_2022}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2021"
-                boardMembers={previousBoards.year_2021}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2020"
-                boardMembers={previousBoards.year_2020}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2019"
-                boardMembers={previousBoards.year_2019}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2018"
-                boardMembers={previousBoards.year_2018}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2017"
-                boardMembers={previousBoards.year_2017}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2016"
-                boardMembers={previousBoards.year_2016}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2015"
-                boardMembers={previousBoards.year_2015}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2014"
-                boardMembers={previousBoards.year_2014}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2013"
-                boardMembers={previousBoards.year_2013}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2012"
-                boardMembers={previousBoards.year_2012}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2011"
-                boardMembers={previousBoards.year_2011}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2010"
-                boardMembers={previousBoards.year_2010}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2009"
-                boardMembers={previousBoards.year_2009}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2008"
-                boardMembers={previousBoards.year_2008}
-              />
-            </div>
-            <div className="hide-left delay-card flex shrink justify-center">
-              <PreviousBoardButton
-                year="2007"
-                boardMembers={previousBoards.year_2007}
-              />
-            </div>
+            {previousBoardData.map((previousBoard) => (
+              <div
+                key={previousBoard.year}
+                className="hide-left delay-card flex shrink justify-center"
+              >
+                <PreviousBoardButton
+                  year={previousBoard.year}
+                  boardMembers={previousBoard.members}
+                />
+              </div>
+            ))}
           </div>
         </section>
       </>

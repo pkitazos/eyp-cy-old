@@ -1,5 +1,4 @@
 export { default as ActionButton } from "./ActionButton";
-export { default as BoardPosition } from "./BoardPosition";
 export { default as EventTypeCard } from "./EventTypeCard";
 export { default as Footer } from "./Footer";
 export { default as ImpactCard } from "./ImpactCard";
@@ -13,7 +12,23 @@ export { default as Title } from "./Title";
 export { default as WhatWeDoCard } from "./WhatWeDoCard";
 export { Drawer, Dropdown, Header } from "./Header";
 export { Focus, ImageGrid, Regular, Test } from "./ImageGrid";
-export { BookIcon, CaretLeft, CaretRight, ChevronDown, CloseIcon, ConversationIcon, FacebookIcon, InstagramIcon, MenuIcon, NetworkIcon, PenIcon, QuoteLeftIcon, QuoteRightIcon, Underline, WhiteStar } from "./SVGs";
+export {
+  BookIcon,
+  CaretLeft,
+  CaretRight,
+  ChevronDown,
+  CloseIcon,
+  ConversationIcon,
+  FacebookIcon,
+  InstagramIcon,
+  MenuIcon,
+  NetworkIcon,
+  PenIcon,
+  QuoteLeftIcon,
+  QuoteRightIcon,
+  Underline,
+  WhiteStar,
+} from "./SVGs";
 export { TestimonialCard, TestimonialCarousel } from "./Testimonials";
 export { UpcomingEventCard, UpcomingEventCardWrapper } from "./UpcomingEvents";
 export { Wave, WaveDivider } from "./Waves";

@@ -1,11 +1,13 @@
+import clsx from "clsx";
 import {
   ImageGrid,
-  TestimonialCarousel,
   Title,
   UpcomingEventCard,
   UpcomingEventCardWrapper,
   WaveDivider,
 } from "~/components";
+import TestimonialCard from "~/components/testimonial-card-2";
+import { TestimonialCarousel } from "~/components/testimonial-carousel-2";
 import { wavePaths } from "~/data";
 
 export default function Home() {
@@ -102,7 +104,12 @@ export default function Home() {
           </UpcomingEventCardWrapper>
         </section>
         <WaveDivider waveLayers={wavePaths.homeBottom} />
-        <section className="page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]">
+        <section
+          className={clsx(
+            "page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]",
+            "px-0 lg:px-8 xl:px-20"
+          )}
+        >
           <div className="flex flex-col gap-5">
             <div className="hide-left flex justify-center md:justify-start">
               <Title
@@ -114,6 +121,21 @@ export default function Home() {
             </div>
             <div className="hide-right delay-card">
               <TestimonialCarousel />
+              {/* <TestimonialCard
+                name="Theodoulos Hadjimatheou"
+                description="23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge"
+                imageURL="/assets/testimonial-theo.jpg"
+              >
+                EYP has changed my life literally. There&apos;s a plethora of
+                areas that I was unaware or indifferent to, that through EYP I
+                now find fascinating. By discussing topics ranging from climate
+                change to human medical gene-editing, I have become more aware
+                of current issues around me. Beyond all these, the extent to
+                which I personally develop in EYP keeps surprising me. Through
+                taking on various roles of responsibility I learnt a lot, met
+                amazing people from all over Europe and stepped out of my
+                comfort zone.
+              </TestimonialCard> */}
             </div>
           </div>
         </section>

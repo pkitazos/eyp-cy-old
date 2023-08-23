@@ -1,5 +1,8 @@
 import type { FC } from "react";
-import { BoardPosition, Title } from ".";
+import { Title } from ".";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "./dialog";
+
+type boardPosition = { position: string; name: string };
 
 interface props {
   year: string;
@@ -10,32 +13,30 @@ interface props {
 const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
   return (
     <>
-      <label
-        htmlFor={`my-modal-${year}`}
-        className="cursor-pointer rounded-md bg-sky-200 px-7 py-2 text-xl hover:scale-105 hover:bg-sky-300"
-      >
-        {year}
-      </label>
-
-      <input type="checkbox" id={`my-modal-${year}`} className="modal-toggle" />
-      <label htmlFor={`my-modal-${year}`} className="modal cursor-pointer">
-        <label
-          className="no-scrollbar modal-box relative bg-white sm:w-11/12 sm:max-w-5xl"
-          htmlFor=""
-        >
-          <Title text={`National Committee ${year}`} order="h2" />
-
-          <div className="mt-6 grid grid-cols-1 gap-4 pb-3 xs:grid-cols-2 lg:grid-cols-3 lg-xl:grid-cols-4">
-            <>
-              {boardMembers.map((boardMember, i) => (
-                <BoardPosition key={i} position={boardMember.position}>
+      <Dialog>
+        <DialogTrigger>
+          <button className="cursor-pointer rounded-md bg-sky-200 px-7 py-2 text-xl hover:scale-105 hover:bg-sky-300">
+            {year}
+          </button>
+        </DialogTrigger>
+        <DialogContent className="backdrop-blur-xl">
+          <DialogHeader>
+            <Title text={`National Committee ${year}`} order="h2" />
+          </DialogHeader>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-8">
+            {boardMembers.map((boardMember, i) => (
+              <div key={i} className="flex flex-col gap-1 p-1">
+                <h3 className="text-base font-semibold text-slate-500 sm:text-lg">
+                  {boardMember.position}
+                </h3>
+                <h2 className="text-lg font-semibold sm:text-xl">
                   {boardMember.name}
-                </BoardPosition>
-              ))}
-            </>
+                </h2>
+              </div>
+            ))}
           </div>
-        </label>
-      </label>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
