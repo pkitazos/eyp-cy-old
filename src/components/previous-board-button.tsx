@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { Title } from ".";
 import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "./dialog";
 
@@ -10,7 +9,7 @@ interface props {
   boardMembers: boardPosition[];
 }
 
-export const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
+export function PreviousBoardButton({ year, boardMembers }: props) {
   return (
     <>
       <Dialog>
@@ -39,4 +38,4 @@ export const PreviousBoardButton: FC<props> = ({ year, boardMembers }) => {
       </Dialog>
     </>
   );
-};
+}

@@ -1,5 +1,5 @@
-import type { FC, ReactNode } from "react";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 interface props {
   title: string;
@@ -8,7 +8,7 @@ interface props {
   children: ReactNode;
 }
 
-const WhatWeDoCard: FC<props> = ({ title, info, imageURL, children: icon }) => {
+export function WhatWeDoCard({ title, info, imageURL, children: icon }: props) {
   return (
     <div className="group flex w-full sm:grid sm:grid-cols-2 sm:items-center md:w-64 md:grid-cols-1">
       <Image
@@ -29,6 +29,4 @@ const WhatWeDoCard: FC<props> = ({ title, info, imageURL, children: icon }) => {
       </div>
     </div>
   );
-};
-
-export default WhatWeDoCard;
+}

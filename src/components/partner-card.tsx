@@ -1,4 +1,3 @@
-import type { FC } from "react";
 // import Image from "next/image";
 
 interface props {
@@ -6,7 +5,7 @@ interface props {
   description: string;
 }
 
-const PartnerCard: FC<props> = ({ name, description }) => {
+export function PartnerCard({ name, description }: props) {
   return (
     <div className="flex w-60 flex-col gap-5">
       {/* <Image/> */}
@@ -14,6 +13,4 @@ const PartnerCard: FC<props> = ({ name, description }) => {
       <p className="text-lg">{description}</p>
     </div>
   );
-};
-
-export default PartnerCard;
+}

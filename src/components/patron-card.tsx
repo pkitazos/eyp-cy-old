@@ -1,5 +1,3 @@
-import type { FC } from "react";
-
 interface props {
   name: string;
   title: string;
@@ -7,11 +5,11 @@ interface props {
   invert?: boolean;
 }
 
-const PatronCard: FC<props> = ({ name, title, imageURL, invert }) => {
+export function PatronCard({ name, title, imageURL, invert }: props) {
   return (
     <>
-      <div className='flex w-60 flex-col'>
-        <div className='mb-4 h-60 w-60 rounded-full bg-teal-500'>&nbsp;</div>
+      <div className="flex w-60 flex-col">
+        <div className="mb-4 h-60 w-60 rounded-full bg-teal-500">&nbsp;</div>
         <div
           className={`mb-3 text-center text-lg ${
             invert ? "text-zinc-200" : "text-black"
@@ -29,6 +27,4 @@ const PatronCard: FC<props> = ({ name, title, imageURL, invert }) => {
       </div>
     </>
   );
-};
-
-export default PatronCard;
+}

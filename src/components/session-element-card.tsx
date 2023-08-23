@@ -9,13 +9,13 @@ interface props {
   className?: string;
 }
 
-const SessionElementCard = ({
+export function SessionElementCard({
   title,
   titlePosition = "text-left",
   children,
   imageURL,
   className,
-}: props) => {
+}: props) {
   return (
     <div
       className={`linker flex ${
@@ -43,6 +43,4 @@ const SessionElementCard = ({
       </div>
     </div>
   );
-};
-
-export default SessionElementCard;
+}

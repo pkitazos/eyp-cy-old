@@ -8,7 +8,7 @@ interface props {
   info?: string; // TODO blocked until get data
 }
 
-const NCMemberCard: FC<props> = ({ name, title, imageURL, info }) => {
+export function NCMemberCard({ name, title, imageURL, info }: props) {
   return (
     <>
       <div className="flex w-60 flex-col">
@@ -24,6 +24,4 @@ const NCMemberCard: FC<props> = ({ name, title, imageURL, info }) => {
       </div>
     </>
   );
-};
-
-export default NCMemberCard;
+}

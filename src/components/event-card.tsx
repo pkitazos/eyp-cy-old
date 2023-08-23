@@ -7,7 +7,7 @@ interface props {
   imageURL: string;
 }
 
-const EventTypeCard = ({ title, info, imageURL }: props) => {
+export function EventTypeCard({ title, info, imageURL }: props) {
   return (
     <>
       <div className="flex h-max flex-col items-center gap-5 transition-all duration-300 hover:-translate-y-2.5 xs:flex-row xs:hover:translate-y-0">
@@ -28,6 +28,4 @@ const EventTypeCard = ({ title, info, imageURL }: props) => {
       </div>
     </>
   );
-};
-
-export default EventTypeCard;
+}

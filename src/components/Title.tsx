@@ -8,13 +8,13 @@ interface props {
   underlineRotation?: string;
 }
 
-export const Title = ({
+export function Title({
   text,
   order,
   variant = "dark",
   underlineColor = "text-accent-900",
   underlineRotation = "rotate-180",
-}: props) => {
+}: props) {
   let size: string;
   let underlineWidth: string;
   let color: string;
@@ -55,4 +55,4 @@ export const Title = ({
       </div>
     </>
   );
-};
+}
