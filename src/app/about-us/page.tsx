@@ -20,11 +20,7 @@ export default function AboutUs() {
         <section className="page-margin mb-0 mt-40 md-lg:mt-32 lg:mt-0 flex max-h-max min-h-fit lg:min-h-[70vh] items-center">
           <div className="z-20 w-full md-lg:w-2/3">
             <div className="hide-left flex justify-center">
-              <Title
-                text="About Us"
-                order="h1"
-                underlineRotation="rotate-[190deg]"
-              />
+              <Title text="About Us" order="h1" underline="rotate-[190deg]" />
             </div>
             <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament (EYP) Cyprus is a non-partisan and
@@ -65,7 +61,7 @@ export default function AboutUs() {
               <Title
                 text="Our Mission"
                 order="h2"
-                underlineRotation="rotate-[190deg]"
+                underline="rotate-[190deg]"
               />
             </div>
             <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
@@ -83,8 +79,8 @@ export default function AboutUs() {
             <Title
               text="What We Do"
               order="h2"
-              variant="light"
-              underlineRotation="rotate-[190deg]"
+              theme="light"
+              underline="rotate-[190deg]"
             />
           </div>
           <div className="hide-right flex flex-col flex-wrap justify-center gap-y-10 md:flex-row md:px-0 lg:-mx-16">
@@ -133,7 +129,7 @@ export default function AboutUs() {
               <Title
                 text="How we do What we do"
                 order="h2"
-                underlineRotation="rotate-[190deg]"
+                underline="rotate-[190deg]"
               />
             </div>
             <p className="text-justify text-lg leading-relaxed md:text-xl">
@@ -164,7 +160,7 @@ export default function AboutUs() {
               <Title
                 text="A Little More About Us"
                 order="h2"
-                underlineRotation="rotate-[190deg]"
+                underline="rotate-[190deg]"
               />
             </div>
             <p className="text-justify text-lg leading-relaxed md:text-xl">

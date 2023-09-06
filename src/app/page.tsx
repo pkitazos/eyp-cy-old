@@ -6,7 +6,6 @@ import {
   UpcomingEventCardWrapper,
   WaveDivider,
 } from "~/components";
-import TestimonialCard from "~/components/testimonial-card";
 import { TestimonialCarousel } from "~/components/testimonial-carousel";
 import { wavePaths } from "~/data";
 
@@ -31,6 +30,9 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32">
+            {/* <button className="ml-auto w-20 rounded-md bg-sky-500 p-2 text-center font-bold text-white ">
+              sign in
+            </button> */}
             <a
               href="/get-involved"
               className="mx-auto w-max cursor-pointer rounded-full bg-accent-900 px-9 py-5 text-xl font-semibold text-black transition-all duration-300 hover:scale-110 md:px-9 md:py-6  md:text-2xl lg:px-10 lg:py-7 lg:text-2xl xl:px-10 xl:py-7 xl:text-3xl"
@@ -74,7 +76,7 @@ export default function Home() {
         <WaveDivider waveLayers={wavePaths.homeTop} />
         <section className="page-padding min-h-[60vh] bg-primary-600">
           <div className="hide-right flex justify-center md:justify-end">
-            <Title text="Upcoming Events" order="h2" variant="light" />
+            <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
           <UpcomingEventCardWrapper>
             <UpcomingEventCard
@@ -115,8 +117,7 @@ export default function Home() {
               <Title
                 text="Testimonials"
                 order="h2"
-                underlineColor="text-orange-600"
-                underlineRotation="rotate-12"
+                underline="text-orange-600 rotate-12"
               />
             </div>
             <div className="hide-right delay-card">

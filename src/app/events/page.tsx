@@ -52,11 +52,11 @@ export default function Events() {
           <Title
             text="I want to participate as a .."
             order="h2"
-            variant="light"
-            underlineColor="text-orange-500"
+            theme="light"
+            underline="text-orange-500"
           />
         </div>
-        <div className="flex flex-row justify-center gap-24">
+        <div className="flex flex-row justify-center gap-8 md:gap-14 lg-xl:gap-24">
           <ActionButton text="School" />
           <ActionButton text="Individual" />
         </div>

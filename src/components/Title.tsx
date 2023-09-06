@@ -1,56 +1,36 @@
 import { Underline } from "~/components";
+import { cn } from "~/utils";
 
 interface props {
   text: string;
   order: "h1" | "h2" | "h3";
-  variant?: "dark" | "light";
-  underlineColor?: string;
-  underlineRotation?: string;
+  theme?: "dark" | "light";
+  underline?: string;
 }
 
-export function Title({
-  text,
-  order,
-  variant = "dark",
-  underlineColor = "text-accent-900",
-  underlineRotation = "rotate-180",
-}: props) {
-  let size: string;
-  let underlineWidth: string;
-  let color: string;
-
-  switch (order) {
-    case "h1":
-      size = "text-3xl xs:text-4xl md-lg:text-5xl";
-      underlineWidth = "w-12 xs:w-14 md-lg:w-16";
-      break;
-    case "h2":
-      size = "text-2xl xs:text-3xl md-lg:text-4xl";
-      underlineWidth = "w-10 xs:w-12 md-lg:w-14";
-      break;
-    case "h3":
-      size = "text-xl xs:text-2xl md-lg:text-3xl";
-      underlineWidth = "w-9 xs:w-10 md-lg:w-12";
-      break;
-  }
-
-  switch (variant) {
-    case "dark":
-      color = "text-primary-900";
-      break;
-    case "light":
-      color = "text-white";
-      break;
-  }
-
+export function Title({ text, order, theme = "dark", underline }: props) {
   return (
     <>
       <div className="flex flex-col items-center">
-        <h1 className={`${size} ${color} text-center font-semibold`}>{text}</h1>
+        <h1
+          className={cn(
+            "text-center font-semibold",
+            order === "h1" && "text-3xl xs:text-4xl md-lg:text-5xl",
+            order === "h2" && "text-2xl xs:text-3xl md-lg:text-4xl",
+            order === "h3" && "text-xl xs:text-2xl md-lg:text-3xl",
+            theme === "dark" ? "text-primary-900" : "text-white"
+          )}
+        >
+          {text}
+        </h1>
         <Underline
-          className={`mb-3 mt-1 xs:mb-4 md-lg:mb-6 ${underlineWidth}`}
-          color={underlineColor}
-          tilt={underlineRotation}
+          className={cn(
+            "mb-3 mt-1 xs:mb-4 md-lg:mb-6",
+            order === "h1" && "w-12 xs:w-14 md-lg:w-16",
+            order === "h2" && "w-10 xs:w-12 md-lg:w-14",
+            order === "h3" && "w-9 xs:w-10 md-lg:w-12",
+            underline
+          )}
         />
       </div>
     </>

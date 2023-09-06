@@ -14,15 +14,11 @@ export default function NationalCommittee() {
               <Title
                 text="Our National Committee"
                 order="h1"
-                underlineRotation="rotate-[190deg]"
+                underline="rotate-[190deg]"
               />
             </div>
             <div className="hide-bottom delay-card">
-              <Title
-                text="2023"
-                order="h2"
-                underlineRotation="rotate-[190deg]"
-              />
+              <Title text="2023" order="h2" underline="rotate-[190deg]" />
             </div>
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-16">
@@ -89,7 +85,7 @@ export default function NationalCommittee() {
             <Title
               text="Previous Boards"
               order="h2"
-              underlineRotation="rotate-[190deg]"
+              underline="rotate-[190deg]"
             />
           </div>
           <div className="mt-10 grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4">

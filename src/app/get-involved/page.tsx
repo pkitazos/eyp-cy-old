@@ -13,7 +13,7 @@ export default function GetInvolved() {
               <Title
                 text="Get Involved"
                 order="h1"
-                underlineRotation="rotate-[190deg]"
+                underline="rotate-[190deg]"
               />
             </div>
             <p className="text-justify text-lg leading-relaxed md:text-xl">
@@ -35,8 +35,7 @@ export default function GetInvolved() {
               <Title
                 text="High-School Students"
                 order="h3"
-                underlineRotation="rotate-[176deg]"
-                underlineColor="text-orange-500"
+                underline="text-orange-500 rotate-[176deg]"
               />
             </div>
             <p className="mb-4 text-justify text-xl">
@@ -57,8 +56,7 @@ export default function GetInvolved() {
               <Title
                 text="Young Adults"
                 order="h3"
-                underlineRotation="rotate-6"
-                underlineColor="text-fuchsia-500"
+                underline="text-fuchsia-500 rotate-6"
               />
             </div>
             <p className="mb-1 text-justify text-xl lg:mb-4">
@@ -77,8 +75,7 @@ export default function GetInvolved() {
               <Title
                 text="General, Open Events"
                 order="h2"
-                underlineRotation="rotate-[190deg]"
-                underlineColor="text-fuchsia-500"
+                underline="text-fuchsia-500 rotate-[190deg]"
               />
             </div>
             <p className="text-justify text-lg leading-relaxed md:text-xl">

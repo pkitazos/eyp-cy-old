@@ -22,7 +22,7 @@ export function InfoCard({
     <>
       <div
         className={cn(
-          "flex group gap-2 items-center",
+          "flex group gap-4 items-center",
           reversed ? "flex-row-reverse" : "flex-row"
         )}
       >

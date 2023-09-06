@@ -62,8 +62,8 @@ export default function PatronsAndPartners() {
               <Title
                 text="EU Wide Patrons"
                 order="h2"
-                variant="light"
-                underlineColor="text-orange-600"
+                theme="light"
+                underline="text-orange-600"
               />
             </div>
             <p className="mb-16 text-center text-lg leading-relaxed text-zinc-200 sm:text-justify md:text-xl">
@@ -92,11 +92,7 @@ export default function PatronsAndPartners() {
         <WaveDivider waveLayers={wavePaths.patronsBottom} />
         <section className="page-margin max-h-max min-h-[60vh]">
           <div className="flex justify-center sm:justify-start">
-            <Title
-              text="Our Partners"
-              order="h2"
-              underlineRotation="rotate-12"
-            />
+            <Title text="Our Partners" order="h2" underline="rotate-12" />
           </div>
           <div className="flex flex-col items-center justify-center gap-10 sm:flex-row md-lg:justify-start">
             <PartnerCard

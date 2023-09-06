@@ -33,7 +33,7 @@ export default function Impact() {
             <Title
               text="What our Impact looks like"
               order="h2"
-              underlineRotation="rotate-[190deg]"
+              underline="rotate-[190deg]"
             />
           </div>
           <InfoCard
