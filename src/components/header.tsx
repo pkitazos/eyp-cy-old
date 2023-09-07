@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { wavePaths } from "~/data";
 import { debounce } from "~/utils";
 import { cn } from "~/utils";
 import { CloseIcon, Drawer, Dropdown, MenuIcon, WaveDivider } from ".";
+import { Popover, Transition } from "@headlessui/react";
 
 const HeaderLogo = () => {
   return (
@@ -26,48 +27,69 @@ const HeaderLogo = () => {
 };
 
 function MobileNav() {
-  const [expanded, setExpanded] = useState(false);
   return (
-    <div className="block lg:hidden">
-      <button onClick={() => setExpanded(true)}>
-        <MenuIcon className="w-6 text-white" />
-      </button>
-      <div
-        className={cn(
-          "grid place-items-center bg-primary-700/70 backdrop-blur-md h-screen w-full fixed top-0 left-0 transition-all duration-100",
-          expanded ? "opacity-1 z-50" : "opacity-0 -z-50"
-        )}
-      >
-        <button
-          className="fixed top-0 h-[10vh] right-4"
-          onClick={() => setExpanded(false)}
-        >
-          <CloseIcon className="w-6 text-white" />
+    <Popover className="block lg:hidden">
+      <Popover.Button>
+        <button>
+          <MenuIcon className="w-6 text-white" />
         </button>
-        <nav className="flex flex-col gap-5">
-          <a className="text-white text-2xl" href="/">
-            Home
-          </a>
-          <Drawer
-            mainItem="About Us"
-            items={["Patrons & Partners", "Impact", "National Committee"]}
-          />
-          <Drawer
-            mainItem="Events"
-            items={[
-              "Pre-Selection Days",
-              "Days of EYP",
-              "Youth Summit",
-              "National Session",
-            ]}
-          />
-          {/* <Drawer mainItem="Public Relations" items={["Press Releases"]} /> */}
-          <a className="text-white text-2xl" href="/get-involved">
-            Get Involved
-          </a>
-        </nav>
-      </div>
-    </div>
+      </Popover.Button>
+      <Transition.Root>
+        <Transition.Child
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="duration-150 ease-in"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Popover.Overlay className="fixed inset-0 bg-primary-700/70 backdrop-blur-md" />
+        </Transition.Child>
+        <Transition.Child
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <Popover.Panel
+            as="div"
+            className="absolute inset-x-0 h-[70vh] grid place-items-center"
+          >
+            <Popover.Button>
+              <button className="absolute -top-[5vh] right-4">
+                <CloseIcon className="w-6 text-white" />
+              </button>
+            </Popover.Button>
+            <nav className="flex flex-col gap-5">
+              <a className="text-white text-2xl" href="/">
+                Home
+              </a>
+              <Drawer
+                mainItem="About Us"
+                items={["Patrons & Partners", "Impact", "National Committee"]}
+              />
+              <Drawer
+                mainItem="Events"
+                items={[
+                  "Pre-Selection Days",
+                  "Days of EYP",
+                  "Youth Summit",
+                  "National Session",
+                ]}
+              />
+              {/* <Drawer mainItem="Public Relations" items={["Press Releases"]} /> */}
+              <a className="text-white text-2xl" href="/get-involved">
+                Get Involved
+              </a>
+            </nav>
+          </Popover.Panel>
+        </Transition.Child>
+      </Transition.Root>
+    </Popover>
   );
 }
 
