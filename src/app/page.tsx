@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import {
   ImageGrid,
+  TestimonialCarousel,
   Title,
   UpcomingEventCard,
   UpcomingEventCardWrapper,
   WaveDivider,
 } from "~/components";
-import { TestimonialCarousel } from "~/components/testimonial-carousel";
 import { wavePaths } from "~/data";
 
 export default function Home() {
