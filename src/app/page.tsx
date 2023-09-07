@@ -30,9 +30,6 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32">
-            {/* <button className="ml-auto w-20 rounded-md bg-sky-500 p-2 text-center font-bold text-white ">
-              sign in
-            </button> */}
             <a
               href="/get-involved"
               className="mx-auto w-max cursor-pointer rounded-full bg-accent-900 px-9 py-5 text-xl font-semibold text-black transition-all duration-300 hover:scale-110 md:px-9 md:py-6  md:text-2xl lg:px-10 lg:py-7 lg:text-2xl xl:px-10 xl:py-7 xl:text-3xl"
@@ -42,7 +39,7 @@ export default function Home() {
           </div>
         </section>
         <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
-          <div className="z-20 w-1/2">
+          <div className="z-20 w-full md-lg:w-1/2">
             <div className="hide-left flex justify-center">
               <Title text="Who We Are" order="h2" />
             </div>
@@ -62,7 +59,7 @@ export default function Home() {
               Cyprus.
             </p>
           </div>
-          <div className="ml-20 grid w-[45%] place-items-center">
+          <div className="ml-20 md-lg:grid w-[45%] place-items-center hidden">
             <ImageGrid.Focus
               flow={"rhs"}
               images={[
