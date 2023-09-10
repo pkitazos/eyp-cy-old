@@ -1,9 +1,8 @@
 "use client";
-
 import { useState } from "react";
-import { TestimonialCard } from ".";
 import { motion, AnimatePresence } from "framer-motion";
 import { CaretLeft, CaretRight } from "./SVGs";
+import { TestimonialCard } from "./testimonial-card";
 
 const testimonialData = [
   {

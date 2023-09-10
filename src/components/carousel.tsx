@@ -4,7 +4,7 @@ interface props {
   children: ReactNode;
 }
 
-const Carousel = ({ children }: props) => {
+export const Carousel = ({ children }: props) => {
   const childs = Children.toArray(children);
 
   const [state, setState] = useState<"idle" | "prev" | "next">("idle");
@@ -117,5 +117,3 @@ const Demo = () => {
     </div>
   );
 };
-
-export default Demo;
