@@ -48,13 +48,6 @@ export const Carousel = ({ children }: props) => {
     }, 501);
   };
 
-  const shift =
-    state === "idle"
-      ? "-translate-x-1/3 transition-none"
-      : state === "next"
-      ? "-translate-x-2/3"
-      : "";
-
   return (
     <div className="flex flex-row gap-10 items-center">
       <button
@@ -73,7 +66,8 @@ export const Carousel = ({ children }: props) => {
         <div
           className={cn(
             "w-[300%] grid-cols-3 grid items-start transition-transform duration-500",
-            shift
+            state === "idle" && "-translate-x-1/3 transition-none",
+            state === "next" && "-translate-x-2/3"
           )}
         >
           <div ref={prevDiv}>{childs.at(prev)}</div>
