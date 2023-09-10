@@ -23,12 +23,12 @@ export function TestimonialCard({
   imageURL,
 }: props) {
   return (
-    <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+    <figure className="relative rounded-2xl bg-white p-6">
       <QuoteIcon className="absolute left-6 top-6 fill-slate-100" />
       <blockquote className="relative">
         <p className="text-lg tracking-tight text-slate-900">{quote}</p>
       </blockquote>
-      <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+      <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6 gap-4">
         <div>
           <div className="font-display text-xl font-semibold text-primary-800">
             {name}

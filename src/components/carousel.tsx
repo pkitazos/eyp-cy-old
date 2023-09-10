@@ -1,6 +1,7 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "~/utils";
+import { CaretLeft, CaretRight } from "./SVGs";
 
 interface props {
   children: ReactNode;
@@ -54,14 +55,14 @@ export const Carousel = ({ children }: props) => {
         onClick={goPrev}
         disabled={state !== "idle"}
         className={cn(
-          "rounded-sm bg-slate-200 p-2 py-0",
-          state !== "idle" && "text-slate-600"
+          "rounded-sm p-2 py-0 text-gray-600",
+          state !== "idle" && "text-gray-200"
         )}
       >
-        prev
+        <CaretLeft className="w-6" />
       </button>
       <div
-        className="w-[50vw] rounded-lg overflow-hidden transition-all duration-500"
+        className="w-full rounded-lg overflow-hidden transition-all duration-500"
         style={{ height: height }}
       >
         <div
@@ -80,11 +81,11 @@ export const Carousel = ({ children }: props) => {
         onClick={goNext}
         disabled={state !== "idle"}
         className={cn(
-          "rounded-sm bg-slate-200 p-2 py-0",
-          state !== "idle" && "text-slate-600"
+          "rounded-sm p-2 py-0 text-gray-600",
+          state !== "idle" && "text-gray-200"
         )}
       >
-        next
+        <CaretRight className="w-6" />
       </button>
     </div>
   );

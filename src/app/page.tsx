@@ -2,7 +2,6 @@ import clsx from "clsx";
 import {
   Carousel,
   ImageGrid,
-  TestimonialCarousel,
   Title,
   UpcomingEventCard,
   UpcomingEventCardWrapper,
@@ -130,7 +129,7 @@ export default function Home() {
         <WaveDivider waveLayers={wavePaths.homeBottom} />
         <section
           className={clsx(
-            "page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]",
+            "page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh] ",
             "px-0 lg:px-8 xl:px-20"
           )}
         >
@@ -142,7 +141,7 @@ export default function Home() {
                 underline="text-orange-600 rotate-12"
               />
             </div>
-            <div className="hide-right delay-card">
+            <div className="hidden md:block hide-right delay-card">
               <Carousel>
                 {testimonials.map((testimonial, testimonialIndex) => (
                   <TestimonialCard
@@ -155,6 +154,18 @@ export default function Home() {
                   </TestimonialCard>
                 ))}
               </Carousel>
+            </div>
+            <div className="flex flex-col gap-4 md:hidden hide-right delay-card">
+              {testimonials.map((testimonial, testimonialIndex) => (
+                <TestimonialCard
+                  key={testimonialIndex}
+                  name={testimonial.name}
+                  description={testimonial.description}
+                  imageURL={testimonial.imageURL}
+                >
+                  {testimonial.quote}
+                </TestimonialCard>
+              ))}
             </div>
           </div>
         </section>
