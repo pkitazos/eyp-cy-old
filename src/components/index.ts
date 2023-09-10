@@ -13,7 +13,7 @@ export { Dropdown } from "./dropdown";
 export { EventTypeCard } from "./event-card";
 export { Header } from "./header";
 export { InfoCard } from "./info-card";
-export { Footer } from "./my-footer";
+export { Footer } from "./footer";
 export { Title } from "./title";
 export { NCMemberCard } from "./nc-member-card";
 export { PartnerCard } from "./partner-card";
