@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Title,
   WaveDivider,
@@ -45,6 +46,15 @@ export default function AboutUs() {
             />
           </div>
         </section>
+        <div className="block page-margin mt-16 sm:hidden">
+          <Image
+            className="w-full"
+            width={200}
+            height={150}
+            src={"/assets/test-image.png"}
+            alt=""
+          />
+        </div>
         <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
           <div className="hidden mr-20 md-lg:grid w-[35%] place-items-center">
             <ImageGrid.Focus
@@ -154,6 +164,15 @@ export default function AboutUs() {
             </p>
           </div>
         </section>
+        <div className="block page-margin mt-16 sm:hidden">
+          <Image
+            className="w-full"
+            width={200}
+            height={150}
+            src={"/assets/test-image.png"}
+            alt=""
+          />
+        </div>
         <section className="page-margin mb-16 mt-16 sm:mt-8 max-h-max min-h-[60vh] px-4">
           <div className="hide-left">
             <div className="flex justify-center">
