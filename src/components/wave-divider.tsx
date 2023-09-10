@@ -1,0 +1,71 @@
+const hashCode = (str: string) => {
+  let hash = 0;
+  for (let i = 0, len = str.length; i < len; i++) {
+    let chr = str.charCodeAt(i);
+    hash = (hash << 5) - hash + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+const makePath: (arr: string[]) => string[] = (arr) => {
+  let resultArr = arr.concat(arr.slice(0, -1).reverse());
+  return resultArr;
+};
+
+const generateKeyTimes: (n: number) => string = (n) => {
+  const stepSize = 1 / (n - 1);
+  let keyTimesString = "";
+  for (let i = 0; i < n - 1; i++)
+    keyTimesString += `${(i * stepSize).toFixed(3)}; `;
+  return `${keyTimesString} 1`;
+};
+
+interface waveProps {
+  pathArr: string[];
+  fill: string;
+}
+
+const Wave = ({ pathArr, fill }: waveProps) => {
+  let steps = pathArr.length * 2 - 1;
+  let keyTimes = generateKeyTimes(steps);
+  return (
+    <path fill={fill}>
+      <animate
+        attributeName="d"
+        values={makePath(pathArr).join("; ")}
+        keyTimes={keyTimes}
+        dur={`${steps}s`}
+        repeatCount="indefinite"
+      />
+    </path>
+  );
+};
+
+interface waveDividerProps {
+  waveLayers: singleWave;
+  viewBox?: string;
+}
+
+const getWaveData = (w: singleWave) => {
+  let layers = w.layers;
+  let colors = w.colors;
+  return layers.map(function (layer, i) {
+    return [layer, colors[i]] as [string[], string];
+  });
+};
+
+export const WaveDivider = ({
+  waveLayers,
+  viewBox = "0 0 1000 300",
+}: waveDividerProps) => {
+  return (
+    <>
+      <svg id="visual" viewBox={viewBox}>
+        {getWaveData(waveLayers).map(([path, color]) => (
+          <Wave key={hashCode(path[0])} fill={color} pathArr={path} />
+        ))}
+      </svg>
+    </>
+  );
+};

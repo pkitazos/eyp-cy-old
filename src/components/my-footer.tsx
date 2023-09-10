@@ -1,7 +1,7 @@
 "use client";
 import { wavePaths } from "~/data";
 import { InstagramIcon, FacebookIcon } from "./SVGs";
-import { WaveDivider } from "./Waves";
+import { WaveDivider } from "./wave-divider";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section

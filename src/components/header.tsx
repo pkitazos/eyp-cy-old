@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
+import { Popover, Transition } from "@headlessui/react";
 
 import { wavePaths } from "~/data";
-import { debounce, cn } from "~/utils";
-import { Popover, Transition } from "@headlessui/react";
+import { cn, debounce } from "~/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
-import { WaveDivider } from "./Waves";
+import { WaveDivider } from "./wave-divider";
 
 const HeaderLogo = () => {
   return (
