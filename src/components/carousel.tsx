@@ -53,19 +53,20 @@ export const Carousel = ({ children }: props) => {
       <button
         onClick={goPrev}
         disabled={state !== "idle"}
-        className={`rounded-sm bg-slate-200 p-2 py-0 ${
-          state !== "idle" ? "text-slate-600" : ""
-        }`}
+        className={cn(
+          "rounded-sm bg-slate-200 p-2 py-0",
+          state !== "idle" && "text-slate-600"
+        )}
       >
         prev
       </button>
       <div
-        className="w-[50vw] rounded-lg bg-slate-200 overflow-hidden transition-all duration-500"
+        className="w-[50vw] rounded-lg overflow-hidden transition-all duration-500"
         style={{ height: height }}
       >
         <div
           className={cn(
-            "w-[300%] grid-cols-3 grid items-start transition-transform duration-500",
+            "w-[300%] grid-cols-3 grid items-start duration-500",
             state === "idle" && "-translate-x-1/3 transition-none",
             state === "next" && "-translate-x-2/3"
           )}
