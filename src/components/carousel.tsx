@@ -1,5 +1,6 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
+import { cn } from "~/utils";
 
 interface props {
   children: ReactNode;
@@ -70,7 +71,10 @@ export const Carousel = ({ children }: props) => {
         style={{ height: height }}
       >
         <div
-          className={`w-[300%] grid-cols-3 grid items-start transition-transform duration-500 ${shift}`}
+          className={cn(
+            "w-[300%] grid-cols-3 grid items-start transition-transform duration-500",
+            shift
+          )}
         >
           <div ref={prevDiv}>{childs.at(prev)}</div>
           <div ref={currentDiv}>{childs.at(counter)}</div>
@@ -80,41 +84,13 @@ export const Carousel = ({ children }: props) => {
       <button
         onClick={goNext}
         disabled={state !== "idle"}
-        className={`rounded-sm bg-slate-200 p-2 py-0 ${
-          state !== "idle" ? "text-slate-600" : ""
-        }`}
+        className={cn(
+          "rounded-sm bg-slate-200 p-2 py-0",
+          state !== "idle" && "text-slate-600"
+        )}
       >
         next
       </button>
-    </div>
-  );
-};
-
-const Demo = () => {
-  return (
-    <div className="flex w-full h-[100vh] justify-center items-center">
-      <Carousel>
-        <p className="p-5">
-          Lorem ipsum dolor sit amet. Sit placeat odit nam vitae accusamus At
-          rerum galisum et delectus minus ut odio delectus! At natus odit quo
-          impedit velit est amet nulla aut architecto beatae non quasi dolores
-          eos dignissimos fuga qui placeat deserunt. Rem iure dolor et cumque
-          ullam ut veritatis voluptas aut ducimus fugit. Vel impedit iure ut
-          similique expedita ut eligendi omnis sit ipsam iure est sint laborum.
-        </p>
-        <p className="p-5">
-          Ad velit dolor est unde ullam qui atque temporibus ut libero
-          consequatur sed perspiciatis velit cum veritatis beatae? Qui dolorem
-          molestias ut eius porro in numquam doloribus in voluptate laborum?
-        </p>
-        <p className="p-5">
-          Sit dolores vero eos voluptas beatae qui error rerum ut laboriosam
-          omnis aut asperiores voluptatum. Aut minus officia et quia repellat in
-          porro ratione qui maxime quisquam ut voluptatem vitae aut fuga
-          possimus id perferendis sint.
-        </p>
-        <p className="p-5">andrei is really great!</p>
-      </Carousel>
     </div>
   );
 };
