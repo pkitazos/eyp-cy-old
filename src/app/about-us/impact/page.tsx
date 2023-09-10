@@ -28,7 +28,7 @@ export default function Impact() {
             measurable impact on young people across Europe.
           </p>
         </section>
-        <section className="page-margin mb-16 mt-60 flex max-h-max min-h-[60vh] flex-col gap-20 xl:gap-36 3xl:gap-56">
+        <section className="page-margin mb-16 mt-60 flex max-h-max min-h-[60vh] flex-col gap-20 sm:gap-24 xl:gap-36 3xl:gap-56">
           <div className="-mb-10 xl:-mb-20 hide-bottom flex justify-center">
             <Title
               text="What our Impact looks like"
