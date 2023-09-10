@@ -10,7 +10,7 @@ import { wavePaths } from "~/data";
 export default function Events() {
   return (
     <>
-      <section className="page-margin flex max-h-max min-h-[60vh] flex-col items-center">
+      <section className="mt-40 md:mt-20 lg:mt-16 page-margin flex max-h-max min-h-[60vh] flex-col items-center">
         <div className="hide-bottom mb-3 flex justify-center lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>

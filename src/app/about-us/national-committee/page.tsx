@@ -8,7 +8,7 @@ export default function NationalCommittee() {
         <title>National Committee</title>
       </head>
       <>
-        <section className="page-margin flex flex-col pb-16">
+        <section className="mt-40 md:mt-20 lg:mt-16 page-margin flex flex-col pb-16">
           <div className="item-center flex flex-col justify-center gap-6">
             <div className="hide-bottom">
               <Title

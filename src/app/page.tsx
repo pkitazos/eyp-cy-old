@@ -155,7 +155,7 @@ export default function Home() {
                 ))}
               </Carousel>
             </div>
-            <div className="flex flex-col gap-4 md:hidden hide-right delay-card">
+            <div className="flex flex-col gap-8 sm:gap-10 md:hidden hide-right delay-card">
               {testimonials.map((testimonial, testimonialIndex) => (
                 <TestimonialCard
                   key={testimonialIndex}

@@ -3,7 +3,7 @@ import { SessionElementCard, Title } from "~/components";
 export default function YouthSummit() {
   return (
     <>
-      <section className="page-margin mt-16 flex max-h-max min-h-[60vh] justify-center">
+      <section className="page-margin mt-40 md:mt-20 lg:mt-16 flex max-h-max min-h-[60vh] justify-center">
         <div className="w-5/6 max-w-4xl xl:w-2/3">
           <div className="hide-left flex justify-center">
             <Title text="Youth Summit" order="h1" />

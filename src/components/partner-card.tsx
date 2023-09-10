@@ -9,7 +9,7 @@ interface props {
 
 export function PartnerCard({ name, description }: props) {
   return (
-    <div className="bg-slate-200/50 px-5 py-3 rounded-md hover:shadow-sm flex gap-5">
+    <div className="bg-slate-200/50 px-3 xs:px-5 py-2 xs:py-3 rounded-md hover:shadow-sm flex gap-5">
       <Image
         className="w-1/4 object-contain"
         width={300}

@@ -7,7 +7,7 @@ export default function GetInvolved() {
         <title>Get Involved</title>
       </head>
       <>
-        <section className="page-margin mb-28 flex flex-col px-5">
+        <section className="page-margin mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5">
           <div className="hide-bottom">
             <div className="flex justify-center">
               <Title

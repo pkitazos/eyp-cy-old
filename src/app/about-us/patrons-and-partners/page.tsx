@@ -8,7 +8,7 @@ export default function PatronsAndPartners() {
         <title>Patrons & Partners</title>
       </head>
       <>
-        <section className="page-margin max-h-max min-h-[60vh]">
+        <section className="mt-40 md:mt-20 lg:mt-16 page-margin max-h-max min-h-[60vh]">
           <div className="hide-bottom mb-6 flex justify-center">
             <Title text="Our Patrons & Partners" order="h1" />
           </div>
