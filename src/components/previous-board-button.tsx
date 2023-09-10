@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "./dialog";
-import { Title } from "./title";
+import { Title } from "./my-title";
 
 type boardPosition = { position: string; name: string };
 
