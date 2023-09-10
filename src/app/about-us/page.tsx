@@ -154,7 +154,7 @@ export default function AboutUs() {
             </p>
           </div>
         </section>
-        <section className="page-margin mb-16 mt-8 max-h-max min-h-[60vh] px-4">
+        <section className="page-margin mb-16 mt-16 sm:mt-8 max-h-max min-h-[60vh] px-4">
           <div className="hide-left">
             <div className="flex justify-center">
               <Title
