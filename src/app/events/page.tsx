@@ -6,7 +6,6 @@ import {
   WaveDivider,
 } from "~/components";
 import { wavePaths } from "~/data";
-import Layout from "../layout";
 
 export default function Events() {
   return (

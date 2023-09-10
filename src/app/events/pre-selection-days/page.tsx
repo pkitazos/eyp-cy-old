@@ -1,4 +1,3 @@
-import Layout from "~/app/layout";
 import { SessionElementCard, Title } from "~/components";
 
 export default function PreSelectionDays() {

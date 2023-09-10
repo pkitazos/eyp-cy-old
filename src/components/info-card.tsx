@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
-import { Title } from ".";
 import { cn } from "~/utils";
+import { Title } from "./title";
 
 interface props {
   title: string;

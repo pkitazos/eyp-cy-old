@@ -15,7 +15,7 @@ const Carousel = ({ children }: props) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    setHeight(currentDiv.current.offsetHeight);
+    setHeight(currentDiv.current!.offsetHeight);
   }, []);
 
   const [counter, setCounter] = useState(0);
@@ -27,7 +27,7 @@ const Carousel = ({ children }: props) => {
   const goPrev = () => {
     setState("prev");
 
-    setHeight(prevDiv.current.offsetHeight);
+    setHeight(prevDiv.current!.offsetHeight);
 
     setTimeout(() => {
       setCounter(prev);
@@ -38,7 +38,7 @@ const Carousel = ({ children }: props) => {
   const goNext = () => {
     setState("next");
 
-    setHeight(nextDiv.current.offsetHeight);
+    setHeight(nextDiv.current!.offsetHeight);
 
     setTimeout(() => {
       setCounter(next);
