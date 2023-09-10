@@ -1,3 +1,4 @@
+"use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
 
 interface props {
