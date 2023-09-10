@@ -20,7 +20,7 @@ export { PartnerCard } from "./partner-card";
 export { PatronCard } from "./patron-card";
 export { PreviousBoardButton } from "./previous-board-button";
 export { SessionElementCard } from "./session-element-card";
-export { TestimonialCard } from "./testimonial-card";
+export { TestimonialCard } from "./testimonial-card-old";
 export { TestimonialCarousel } from "./testimonial-carousel";
 export { WaveDivider } from "./wave-divider";
 export { WhatWeDoCard } from "./what-we-do-card";
