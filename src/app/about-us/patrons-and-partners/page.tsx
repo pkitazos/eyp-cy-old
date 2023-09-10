@@ -94,14 +94,14 @@ export default function PatronsAndPartners() {
           <div className="flex justify-center sm:justify-start">
             <Title text="Our Partners" order="h2" underline="rotate-12" />
           </div>
-          <div className="flex flex-col items-center justify-center gap-10 sm:flex-row md-lg:justify-start">
+          <div className="flex flex-col items-center justify-center gap-10 md:flex-row md-lg:justify-start">
             <PartnerCard
               name="Ant1"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+              description="A short description about your partner Ant1"
             />
             <PartnerCard
               name="BoC"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
+              description="A short description about your partner BoC"
             />
           </div>
         </section>
