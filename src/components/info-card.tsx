@@ -42,11 +42,14 @@ export function InfoCard({
         </div>
         <div
           className={cn(
-            "m-8 mr-12 w-3/4 transition-all duration-300 group-hover:scale-[1.02]",
+            "m-8 mr-12 w-3/4 transition-all flex flex-col items-center duration-300 group-hover:scale-[1.02]",
             className
           )}
         >
-          <Title text={title} order="h3" />
+          <h3 className="text-xl sm:text-2xl text-primary-900 font-semibold text-center">
+            {title}
+          </h3>
+          <div className="bg-secondary-900 h-1 w-8 my-6">&nbsp;</div>
           <p className="text-justify text-lg">{children}</p>
         </div>
       </div>
