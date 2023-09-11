@@ -80,7 +80,7 @@ export default function NationalCommittee() {
             </div>
           </div>
         </section>
-        <section className="page-margin mt-16 flex flex-col justify-center gap-2">
+        <section className="page-margin mt-16 mb-20 flex flex-col justify-center gap-2">
           <div className="hide-left flex justify-center">
             <Title
               text="Previous Boards"
