@@ -16,7 +16,7 @@ export function Dropdown({ mainItem, items }: props) {
           {mainItem}
         </a>
         <div className="dropdown-content pt-2">
-          <div className="z-2 top-9 mt-2 rounded-xl bg-primary-900/60 p-2">
+          <div className="z-2 top-9 mt-2 rounded-xl backdrop-blur-sm bg-primary-900/60 p-2">
             {items.map((item, i) => (
               <a
                 key={i}
