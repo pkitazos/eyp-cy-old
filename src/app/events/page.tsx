@@ -60,8 +60,8 @@ export default function Events() {
           />
         </div>
         <div className="flex flex-row justify-center gap-8 md:gap-14 lg-xl:gap-24">
-          <ActionButton text="School" />
-          <ActionButton text="Individual" />
+          <ActionButton text="School" onClick={() => {}} />
+          <ActionButton text="Individual" onClick={() => {}} />
         </div>
       </section>
       <WaveDivider waveLayers={wavePaths.eventsBottom} />

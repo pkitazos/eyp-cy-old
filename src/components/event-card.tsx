@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn, slugify } from "~/utils";
+import { cn, slugify } from "~/lib/utils";
 
 interface props {
   title: string;

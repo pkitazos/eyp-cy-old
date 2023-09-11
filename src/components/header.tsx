@@ -1,9 +1,8 @@
 "use client";
+import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
-
 import { wavePaths } from "~/data";
 import { cn, debounce } from "~/lib/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";

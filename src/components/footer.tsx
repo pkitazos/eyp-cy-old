@@ -1,6 +1,6 @@
 "use client";
 import { wavePaths } from "~/data";
-import { InstagramIcon, FacebookIcon } from "./SVGs";
+import { FacebookIcon, InstagramIcon } from "./SVGs";
 import { WaveDivider } from "./wave-divider";
 
 // TODO: make phone number and email get copied to clipboard when clicked
