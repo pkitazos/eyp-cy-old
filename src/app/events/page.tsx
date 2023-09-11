@@ -6,43 +6,51 @@ import {
   WaveDivider,
 } from "~/components";
 import { wavePaths } from "~/data";
+import { cn } from "~/utils";
+
+const events = [
+  {
+    title: "Pre-Selection Days",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
+    imageURL: "/assets/logo-pre-selections.png",
+  },
+  {
+    title: "Days of EYP",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
+    imageURL: "/assets/logo-days-of-eyp.png",
+  },
+  {
+    title: "Youth Summit",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
+    imageURL: "/assets/logo-youth-summit.png",
+  },
+  {
+    title: "National Session",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
+    imageURL: "/assets/logo-national-session.png",
+  },
+];
 
 export default function Events() {
   return (
     <>
-      <section className="mt-40 md:mt-20 lg:mt-16 page-margin flex max-h-max min-h-[60vh] flex-col items-center">
+      <section className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 page-margin flex max-h-max min-h-[60vh] flex-col items-center">
         <div className="hide-bottom mb-3 flex justify-center lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>
-        <div className="flex w-max shrink flex-col items-center gap-16 px-6 sm:px-8 md:px-16 lg:grid lg:grid-cols-12 lg:grid-rows-4">
-          <div className="hide-left delay-card col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl">
+        <div className="flex shrink flex-col items-center gap-16 xl:grid xl:grid-cols-12 xl:grid-rows-4">
+          {events.map((event, i) => (
             <EventTypeCard
-              title="Pre-Selection Days"
-              imageURL="/assets/logo-pre-selections.png"
-              info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+              key={event.title}
+              title={event.title}
+              info={event.description}
+              imageURL={event.imageURL}
+              className={cn(
+                "hide-left delay-card col-span-9 row-span-1 xl:max-w-4xl 2xl:max-w-5xl",
+                `col-start-${i + 1}`
+              )}
             />
-          </div>
-          <div className="hide-left delay-card col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl">
-            <EventTypeCard
-              title="Days of EYP"
-              info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-              imageURL="/assets/logo-days-of-eyp.png"
-            />
-          </div>
-          <div className="hide-left delay-card col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl">
-            <EventTypeCard
-              title="Youth Summit"
-              info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-              imageURL="/assets/logo-youth-summit.png"
-            />
-          </div>
-          <div className="hide-left delay-card col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl">
-            <EventTypeCard
-              title="National Session"
-              info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-              imageURL="/assets/logo-national-session.png"
-            />
-          </div>
+          ))}
         </div>
       </section>
       <WaveDivider waveLayers={wavePaths.eventsTop} />
