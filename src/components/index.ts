@@ -1,4 +1,3 @@
-export { Focus, ImageGrid, Regular, Test } from "./ImageGrid";
 export {
   BookIcon,
   CaretLeft,
@@ -37,6 +36,7 @@ export { Dropdown } from "./dropdown";
 export { EventTypeCard } from "./event-card";
 export { Footer } from "./footer";
 export { Header } from "./header";
+export { ImageGrid } from "./image-grid";
 export { InfoCard } from "./info-card";
 export { NCMemberCard } from "./nc-member-card";
 export { PartnerCard } from "./partner-card";
