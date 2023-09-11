@@ -20,7 +20,7 @@ export function SessionElementCard({
   return (
     <div
       className={cn(
-        "flex flex-col-reverse gap-4 group linker",
+        "flex flex-col-reverse gap-4 group",
         reverse ? "md:flex-row-reverse" : "md:flex-row",
         className
       )}
@@ -36,7 +36,7 @@ export function SessionElementCard({
       </div>
       <div className="p-8 w-full md:w-2/3 3xl:w-3/4 transition-all duration-300 group-hover:scale-[1.02]">
         <div className={cn("flex", reverse && "md:justify-end")}>
-          <h2 className="underliner mb-4 text-xl font-semibold xl:text-3xl">
+          <h2 className="bg-underliner-secondary bg-[length:0%_105%] group-hover:bg-[length:100%_105%] bg-no-repeat transition-[background-size] duration-500 mb-4 text-xl font-semibold xl:text-3xl">
             {title}
           </h2>
         </div>

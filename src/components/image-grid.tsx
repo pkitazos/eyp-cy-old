@@ -25,7 +25,7 @@ const Focus = ({ images, flow }: focusGridProps) => {
           <Image
             src={image.src}
             alt={image.alt}
-            className="masked-image"
+            className="masked-image "
             width={300 * ratio[i]}
             height={300 * ratio[i]}
           />

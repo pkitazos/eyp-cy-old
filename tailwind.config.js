@@ -69,6 +69,16 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-source-sans-3)"],
       },
+      backgroundImage: {
+        "underliner-orange": `linear-gradient(
+          transparent calc(100% - 10px),
+          orange 5px
+        );`,
+        "underliner-secondary": `linear-gradient(
+          transparent calc(100% - 10px),
+          #00b7ff99 5px
+        );`,
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

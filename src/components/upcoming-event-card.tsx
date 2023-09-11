@@ -15,7 +15,7 @@ export const UpcomingEventCard = ({
   imageURL,
 }: props) => {
   return (
-    <a className="linker" href={`/events${slugify(title)}`}>
+    <a className="group" href={`/events${slugify(title)}`}>
       <div className="group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]">
         <Image
           width={200}
@@ -25,7 +25,7 @@ export const UpcomingEventCard = ({
           alt=""
         />
         <div className="h-3/5 p-6">
-          <span className="underliner">
+          <span className="bg-underliner-orange bg-[length:0%_105%] group-hover:bg-[length:100%_105%] bg-no-repeat transition-[background-size] duration-500">
             <span className="w-max text-xl font-semibold text-primary-800">
               {title}
             </span>
