@@ -21,6 +21,7 @@ export {
 } from "./accordion";
 export { ActionButton } from "./action-button";
 export { Carousel } from "./carousel";
+export { CategoryCard } from "./category-card";
 export { DebugOverlay } from "./debug-overlay";
 export {
   Dialog,

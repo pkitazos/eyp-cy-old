@@ -6,9 +6,16 @@ interface props {
   order: "h1" | "h2" | "h3";
   theme?: "dark" | "light";
   underline?: string;
+  className?: string;
 }
 
-export function Title({ text, order, theme = "dark", underline }: props) {
+export function Title({
+  text,
+  order,
+  theme = "dark",
+  underline,
+  className,
+}: props) {
   return (
     <>
       <div className="flex flex-col items-center">
@@ -18,7 +25,8 @@ export function Title({ text, order, theme = "dark", underline }: props) {
             order === "h1" && "text-3xl xs:text-4xl md-lg:text-5xl",
             order === "h2" && "text-2xl xs:text-3xl md-lg:text-4xl",
             order === "h3" && "text-xl xs:text-2xl md-lg:text-3xl",
-            theme === "dark" ? "text-primary-900" : "text-white"
+            theme === "dark" ? "text-primary-900" : "text-white",
+            className
           )}
         >
           {text}
