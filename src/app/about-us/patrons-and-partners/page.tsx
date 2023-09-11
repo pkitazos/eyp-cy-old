@@ -74,7 +74,7 @@ export default function PatronsAndPartners() {
           </p>
         </section>
         <WaveDivider waveLayers={wavePaths.patronsTop} />
-        <section className="page-padding max-h-max min-h-[60vh] bg-primary-800 pb-24 pt-16 flex flex-col items-center">
+        <section className="page-padding max-h-max min-h-[60vh] bg-primary-700 pb-24 pt-3 flex flex-col items-center">
           <div className="hide-left">
             <div className="flex justify-center sm:justify-start">
               <Title
