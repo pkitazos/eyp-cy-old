@@ -1,6 +1,6 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
-import { cn } from "~/utils";
+import { cn } from "~/lib/utils";
 import { CaretLeft, CaretRight } from "./SVGs";
 
 interface props {

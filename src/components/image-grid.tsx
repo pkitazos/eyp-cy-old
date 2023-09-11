@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "~/utils";
+import { cn } from "~/lib/utils";
 
 interface focusGridProps {
   images: [imageObj, imageObj, imageObj];

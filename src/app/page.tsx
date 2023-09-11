@@ -7,7 +7,6 @@ import {
   WaveDivider,
 } from "~/components";
 import { wavePaths } from "~/data";
-import { cn } from "~/utils";
 
 const testimonials = [
   {
@@ -128,12 +127,7 @@ export default function Home() {
           </div>
         </section>
         <WaveDivider waveLayers={wavePaths.homeBottom} />
-        <section
-          className={cn(
-            "page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh]",
-            "px-0 lg:px-8 xl:px-20"
-          )}
-        >
+        <section className="page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh] px-0 lg:px-8 xl:px-20">
           <div className="flex flex-col gap-5">
             <div className="hide-left flex justify-center md:justify-start">
               <Title
