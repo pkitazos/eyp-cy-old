@@ -26,7 +26,7 @@ export default function PatronsAndPartners() {
         <title>Patrons & Partners</title>
       </head>
       <>
-        <section className="mt-40 md:mt-20 lg:mt-16 page-margin max-h-max min-h-[60vh]">
+        <section className="mt-40 md:mt-20 lg:mt-16 page-margin max-h-max min-h-[60vh] flex flex-col items-center">
           <div className="hide-bottom mb-6 flex justify-center">
             <Title text="Our Patrons & Partners" order="h1" />
           </div>
@@ -34,7 +34,7 @@ export default function PatronsAndPartners() {
             <div className="flex justify-center">
               <Title text="Board of Patrons" order="h2" />
             </div>
-            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl">
+            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
               EYP Cyprus&apos;s work and impact is recognised by various high
               profile stakeholders in Cyprus, including our board of patrons
               which includes
@@ -66,7 +66,7 @@ export default function PatronsAndPartners() {
               />
             </div>
           </div>
-          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl">
+          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
             Our patrons&apos; support highlights the value of our
             organisation&apos;s work. They also provide invaluable guidance and
             active support for our events and our workings, both by providing
@@ -74,7 +74,7 @@ export default function PatronsAndPartners() {
           </p>
         </section>
         <WaveDivider waveLayers={wavePaths.patronsTop} />
-        <section className="page-padding max-h-max min-h-[60vh] bg-primary-800 pb-24 pt-16">
+        <section className="page-padding max-h-max min-h-[60vh] bg-primary-800 pb-24 pt-16 flex flex-col items-center">
           <div className="hide-left">
             <div className="flex justify-center sm:justify-start">
               <Title
@@ -90,7 +90,7 @@ export default function PatronsAndPartners() {
               its activities.
             </p>
           </div>
-          <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14">
+          <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14 w-full max-w-8xl">
             <div className="hide-left delay-card">
               <PatronCard
                 name="Ursula von der Leyen"
