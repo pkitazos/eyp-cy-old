@@ -62,7 +62,7 @@ export const Carousel = ({ children }: props) => {
         <CaretLeft className="w-6" />
       </button>
       <div
-        className="w-full rounded-lg overflow-hidden transition-all duration-500"
+        className="w-full max-w-4xl rounded-lg overflow-hidden transition-all duration-500"
         style={{ height: height }}
       >
         <div

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { slugify } from "~/utils";
 
-// TODO: improve design
-
 interface props {
   title: string;
   date: string;
@@ -10,7 +8,12 @@ interface props {
   imageURL: string;
 }
 
-const UpcomingEventCard = ({ title, date, description, imageURL }: props) => {
+export const UpcomingEventCard = ({
+  title,
+  date,
+  description,
+  imageURL,
+}: props) => {
   return (
     <a className="linker" href={`/events${slugify(title)}`}>
       <div className="group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]">
@@ -35,5 +38,3 @@ const UpcomingEventCard = ({ title, date, description, imageURL }: props) => {
     </a>
   );
 };
-
-export default UpcomingEventCard;
