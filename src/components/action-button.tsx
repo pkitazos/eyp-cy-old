@@ -1,14 +1,20 @@
+import { MouseEventHandler } from "react";
+
 interface props {
   text: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit" | "reset";
 }
 
-export function ActionButton({ text }: props) {
+export function ActionButton({ text, onClick, type }: props) {
   return (
     <button
+      type={type}
       className={`w-max cursor-pointer rounded-full bg-accent-900 
         px-9 py-5 text-xl font-semibold text-black shadow-sm
         transition-all duration-300 hover:scale-110 
         md:text-2xl lg:px-7 lg:py-5`}
+      onClick={onClick}
     >
       {text}
     </button>
