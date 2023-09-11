@@ -1,6 +1,29 @@
 import { PartnerCard, PatronCard, Title, WaveDivider } from "~/components";
 import { wavePaths } from "~/data";
 
+const patronData = [
+  {
+    name: "Mr. Andreas Kettis",
+    title: "Head of the European Parliament Liaison Office in Cyprus",
+  },
+  {
+    name: "Ambassador Kornelios Korneliou",
+    title: "Permanent Secretary at the Ministry of Foreign Affairs",
+  },
+  {
+    name: "Ms. Antigoni Papaphilippou",
+    title: "Head of Public Relations of Antenna and President of THOC",
+  },
+  {
+    name: "Mr. Constantinos Yiorkadjis",
+    title: "Mayor of Nicosia",
+  },
+  {
+    name: "Mr. Panayiotis Sentonas",
+    title: "Commissioner for the Citizen",
+  },
+];
+
 const partnerData = [
   {
     name: "BoC",
@@ -36,41 +59,22 @@ export default function PatronsAndPartners() {
             </div>
             <p className="mt-6 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
               EYP Cyprus&apos;s work and impact is recognised by various high
-              profile stakeholders in Cyprus, including our board of patrons
+              profile stakeholders in Cyprus, including our Board of Patrons
               which includes
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-16">
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Andreas Kettis"
-                title="Head of the European Parliament Liaison Office in Cyprus"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Yiannis Yiannaki"
-                title="Commissioner of Volunteerism and NGOs"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Ms. Antigoni Papaphilippou"
-                title="Head of Public Relations of Antenna and President of THOC"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Constantinos Yiorkadjis"
-                title="Mayor of Nicosia"
-              />
-            </div>
+            {patronData.map((patron, i) => (
+              <div key={i} className="hide-right delay-card">
+                <PatronCard name={patron.name} title={patron.title} />
+              </div>
+            ))}
           </div>
           <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
             Our patrons&apos; support highlights the value of our
             organisation&apos;s work. They also provide invaluable guidance and
             active support for our events and our workings, both by providing
-            advice, support and also attending various of our events.
+            advice, support as well as attending various of our events.
           </p>
         </section>
         <WaveDivider waveLayers={wavePaths.patronsTop} />
