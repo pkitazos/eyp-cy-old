@@ -1,4 +1,4 @@
-import { slugify } from "~/utils";
+import { slugify } from "~/lib/utils";
 
 interface props {
   mainItem: string;

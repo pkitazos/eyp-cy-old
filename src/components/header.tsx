@@ -5,7 +5,7 @@ import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 
 import { wavePaths } from "~/data";
-import { cn, debounce } from "~/utils";
+import { cn, debounce } from "~/lib/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
