@@ -136,7 +136,7 @@ export default function AboutUs() {
           </div>
         </section>
         <WaveDivider waveLayers={wavePaths.aboutBottom} />
-        <section className="page-margin mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 lg-xl:min-h-[70vh] px-4 pb-16">
+        <section className="page-margin mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 xl:min-h-[70vh] px-4 pb-16">
           <div className="hide-left">
             <div className="flex justify-center">
               <Title
@@ -176,10 +176,10 @@ export default function AboutUs() {
             alt=""
           />
         </div>
-        <div className="flex sm:hidden justify-center mt-20">
+        <div className="flex sm:hidden lg-xl:flex justify-center mt-20 lg-xl:mt-14 mb-32">
           <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
         </div>
-        <section className="page-margin mb-16 sm:mb-28 lg-xl:20 mt-16 sm:mt-8 max-h-max lg-xl:min-h-[60vh] px-4">
+        <section className="page-margin mb-16 sm:mb-28 lg-xl:20 mt-16 sm:mt-8 max-h-max xl:min-h-[60vh] px-4">
           <div className="hide-left">
             <div className="flex justify-center">
               <Title
