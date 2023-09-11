@@ -31,6 +31,33 @@ const testimonials = [
   },
 ];
 
+const upcomingEvents = [
+  {
+    title: "Pre-Selection Days",
+    description: "Short text about Pre-Selection Days goes here.",
+    date: "20/03/2023",
+    imageURL: "/assets/events-1.jpg",
+  },
+  {
+    title: "Days of EYP",
+    description: "Short text about Days of EYP goes here.",
+    date: "27/03/2023",
+    imageURL: "/assets/events-2.jpg",
+  },
+  {
+    title: "Youth Summit",
+    description: "Short text about Youth Summit goes here.",
+    date: "16/07/2023",
+    imageURL: "/assets/events-3.jpg",
+  },
+  {
+    title: "National Session",
+    description: "Short text about National Session goes here.",
+    date: "24/08/2023",
+    imageURL: "/assets/events-4.jpg",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -93,36 +120,34 @@ export default function Home() {
           </div>
         </section>
         <WaveDivider waveLayers={wavePaths.homeTop} />
-        <section className="page-padding min-h-[60vh] bg-primary-600">
-          <div className="hide-right flex justify-center md:justify-end">
+        <section className="min-h-[60vh] bg-primary-600">
+          <div className="hide-right page-margin flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
-          <div className="flex justify-end">
+          <div className="page-margin flex justify-end lg:hidden">
             <ul className="no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5">
-              <UpcomingEventCard
-                title="Pre-Selection Days"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-                imageURL="/assets/events-1.jpg"
-                date="20/03/2023"
-              />
-              <UpcomingEventCard
-                title="Days of EYP"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-                imageURL="/assets/events-2.jpg"
-                date="27/03/2023"
-              />
-              <UpcomingEventCard
-                title="Youth Summit"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-                imageURL="/assets/events-3.jpg"
-                date="16/07/2023"
-              />
-              <UpcomingEventCard
-                title="National Session"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-                imageURL="/assets/events-4.jpg"
-                date="24/08/2023"
-              />
+              {upcomingEvents.map((event, i) => (
+                <UpcomingEventCard
+                  key={i}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  imageURL={event.imageURL}
+                />
+              ))}
+            </ul>
+          </div>
+          <div className="hidden lg:flex justify-center">
+            <ul className="w-full min-w-min flex h-max justify-evenly gap-2 max-w-7xl">
+              {upcomingEvents.map((event, i) => (
+                <UpcomingEventCard
+                  key={i}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  imageURL={event.imageURL}
+                />
+              ))}
             </ul>
           </div>
         </section>
