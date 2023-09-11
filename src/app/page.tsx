@@ -1,14 +1,13 @@
-import clsx from "clsx";
 import {
   Carousel,
   ImageGrid,
+  TestimonialCard,
   Title,
   UpcomingEventCard,
-  UpcomingEventCardWrapper,
   WaveDivider,
 } from "~/components";
-import { TestimonialCard } from "~/components/testimonial-card";
 import { wavePaths } from "~/data";
+import { cn } from "~/utils";
 
 const testimonials = [
   {
@@ -99,37 +98,39 @@ export default function Home() {
           <div className="hide-right flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
-          <UpcomingEventCardWrapper>
-            <UpcomingEventCard
-              title="Pre-Selection Days"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-1.jpg"
-              date="20/03/2023"
-            />
-            <UpcomingEventCard
-              title="Days of EYP"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-2.jpg"
-              date="27/03/2023"
-            />
-            <UpcomingEventCard
-              title="Youth Summit"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-3.jpg"
-              date="16/07/2023"
-            />
-            <UpcomingEventCard
-              title="National Session"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-4.jpg"
-              date="24/08/2023"
-            />
-          </UpcomingEventCardWrapper>
+          <div className="flex justify-end">
+            <ul className="no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5">
+              <UpcomingEventCard
+                title="Pre-Selection Days"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-1.jpg"
+                date="20/03/2023"
+              />
+              <UpcomingEventCard
+                title="Days of EYP"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-2.jpg"
+                date="27/03/2023"
+              />
+              <UpcomingEventCard
+                title="Youth Summit"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-3.jpg"
+                date="16/07/2023"
+              />
+              <UpcomingEventCard
+                title="National Session"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
+                imageURL="/assets/events-4.jpg"
+                date="24/08/2023"
+              />
+            </ul>
+          </div>
         </section>
         <WaveDivider waveLayers={wavePaths.homeBottom} />
         <section
-          className={clsx(
-            "page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh] ",
+          className={cn(
+            "page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh]",
             "px-0 lg:px-8 xl:px-20"
           )}
         >
