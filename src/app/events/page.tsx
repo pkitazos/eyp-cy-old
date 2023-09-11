@@ -18,7 +18,7 @@ export default function Events() {
           <EventTypeCard
             className="hide-left delay-card col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Pre-Selection Days"
-            imageURL="/assets/logo-pre-selections.png"
+            imageURL="/assets/logo-pre-selection-days.png"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
