@@ -7,7 +7,7 @@ export default function Impact() {
         <title>Impact</title>
       </head>
       <>
-        <section className="page-margin mt-40 md:mt-20 lg:mt-16 flex flex-col justify-center">
+        <section className="page-margin mt-40 mb-20 sm:mb-28  md:mt-20 lg:mt-16 flex flex-col justify-center">
           <div className="hide-bottom flex justify-center">
             <Title text="Our Impact" order="h1" />
           </div>
@@ -28,8 +28,11 @@ export default function Impact() {
             measurable impact on young people across Europe.
           </p>
         </section>
-        <section className="page-margin mb-16 mt-60 flex max-h-max min-h-[60vh] flex-col gap-20 sm:gap-24 xl:gap-36 3xl:gap-56">
-          <div className="-mb-10 xl:-mb-20 hide-bottom flex justify-center">
+        <div className="flex justify-center mt-20">
+          <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
+        </div>
+        <section className="page-margin mb-28 md:mb-16 mt-20 sm:mt-28 md:mt-32 flex max-h-max min-h-[60vh] flex-col gap-20 sm:gap-24 xl:gap-36 3xl:gap-56">
+          <div className="-mb-10 sm:-mb-16 xl:-mb-20 hide-bottom flex justify-center">
             <Title
               text="What our Impact looks like"
               order="h2"
