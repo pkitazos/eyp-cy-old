@@ -1,4 +1,4 @@
-import { Title, ActionButton } from "~/components";
+import { Title, ActionButton, ContactForm } from "~/components";
 
 export default function GetInvolved() {
   return (
@@ -87,6 +87,14 @@ export default function GetInvolved() {
               you are notified when an opportunity arises.
             </p>
           </div>
+        </section>
+        <section className="page-margin mt-20 flex flex-col px-5">
+          <Title
+            text="Contact Us"
+            order="h2"
+            underline="text-fuchsia-500 rotate-[190deg]"
+          />
+          <ContactForm />
         </section>
       </>
     </>
