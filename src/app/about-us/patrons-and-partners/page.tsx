@@ -1,6 +1,24 @@
 import { PartnerCard, PatronCard, Title, WaveDivider } from "~/components";
 import { wavePaths } from "~/data";
 
+const partnerData = [
+  {
+    name: "BoC",
+    description: "A short description about your partner BoC",
+    imageURL: "/assets/partner-boc.jpeg",
+  },
+  {
+    name: "Ant1",
+    description: "A short description about your partner Ant1",
+    imageURL: "/assets/partner-ant1.jpeg",
+  },
+  {
+    name: "VMLY&R",
+    description: "A short description about your partner VMLY&R",
+    imageURL: "/assets/partner-vmlyr.png",
+  },
+];
+
 export default function PatronsAndPartners() {
   return (
     <>
@@ -94,15 +112,15 @@ export default function PatronsAndPartners() {
           <div className="flex justify-center sm:justify-start">
             <Title text="Our Partners" order="h2" underline="rotate-12" />
           </div>
-          <div className="flex flex-col items-center justify-center gap-10 md:flex-row md-lg:justify-start">
-            <PartnerCard
-              name="Ant1"
-              description="A short description about your partner Ant1"
-            />
-            <PartnerCard
-              name="BoC"
-              description="A short description about your partner BoC"
-            />
+          <div className="grid grid-cols-1 items-center justify-center gap-10 md:grid-cols-2 md-lg:justify-start">
+            {partnerData.map((partner) => (
+              <PartnerCard
+                key={partner.name}
+                name={partner.name}
+                description={partner.description}
+                imageURL={partner.imageURL}
+              />
+            ))}
           </div>
         </section>
       </>
