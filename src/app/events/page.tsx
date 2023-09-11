@@ -6,51 +6,47 @@ import {
   WaveDivider,
 } from "~/components";
 import { wavePaths } from "~/data";
-import { cn } from "~/utils";
-
-const events = [
-  {
-    title: "Pre-Selection Days",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
-    imageURL: "/assets/logo-pre-selections.png",
-  },
-  {
-    title: "Days of EYP",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
-    imageURL: "/assets/logo-days-of-eyp.png",
-  },
-  {
-    title: "Youth Summit",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
-    imageURL: "/assets/logo-youth-summit.png",
-  },
-  {
-    title: "National Session",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua`,
-    imageURL: "/assets/logo-national-session.png",
-  },
-];
 
 export default function Events() {
   return (
     <>
       <section className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 page-margin flex max-h-max min-h-[60vh] flex-col items-center">
-        <div className="hide-bottom mb-3 flex justify-center lg:justify-start">
+        <div className="hide-bottom mb-10 md:mb-3 flex justify-center lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>
         <div className="flex shrink flex-col items-center gap-16 xl:grid xl:grid-cols-12 xl:grid-rows-4">
-          {events.map((event, i) => (
-            <EventTypeCard
-              key={event.title}
-              title={event.title}
-              info={event.description}
-              imageURL={event.imageURL}
-              className={cn(
-                "hide-left delay-card col-span-9 row-span-1 xl:max-w-4xl 2xl:max-w-5xl",
-                `col-start-${i + 1}`
-              )}
-            />
-          ))}
+          <EventTypeCard
+            className="hide-left delay-card col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            title="Pre-Selection Days"
+            imageURL="/assets/logo-pre-selections.png"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </EventTypeCard>
+          <EventTypeCard
+            className="hide-left delay-card col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            title="Days of EYP"
+            imageURL="/assets/logo-days-of-eyp.png"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </EventTypeCard>
+          <EventTypeCard
+            className="hide-left delay-card col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            title="Youth Summit"
+            imageURL="/assets/logo-youth-summit.png"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </EventTypeCard>
+          <EventTypeCard
+            className="hide-left delay-card col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            title="National Session"
+            imageURL="/assets/logo-national-session.png"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </EventTypeCard>
         </div>
       </section>
       <WaveDivider waveLayers={wavePaths.eventsTop} />
@@ -69,14 +65,14 @@ export default function Events() {
         </div>
       </section>
       <WaveDivider waveLayers={wavePaths.eventsBottom} />
-      <section className="page-margin max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32">
+      <section className="page-margin max-h-max min-h-[60vh] mb-16 xl:mb-20 2xl:mb-32">
         <div className="hide-bottom mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-20">
+        <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
             title="Teambuilding"
             imageURL="/assets/events-3.jpg"
           >
@@ -90,9 +86,9 @@ export default function Events() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className="hide-right delay-card w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
-            titlePosition="text-right"
+            reverse={true}
             imageURL="/assets/events-2.jpg"
           >
             This is the central part of any EYP session. After team-building,
@@ -103,7 +99,7 @@ export default function Events() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
             imageURL="/assets/events-1.jpg"
           >

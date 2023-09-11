@@ -3,12 +3,17 @@ import { cn, slugify } from "~/utils";
 
 interface props {
   title: string;
-  info: string;
+  children: string;
   imageURL: string;
   className?: string;
 }
 
-export function EventTypeCard({ title, info, imageURL, className }: props) {
+export function EventTypeCard({
+  title,
+  children: description,
+  imageURL,
+  className,
+}: props) {
   return (
     <>
       <a
@@ -22,14 +27,16 @@ export function EventTypeCard({ title, info, imageURL, className }: props) {
           <Image
             width={300}
             height={300}
-            className="object-fit aspect-auto px-4 transition-all duration-300 xs:hover:-translate-y-2.5"
+            className="max-w-[16rem] object-fit aspect-auto px-4 transition-all duration-300 xs:hover:-translate-y-2.5"
             src={imageURL}
             alt=""
           />
         </div>
         <div className="basis-3/4 flex flex-col w-2/3 transition-all duration-300 xs:hover:-translate-y-2.5">
-          <h2 className="text-3xl">{title}</h2>
-          <p className="text-lg">{info}</p>
+          <h2 className="text-xl font-semibold xl:font-normal md:text-2xl xl:text-3xl">
+            {title}
+          </h2>
+          <p className="text-lg">{description}</p>
         </div>
       </a>
     </>

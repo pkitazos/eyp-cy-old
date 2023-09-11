@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import { cn } from "~/utils";
 
 interface props {
   title: string;
-  titlePosition?: "text-left" | "text-center" | "text-right";
+  reverse?: boolean;
   children: ReactNode;
   imageURL: string;
   className?: string;
@@ -11,34 +12,34 @@ interface props {
 
 export function SessionElementCard({
   title,
-  titlePosition = "text-left",
+  reverse,
   children,
   imageURL,
   className,
 }: props) {
   return (
     <div
-      className={`linker flex ${
-        titlePosition === "text-right" ? "flex-row-reverse" : "flex-row"
-      } group`}
+      className={cn(
+        "flex flex-col-reverse gap-4 group linker",
+        reverse ? "md:flex-row-reverse" : "md:flex-row",
+        className
+      )}
     >
-      <div className="w-1/4 rounded-lg bg-pink-500">
+      <div className="w-1/2 place-self-end md:w-1/3 3xl:w-1/4 my-auto min-h-[8rem] max-h-40 md:max-h-56 md-lg:max-h-60 rounded-lg bg-pink-500 rotate-3 group-hover:rotate-6 duration-300 transition-transform">
         <Image
           width={250}
           height={250}
           src={imageURL}
           alt=""
-          className="h-[97%] w-[97%] -translate-x-4 -translate-y-4 content-center rounded-lg object-cover transition-all duration-300 group-hover:-translate-x-5 group-hover:-translate-y-5"
+          className="-rotate-3 h-[97%] w-[97%] -translate-x-4 -translate-y-4 content-center rounded-lg object-cover transition-all duration-300 group-hover:-rotate-6"
         />
       </div>
-      <div
-        className={`m-8 mr-12 w-3/4 transition-all duration-300 group-hover:scale-[1.02] ${className}`}
-      >
-        <h2
-          className={`underliner mb-4 w-max text-xl font-semibold xl:text-3xl ${titlePosition}`}
-        >
-          {title}
-        </h2>
+      <div className="p-8 w-full md:w-2/3 3xl:w-3/4 transition-all duration-300 group-hover:scale-[1.02]">
+        <div className={cn("flex", reverse && "md:justify-end")}>
+          <h2 className="underliner mb-4 text-xl font-semibold xl:text-3xl">
+            {title}
+          </h2>
+        </div>
         <p className="text-justify text-lg">{children}</p>
       </div>
     </div>
