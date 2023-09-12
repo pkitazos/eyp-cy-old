@@ -11,7 +11,6 @@ export {
   NetworkIcon,
   PenIcon,
   Underline,
-  WhiteStar,
 } from "./SVGs";
 export {
   Accordion,
