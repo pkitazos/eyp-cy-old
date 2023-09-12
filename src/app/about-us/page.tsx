@@ -1,17 +1,16 @@
 import Image from "next/image";
 import {
+  BookIcon,
+  Container,
+  ConversationIcon,
+  Divider,
+  ImageGrid,
+  NetworkIcon,
+  PenIcon,
   Title,
   WaveDivider,
-  BookIcon,
-  ConversationIcon,
-  PenIcon,
-  NetworkIcon,
   WhatWeDoCard,
-  ImageGrid,
-  Container,
-  Divider,
 } from "~/components";
-import { wavePaths } from "~/data";
 
 export default function AboutUs() {
   return (
@@ -86,7 +85,7 @@ export default function AboutUs() {
             </p>
           </div>
         </Container>
-        <WaveDivider waveLayers={wavePaths.aboutTop} />
+        <WaveDivider.aboutTop />
         <Container backdrop="bg-primary-600" className="pb-20 pt-8 xl:px-20">
           <div className="flex justify-center">
             <Title
@@ -130,7 +129,7 @@ export default function AboutUs() {
             </WhatWeDoCard>
           </div>
         </Container>
-        <WaveDivider waveLayers={wavePaths.aboutBottom} />
+        <WaveDivider.aboutBottom />
         <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16 flex items-center">
           <div className="z-20 w-full md-lg:w-2/3">
             <div className=" flex justify-center">

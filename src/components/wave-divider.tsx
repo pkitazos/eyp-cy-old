@@ -1,3 +1,5 @@
+import { wavePaths } from "~/data";
+
 const hashCode = (str: string) => {
   let hash = 0;
   for (let i = 0, len = str.length; i < len; i++) {
@@ -19,6 +21,14 @@ const generateKeyTimes: (n: number) => string = (n) => {
   for (let i = 0; i < n - 1; i++)
     keyTimesString += `${(i * stepSize).toFixed(3)}; `;
   return `${keyTimesString} 1`;
+};
+
+const getWaveData = (w: singleWave) => {
+  let layers = w.layers;
+  let colors = w.colors;
+  return layers.map(function (layer, i) {
+    return [layer, colors[i]] as [string[], string];
+  });
 };
 
 interface waveProps {
@@ -47,15 +57,7 @@ interface waveDividerProps {
   viewBox?: string;
 }
 
-const getWaveData = (w: singleWave) => {
-  let layers = w.layers;
-  let colors = w.colors;
-  return layers.map(function (layer, i) {
-    return [layer, colors[i]] as [string[], string];
-  });
-};
-
-export const WaveDivider = ({
+const WaveStack = ({
   waveLayers,
   viewBox = "0 0 1000 300",
 }: waveDividerProps) => {
@@ -69,3 +71,35 @@ export const WaveDivider = ({
     </>
   );
 };
+
+const headerDiagonal = () => (
+  <WaveStack waveLayers={wavePaths.headerDiagonal} viewBox="0 0 1000 650" />
+);
+const headerHorizontal = () => (
+  <WaveStack waveLayers={wavePaths.headerHorizontal} />
+);
+const footer = () => (
+  <WaveStack waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
+);
+const homeTop = () => <WaveStack waveLayers={wavePaths.homeTop} />;
+const homeBottom = () => <WaveStack waveLayers={wavePaths.homeBottom} />;
+const eventsTop = () => <WaveStack waveLayers={wavePaths.eventsTop} />;
+const eventsBottom = () => <WaveStack waveLayers={wavePaths.eventsBottom} />;
+const patronsTop = () => <WaveStack waveLayers={wavePaths.patronsTop} />;
+const patronsBottom = () => <WaveStack waveLayers={wavePaths.patronsBottom} />;
+const aboutTop = () => <WaveStack waveLayers={wavePaths.aboutTop} />;
+const aboutBottom = () => <WaveStack waveLayers={wavePaths.aboutBottom} />;
+
+export const WaveDivider = {
+  headerDiagonal,
+  headerHorizontal,
+  footer,
+  homeTop,
+  homeBottom,
+  eventsTop,
+  eventsBottom,
+  patronsTop,
+  patronsBottom,
+  aboutTop,
+  aboutBottom,
+} as const;

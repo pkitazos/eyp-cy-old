@@ -5,7 +5,6 @@ import {
   Title,
   WaveDivider,
 } from "~/components";
-import { wavePaths } from "~/data";
 
 const patronData = [
   {
@@ -83,7 +82,7 @@ export default function PatronsAndPartners() {
             advice, support as well as attending various of our events.
           </p>
         </Container>
-        <WaveDivider waveLayers={wavePaths.patronsTop} />
+        <WaveDivider.patronsTop />
         <Container
           backdrop="bg-primary-700"
           className="pb-24 pt-3 flex flex-col items-center"
@@ -120,7 +119,7 @@ export default function PatronsAndPartners() {
             </div>
           </div>
         </Container>
-        <WaveDivider waveLayers={wavePaths.patronsBottom} />
+        <WaveDivider.patronsBottom />
         <Container className="flex flex-col items-center">
           <div className="flex justify-center sm:justify-start">
             <Title text="Our Partners" order="h2" underline="rotate-12" />

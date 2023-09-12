@@ -3,7 +3,6 @@ import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
-import { wavePaths } from "~/data";
 import { cn, debounce } from "~/lib/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
@@ -146,10 +145,7 @@ export function Header() {
     <>
       {home && (
         <div className="absolute left-0 -z-10 w-full">
-          <WaveDivider
-            waveLayers={wavePaths.headerDiagonal}
-            viewBox="0 0 1000 650"
-          />
+          <WaveDivider.headerDiagonal />
         </div>
       )}
       <div
@@ -165,7 +161,7 @@ export function Header() {
       {!home && (
         <div className="-mb-40">
           <div className="h-12 bg-primary-800">&nbsp;</div>
-          <WaveDivider waveLayers={wavePaths.headerHorizontal} />
+          <WaveDivider.headerHorizontal />
         </div>
       )}
     </>

@@ -7,7 +7,6 @@ import {
   UpcomingEventCard,
   WaveDivider,
 } from "~/components";
-import { wavePaths } from "~/data";
 
 const testimonials = [
   {
@@ -120,7 +119,7 @@ export default function Home() {
             />
           </div>
         </Container>
-        <WaveDivider waveLayers={wavePaths.homeTop} />
+        <WaveDivider.homeTop />
         <Container
           backdrop="bg-primary-600"
           className="flex flex-col items-center lg-xl:px-0"
@@ -140,7 +139,7 @@ export default function Home() {
             ))}
           </ul>
         </Container>
-        <WaveDivider waveLayers={wavePaths.homeBottom} />
+        <WaveDivider.homeBottom />
         <Container className="mb-12 min-h-[40rem] h-max">
           <div className="flex flex-col gap-5">
             <div className=" flex justify-center md:justify-start">

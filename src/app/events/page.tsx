@@ -1,13 +1,12 @@
 "use client";
 import {
-  ActionButton,
   Container,
   EventTypeCard,
   SessionElementCard,
   Title,
   WaveDivider,
 } from "~/components";
-import { wavePaths } from "~/data";
+import { ClientSection } from "./client-section";
 
 export default function Events() {
   return (
@@ -51,7 +50,7 @@ export default function Events() {
           </EventTypeCard>
         </div>
       </Container>
-      <WaveDivider waveLayers={wavePaths.eventsTop} />
+      <WaveDivider.eventsTop />
       <Container
         backdrop="bg-primary-700"
         className="flex h-[30rem] flex-col justify-around pt-10"
@@ -64,12 +63,9 @@ export default function Events() {
             underline="text-orange-500"
           />
         </div>
-        <div className="flex flex-row justify-center gap-8 md:gap-14 lg-xl:gap-24">
-          <ActionButton text="School" onClick={() => {}} />
-          <ActionButton text="Individual" onClick={() => {}} />
-        </div>
+        <ClientSection />
       </Container>
-      <WaveDivider waveLayers={wavePaths.eventsBottom} />
+      <WaveDivider.eventsBottom />
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
         <div className=" mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />

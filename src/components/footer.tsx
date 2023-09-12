@@ -1,5 +1,4 @@
 "use client";
-import { wavePaths } from "~/data";
 import { FacebookIcon, InstagramIcon } from "./SVGs";
 import { WaveDivider } from "./wave-divider";
 import { Container } from "./container";
@@ -10,7 +9,7 @@ import { Container } from "./container";
 export function Footer() {
   return (
     <div className="bottom-0 w-full">
-      <WaveDivider waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
+      <WaveDivider.footer />
       <Container
         backdrop="bg-primary-800"
         className="grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0"
