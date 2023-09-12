@@ -136,16 +136,16 @@ export default function AboutUs() {
           </div>
         </Container>
         <WaveDivider waveLayers={wavePaths.aboutBottom} />
-        <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16">
-          <div className="hide-left">
-            <div className="flex justify-center">
+        <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16 flex items-center">
+          <div className="z-20 w-full md-lg:w-2/3">
+            <div className="hide-left flex justify-center">
               <Title
                 text="How we do What we do"
                 order="h2"
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="text-justify text-lg leading-relaxed md:text-xl">
+            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
               With non-formal education at the heart of our activities, we
               provide young people with a non-partisan and independent forum to
               formulate and discuss their opinions about current issues both
@@ -165,6 +165,16 @@ export default function AboutUs() {
               part in more than 500 EYP events organised across Europe every
               year.
             </p>
+          </div>
+          <div className="hidden ml-20 md-lg:grid w-[35%] place-items-center">
+            <ImageGrid.Focus
+              flow="lhs"
+              images={[
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+              ]}
+            />
           </div>
         </Container>
         <Container className="block mt-4 xs:mt-10 mb-16 sm:hidden">
