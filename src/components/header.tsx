@@ -154,7 +154,7 @@ export function Header() {
       )}
       <div
         className={cn(
-          "fixed top-0 z-50 flex h-[10vh] w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
+          "fixed top-0 z-50 flex h-[10vh] max-h-32 w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
           !isDocked && "bg-primary-800 shadow-md"
         )}
       >
