@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -69,16 +71,6 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-source-sans-3)"],
       },
-      backgroundImage: {
-        "underliner-orange": `linear-gradient(
-          transparent calc(100% - 10px),
-          orange 5px
-        );`,
-        "underliner-secondary": `linear-gradient(
-          transparent calc(100% - 10px),
-          #00b7ff99 5px
-        );`,
-      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -95,5 +87,16 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".diamond-mask": {
+          maskImage: "url('/diamond-mask.svg')",
+          maskSize: "contain",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+        },
+      });
+    }),
+  ],
 };

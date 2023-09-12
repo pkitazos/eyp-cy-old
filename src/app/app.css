@@ -10,20 +10,6 @@
   @apply px-5 sm:px-7 md:px-10 md-lg:px-20 lg:px-28 lg-xl:px-40;
 }
 
-@layer components {
-  .masked-image {
-    mask-image: url("/diamond-mask.svg");
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    -webkit-mask-image: url("/diamond-mask.svg");
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-  }
-}
-
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
@@ -37,10 +23,6 @@
   }
 
   /* debug classes ------------------------------------------------------------- */
-  .debug {
-    outline: 2px solid;
-    outline-color: hsl(14, 80%, 50%);
-  }
 
   .media-debug {
     @apply bg-lime-300 xs:bg-amber-300 sm:bg-orange-400 md:bg-red-500 md-lg:bg-fuchsia-300 lg:bg-purple-500 lg-xl:bg-sky-400 xl:bg-teal-400 2xl:bg-emerald-500 3xl:bg-green-500;
