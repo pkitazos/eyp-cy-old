@@ -1,5 +1,10 @@
-import { NCMemberCard, PreviousBoardButton, Title } from "~/components";
-import { previousBoardData } from "~/data/previous-boards";
+import {
+  Container,
+  NCMemberCard,
+  PreviousBoardButton,
+  Title,
+} from "~/components";
+import { previousBoardData } from "./previous-boards";
 
 const ncMembers = [
   {
@@ -15,7 +20,7 @@ const ncMembers = [
   {
     name: "Andrea Soteriou",
     title: "Secretary",
-    imageURL: "/assets/nc-secretary.jpg",
+    imageURL: "/assets/nc-secretary.png",
   },
   {
     name: "Georgios Papaconstantinou",
@@ -25,7 +30,7 @@ const ncMembers = [
   {
     name: "Antreas Psaltis",
     title: "Head of Human Resources",
-    imageURL: "/assets/nc-hr.jpg",
+    imageURL: "/assets/nc-hr.png",
   },
   {
     name: "Kornelia Kitazou",
@@ -40,7 +45,7 @@ const ncMembers = [
   {
     name: "Theodoulos Hadjimatheou",
     title: "National Coordinator",
-    imageURL: "/assets/nc-natco-2.jpg",
+    imageURL: "/assets/nc-natco-2.png",
   },
 ];
 
@@ -51,7 +56,7 @@ export default function NationalCommittee() {
         <title>National Committee</title>
       </head>
       <>
-        <section className="mt-40 md:mt-20 lg:mt-16 page-margin flex flex-col pb-16">
+        <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col pb-16">
           <div className="item-center flex flex-col items-center gap-6">
             <div className="hide-bottom">
               <Title
@@ -60,7 +65,7 @@ export default function NationalCommittee() {
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl max-w-5xl">
+            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl">
               The National Committee of EYP Cyprus is elected by the
               organisation&apos;s members at our Annual General Meetings taking
               place in December. The Committee is responsible for undertaking
@@ -83,11 +88,11 @@ export default function NationalCommittee() {
               </div>
             ))}
           </div>
-        </section>
+        </Container>
         <div className="flex justify-center mt-24 mb-32">
           <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
         </div>
-        <section className="page-margin mt-16 mb-20 flex flex-col justify-center gap-2">
+        <Container className="mt-16 mb-20 flex flex-col justify-center gap-2">
           <div className="hide-left flex justify-center">
             <Title text="Past Boards" order="h2" underline="rotate-[190deg]" />
           </div>
@@ -104,7 +109,7 @@ export default function NationalCommittee() {
               </div>
             ))}
           </div>
-        </section>
+        </Container>
       </>
     </>
   );
