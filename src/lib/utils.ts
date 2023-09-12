@@ -9,6 +9,7 @@ export function slugify(label: string): string {
   let route = label.replaceAll("&", "and").replaceAll(" ", "-").toLowerCase();
   return `/${route}`;
 }
+
 export function debounce<T extends Function>(cb: T, wait = 20) {
   let frame: number;
   let callable = (...args: any) => {

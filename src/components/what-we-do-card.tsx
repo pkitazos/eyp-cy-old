@@ -18,7 +18,7 @@ export function WhatWeDoCard({ title, info, imageURL, children: icon }: props) {
         alt=""
         className="col-span-1 hidden h-60 rounded-xl object-cover transition-all duration-200 group-hover:scale-[0.97] sm:block"
       />
-      <div className="backdrop-blur-md bg-white/50 relative mx-2 rounded-xl px-8 py-6 transition-all duration-200 group-hover:scale-[1.02] sm:col-span-1 sm:-ml-4 md:-mx-1 md:-mt-14">
+      <div className="backdrop-blur-md bg-white/50 relative mx-2 rounded-xl px-4 xs:px-8 py-6 transition-all duration-200 group-hover:scale-[1.02] sm:col-span-1 ml-0 sm:-ml-4 md:-mx-1 md:-mt-14">
         <div className="absolute -left-3 -top-3 flex h-max items-center rounded-full bg-accent-900 p-4 sm:hidden">
           {icon}
         </div>

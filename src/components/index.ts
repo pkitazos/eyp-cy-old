@@ -22,6 +22,7 @@ export {
 export { ActionButton } from "./action-button";
 export { Carousel } from "./carousel";
 export { CategoryCard } from "./category-card";
+export { Container } from "./container";
 export { DebugOverlay } from "./debug-overlay";
 export {
   Dialog,
@@ -32,6 +33,7 @@ export {
   DialogTitle,
   DialogTrigger,
 } from "./dialog";
+export { Divider } from "./divider";
 export { Drawer } from "./drawer";
 export { Dropdown } from "./dropdown";
 export { EventTypeCard } from "./event-card";
