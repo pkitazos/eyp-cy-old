@@ -90,10 +90,10 @@ export default function Home() {
         </section>
         <Container className="flex items-center">
           <div className="z-20 w-full md-lg:w-1/2">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title text="Who We Are" order="h2" />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament (EYP) is a non-partisan and
               independent educational platform bringing together thousands of
               young people from all over Europe to discuss current issues,
@@ -125,7 +125,7 @@ export default function Home() {
           backdrop="bg-primary-600"
           className="flex flex-col items-center lg-xl:px-0"
         >
-          <div className="hide-right flex justify-center md:justify-end">
+          <div className=" flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
           <ul className="no-scrollbar flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
@@ -143,14 +143,14 @@ export default function Home() {
         <WaveDivider waveLayers={wavePaths.homeBottom} />
         <Container className="mb-12 min-h-[40rem] h-max">
           <div className="flex flex-col gap-5">
-            <div className="hide-left flex justify-center md:justify-start">
+            <div className=" flex justify-center md:justify-start">
               <Title
                 text="Testimonials"
                 order="h2"
                 underline="text-orange-600 rotate-12"
               />
             </div>
-            <div className="hidden md:block hide-right delay-card">
+            <div className="hidden md:block ">
               <Carousel>
                 {testimonials.map((testimonial, testimonialIndex) => (
                   <TestimonialCard
@@ -164,7 +164,7 @@ export default function Home() {
                 ))}
               </Carousel>
             </div>
-            <div className="flex flex-col gap-8 sm:gap-10 md:hidden hide-right delay-card">
+            <div className="flex flex-col gap-8 sm:gap-10 md:hidden ">
               {testimonials.map((testimonial, testimonialIndex) => (
                 <TestimonialCard
                   key={testimonialIndex}

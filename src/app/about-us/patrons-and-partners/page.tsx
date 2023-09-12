@@ -56,10 +56,10 @@ export default function PatronsAndPartners() {
       </head>
       <>
         <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
-          <div className="hide-bottom mb-6 flex justify-center">
+          <div className=" mb-6 flex justify-center">
             <Title text="Our Patrons & Partners" order="h1" />
           </div>
-          <div className="hide-bottom mb-16 flex flex-col items-center gap-2">
+          <div className=" mb-16 flex flex-col items-center gap-2">
             <div className="flex justify-center">
               <Title text="Board of Patrons" order="h2" />
             </div>
@@ -69,14 +69,14 @@ export default function PatronsAndPartners() {
               which includes
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-16">
+          <div className="flex flex-wrap justify-center gap-16 max-w-5xl">
             {patronData.map((patron, i) => (
-              <div key={i} className="hide-right delay-card">
+              <div key={i} className="">
                 <PatronCard name={patron.name} title={patron.title} />
               </div>
             ))}
           </div>
-          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl">
+          <p className=" mt-16 text-center text-lg leading-relaxed md:text-xl">
             Our patrons&apos; support highlights the value of our
             organisation&apos;s work. They also provide invaluable guidance and
             active support for our events and our workings, both by providing
@@ -88,7 +88,7 @@ export default function PatronsAndPartners() {
           backdrop="bg-primary-700"
           className="pb-24 pt-3 flex flex-col items-center"
         >
-          <div className="hide-left">
+          <div className="">
             <div className="flex justify-center sm:justify-start">
               <Title
                 text="EU Wide Patrons"
@@ -104,14 +104,14 @@ export default function PatronsAndPartners() {
             </p>
           </div>
           <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14 w-full max-w-8xl">
-            <div className="hide-left delay-card">
+            <div className="">
               <PatronCard
                 name="Ursula von der Leyen"
                 title="President of the European Commission"
                 invert={true}
               />
             </div>
-            <div className="hide-left delay-card">
+            <div className="">
               <PatronCard
                 name="Roberta Metsola"
                 title="President of the European Parliament"

@@ -13,12 +13,12 @@ export default function Events() {
   return (
     <>
       <Container className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
-        <div className="hide-bottom mb-10 md:mb-3 flex justify-center lg:justify-start">
+        <div className=" mb-10 md:mb-3 flex justify-center lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>
         <div className="flex shrink flex-col items-center gap-16 xl:grid xl:grid-cols-12 xl:grid-rows-4">
           <EventTypeCard
-            className="hide-left delay-card col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            className=" col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Pre-Selection Days"
             imageURL="/assets/logo-pre-selection-days.png"
           >
@@ -26,7 +26,7 @@ export default function Events() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </EventTypeCard>
           <EventTypeCard
-            className="hide-left delay-card col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            className=" col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Days of EYP"
             imageURL="/assets/logo-days-of-eyp.png"
           >
@@ -34,7 +34,7 @@ export default function Events() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </EventTypeCard>
           <EventTypeCard
-            className="hide-left delay-card col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            className=" col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Youth Summit"
             imageURL="/assets/logo-youth-summit.png"
           >
@@ -42,7 +42,7 @@ export default function Events() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </EventTypeCard>
           <EventTypeCard
-            className="hide-left delay-card col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
+            className=" col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="National Session"
             imageURL="/assets/logo-national-session.png"
           >
@@ -56,7 +56,7 @@ export default function Events() {
         backdrop="bg-primary-700"
         className="flex h-[30rem] flex-col justify-around pt-10"
       >
-        <div className="hide-right flex justify-center">
+        <div className=" flex justify-center">
           <Title
             text="I want to participate as a .."
             order="h2"
@@ -71,13 +71,13 @@ export default function Events() {
       </Container>
       <WaveDivider waveLayers={wavePaths.eventsBottom} />
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom mb-16 flex justify-center">
+        <div className=" mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
 
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
-            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             title="Teambuilding"
             imageURL="/assets/events-3.jpg"
           >
@@ -91,7 +91,7 @@ export default function Events() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-right delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
             reverse={true}
             imageURL="/assets/events-2.jpg"
@@ -104,7 +104,7 @@ export default function Events() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
             imageURL="/assets/events-1.jpg"
           >

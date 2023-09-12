@@ -9,7 +9,7 @@ export default function GetInvolved() {
       </head>
       <>
         <Container className="mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
-          <div className="hide-bottom max-w-7xl">
+          <div className=" max-w-7xl">
             <div className="flex justify-center">
               <Title
                 text="Get Involved"
@@ -51,7 +51,7 @@ export default function GetInvolved() {
           </CategoryCard>
         </Container>
         <Container className="mb-16 flex flex-col items-center px-5">
-          <div className="hide-right max-w-7xl">
+          <div className=" max-w-7xl">
             <div className="flex justify-center">
               <Title
                 text="General, Open Events"

@@ -13,10 +13,10 @@ export default function PreSelectionDays() {
             src="/assets/logo-pre-selection-days.png"
             alt=""
           />
-          <div className="hide-left flex justify-center">
+          <div className=" flex justify-center">
             <Title text="Pre-Selection Days" order="h1" />
           </div>
-          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+          <p className=" text-justify text-lg leading-relaxed md:text-xl">
             The Pre-Selection Days of EYP Cyprus have been organised annually
             since 2010 and welcome about 22-26 school delegations for a 2 day
             conference where young people have the opportunity to discuss
@@ -32,13 +32,13 @@ export default function PreSelectionDays() {
       </Container>
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
       <Container className=" mb-16 xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom mb-6 md:mb-16 flex justify-center">
+        <div className=" mb-6 md:mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
             title="Teambuilding"
-            className="hide-right delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             Team building in the context of the European Youth Parliament, means
@@ -53,7 +53,7 @@ export default function PreSelectionDays() {
           <SessionElementCard
             title="General Assembly"
             reverse={true}
-            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             The General Assembly reunites all the participants of the session to

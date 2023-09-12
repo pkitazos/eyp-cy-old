@@ -22,10 +22,10 @@ export default function AboutUs() {
       <>
         <Container className="mb-0 mt-40 md-lg:mt-32 2xl:mt-0 flex items-center">
           <div className="z-20 w-full md-lg:w-2/3">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title text="About Us" order="h1" underline="rotate-[190deg]" />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament (EYP) Cyprus is a non-partisan and
               non-governmental organisation, which aims to encourage independent
               thinking, personal initiative and intercultural encounters amongst
@@ -70,14 +70,14 @@ export default function AboutUs() {
             />
           </div>
           <div className="z-20 w-full md-lg:w-2/3">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title
                 text="Our Mission"
                 order="h2"
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament is a peer-to-peer educational
               programme that brings together young people from across Europe to
               debate the pressing issues of our time. Our mission is to inspire
@@ -96,8 +96,8 @@ export default function AboutUs() {
               underline="rotate-[190deg]"
             />
           </div>
-          <div className="hide-right flex flex-col flex-wrap justify-center gap-y-10 md:flex-row md:px-0 lg:-mx-16">
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
+          <div className=" flex flex-col flex-wrap justify-center gap-y-10 md:flex-row md:px-0 lg:-mx-16">
+            <div className="flex flex-auto justify-center px-4 md:w-max">
               <WhatWeDoCard
                 title="Open Forum for Youth"
                 info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
@@ -106,7 +106,7 @@ export default function AboutUs() {
                 <BookIcon className="w-10 text-white" />
               </WhatWeDoCard>
             </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
+            <div className="flex flex-auto justify-center px-4 md:w-max">
               <WhatWeDoCard
                 title="Intercultural Dialogue"
                 info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
@@ -115,7 +115,7 @@ export default function AboutUs() {
                 <ConversationIcon className="w-10 text-white" />
               </WhatWeDoCard>
             </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
+            <div className="flex flex-auto justify-center px-4 md:w-max">
               <WhatWeDoCard
                 title="Skills Development"
                 info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
@@ -124,7 +124,7 @@ export default function AboutUs() {
                 <PenIcon className="w-10 text-white" />
               </WhatWeDoCard>
             </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
+            <div className="flex flex-auto justify-center px-4 md:w-max">
               <WhatWeDoCard
                 title="Network of Changemakers"
                 info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
@@ -138,14 +138,14 @@ export default function AboutUs() {
         <WaveDivider waveLayers={wavePaths.aboutBottom} />
         <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16 flex items-center">
           <div className="z-20 w-full md-lg:w-2/3">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title
                 text="How we do What we do"
                 order="h2"
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               With non-formal education at the heart of our activities, we
               provide young people with a non-partisan and independent forum to
               formulate and discuss their opinions about current issues both
@@ -190,7 +190,7 @@ export default function AboutUs() {
           <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
         </div>
         <Container className="mb-16 sm:mb-28 lg-xl:20 mt-16 sm:mt-8">
-          <div className="hide-left">
+          <div className="">
             <div className="flex justify-center">
               <Title
                 text="A Little More About Us"

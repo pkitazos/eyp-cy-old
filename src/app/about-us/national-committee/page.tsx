@@ -58,7 +58,7 @@ export default function NationalCommittee() {
       <>
         <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col pb-16">
           <div className="item-center flex flex-col items-center gap-6">
-            <div className="hide-bottom">
+            <div className="">
               <Title
                 text="Our National Committee"
                 order="h1"
@@ -73,13 +73,13 @@ export default function NationalCommittee() {
               administrative tasks that enable the organisation to function on a
               day-to-day basis.
             </p>
-            <div className="mt-20 3xl:mt-32 hide-bottom delay-card">
+            <div className="mt-20 3xl:mt-32 ">
               <Title text="2023" order="h2" underline="rotate-[190deg]" />
             </div>
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-16">
             {ncMembers.map((member, i) => (
-              <div key={i} className="hide-right delay-card">
+              <div key={i} className="">
                 <NCMemberCard
                   name={member.name}
                   title={member.title}
@@ -93,14 +93,14 @@ export default function NationalCommittee() {
           <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
         </div>
         <Container className="mt-16 mb-20 flex flex-col justify-center gap-2">
-          <div className="hide-left flex justify-center">
+          <div className=" flex justify-center">
             <Title text="Past Boards" order="h2" underline="rotate-[190deg]" />
           </div>
           <div className="mt-10 grid grid-cols-3 grid-rows-5 gap-5 xs:grid-cols-4 xs:grid-rows-4">
             {previousBoardData.map((previousBoard) => (
               <div
                 key={previousBoard.year}
-                className="hide-left delay-card flex shrink justify-center"
+                className=" flex shrink justify-center"
               >
                 <PreviousBoardButton
                   year={previousBoard.year}

@@ -10,7 +10,7 @@ interface props {
 
 export const CategoryCard = ({ title, children: info, action }: props) => {
   return (
-    <div className="hide-left h-max flex flex-col shadow-sm items-center gap-4 bg-gray-200/50 hover:bg-gray-300/50 px-4 py-6 sm:px-8 sm:py-12 rounded-md">
+    <div className=" h-max flex flex-col shadow-sm items-center gap-4 bg-gray-200/50 hover:bg-gray-300/50 px-4 py-6 sm:px-8 sm:py-12 rounded-md">
       <div className="flex justify-start w-full">
         <Title
           className="font-semibold"

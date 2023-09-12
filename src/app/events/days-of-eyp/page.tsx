@@ -13,10 +13,10 @@ export default function DaysOfEYP() {
             src="/assets/logo-days-of-eyp.png"
             alt=""
           />
-          <div className="hide-left flex justify-center">
+          <div className=" flex justify-center">
             <Title text="Days of EYP" order="h1" />
           </div>
-          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+          <p className=" text-justify text-lg leading-relaxed md:text-xl">
             The EYP Day was established in 2019 and takes place annually. It
             welcomed approximately 50 - 80 young people to a one day conference
             where they can discuss current issues. This event allows young
@@ -29,14 +29,14 @@ export default function DaysOfEYP() {
       </Container>
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom mb-16 flex justify-center">
+        <div className=" mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
             title="Teambuilding"
             imageURL="/assets/events-2.jpg"
-            className="hide-right delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -51,7 +51,7 @@ export default function DaysOfEYP() {
             title="Committee Work"
             reverse={true}
             imageURL="/assets/events-2.jpg"
-            className="hide-left delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -63,7 +63,7 @@ export default function DaysOfEYP() {
           <SessionElementCard
             title="General Assembly"
             imageURL="/assets/events-2.jpg"
-            className="hide-right delay-card w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and
