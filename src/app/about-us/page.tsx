@@ -87,7 +87,7 @@ export default function AboutUs() {
           </div>
         </Container>
         <WaveDivider waveLayers={wavePaths.aboutTop} />
-        <Container backdrop="bg-primary-600" className="pb-20 pt-8">
+        <Container backdrop="bg-primary-600" className="pb-20 pt-8 xl:px-20">
           <div className="flex justify-center">
             <Title
               text="What We Do"
@@ -96,43 +96,38 @@ export default function AboutUs() {
               underline="rotate-[190deg]"
             />
           </div>
-          <div className=" flex flex-col flex-wrap justify-center gap-y-10 md:flex-row md:px-0 lg:-mx-16">
-            <div className="flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Open Forum for Youth"
-                info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
-                imageURL="/assets/what-we-do-1.jpg"
-              >
-                <BookIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Intercultural Dialogue"
-                info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
-                imageURL="/assets/what-we-do-2.jpg"
-              >
-                <ConversationIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Skills Development"
-                info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
-                imageURL="/assets/what-we-do-3.jpg"
-              >
-                <PenIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Network of Changemakers"
-                info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
-                imageURL="/assets/what-we-do-4.jpg"
-              >
-                <NetworkIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
+          <div className="grid grid-cols-1 place-items-center gap-10 xl:flex justify-evenly">
+            <WhatWeDoCard
+              title="Open Forum for Youth"
+              info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
+              imageURL="/assets/what-we-do-1.jpg"
+            >
+              <BookIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Intercultural Dialogue"
+              info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
+              imageURL="/assets/what-we-do-2.jpg"
+            >
+              <ConversationIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Skills Development"
+              info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
+              imageURL="/assets/what-we-do-3.jpg"
+            >
+              <PenIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Network of Changemakers"
+              info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
+              imageURL="/assets/what-we-do-4.jpg"
+            >
+              <NetworkIcon className="w-10 text-white" />
+            </WhatWeDoCard>
           </div>
         </Container>
         <WaveDivider waveLayers={wavePaths.aboutBottom} />
