@@ -73,7 +73,7 @@ export default function NationalCommittee() {
               administrative tasks that enable the organisation to function on a
               day-to-day basis.
             </p>
-            <div className="hide-bottom delay-card">
+            <div className="mt-20 3xl:mt-32 hide-bottom delay-card">
               <Title text="2023" order="h2" underline="rotate-[190deg]" />
             </div>
           </div>
