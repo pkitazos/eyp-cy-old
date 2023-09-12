@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.page-margin {
-  @apply mx-5 sm:mx-7 md:mx-10 md-lg:mx-20 lg:mx-28 lg-xl:mx-40 xl:mx-60 2xl:mx-80 3xl:mx-96;
-}
-
-.page-padding {
-  @apply px-5 sm:px-7 md:px-10 md-lg:px-20 lg:px-28 lg-xl:px-40;
-}
-
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
@@ -22,29 +14,7 @@
     display: none;
   }
 
-  /* debug classes ------------------------------------------------------------- */
-
   .media-debug {
     @apply bg-lime-300 xs:bg-amber-300 sm:bg-orange-400 md:bg-red-500 md-lg:bg-fuchsia-300 lg:bg-purple-500 lg-xl:bg-sky-400 xl:bg-teal-400 2xl:bg-emerald-500 3xl:bg-green-500;
-  }
-
-  .--orange {
-    outline: 2px solid;
-    outline-color: hsl(14, 80%, 50%);
-  }
-
-  .--lime {
-    outline: 2px solid;
-    outline-color: hsl(84, 81%, 44%);
-  }
-
-  .--sky {
-    outline: 2px solid;
-    outline-color: hsl(199, 89%, 48%);
-  }
-
-  .--purple {
-    outline: 2px solid;
-    outline-color: hsl(271, 91%, 65%);
   }
 }

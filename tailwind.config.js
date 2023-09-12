@@ -96,6 +96,22 @@ module.exports = {
           maskRepeat: "no-repeat",
           maskPosition: "center",
         },
+        ".--orange": {
+          outline: "2px solid",
+          outlineColor: "hsl(14, 80%, 50%)",
+        },
+        ".--lime": {
+          outline: "2px solid",
+          outlineColor: "hsl(84, 81%, 44%)",
+        },
+        ".--sky": {
+          outline: "2px solid",
+          outlineColor: "hsl(199, 89%, 48%)",
+        },
+        ".--purple": {
+          outline: "2px solid",
+          outlineColor: "hsl(271, 91%, 65%)",
+        },
       });
     }),
   ],
