@@ -1,4 +1,3 @@
-"use client";
 import { CategoryCard, Container, Title } from "~/components";
 
 export default function GetInvolved() {
@@ -31,7 +30,7 @@ export default function GetInvolved() {
           </div>
         </Container>
         <Container className="lg-xl:px-28 mb-32 grid grid-cols-1 gap-7 md-lg:gap-10 2xl:gap-16 md:grid-cols-2">
-          <CategoryCard title="High School Students" action={() => {}}>
+          <CategoryCard title="High School Students">
             If you are a High-School Student aged 15-18, you can register
             individually to attend our EYP Day. If your school is interested in
             applying as a delegation of six students, then you are able to
@@ -42,7 +41,7 @@ export default function GetInvolved() {
             contact our HR members@eypcyprus.com to declare your interest or ask
             for further details.
           </CategoryCard>
-          <CategoryCard title="Young Adults" action={() => {}}>
+          <CategoryCard title="Young Adults">
             If you are a university student or over 18 years old, you can attend
             our Youth Summit - a 4 day long conference that often takes place in
             the Summer. If you are interested in attending this event, you can

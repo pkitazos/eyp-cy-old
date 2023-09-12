@@ -5,7 +5,7 @@ import { Title } from "~/components";
 interface props {
   title: string;
   children: ReactNode;
-  action: () => void;
+  action?: () => void;
 }
 
 export const CategoryCard = ({ title, children: info, action }: props) => {
