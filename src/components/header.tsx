@@ -117,7 +117,6 @@ function DesktopNav() {
         ]}
       />
       {/* <Dropdown mainItem="Public Relations" items={["Press Releases"]} /> */}
-
       <a
         className="cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl"
         href="/get-involved"

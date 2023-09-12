@@ -1,4 +1,10 @@
-import { PartnerCard, PatronCard, Title, WaveDivider } from "~/components";
+import {
+  Container,
+  PartnerCard,
+  PatronCard,
+  Title,
+  WaveDivider,
+} from "~/components";
 import { wavePaths } from "~/data";
 
 const patronData = [
@@ -49,7 +55,7 @@ export default function PatronsAndPartners() {
         <title>Patrons & Partners</title>
       </head>
       <>
-        <section className="mt-40 md:mt-20 lg:mt-16 page-margin max-h-max min-h-[60vh] flex flex-col items-center">
+        <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
           <div className="hide-bottom mb-6 flex justify-center">
             <Title text="Our Patrons & Partners" order="h1" />
           </div>
@@ -57,7 +63,7 @@ export default function PatronsAndPartners() {
             <div className="flex justify-center">
               <Title text="Board of Patrons" order="h2" />
             </div>
-            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
+            <p className="mt-6 text-center text-lg leading-relaxed md:text-xl">
               EYP Cyprus&apos;s work and impact is recognised by various high
               profile stakeholders in Cyprus, including our Board of Patrons
               which includes
@@ -70,15 +76,18 @@ export default function PatronsAndPartners() {
               </div>
             ))}
           </div>
-          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl max-w-8xl">
+          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl">
             Our patrons&apos; support highlights the value of our
             organisation&apos;s work. They also provide invaluable guidance and
             active support for our events and our workings, both by providing
             advice, support as well as attending various of our events.
           </p>
-        </section>
+        </Container>
         <WaveDivider waveLayers={wavePaths.patronsTop} />
-        <section className="page-padding max-h-max min-h-[60vh] bg-primary-700 pb-24 pt-3 flex flex-col items-center">
+        <Container
+          backdrop="bg-primary-700"
+          className="pb-24 pt-3 flex flex-col items-center"
+        >
           <div className="hide-left">
             <div className="flex justify-center sm:justify-start">
               <Title
@@ -110,9 +119,9 @@ export default function PatronsAndPartners() {
               />
             </div>
           </div>
-        </section>
+        </Container>
         <WaveDivider waveLayers={wavePaths.patronsBottom} />
-        <section className="page-margin max-h-max min-h-[60vh]">
+        <Container className="flex flex-col items-center">
           <div className="flex justify-center sm:justify-start">
             <Title text="Our Partners" order="h2" underline="rotate-12" />
           </div>
@@ -126,7 +135,7 @@ export default function PatronsAndPartners() {
               />
             ))}
           </div>
-        </section>
+        </Container>
       </>
     </>
   );

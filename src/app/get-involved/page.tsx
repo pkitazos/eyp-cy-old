@@ -1,5 +1,5 @@
 "use client";
-import { CategoryCard, Title } from "~/components";
+import { CategoryCard, Container, Title } from "~/components";
 
 export default function GetInvolved() {
   return (
@@ -8,7 +8,7 @@ export default function GetInvolved() {
         <title>Get Involved</title>
       </head>
       <>
-        <section className="page-margin mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
+        <Container className="mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
           <div className="hide-bottom max-w-7xl">
             <div className="flex justify-center">
               <Title
@@ -29,8 +29,8 @@ export default function GetInvolved() {
               opportunities to take part in our activities.
             </p>
           </div>
-        </section>
-        <section className="page-margin mb-32 grid grid-cols-1 gap-7 md-lg:gap-10 2xl:gap-16 md:grid-cols-2">
+        </Container>
+        <Container className="lg-xl:px-28 mb-32 grid grid-cols-1 gap-7 md-lg:gap-10 2xl:gap-16 md:grid-cols-2">
           <CategoryCard title="High School Students" action={() => {}}>
             If you are a High-School Student aged 15-18, you can register
             individually to attend our EYP Day. If your school is interested in
@@ -49,8 +49,8 @@ export default function GetInvolved() {
             contact our HR members@eypcyprus.com to declare your interest or ask
             for further details.
           </CategoryCard>
-        </section>
-        <section className="page-margin mb-16 flex flex-col items-center px-5">
+        </Container>
+        <Container className="mb-16 flex flex-col items-center px-5">
           <div className="hide-right max-w-7xl">
             <div className="flex justify-center">
               <Title
@@ -68,7 +68,7 @@ export default function GetInvolved() {
               you are notified when an opportunity arises.
             </p>
           </div>
-        </section>
+        </Container>
       </>
     </>
   );

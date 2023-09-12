@@ -1,5 +1,6 @@
 import {
   Carousel,
+  Container,
   ImageGrid,
   TestimonialCard,
   Title,
@@ -87,7 +88,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
+        <Container className="flex items-center">
           <div className="z-20 w-full md-lg:w-1/2">
             <div className="hide-left flex justify-center">
               <Title text="Who We Are" order="h2" />
@@ -118,41 +119,29 @@ export default function Home() {
               ]}
             />
           </div>
-        </section>
+        </Container>
         <WaveDivider waveLayers={wavePaths.homeTop} />
-        <section className="min-h-[60vh] bg-primary-600">
-          <div className="hide-right page-margin flex justify-center md:justify-end">
+        <Container
+          backdrop="bg-primary-600"
+          className="flex flex-col items-center lg-xl:px-0"
+        >
+          <div className="hide-right flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
-          <div className="page-margin flex justify-end lg:hidden">
-            <ul className="no-scrollbar flex h-max max-w-max flex-row justify-between gap-9 overflow-x-scroll p-5">
-              {upcomingEvents.map((event, i) => (
-                <UpcomingEventCard
-                  key={i}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  imageURL={event.imageURL}
-                />
-              ))}
-            </ul>
-          </div>
-          <div className="hidden lg:flex justify-center">
-            <ul className="w-full min-w-min flex h-max justify-evenly gap-2 max-w-7xl">
-              {upcomingEvents.map((event, i) => (
-                <UpcomingEventCard
-                  key={i}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  imageURL={event.imageURL}
-                />
-              ))}
-            </ul>
-          </div>
-        </section>
+          <ul className="no-scrollbar flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
+            {upcomingEvents.map((event, i) => (
+              <UpcomingEventCard
+                key={i}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                imageURL={event.imageURL}
+              />
+            ))}
+          </ul>
+        </Container>
         <WaveDivider waveLayers={wavePaths.homeBottom} />
-        <section className="page-margin mb-12 h-max sm:max-h-max sm:min-h-[50vh] md:min-h-[80vh] px-0 lg:px-8 xl:px-20">
+        <Container className="mb-12 min-h-[40rem] h-max">
           <div className="flex flex-col gap-5">
             <div className="hide-left flex justify-center md:justify-start">
               <Title
@@ -188,7 +177,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </Container>
       </>
     </>
   );

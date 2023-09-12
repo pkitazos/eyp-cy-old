@@ -2,6 +2,7 @@
 import { wavePaths } from "~/data";
 import { FacebookIcon, InstagramIcon } from "./SVGs";
 import { WaveDivider } from "./wave-divider";
+import { Container } from "./container";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
@@ -10,7 +11,10 @@ export function Footer() {
   return (
     <div className="bottom-0 w-full">
       <WaveDivider waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
-      <div className="page-padding grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 bg-primary-800 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0">
+      <Container
+        backdrop="bg-primary-800"
+        className="grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0"
+      >
         <div className="w-max">
           <h3 className="mb-2 text-2xl font-semibold text-white">Contact us</h3>
           <p className="ml-1 text-slate-100">
@@ -47,7 +51,7 @@ export function Footer() {
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

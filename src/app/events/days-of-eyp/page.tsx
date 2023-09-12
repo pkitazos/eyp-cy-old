@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { SessionElementCard, Title } from "~/components";
+import { Container, Divider, SessionElementCard, Title } from "~/components";
 
 export default function DaysOfEYP() {
   return (
     <>
-      <section className="mt-40 md:mt-20 lg:mt-16 page-margin flex justify-center">
-        <div className="flex flex-col items-center gap-5 w-5/6 max-w-4xl xl:w-2/3">
+      <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
+        <div className="flex flex-col items-center gap-5 w-5/6 xl:w-2/3">
           <Image
             className="mb-5 w-48 md-lg:w-60"
             width={200}
@@ -26,11 +26,9 @@ export default function DaysOfEYP() {
             contacting us.
           </p>
         </div>
-      </section>
-      <div className="flex justify-center mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32">
-        <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
-      </div>
-      <section className="page-margin max-h-max min-h-[60vh] mb-16 xl:mb-20 2xl:mb-32">
+      </Container>
+      <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
+      <Container className="mb-16 xl:mb-20 2xl:mb-32">
         <div className="hide-bottom mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
@@ -73,7 +71,7 @@ export default function DaysOfEYP() {
             according to the current model of the European Parliament.
           </SessionElementCard>
         </div>
-      </section>
+      </Container>
     </>
   );
 }

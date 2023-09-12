@@ -48,7 +48,7 @@ export default function AboutUs() {
             />
           </div>
         </Container>
-        <div className="block page-margin mt-16 sm:hidden">
+        <Container className="block mt-16 sm:hidden">
           <Image
             className="w-full"
             width={200}
@@ -56,7 +56,7 @@ export default function AboutUs() {
             src={"/assets/test-image.png"}
             alt=""
           />
-        </div>
+        </Container>
         <Divider className="mt-20 mb-32" />
         <Container className="mb-20 flex items-center">
           <div className="hidden mr-20 md-lg:grid w-[35%] place-items-center">
@@ -167,7 +167,7 @@ export default function AboutUs() {
             </p>
           </div>
         </Container>
-        <div className="block page-margin mt-4 xs:mt-10 mb-16 sm:hidden">
+        <Container className="block mt-4 xs:mt-10 mb-16 sm:hidden">
           <Image
             className="w-full"
             width={200}
@@ -175,7 +175,7 @@ export default function AboutUs() {
             src={"/assets/test-image.png"}
             alt=""
           />
-        </div>
+        </Container>
         <div className="flex sm:hidden lg-xl:flex justify-center mt-20 lg-xl:mt-14 mb-32">
           <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
         </div>

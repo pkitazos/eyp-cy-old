@@ -1,6 +1,7 @@
 "use client";
 import {
   ActionButton,
+  Container,
   EventTypeCard,
   SessionElementCard,
   Title,
@@ -11,7 +12,7 @@ import { wavePaths } from "~/data";
 export default function Events() {
   return (
     <>
-      <section className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 page-margin flex max-h-max min-h-[60vh] flex-col items-center">
+      <Container className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
         <div className="hide-bottom mb-10 md:mb-3 flex justify-center lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>
@@ -49,9 +50,12 @@ export default function Events() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </EventTypeCard>
         </div>
-      </section>
+      </Container>
       <WaveDivider waveLayers={wavePaths.eventsTop} />
-      <section className="page-padding flex max-h-max min-h-[40vh] flex-col justify-around bg-primary-700 pt-10">
+      <Container
+        backdrop="bg-primary-700"
+        className="flex h-[30rem] flex-col justify-around pt-10"
+      >
         <div className="hide-right flex justify-center">
           <Title
             text="I want to participate as a .."
@@ -64,9 +68,9 @@ export default function Events() {
           <ActionButton text="School" onClick={() => {}} />
           <ActionButton text="Individual" onClick={() => {}} />
         </div>
-      </section>
+      </Container>
       <WaveDivider waveLayers={wavePaths.eventsBottom} />
-      <section className="page-margin max-h-max min-h-[60vh] mb-16 xl:mb-20 2xl:mb-32">
+      <Container className="mb-16 xl:mb-20 2xl:mb-32">
         <div className="hide-bottom mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
@@ -110,7 +114,7 @@ export default function Events() {
             according to the current model of the European Parliament.
           </SessionElementCard>
         </div>
-      </section>
+      </Container>
     </>
   );
 }
