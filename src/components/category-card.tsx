@@ -1,6 +1,6 @@
 "use client";
 import type { ReactNode } from "react";
-import { Title } from "~/components";
+import { Title } from "./title";
 
 interface props {
   title: string;

@@ -1,4 +1,10 @@
-import { CategoryCard, Container, Title } from "~/components";
+import {
+  Title,
+  CategoryCard,
+  Container,
+  ContactForm,
+  Divider,
+} from "~/components";
 
 export default function GetInvolved() {
   return (
@@ -67,6 +73,15 @@ export default function GetInvolved() {
               you are notified when an opportunity arises.
             </p>
           </div>
+        </Container>
+        <Divider className="mt-40 mb-32" />
+        <Container className="mb-20 flex flex-col">
+          <Title
+            text="Contact Us"
+            order="h2"
+            underline="text-lime-500 rotate-[190deg]"
+          />
+          <ContactForm />
         </Container>
       </>
     </>

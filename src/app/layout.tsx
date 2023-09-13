@@ -1,5 +1,5 @@
 import { Source_Sans_3 } from "next/font/google";
-import { Footer, Header } from "~/components";
+import { Footer, Header, Toaster } from "~/components";
 import "./app.css";
 
 const sourceSans3 = Source_Sans_3({
@@ -16,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
