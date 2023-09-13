@@ -127,7 +127,7 @@ export default function Home() {
           <div className=" flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
-          <ul className="no-scrollbar flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
+          <ul className="no-scrollbar py-10 flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
             {upcomingEvents.map((event, i) => (
               <UpcomingEventCard
                 key={i}

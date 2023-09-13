@@ -68,6 +68,12 @@ module.exports = {
         },
         "base-white": "#f9f9f9",
       },
+      backgroundImage: {
+        "underliner-secondary":
+          "linear-gradient(transparent calc(100% - 10px), #33C5FF 5px);",
+        "underliner-orange":
+          "linear-gradient(transparent calc(100% - 10px), orange 5px);",
+      },
       fontFamily: {
         sans: ["var(--font-source-sans-3)"],
       },
