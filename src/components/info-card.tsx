@@ -1,7 +1,6 @@
-import { ReactNode } from "react";
 import Image from "next/image";
-import { cn } from "~/utils";
-import { Title } from "./my-title";
+import type { ReactNode } from "react";
+import { cn } from "~/lib/utils";
 
 interface props {
   title: string;
@@ -22,11 +21,11 @@ export function InfoCard({
     <>
       <div
         className={cn(
-          "flex group gap-4 items-center",
-          reversed ? "flex-row-reverse" : "flex-row"
+          "flex group gap-4 items-center flex-col-reverse",
+          reversed ? "md:flex-row-reverse" : "md:flex-row"
         )}
       >
-        <div className="w-1/4 rounded-lg bg-pink-500">
+        <div className="w-2/3 xs:w-1/2 md:w-1/4 rounded-lg bg-pink-500">
           <Image
             width={250}
             height={250}
@@ -42,11 +41,14 @@ export function InfoCard({
         </div>
         <div
           className={cn(
-            "m-8 mr-12 w-3/4 transition-all duration-300 group-hover:scale-[1.02]",
+            "m-8 mr-12 w-full xs:w-11/12 sm:w-10/12 md:w-3/4 transition-all flex flex-col items-center duration-300 group-hover:scale-[1.02]",
             className
           )}
         >
-          <Title text={title} order="h3" />
+          <h3 className="text-xl sm:text-2xl text-primary-900 font-semibold text-center">
+            {title}
+          </h3>
+          <div className="bg-secondary-900 h-1 w-8 my-6">&nbsp;</div>
           <p className="text-justify text-lg">{children}</p>
         </div>
       </div>

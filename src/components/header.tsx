@@ -1,11 +1,9 @@
 "use client";
+import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
-import { Popover, Transition } from "@headlessui/react";
-
-import { wavePaths } from "~/data";
-import { cn, debounce } from "~/utils";
+import { cn, debounce } from "~/lib/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
@@ -118,7 +116,6 @@ function DesktopNav() {
         ]}
       />
       {/* <Dropdown mainItem="Public Relations" items={["Press Releases"]} /> */}
-
       <a
         className="cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl"
         href="/get-involved"
@@ -148,15 +145,12 @@ export function Header() {
     <>
       {home && (
         <div className="absolute left-0 -z-10 w-full">
-          <WaveDivider
-            waveLayers={wavePaths.headerDiagonal}
-            viewBox="0 0 1000 650"
-          />
+          <WaveDivider.headerDiagonal />
         </div>
       )}
       <div
         className={cn(
-          "fixed top-0 z-50 flex h-[10vh] w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
+          "fixed top-0 z-50 flex h-[10vh] max-h-32 w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
           !isDocked && "bg-primary-800 shadow-md"
         )}
       >
@@ -167,7 +161,7 @@ export function Header() {
       {!home && (
         <div className="-mb-40">
           <div className="h-12 bg-primary-800">&nbsp;</div>
-          <WaveDivider waveLayers={wavePaths.headerHorizontal} />
+          <WaveDivider.headerHorizontal />
         </div>
       )}
     </>

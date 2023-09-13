@@ -9,7 +9,4 @@ export { default as InstagramIcon } from "./InstagramIcon";
 export { default as MenuIcon } from "./MenuIcon";
 export { default as NetworkIcon } from "./NetworkIcon";
 export { default as PenIcon } from "./PenIcon";
-export { default as QuoteLeftIcon } from "./QuoteLeftIcon";
-export { default as QuoteRightIcon } from "./QuoteRightIcon";
 export { default as Underline } from "./Underline";
-export { default as WhiteStar } from "./WhiteStar";

@@ -1,13 +1,62 @@
-import clsx from "clsx";
 import {
+  Carousel,
+  Container,
   ImageGrid,
-  TestimonialCarousel,
+  TestimonialCard,
   Title,
   UpcomingEventCard,
-  UpcomingEventCardWrapper,
   WaveDivider,
 } from "~/components";
-import { wavePaths } from "~/data";
+
+const testimonials = [
+  {
+    name: "Theodoulos Hadjimatheou",
+    description:
+      "23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge",
+    imageURL: "/assets/testimonial-theo.jpg",
+    quote: `EYP has changed my life literally. Theres a plethora of areas that I was unaware or indifferent to, that through EYP I now find fascinating. By discussing topics ranging from climate change to human medical gene-editing, I have become more aware of current issues around me. Beyond all these, the extent to which I personally develop in EYP keeps surprising me. Through taking on various roles of responsibility I learnt a lot, met amazing people from all over Europe and stepped out of my comfort zone.`,
+  },
+  {
+    name: "Elena Odysseos",
+    description:
+      "24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK",
+    imageURL: "/assets/testimonial-elena.jpg",
+    quote: `Through my involvement in the organisation I have developed both organisational and leadership skills which are appreciated in any situation. Through EYP I have learned how to communicate effectively and how to work as part of a team It is without a doubt that EYP has shaped the way I work and conduct myself in a professional setting.`,
+  },
+  {
+    name: "Maddie Theodoulou",
+    description: "17, Member since 2020, High school student",
+    imageURL: "/assets/testimonial-maddie.png",
+    quote: `Lockdown in 2020 was a peculiar time for all of us. Everything from work to school became digital. At the beginning I honestly couldn&apos;t see how doing things via Zoom could be in any way productive and certainly in no way enjoyable. Yet, having the opportunity to participate in the EYP Online Discussion Forum showed me otherwise. Even though the Online Discussion was only four hours, I had never felt that I had accomplished so many things. I was able to not only further my academic knowledge on a new current topic by having raw and fascinating discussions with my fellow delegates, but I was also given the chance to meet these new people. People all over Cyprus, who had been through the same situation as me, yet with completely different experiences. Having EYP organise such events, even in times of disarray, is something that I am truly thankful for.`,
+  },
+];
+
+const upcomingEvents = [
+  {
+    title: "Pre-Selection Days",
+    description: "Short text about Pre-Selection Days goes here.",
+    date: "20/03/2023",
+    imageURL: "/assets/events-1.jpg",
+  },
+  {
+    title: "Days of EYP",
+    description: "Short text about Days of EYP goes here.",
+    date: "27/03/2023",
+    imageURL: "/assets/events-2.jpg",
+  },
+  {
+    title: "Youth Summit",
+    description: "Short text about Youth Summit goes here.",
+    date: "16/07/2023",
+    imageURL: "/assets/events-3.jpg",
+  },
+  {
+    title: "National Session",
+    description: "Short text about National Session goes here.",
+    date: "24/08/2023",
+    imageURL: "/assets/events-4.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -38,12 +87,12 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
+        <Container className="flex items-center">
           <div className="z-20 w-full md-lg:w-1/2">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title text="Who We Are" order="h2" />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament (EYP) is a non-partisan and
               independent educational platform bringing together thousands of
               young people from all over Europe to discuss current issues,
@@ -69,59 +118,65 @@ export default function Home() {
               ]}
             />
           </div>
-        </section>
-        <WaveDivider waveLayers={wavePaths.homeTop} />
-        <section className="page-padding min-h-[60vh] bg-primary-600">
-          <div className="hide-right flex justify-center md:justify-end">
+        </Container>
+        <WaveDivider.homeTop />
+        <Container
+          backdrop="bg-primary-600"
+          className="flex flex-col items-center lg-xl:px-0"
+        >
+          <div className=" flex justify-center md:justify-end">
             <Title text="Upcoming Events" order="h2" theme="light" />
           </div>
-          <UpcomingEventCardWrapper>
-            <UpcomingEventCard
-              title="Pre-Selection Days"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-1.jpg"
-              date="20/03/2023"
-            />
-            <UpcomingEventCard
-              title="Days of EYP"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-2.jpg"
-              date="27/03/2023"
-            />
-            <UpcomingEventCard
-              title="Youth Summit"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-3.jpg"
-              date="16/07/2023"
-            />
-            <UpcomingEventCard
-              title="National Session"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod et dolore magna aliqua."
-              imageURL="/assets/events-4.jpg"
-              date="24/08/2023"
-            />
-          </UpcomingEventCardWrapper>
-        </section>
-        <WaveDivider waveLayers={wavePaths.homeBottom} />
-        <section
-          className={clsx(
-            "page-margin mb-12 h-[60rem] xs:h-[50rem] sm:max-h-max sm:min-h-[50vh]",
-            "px-0 lg:px-8 xl:px-20"
-          )}
-        >
+          <ul className="no-scrollbar py-10 flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
+            {upcomingEvents.map((event, i) => (
+              <UpcomingEventCard
+                key={i}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                imageURL={event.imageURL}
+              />
+            ))}
+          </ul>
+        </Container>
+        <WaveDivider.homeBottom />
+        <Container className="mb-12 min-h-[40rem] h-max">
           <div className="flex flex-col gap-5">
-            <div className="hide-left flex justify-center md:justify-start">
+            <div className=" flex justify-center md:justify-start">
               <Title
                 text="Testimonials"
                 order="h2"
                 underline="text-orange-600 rotate-12"
               />
             </div>
-            <div className="hide-right delay-card">
-              <TestimonialCarousel />
+            <div className="hidden md:block ">
+              <Carousel>
+                {testimonials.map((testimonial, testimonialIndex) => (
+                  <TestimonialCard
+                    key={testimonialIndex}
+                    name={testimonial.name}
+                    description={testimonial.description}
+                    imageURL={testimonial.imageURL}
+                  >
+                    {testimonial.quote}
+                  </TestimonialCard>
+                ))}
+              </Carousel>
+            </div>
+            <div className="flex flex-col gap-8 sm:gap-10 md:hidden ">
+              {testimonials.map((testimonial, testimonialIndex) => (
+                <TestimonialCard
+                  key={testimonialIndex}
+                  name={testimonial.name}
+                  description={testimonial.description}
+                  imageURL={testimonial.imageURL}
+                >
+                  {testimonial.quote}
+                </TestimonialCard>
+              ))}
             </div>
           </div>
-        </section>
+        </Container>
       </>
     </>
   );

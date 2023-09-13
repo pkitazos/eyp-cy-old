@@ -1,14 +1,22 @@
-import { SessionElementCard, Title } from "~/components";
+import Image from "next/image";
+import { Container, Divider, SessionElementCard, Title } from "~/components";
 
 export default function NationalSession() {
   return (
     <>
-      <section className="page-margin mt-16 flex max-h-max min-h-[60vh] justify-center">
-        <div className="w-5/6 max-w-4xl xl:w-2/3">
-          <div className="hide-left flex justify-center">
+      <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
+        <div className="flex flex-col items-center gap-5 w-5/6 xl:w-2/3">
+          <Image
+            className="mb-5 w-48 md-lg:w-60"
+            width={200}
+            height={200}
+            src="/assets/logo-national-session.png"
+            alt=""
+          />
+          <div className=" flex justify-center">
             <Title text="National Session" order="h1" />
           </div>
-          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+          <p className=" text-justify text-lg leading-relaxed md:text-xl">
             National Sessions are our flagship, annual event which welcomes
             approximately 200 participants from all over Cyprus as well as
             participants from all over Europe. The conference takes place over 5
@@ -28,15 +36,17 @@ export default function NationalSession() {
             will take place in July! You can get information by contacting us.
           </p>
         </div>
-      </section>
-      <section className="page-margin mt-32 max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom mb-3 flex justify-center">
+      </Container>
+      <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
+
+      <Container className="mb-16 xl:mb-20 2xl:mb-32">
+        <div className=" mb-3 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
-        <div className="flex flex-col items-center justify-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
             title="Teambuilding"
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             Team building in the context of the European Youth Parliament, means
@@ -50,8 +60,8 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="Committee Work"
-            titlePosition="text-right"
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            reverse={true}
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             This is the central part of any EYP session. After team-building,
@@ -63,7 +73,7 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="Evening Activities"
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             To complement the academic elements of our sessions, our organising
@@ -73,8 +83,8 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="Discussing Europe"
-            titlePosition="text-right"
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            reverse={true}
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             Discussing Europe has been established as an annual happening at our
@@ -85,7 +95,7 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="General Assembly"
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
           >
             The General Assembly reunites all the participants of the session to
@@ -94,7 +104,7 @@ export default function NationalSession() {
             according to the current model of the European Parliament.
           </SessionElementCard>
         </div>
-      </section>
+      </Container>
     </>
   );
 }

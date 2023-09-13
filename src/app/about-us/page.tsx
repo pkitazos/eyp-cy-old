@@ -1,14 +1,16 @@
+import Image from "next/image";
 import {
+  BookIcon,
+  Container,
+  ConversationIcon,
+  Divider,
+  ImageGrid,
+  NetworkIcon,
+  PenIcon,
   Title,
   WaveDivider,
-  BookIcon,
-  ConversationIcon,
-  PenIcon,
-  NetworkIcon,
   WhatWeDoCard,
-  ImageGrid,
 } from "~/components";
-import { wavePaths } from "~/data";
 
 export default function AboutUs() {
   return (
@@ -17,12 +19,12 @@ export default function AboutUs() {
         <title>About Us</title>
       </head>
       <>
-        <section className="page-margin mb-0 mt-40 md-lg:mt-32 lg:mt-0 flex max-h-max min-h-fit lg:min-h-[70vh] items-center">
+        <Container className="mb-0 mt-40 md-lg:mt-32 2xl:mt-0 flex items-center">
           <div className="z-20 w-full md-lg:w-2/3">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title text="About Us" order="h1" underline="rotate-[190deg]" />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament (EYP) Cyprus is a non-partisan and
               non-governmental organisation, which aims to encourage independent
               thinking, personal initiative and intercultural encounters amongst
@@ -44,8 +46,18 @@ export default function AboutUs() {
               ]}
             />
           </div>
-        </section>
-        <section className="page-margin mb-0 flex max-h-max min-h-[70vh] items-center">
+        </Container>
+        <Container className="block mt-16 sm:hidden">
+          <Image
+            className="w-full"
+            width={200}
+            height={150}
+            src={"/assets/test-image.png"}
+            alt=""
+          />
+        </Container>
+        <Divider className="mt-20 mb-32" />
+        <Container className="mb-20 flex items-center">
           <div className="hidden mr-20 md-lg:grid w-[35%] place-items-center">
             <ImageGrid.Focus
               flow="rhs"
@@ -57,14 +69,14 @@ export default function AboutUs() {
             />
           </div>
           <div className="z-20 w-full md-lg:w-2/3">
-            <div className="hide-left flex justify-center">
+            <div className=" flex justify-center">
               <Title
                 text="Our Mission"
                 order="h2"
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               The European Youth Parliament is a peer-to-peer educational
               programme that brings together young people from across Europe to
               debate the pressing issues of our time. Our mission is to inspire
@@ -72,9 +84,9 @@ export default function AboutUs() {
               citizens.
             </p>
           </div>
-        </section>
-        <WaveDivider waveLayers={wavePaths.aboutTop} />
-        <section className="page-padding max-h-max min-h-[60vh] bg-primary-600 pb-20 pt-8">
+        </Container>
+        <WaveDivider.aboutTop />
+        <Container backdrop="bg-primary-600" className="pb-20 pt-8 xl:px-20">
           <div className="flex justify-center">
             <Title
               text="What We Do"
@@ -83,56 +95,51 @@ export default function AboutUs() {
               underline="rotate-[190deg]"
             />
           </div>
-          <div className="hide-right flex flex-col flex-wrap justify-center gap-y-10 md:flex-row md:px-0 lg:-mx-16">
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Open Forum for Youth"
-                info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
-                imageURL="/assets/what-we-do-1.jpg"
-              >
-                <BookIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Intercultural Dialogue"
-                info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
-                imageURL="/assets/what-we-do-2.jpg"
-              >
-                <ConversationIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Skills Development"
-                info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
-                imageURL="/assets/what-we-do-3.jpg"
-              >
-                <PenIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
-            <div className="delay-card flex flex-auto justify-center px-4 md:w-max">
-              <WhatWeDoCard
-                title="Network of Changemakers"
-                info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
-                imageURL="/assets/what-we-do-4.jpg"
-              >
-                <NetworkIcon className="w-10 text-white" />
-              </WhatWeDoCard>
-            </div>
+          <div className="grid grid-cols-1 place-items-center gap-10 xl:flex justify-evenly">
+            <WhatWeDoCard
+              title="Open Forum for Youth"
+              info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
+              imageURL="/assets/what-we-do-1.jpg"
+            >
+              <BookIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Intercultural Dialogue"
+              info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
+              imageURL="/assets/what-we-do-2.jpg"
+            >
+              <ConversationIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Skills Development"
+              info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
+              imageURL="/assets/what-we-do-3.jpg"
+            >
+              <PenIcon className="w-10 text-white" />
+            </WhatWeDoCard>
+
+            <WhatWeDoCard
+              title="Network of Changemakers"
+              info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
+              imageURL="/assets/what-we-do-4.jpg"
+            >
+              <NetworkIcon className="w-10 text-white" />
+            </WhatWeDoCard>
           </div>
-        </section>
-        <WaveDivider waveLayers={wavePaths.aboutBottom} />
-        <section className="page-margin mt-8 max-h-max min-h-[70vh] px-4 pb-16">
-          <div className="hide-left">
-            <div className="flex justify-center">
+        </Container>
+        <WaveDivider.aboutBottom />
+        <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16 flex items-center">
+          <div className="z-20 w-full md-lg:w-2/3">
+            <div className=" flex justify-center">
               <Title
                 text="How we do What we do"
                 order="h2"
                 underline="rotate-[190deg]"
               />
             </div>
-            <p className="text-justify text-lg leading-relaxed md:text-xl">
+            <p className=" text-justify text-lg leading-relaxed md:text-xl">
               With non-formal education at the heart of our activities, we
               provide young people with a non-partisan and independent forum to
               formulate and discuss their opinions about current issues both
@@ -153,9 +160,31 @@ export default function AboutUs() {
               year.
             </p>
           </div>
-        </section>
-        <section className="page-margin mb-16 mt-8 max-h-max min-h-[60vh] px-4">
-          <div className="hide-left">
+          <div className="hidden ml-20 md-lg:grid w-[35%] place-items-center">
+            <ImageGrid.Focus
+              flow="lhs"
+              images={[
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+                { src: "/assets/test-image.png", alt: "" },
+              ]}
+            />
+          </div>
+        </Container>
+        <Container className="block mt-4 xs:mt-10 mb-16 sm:hidden">
+          <Image
+            className="w-full"
+            width={200}
+            height={150}
+            src={"/assets/test-image.png"}
+            alt=""
+          />
+        </Container>
+        <div className="flex sm:hidden lg-xl:flex justify-center mt-20 lg-xl:mt-14 mb-32">
+          <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
+        </div>
+        <Container className="mb-16 sm:mb-28 lg-xl:20 mt-16 sm:mt-8">
+          <div className="">
             <div className="flex justify-center">
               <Title
                 text="A Little More About Us"
@@ -179,8 +208,8 @@ export default function AboutUs() {
               young people in its activities, and furthering its impact!
             </p>
           </div>
-        </section>
-      </>{" "}
+        </Container>
+      </>
     </>
   );
 }

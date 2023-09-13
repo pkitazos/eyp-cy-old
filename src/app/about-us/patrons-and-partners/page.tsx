@@ -1,5 +1,51 @@
-import { PartnerCard, PatronCard, Title, WaveDivider } from "~/components";
-import { wavePaths } from "~/data";
+import {
+  Container,
+  PartnerCard,
+  PatronCard,
+  Title,
+  WaveDivider,
+} from "~/components";
+
+const patronData = [
+  {
+    name: "Mr. Andreas Kettis",
+    title: "Head of the European Parliament Liaison Office in Cyprus",
+  },
+  {
+    name: "Ambassador Kornelios Korneliou",
+    title: "Permanent Secretary at the Ministry of Foreign Affairs",
+  },
+  {
+    name: "Ms. Antigoni Papaphilippou",
+    title: "Head of Public Relations of Antenna and President of THOC",
+  },
+  {
+    name: "Mr. Constantinos Yiorkadjis",
+    title: "Mayor of Nicosia",
+  },
+  {
+    name: "Mr. Panayiotis Sentonas",
+    title: "Commissioner for the Citizen",
+  },
+];
+
+const partnerData = [
+  {
+    name: "BoC",
+    description: "A short description about your partner BoC",
+    imageURL: "/assets/partner-boc.jpeg",
+  },
+  {
+    name: "Ant1",
+    description: "A short description about your partner Ant1",
+    imageURL: "/assets/partner-ant1.jpeg",
+  },
+  {
+    name: "VMLY&R",
+    description: "A short description about your partner VMLY&R",
+    imageURL: "/assets/partner-vmlyr.png",
+  },
+];
 
 export default function PatronsAndPartners() {
   return (
@@ -8,56 +54,40 @@ export default function PatronsAndPartners() {
         <title>Patrons & Partners</title>
       </head>
       <>
-        <section className="page-margin max-h-max min-h-[60vh]">
-          <div className="hide-bottom mb-6 flex justify-center">
+        <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
+          <div className=" mb-6 flex justify-center">
             <Title text="Our Patrons & Partners" order="h1" />
           </div>
-          <div className="hide-bottom mb-16 flex flex-col items-center gap-2">
+          <div className=" mb-16 flex flex-col items-center gap-2">
             <div className="flex justify-center">
               <Title text="Board of Patrons" order="h2" />
             </div>
             <p className="mt-6 text-center text-lg leading-relaxed md:text-xl">
               EYP Cyprus&apos;s work and impact is recognised by various high
-              profile stakeholders in Cyprus, including our board of patrons
+              profile stakeholders in Cyprus, including our Board of Patrons
               which includes
             </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-16">
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Andreas Kettis"
-                title="Head of the European Parliament Liaison Office in Cyprus"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Yiannis Yiannaki"
-                title="Commissioner of Volunteerism and NGOs"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Ms. Antigoni Papaphilippou"
-                title="Head of Public Relations of Antenna and President of THOC"
-              />
-            </div>
-            <div className="hide-right delay-card">
-              <PatronCard
-                name="Mr. Constantinos Yiorkadjis"
-                title="Mayor of Nicosia"
-              />
-            </div>
+          <div className="flex flex-wrap justify-center gap-16 max-w-5xl">
+            {patronData.map((patron, i) => (
+              <div key={i} className="">
+                <PatronCard name={patron.name} title={patron.title} />
+              </div>
+            ))}
           </div>
-          <p className="hide-bottom mt-16 text-center text-lg leading-relaxed md:text-xl">
+          <p className=" mt-16 text-center text-lg leading-relaxed md:text-xl">
             Our patrons&apos; support highlights the value of our
             organisation&apos;s work. They also provide invaluable guidance and
             active support for our events and our workings, both by providing
-            advice, support and also attending various of our events.
+            advice, support as well as attending various of our events.
           </p>
-        </section>
-        <WaveDivider waveLayers={wavePaths.patronsTop} />
-        <section className="page-padding max-h-max min-h-[60vh] bg-primary-800 pb-24 pt-16">
-          <div className="hide-left">
+        </Container>
+        <WaveDivider.patronsTop />
+        <Container
+          backdrop="bg-primary-700"
+          className="pb-24 pt-3 flex flex-col items-center"
+        >
+          <div className="">
             <div className="flex justify-center sm:justify-start">
               <Title
                 text="EU Wide Patrons"
@@ -72,15 +102,15 @@ export default function PatronsAndPartners() {
               its activities.
             </p>
           </div>
-          <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14">
-            <div className="hide-left delay-card">
+          <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14 w-full max-w-8xl">
+            <div className="">
               <PatronCard
                 name="Ursula von der Leyen"
                 title="President of the European Commission"
                 invert={true}
               />
             </div>
-            <div className="hide-left delay-card">
+            <div className="">
               <PatronCard
                 name="Roberta Metsola"
                 title="President of the European Parliament"
@@ -88,23 +118,23 @@ export default function PatronsAndPartners() {
               />
             </div>
           </div>
-        </section>
-        <WaveDivider waveLayers={wavePaths.patronsBottom} />
-        <section className="page-margin max-h-max min-h-[60vh]">
+        </Container>
+        <WaveDivider.patronsBottom />
+        <Container className="flex flex-col items-center">
           <div className="flex justify-center sm:justify-start">
             <Title text="Our Partners" order="h2" underline="rotate-12" />
           </div>
-          <div className="flex flex-col items-center justify-center gap-10 sm:flex-row md-lg:justify-start">
-            <PartnerCard
-              name="Ant1"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
-            />
-            <PartnerCard
-              name="BoC"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit"
-            />
+          <div className="grid grid-cols-1 items-center justify-center gap-10 md:grid-cols-2 md-lg:justify-start">
+            {partnerData.map((partner) => (
+              <PartnerCard
+                key={partner.name}
+                name={partner.name}
+                description={partner.description}
+                imageURL={partner.imageURL}
+              />
+            ))}
           </div>
-        </section>
+        </Container>
       </>
     </>
   );

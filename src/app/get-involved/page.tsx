@@ -1,4 +1,5 @@
-import { Title, ActionButton, ContactForm } from "~/components";
+import { Title, CategoryCard, Container } from "~/components";
+import { ContactForm } from "~/components/contact-form";
 
 export default function GetInvolved() {
   return (
@@ -7,8 +8,8 @@ export default function GetInvolved() {
         <title>Get Involved</title>
       </head>
       <>
-        <section className="page-margin mb-28 flex flex-col px-5">
-          <div className="hide-bottom">
+        <Container className="mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
+          <div className=" max-w-7xl">
             <div className="flex justify-center">
               <Title
                 text="Get Involved"
@@ -28,49 +29,29 @@ export default function GetInvolved() {
               opportunities to take part in our activities.
             </p>
           </div>
-        </section>
-        <section className="page-margin mb-32 grid grid-cols-1 gap-16 px-5 md:grid-cols-2">
-          <div className="hide-left flex flex-col items-center gap-4">
-            <div className="flex justify-center">
-              <Title
-                text="High-School Students"
-                order="h3"
-                underline="text-orange-500 rotate-[176deg]"
-              />
-            </div>
-            <p className="mb-4 text-justify text-xl">
-              If you are a High-School Student aged 15-18, you can register
-              individually to attend our EYP Day. If your school is interested
-              in applying as a delegation of six students, then you are able to
-              attend our Pre-Selection Days. Both events usually take place in
-              March and April. Through these events, you could be selected to
-              attend EYP Cyprus&apos; annual National Session in the Summer. If
-              you are interested in attending either of these events, you can
-              contact our HR members@eypcyprus.com to declare your interest or
-              ask for further details.
-            </p>
-            <ActionButton text="Join" />
-          </div>
-          <div className="hide-right flex flex-col items-center gap-4">
-            <div className="flex justify-center">
-              <Title
-                text="Young Adults"
-                order="h3"
-                underline="text-fuchsia-500 rotate-6"
-              />
-            </div>
-            <p className="mb-1 text-justify text-xl lg:mb-4">
-              If you are a university student or over 18 years old, you can
-              attend our Youth Summit - a 4 day long conference that often takes
-              place in the Summer. If you are interested in attending this
-              event, you can contact our HR members@eypcyprus.com to declare
-              your interest or ask for further details.
-            </p>
-            <ActionButton text="Join" />
-          </div>
-        </section>
-        <section className="page-margin mb-16 flex flex-col px-5">
-          <div className="hide-right">
+        </Container>
+        <Container className="lg-xl:px-28 mb-32 grid grid-cols-1 gap-7 md-lg:gap-10 2xl:gap-16 md:grid-cols-2">
+          <CategoryCard title="High School Students">
+            If you are a High-School Student aged 15-18, you can register
+            individually to attend our EYP Day. If your school is interested in
+            applying as a delegation of six students, then you are able to
+            attend our Pre-Selection Days. Both events usually take place in
+            March and April. Through these events, you could be selected to
+            attend EYP Cyprus&apos; annual National Session in the Summer. If
+            you are interested in attending either of these events, you can
+            contact our HR members@eypcyprus.com to declare your interest or ask
+            for further details.
+          </CategoryCard>
+          <CategoryCard title="Young Adults">
+            If you are a university student or over 18 years old, you can attend
+            our Youth Summit - a 4 day long conference that often takes place in
+            the Summer. If you are interested in attending this event, you can
+            contact our HR members@eypcyprus.com to declare your interest or ask
+            for further details.
+          </CategoryCard>
+        </Container>
+        <Container className="mb-16 flex flex-col items-center px-5">
+          <div className=" max-w-7xl">
             <div className="flex justify-center">
               <Title
                 text="General, Open Events"
@@ -87,7 +68,7 @@ export default function GetInvolved() {
               you are notified when an opportunity arises.
             </p>
           </div>
-        </section>
+        </Container>
         <section className="page-margin mt-20 flex flex-col px-5">
           <Title
             text="Contact Us"

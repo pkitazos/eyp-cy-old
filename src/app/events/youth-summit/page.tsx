@@ -1,14 +1,22 @@
-import { SessionElementCard, Title } from "~/components";
+import Image from "next/image";
+import { Container, Divider, SessionElementCard, Title } from "~/components";
 
 export default function YouthSummit() {
   return (
     <>
-      <section className="page-margin mt-16 flex max-h-max min-h-[60vh] justify-center">
-        <div className="w-5/6 max-w-4xl xl:w-2/3">
-          <div className="hide-left flex justify-center">
+      <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
+        <div className="flex flex-col items-center gap-5 w-5/6 xl:w-2/3">
+          <Image
+            className="mb-5 w-48 md-lg:w-60"
+            width={200}
+            height={200}
+            src="/assets/logo-youth-summit.png"
+            alt=""
+          />
+          <div className=" flex justify-center">
             <Title text="Youth Summit" order="h1" />
           </div>
-          <p className="hide-left delay-card text-justify text-lg leading-relaxed md:text-xl">
+          <p className=" text-justify text-lg leading-relaxed md:text-xl">
             Youth Summits are 4-day conferences for university students and
             young adults who are 18+ years old. With the Youth Summit being one
             of our major events that usually take place in the Summer, it
@@ -26,16 +34,17 @@ export default function YouthSummit() {
             members@eypcyprus.com to find out more information.
           </p>
         </div>
-      </section>
-      <section className="page-margin mt-32 max-h-max min-h-[60vh] xl:mb-20 2xl:mb-32">
-        <div className="hide-bottom flex justify-center">
+      </Container>
+      <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
+      <Container className="mb-16 xl:mb-20 2xl:mb-32">
+        <div className=" mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
-        <div className="flex flex-col items-center justify-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
             title="Teambuilding"
             imageURL="/assets/events-2.jpg"
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -48,9 +57,9 @@ export default function YouthSummit() {
           </SessionElementCard>
           <SessionElementCard
             title="Committee Work"
-            titlePosition="text-right"
+            reverse={true}
             imageURL="/assets/events-2.jpg"
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -62,7 +71,7 @@ export default function YouthSummit() {
           <SessionElementCard
             title="Discussing Europe"
             imageURL="/assets/events-2.jpg"
-            className="hide-right delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             Discussing Europe has been established as an annual happening at our
             sessions - an event welcoming various guests in a panel discussion
@@ -72,9 +81,9 @@ export default function YouthSummit() {
           </SessionElementCard>
           <SessionElementCard
             title="General Assembly"
-            titlePosition="text-right"
+            reverse={true}
             imageURL="/assets/events-2.jpg"
-            className="hide-left delay-card w-5/6 max-w-5xl"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and
@@ -82,7 +91,7 @@ export default function YouthSummit() {
             according to the current model of the European Parliament.
           </SessionElementCard>
         </div>
-      </section>
+      </Container>
     </>
   );
 }

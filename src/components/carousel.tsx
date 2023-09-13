@@ -1,5 +1,7 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
+import { cn } from "~/lib/utils";
+import { CaretLeft, CaretRight } from "./SVGs";
 
 interface props {
   children: ReactNode;
@@ -47,30 +49,28 @@ export const Carousel = ({ children }: props) => {
     }, 501);
   };
 
-  const shift =
-    state === "idle"
-      ? "-translate-x-1/3 transition-none"
-      : state === "next"
-      ? "-translate-x-2/3"
-      : "";
-
   return (
     <div className="flex flex-row gap-10 items-center">
       <button
         onClick={goPrev}
         disabled={state !== "idle"}
-        className={`rounded-sm bg-slate-200 p-2 py-0 ${
-          state !== "idle" ? "text-slate-600" : ""
-        }`}
+        className={cn(
+          "rounded-sm p-2 py-0 text-gray-600",
+          state !== "idle" && "text-gray-200"
+        )}
       >
-        prev
+        <CaretLeft className="w-6" />
       </button>
       <div
-        className="w-[50vw] rounded-lg bg-slate-200 overflow-hidden transition-all duration-500"
+        className="w-full max-w-4xl rounded-lg overflow-hidden transition-all duration-500"
         style={{ height: height }}
       >
         <div
-          className={`w-[300%] grid-cols-3 grid items-start transition-transform duration-500 ${shift}`}
+          className={cn(
+            "w-[300%] grid-cols-3 grid items-start duration-500",
+            state === "idle" && "-translate-x-1/3 transition-none",
+            state === "next" && "-translate-x-2/3"
+          )}
         >
           <div ref={prevDiv}>{childs.at(prev)}</div>
           <div ref={currentDiv}>{childs.at(counter)}</div>
@@ -80,41 +80,13 @@ export const Carousel = ({ children }: props) => {
       <button
         onClick={goNext}
         disabled={state !== "idle"}
-        className={`rounded-sm bg-slate-200 p-2 py-0 ${
-          state !== "idle" ? "text-slate-600" : ""
-        }`}
+        className={cn(
+          "rounded-sm p-2 py-0 text-gray-600",
+          state !== "idle" && "text-gray-200"
+        )}
       >
-        next
+        <CaretRight className="w-6" />
       </button>
-    </div>
-  );
-};
-
-const Demo = () => {
-  return (
-    <div className="flex w-full h-[100vh] justify-center items-center">
-      <Carousel>
-        <p className="p-5">
-          Lorem ipsum dolor sit amet. Sit placeat odit nam vitae accusamus At
-          rerum galisum et delectus minus ut odio delectus! At natus odit quo
-          impedit velit est amet nulla aut architecto beatae non quasi dolores
-          eos dignissimos fuga qui placeat deserunt. Rem iure dolor et cumque
-          ullam ut veritatis voluptas aut ducimus fugit. Vel impedit iure ut
-          similique expedita ut eligendi omnis sit ipsam iure est sint laborum.
-        </p>
-        <p className="p-5">
-          Ad velit dolor est unde ullam qui atque temporibus ut libero
-          consequatur sed perspiciatis velit cum veritatis beatae? Qui dolorem
-          molestias ut eius porro in numquam doloribus in voluptate laborum?
-        </p>
-        <p className="p-5">
-          Sit dolores vero eos voluptas beatae qui error rerum ut laboriosam
-          omnis aut asperiores voluptatum. Aut minus officia et quia repellat in
-          porro ratione qui maxime quisquam ut voluptatem vitae aut fuga
-          possimus id perferendis sint.
-        </p>
-        <p className="p-5">andrei is really great!</p>
-      </Carousel>
     </div>
   );
 };

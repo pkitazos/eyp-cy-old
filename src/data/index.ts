@@ -1,1 +1,1 @@
-export { default as wavePaths } from "./wavePaths";
+export { wavePaths } from "./wave-paths";

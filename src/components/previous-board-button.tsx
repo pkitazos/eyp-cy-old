@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "./dialog";
-import { Title } from "./my-title";
+import { Title } from "./title";
 
 type boardPosition = { position: string; name: string };
 
@@ -18,7 +18,7 @@ export function PreviousBoardButton({ year, boardMembers }: props) {
             {year}
           </button>
         </DialogTrigger>
-        <DialogContent className="backdrop-blur-xl">
+        <DialogContent className="bg-white outline-none backdrop-blur-xl">
           <DialogHeader>
             <Title text={`National Committee ${year}`} order="h2" />
           </DialogHeader>
