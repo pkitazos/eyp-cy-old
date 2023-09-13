@@ -16,7 +16,7 @@ export const UpcomingEventCard = ({
 }: props) => {
   return (
     <a
-      className="group h-full w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]"
+      className="group w-60 max-w-xs overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]"
       href={`/events${slugify(title)}`}
     >
       <Image
