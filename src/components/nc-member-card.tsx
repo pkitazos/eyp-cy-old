@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import Image from "next/image";
 
 interface props {

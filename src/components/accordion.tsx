@@ -1,8 +1,7 @@
 "use client";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import * as React from "react";
-import { ChevronDown } from "~/components/SVGs";
-
+import { ChevronDown } from "./SVGs";
 import { cn } from "~/lib/utils";
 
 const Accordion = AccordionPrimitive.Root;
