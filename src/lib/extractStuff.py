@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from xml.dom import minidom
 
@@ -10,17 +11,17 @@ def toCamelCase(str):
     return "".join(lst)
 
 
-def extractStuff(filename, num):
+def extractStuff(directory, filename, num):
     frames = []
-    for i in range(1, num):
-        doc = minidom.parse(f"./src/assets/{filename}-{i}.svg")
+    for i in range(1, num+1):
+        doc = minidom.parse(f"./{directory}/{filename}-{i}.svg")
         path_strings = [path.getAttribute("d") for path in doc.getElementsByTagName("path")]
         doc.unlink()
         frames.append(path_strings)
 
     layers = np.array(frames).T.tolist()
 
-    doc = minidom.parse(f"./src/assets/{filename}-1.svg")
+    doc = minidom.parse(f"./{directory}/{filename}-1.svg")
     colors = [path.getAttribute("fill") for path in doc.getElementsByTagName("path")]
     doc.unlink()
 
@@ -32,4 +33,4 @@ def extractStuff(filename, num):
 
 
 print("const paths = ", end="")
-print(extractStuff("header-horizontal", num=2))
+print(extractStuff(directory="horizontal-waves",filename="header-horizontal", num=5))
