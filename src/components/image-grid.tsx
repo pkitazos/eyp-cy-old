@@ -1,6 +1,13 @@
 import Image from "next/image";
 import { cn } from "~/lib/utils";
 
+interface imageObj {
+  src: string;
+  alt: string;
+}
+
+type gridFlow = "lhs" | "rhs";
+
 interface focusGridProps {
   images: [imageObj, imageObj, imageObj];
   flow: gridFlow;

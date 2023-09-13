@@ -38,7 +38,8 @@ export function ContactForm() {
         text,
       }),
     })
-      .then(() => {
+      .then((message) => {
+        console.log(message);
         toast({
           variant: "success",
           title: "Sent",

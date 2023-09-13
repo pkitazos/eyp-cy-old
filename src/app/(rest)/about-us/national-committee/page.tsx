@@ -5,6 +5,7 @@ import {
   Title,
 } from "~/components";
 import { previousBoardData } from "./previous-boards";
+import { Metadata } from "next";
 
 const ncMembers = [
   {
@@ -49,12 +50,14 @@ const ncMembers = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
+
 export default function NationalCommittee() {
   return (
     <>
-      <head>
-        <title>National Committee</title>
-      </head>
       <>
         <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col pb-16">
           <div className="item-center flex flex-col items-center gap-6">

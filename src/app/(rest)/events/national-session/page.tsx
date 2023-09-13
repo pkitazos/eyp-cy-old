@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
+
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
 
 export default function NationalSession() {
   return (

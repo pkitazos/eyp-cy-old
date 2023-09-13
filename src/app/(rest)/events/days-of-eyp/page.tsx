@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
 
-export default function PreSelectionDays() {
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
+
+export default function DaysOfEYP() {
   return (
     <>
       <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
@@ -10,36 +16,33 @@ export default function PreSelectionDays() {
             className="mb-5 w-48 md-lg:w-60"
             width={200}
             height={200}
-            src="/assets/logo-pre-selection-days.png"
+            src="/assets/logo-days-of-eyp.png"
             alt=""
           />
           <div className=" flex justify-center">
-            <Title text="Pre-Selection Days" order="h1" />
+            <Title text="Days of EYP" order="h1" />
           </div>
           <p className=" text-justify text-lg leading-relaxed md:text-xl">
-            The Pre-Selection Days of EYP Cyprus have been organised annually
-            since 2010 and welcome about 22-26 school delegations for a 2 day
-            conference where young people have the opportunity to discuss
-            current European issues through a General Assembly. With about 180
-            participants every year taking part in the event, the Pre-Selection
-            Days serve as the first contact of young people with the
-            organisation and it&apos;s an opportunity for 16 school delegations
-            to be selected to attend our National Session. Pre-Selection Days
-            2021 will take place between the 5th and 7th of March. You can get
-            information on how to register by contacting us.
+            The EYP Day was established in 2019 and takes place annually. It
+            welcomed approximately 50 - 80 young people to a one day conference
+            where they can discuss current issues. This event allows young
+            people to join EYP&apos;s activities without having to attend as a
+            school delegation. EYP Day 2021 will take place between the 3rd and
+            4th of April. You can get information on how to register by
+            contacting us.
           </p>
         </div>
       </Container>
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
-      <Container className=" mb-16 xl:mb-20 2xl:mb-32">
-        <div className=" mb-6 md:mb-16 flex justify-center">
+      <Container className="mb-16 xl:mb-20 2xl:mb-32">
+        <div className=" mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
             title="Teambuilding"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -51,10 +54,22 @@ export default function PreSelectionDays() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            title="General Assembly"
+            title="Committee Work"
             reverse={true}
-            className=" w-full md-lg:w-5/6 max-w-5xl"
             imageURL="/assets/events-2.jpg"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
+          >
+            This is the central part of any EYP session. After team-building,
+            the delegates come together to discuss their allocated topics, and
+            will explore the skills needed to discuss, debate and communicate
+            effectively within their committee. The goal of Committee work is
+            the production of a strong and meaningful resolution, that will be
+            debated upon during the General Assembly.
+          </SessionElementCard>
+          <SessionElementCard
+            title="General Assembly"
+            imageURL="/assets/events-2.jpg"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

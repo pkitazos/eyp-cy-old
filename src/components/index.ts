@@ -21,7 +21,6 @@ export {
 export { ActionButton } from "./action-button";
 export { Carousel } from "./carousel";
 export { CategoryCard } from "./category-card";
-export { ContactForm } from "../app/get-involved/contact-form";
 export { Container } from "./container";
 export { DebugOverlay } from "./debug-overlay";
 export {

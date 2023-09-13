@@ -1,11 +1,14 @@
+import { Metadata } from "next";
 import { Container, Divider, InfoCard, Title } from "~/components";
+
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
 
 export default function Impact() {
   return (
     <>
-      <head>
-        <title>Impact</title>
-      </head>
       <>
         <Container className="mt-40 mb-20 lg:mt-16 flex flex-col justify-center">
           <div className=" flex justify-center">

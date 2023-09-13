@@ -1,4 +1,3 @@
-"use client";
 import {
   Container,
   EventTypeCard,
@@ -7,6 +6,12 @@ import {
   WaveDivider,
 } from "~/components";
 import { ClientSection } from "./client-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
 
 export default function Events() {
   return (

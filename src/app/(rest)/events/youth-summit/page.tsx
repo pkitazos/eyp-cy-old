@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
 
-export default function DaysOfEYP() {
+export const metadata: Metadata = {
+  title: "EYP CY - Home",
+};
+export const runtime = "edge";
+
+export default function YouthSummit() {
   return (
     <>
       <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
@@ -10,20 +16,28 @@ export default function DaysOfEYP() {
             className="mb-5 w-48 md-lg:w-60"
             width={200}
             height={200}
-            src="/assets/logo-days-of-eyp.png"
+            src="/assets/logo-youth-summit.png"
             alt=""
           />
           <div className=" flex justify-center">
-            <Title text="Days of EYP" order="h1" />
+            <Title text="Youth Summit" order="h1" />
           </div>
           <p className=" text-justify text-lg leading-relaxed md:text-xl">
-            The EYP Day was established in 2019 and takes place annually. It
-            welcomed approximately 50 - 80 young people to a one day conference
-            where they can discuss current issues. This event allows young
-            people to join EYP&apos;s activities without having to attend as a
-            school delegation. EYP Day 2021 will take place between the 3rd and
-            4th of April. You can get information on how to register by
-            contacting us.
+            Youth Summits are 4-day conferences for university students and
+            young adults who are 18+ years old. With the Youth Summit being one
+            of our major events that usually take place in the Summer, it
+            usually welcomes approximately 100 participants from all over Cyprus
+            and all over Europe. The conference allows participants to discuss
+            amongst teams, but also with experts and high profile decision
+            makers, topics that Cyprus and Europe currently face. The event and
+            its activities help participants develop invaluable skills both for
+            their studies and early careers. Through teambuilding activities,
+            Committee Work where teams discuss various important topics, their
+            opinions and suggestions as well as through a General Assembly,
+            participants develop their teamwork, cooperation, communication and
+            public speaking skills. If you are interested in participating in
+            the next Youth Summit, get in touch with with our HR officer at
+            members@eypcyprus.com to find out more information.
           </p>
         </div>
       </Container>
@@ -61,7 +75,19 @@ export default function DaysOfEYP() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
+            title="Discussing Europe"
+            imageURL="/assets/events-2.jpg"
+            className=" w-full md-lg:w-5/6 max-w-5xl"
+          >
+            Discussing Europe has been established as an annual happening at our
+            sessions - an event welcoming various guests in a panel discussion
+            centred around the session theme. During this event, participants
+            have the opportunity to interact with professionals with expertise
+            in the field, as well as experienced political figures.
+          </SessionElementCard>
+          <SessionElementCard
             title="General Assembly"
+            reverse={true}
             imageURL="/assets/events-2.jpg"
             className=" w-full md-lg:w-5/6 max-w-5xl"
           >

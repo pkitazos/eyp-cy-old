@@ -4,10 +4,9 @@ interface props {
   name: string;
   title: string;
   imageURL: string;
-  info?: string; // TODO blocked until get data
 }
 
-export function NCMemberCard({ name, title, imageURL, info }: props) {
+export function NCMemberCard({ name, title, imageURL }: props) {
   return (
     <>
       <div className="flex w-60 flex-col">
