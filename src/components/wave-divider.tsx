@@ -1,5 +1,4 @@
-import { ReactSVGElement } from "react";
-import { wavePaths } from "~/data";
+import { wavePaths } from "~/lib/wave-paths";
 import { cn } from "~/lib/utils";
 
 const hashCode = (str: string) => {
