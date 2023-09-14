@@ -3,7 +3,7 @@ import Image from "next/image";
 interface props {
   name: string;
   title: string;
-  imageURL: string;
+  imageURL: StaticImageData;
 }
 
 export function NCMemberCard({ name, title, imageURL }: props) {

@@ -1,5 +1,6 @@
+import { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
-import { DebugOverlay, Footer, Toaster } from "~/components";
+import { Footer, Toaster } from "~/components";
 import "./app.css";
 
 const sourceSans3 = Source_Sans_3({
@@ -11,7 +12,6 @@ const sourceSans3 = Source_Sans_3({
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sourceSans3.className}>
-      {/* <DebugOverlay /> */}
       <body className="bg-base-white">
         {children}
         <Footer />

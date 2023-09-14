@@ -1,10 +1,12 @@
 import { Metadata } from "next";
+import { info1, info2, info3, info4, info5 } from "~/assets";
 import { Container, Divider, InfoCard, Title } from "~/components";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
 export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "Impact",
+};
 
 export default function Impact() {
   return (
@@ -42,7 +44,7 @@ export default function Impact() {
           </div>
           <InfoCard
             title="Forming opinions and solving current challenges"
-            imageURL="/assets/impact-1.png"
+            imageURL={info1}
           >
             Every year, the EYP Cyprus engages 500+ young people from across
             Cyprus and Europe in a welcoming, independent, non-partisan
@@ -52,8 +54,8 @@ export default function Impact() {
           </InfoCard>
           <InfoCard
             title="Developing skills and growing as a person"
-            imageURL="/assets/impact-2.png"
-            reversed={true}
+            imageURL={info2}
+            reversed
           >
             EYP Cyprus encourages independent thinking and initiative amongst
             young people and facilitates the learning of crucial social and
@@ -67,7 +69,7 @@ export default function Impact() {
           </InfoCard>
           <InfoCard
             title="Engaging with current topics in dialogue with decision-makers"
-            imageURL="/assets/impact-3.png"
+            imageURL={info3}
           >
             During most of our events, we work hard to bring young people
             together with decision makers and experts. Participants at our
@@ -81,8 +83,8 @@ export default function Impact() {
           </InfoCard>
           <InfoCard
             title="Building a network and facilitating intercultural understanding"
-            imageURL="/assets/impact-4.png"
-            reversed={true}
+            imageURL={info4}
+            reversed
           >
             Through taking part in an EYP Cyprus event, young people have the
             chance to join a network of active alumni and volunteers both in
@@ -94,10 +96,7 @@ export default function Impact() {
             their intercultural understanding and build international
             friendships.
           </InfoCard>
-          <InfoCard
-            title="Empowering young, active citizens"
-            imageURL="/assets/impact-5.png"
-          >
+          <InfoCard title="Empowering young, active citizens" imageURL={info5}>
             As a result of our events, more than 90% of participants indicate an
             increased willingness to actively get involved in society and
             politics. Participants have the chance through discussing current
@@ -109,8 +108,8 @@ export default function Impact() {
           </InfoCard>
           <InfoCard
             title="Traveling and International Opportunities"
-            imageURL="/assets/impact-1.png"
-            reversed={true}
+            imageURL={info1}
+            reversed
           >
             Through joining some of our events, participants have the chance to
             be selected and participate in International Sessions in 40+

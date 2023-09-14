@@ -5,7 +5,7 @@ interface props {
   title: string;
   date: string;
   description: string;
-  imageURL: string;
+  imageURL: StaticImageData;
 }
 
 export const UpcomingEventCard = ({

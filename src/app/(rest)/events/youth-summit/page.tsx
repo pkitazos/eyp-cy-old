@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { events2, logoYouthSummit } from "~/assets";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
 export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "Youth Summt",
+};
 
 export default function YouthSummit() {
   return (
@@ -16,13 +18,13 @@ export default function YouthSummit() {
             className="mb-5 w-48 md-lg:w-60"
             width={200}
             height={200}
-            src="/assets/logo-youth-summit.png"
+            src={logoYouthSummit}
             alt=""
           />
-          <div className=" flex justify-center">
+          <div className="flex justify-center">
             <Title text="Youth Summit" order="h1" />
           </div>
-          <p className=" text-justify text-lg leading-relaxed md:text-xl">
+          <p className="text-justify text-lg leading-relaxed md:text-xl">
             Youth Summits are 4-day conferences for university students and
             young adults who are 18+ years old. With the Youth Summit being one
             of our major events that usually take place in the Summer, it
@@ -43,14 +45,14 @@ export default function YouthSummit() {
       </Container>
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
-        <div className=" mb-16 flex justify-center">
+        <div className="mb-16 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Teambuilding"
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -62,10 +64,10 @@ export default function YouthSummit() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
-            reverse={true}
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
+            reverse
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -75,9 +77,9 @@ export default function YouthSummit() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Discussing Europe"
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
           >
             Discussing Europe has been established as an annual happening at our
             sessions - an event welcoming various guests in a panel discussion
@@ -86,10 +88,10 @@ export default function YouthSummit() {
             in the field, as well as experienced political figures.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
-            reverse={true}
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
+            reverse
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { events2, events3, logoDaysOfEyp } from "~/assets";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
 export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "Days of EYP",
+};
 
 export default function DaysOfEYP() {
   return (
@@ -16,13 +18,13 @@ export default function DaysOfEYP() {
             className="mb-5 w-48 md-lg:w-60"
             width={200}
             height={200}
-            src="/assets/logo-days-of-eyp.png"
+            src={logoDaysOfEyp}
             alt=""
           />
-          <div className=" flex justify-center">
+          <div className="flex justify-center">
             <Title text="Days of EYP" order="h1" />
           </div>
-          <p className=" text-justify text-lg leading-relaxed md:text-xl">
+          <p className="text-justify text-lg leading-relaxed md:text-xl">
             The EYP Day was established in 2019 and takes place annually. It
             welcomed approximately 50 - 80 young people to a one day conference
             where they can discuss current issues. This event allows young
@@ -40,9 +42,9 @@ export default function DaysOfEYP() {
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
-            title="Teambuilding"
-            imageURL="/assets/events-2.jpg"
             className=" w-full md-lg:w-5/6 max-w-5xl"
+            title="Teambuilding"
+            imageURL={events2}
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -54,10 +56,10 @@ export default function DaysOfEYP() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
-            reverse={true}
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
+            reverse
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -67,9 +69,9 @@ export default function DaysOfEYP() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
-            imageURL="/assets/events-2.jpg"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events3}
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

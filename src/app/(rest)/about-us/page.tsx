@@ -1,6 +1,13 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import {
+  testImage,
+  whatWeDo1,
+  whatWeDo2,
+  whatWeDo3,
+  whatWeDo4,
+} from "~/assets";
+import {
   BookIcon,
   Container,
   ConversationIcon,
@@ -13,10 +20,11 @@ import {
   WhatWeDoCard,
 } from "~/components";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
 export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 export default function AboutUs() {
   return (
@@ -42,9 +50,9 @@ export default function AboutUs() {
           <ImageGrid.Focus
             flow="lhs"
             images={[
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
             ]}
           />
         </div>
@@ -54,7 +62,7 @@ export default function AboutUs() {
           className="w-full"
           width={200}
           height={150}
-          src={"/assets/test-image.png"}
+          src={testImage}
           alt=""
         />
       </Container>
@@ -64,9 +72,9 @@ export default function AboutUs() {
           <ImageGrid.Focus
             flow="rhs"
             images={[
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
             ]}
           />
         </div>
@@ -97,7 +105,7 @@ export default function AboutUs() {
           <WhatWeDoCard
             title="Open Forum for Youth"
             info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
-            imageURL="/assets/what-we-do-1.jpg"
+            imageURL={whatWeDo1}
           >
             <BookIcon className="w-10 text-white" />
           </WhatWeDoCard>
@@ -105,7 +113,7 @@ export default function AboutUs() {
           <WhatWeDoCard
             title="Intercultural Dialogue"
             info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
-            imageURL="/assets/what-we-do-2.jpg"
+            imageURL={whatWeDo2}
           >
             <ConversationIcon className="w-10 text-white" />
           </WhatWeDoCard>
@@ -113,7 +121,7 @@ export default function AboutUs() {
           <WhatWeDoCard
             title="Skills Development"
             info="We present young people across Europe with diverse opportunities for personal growth and skills development through non-formal and peer-led educational activities."
-            imageURL="/assets/what-we-do-3.jpg"
+            imageURL={whatWeDo3}
           >
             <PenIcon className="w-10 text-white" />
           </WhatWeDoCard>
@@ -121,7 +129,7 @@ export default function AboutUs() {
           <WhatWeDoCard
             title="Network of Changemakers"
             info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
-            imageURL="/assets/what-we-do-4.jpg"
+            imageURL={whatWeDo4}
           >
             <NetworkIcon className="w-10 text-white" />
           </WhatWeDoCard>
@@ -161,9 +169,9 @@ export default function AboutUs() {
           <ImageGrid.Focus
             flow="lhs"
             images={[
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
             ]}
           />
         </div>
@@ -173,7 +181,7 @@ export default function AboutUs() {
           className="w-full"
           width={200}
           height={150}
-          src={"/assets/test-image.png"}
+          src={testImage}
           alt=""
         />
       </Container>

@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { events1, events2, events3, logoNationalSession } from "~/assets";
 import { Container, Divider, SessionElementCard, Title } from "~/components";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
 export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "National Session",
+};
 
 export default function NationalSession() {
   return (
@@ -16,13 +18,13 @@ export default function NationalSession() {
             className="mb-5 w-48 md-lg:w-60"
             width={200}
             height={200}
-            src="/assets/logo-national-session.png"
+            src={logoNationalSession}
             alt=""
           />
-          <div className=" flex justify-center">
+          <div className="flex justify-center">
             <Title text="National Session" order="h1" />
           </div>
-          <p className=" text-justify text-lg leading-relaxed md:text-xl">
+          <p className="text-justify text-lg leading-relaxed md:text-xl">
             National Sessions are our flagship, annual event which welcomes
             approximately 200 participants from all over Cyprus as well as
             participants from all over Europe. The conference takes place over 5
@@ -46,14 +48,14 @@ export default function NationalSession() {
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
 
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
-        <div className=" mb-3 flex justify-center">
+        <div className="mb-3 flex justify-center">
           <Title text="Session Program" order="h2" />
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Teambuilding"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
-            imageURL="/assets/events-2.jpg"
+            imageURL={events2}
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -65,10 +67,10 @@ export default function NationalSession() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
-            reverse={true}
-            className=" w-full md-lg:w-5/6 max-w-5xl"
-            imageURL="/assets/events-2.jpg"
+            imageURL={events1}
+            reverse
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -78,9 +80,9 @@ export default function NationalSession() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="Evening Activities"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
-            imageURL="/assets/events-2.jpg"
+            imageURL={events3}
           >
             To complement the academic elements of our sessions, our organising
             teams prepare unique evening programmes each year which engage
@@ -89,9 +91,9 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="Discussing Europe"
-            reverse={true}
-            className=" w-full md-lg:w-5/6 max-w-5xl"
-            imageURL="/assets/events-2.jpg"
+            className="w-full md-lg:w-5/6 max-w-5xl"
+            imageURL={events2}
+            reverse
           >
             Discussing Europe has been established as an annual happening at our
             sessions - an event welcoming various guests in a panel discussion
@@ -100,9 +102,9 @@ export default function NationalSession() {
             in the field, as well as experienced political figures.
           </SessionElementCard>
           <SessionElementCard
+            className="w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
-            className=" w-full md-lg:w-5/6 max-w-5xl"
-            imageURL="/assets/events-2.jpg"
+            imageURL={events2}
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

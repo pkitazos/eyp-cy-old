@@ -1,5 +1,15 @@
 import { Metadata } from "next";
 import {
+  events1,
+  events2,
+  events3,
+  events4,
+  testImage,
+  testimonialElena,
+  testimonialMaddie,
+  testimonialTheo,
+} from "~/assets";
+import {
   Carousel,
   Container,
   ImageGrid,
@@ -12,23 +22,21 @@ import {
 const testimonials = [
   {
     name: "Theodoulos Hadjimatheou",
-    description:
-      "23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge",
-    imageURL: "/assets/testimonial-theo.jpg",
+    description: `23, Member of EYP Cyprus since 2017, Engineering Student at the University of Cambridge`,
     quote: `EYP has changed my life literally. Theres a plethora of areas that I was unaware or indifferent to, that through EYP I now find fascinating. By discussing topics ranging from climate change to human medical gene-editing, I have become more aware of current issues around me. Beyond all these, the extent to which I personally develop in EYP keeps surprising me. Through taking on various roles of responsibility I learnt a lot, met amazing people from all over Europe and stepped out of my comfort zone.`,
+    imageURL: testimonialTheo,
   },
   {
     name: "Elena Odysseos",
-    description:
-      "24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK",
-    imageURL: "/assets/testimonial-elena.jpg",
+    description: `24, Member of EYP Cyprus since 2011, Graduate Engineer at Rolls Royce, UK`,
     quote: `Through my involvement in the organisation I have developed both organisational and leadership skills which are appreciated in any situation. Through EYP I have learned how to communicate effectively and how to work as part of a team It is without a doubt that EYP has shaped the way I work and conduct myself in a professional setting.`,
+    imageURL: testimonialElena,
   },
   {
     name: "Maddie Theodoulou",
     description: "17, Member since 2020, High school student",
-    imageURL: "/assets/testimonial-maddie.png",
     quote: `Lockdown in 2020 was a peculiar time for all of us. Everything from work to school became digital. At the beginning I honestly couldn&apos;t see how doing things via Zoom could be in any way productive and certainly in no way enjoyable. Yet, having the opportunity to participate in the EYP Online Discussion Forum showed me otherwise. Even though the Online Discussion was only four hours, I had never felt that I had accomplished so many things. I was able to not only further my academic knowledge on a new current topic by having raw and fascinating discussions with my fellow delegates, but I was also given the chance to meet these new people. People all over Cyprus, who had been through the same situation as me, yet with completely different experiences. Having EYP organise such events, even in times of disarray, is something that I am truly thankful for.`,
+    imageURL: testimonialMaddie,
   },
 ];
 
@@ -37,25 +45,25 @@ const upcomingEvents = [
     title: "Pre-Selection Days",
     description: "Short text about Pre-Selection Days goes here.",
     date: "20/03/2023",
-    imageURL: "/assets/events-1.jpg",
+    imageURL: events1,
   },
   {
     title: "Days of EYP",
     description: "Short text about Days of EYP goes here.",
     date: "27/03/2023",
-    imageURL: "/assets/events-2.jpg",
+    imageURL: events2,
   },
   {
     title: "Youth Summit",
     description: "Short text about Youth Summit goes here.",
     date: "16/07/2023",
-    imageURL: "/assets/events-3.jpg",
+    imageURL: events3,
   },
   {
     title: "National Session",
     description: "Short text about National Session goes here.",
     date: "24/08/2023",
-    imageURL: "/assets/events-4.jpg",
+    imageURL: events4,
   },
 ];
 
@@ -113,9 +121,9 @@ export default function Home() {
           <ImageGrid.Focus
             flow={"rhs"}
             images={[
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
-              { src: "/assets/test-image.png", alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
+              { src: testImage, alt: "" },
             ]}
           />
         </div>
@@ -150,7 +158,7 @@ export default function Home() {
               underline="text-orange-600 rotate-12"
             />
           </div>
-          <div className="hidden md:block ">
+          <div className="hidden md:block">
             <Carousel>
               {testimonials.map((testimonial, testimonialIndex) => (
                 <TestimonialCard
@@ -164,7 +172,7 @@ export default function Home() {
               ))}
             </Carousel>
           </div>
-          <div className="flex flex-col gap-8 sm:gap-10 md:hidden ">
+          <div className="flex flex-col gap-8 sm:gap-10 md:hidden">
             {testimonials.map((testimonial, testimonialIndex) => (
               <TestimonialCard
                 key={testimonialIndex}

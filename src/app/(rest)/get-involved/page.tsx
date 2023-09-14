@@ -1,17 +1,18 @@
-import { Title, CategoryCard, Container, Divider } from "~/components";
-import { ContactForm } from "./contact-form";
 import { Metadata } from "next";
+import { CategoryCard, Container, Divider, Title } from "~/components";
+import { ContactForm } from "./contact-form";
+
+export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "EYP CY - Home",
+  title: "Get Involved",
 };
-export const runtime = "edge";
 
 export default function GetInvolved() {
   return (
     <>
       <Container className="mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
-        <div className=" max-w-7xl">
+        <div className="max-w-7xl">
           <div className="flex justify-center">
             <Title text="Get Involved" order="h1" underline="rotate-[190deg]" />
           </div>
@@ -49,7 +50,7 @@ export default function GetInvolved() {
         </CategoryCard>
       </Container>
       <Container className="mb-16 flex flex-col items-center px-5">
-        <div className=" max-w-7xl">
+        <div className="max-w-7xl">
           <div className="flex justify-center">
             <Title
               text="General, Open Events"

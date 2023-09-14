@@ -1,17 +1,27 @@
+import { Metadata } from "next";
 import {
+  events1,
+  events2,
+  events3,
+  logoDaysOfEyp,
+  logoNationalSession,
+  logoPreSelectionDays,
+  logoYouthSummit,
+} from "~/assets";
+import {
+  ActionButton,
   Container,
   EventTypeCard,
   SessionElementCard,
   Title,
   WaveDivider,
 } from "~/components";
-import { ClientSection } from "./client-section";
-import { Metadata } from "next";
+
+export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "EYP CY - Home",
+  title: "Events",
 };
-export const runtime = "edge";
 
 export default function Events() {
   return (
@@ -24,7 +34,7 @@ export default function Events() {
           <EventTypeCard
             className=" col-span-9 col-start-1 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Pre-Selection Days"
-            imageURL="/assets/logo-pre-selection-days.png"
+            imageURL={logoPreSelectionDays}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -32,7 +42,7 @@ export default function Events() {
           <EventTypeCard
             className=" col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Days of EYP"
-            imageURL="/assets/logo-days-of-eyp.png"
+            imageURL={logoDaysOfEyp}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -40,7 +50,7 @@ export default function Events() {
           <EventTypeCard
             className=" col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Youth Summit"
-            imageURL="/assets/logo-youth-summit.png"
+            imageURL={logoYouthSummit}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -48,7 +58,7 @@ export default function Events() {
           <EventTypeCard
             className=" col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="National Session"
-            imageURL="/assets/logo-national-session.png"
+            imageURL={logoNationalSession}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -68,7 +78,10 @@ export default function Events() {
             underline="text-orange-500"
           />
         </div>
-        <ClientSection />
+        <div className="flex flex-row justify-center gap-8 md:gap-14 lg-xl:gap-24">
+          <ActionButton variant="link" text="School" href="/get-involved" />
+          <ActionButton variant="link" text="Individual" href="/get-involved" />
+        </div>
       </Container>
       <WaveDivider.eventsBottom />
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
@@ -80,7 +93,7 @@ export default function Events() {
           <SessionElementCard
             className=" w-full md-lg:w-5/6 max-w-5xl"
             title="Teambuilding"
-            imageURL="/assets/events-3.jpg"
+            imageURL={events3}
           >
             Team building in the context of the European Youth Parliament, means
             communication training, focused on group dynamics. The fundamental
@@ -94,8 +107,8 @@ export default function Events() {
           <SessionElementCard
             className=" w-full md-lg:w-5/6 max-w-5xl"
             title="Committee Work"
-            reverse={true}
-            imageURL="/assets/events-2.jpg"
+            imageURL={events2}
+            reverse
           >
             This is the central part of any EYP session. After team-building,
             the delegates come together to discuss their allocated topics, and
@@ -107,7 +120,7 @@ export default function Events() {
           <SessionElementCard
             className=" w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
-            imageURL="/assets/events-1.jpg"
+            imageURL={events1}
           >
             The General Assembly reunites all the participants of the session to
             consider the results of committee work. Each committee presents and

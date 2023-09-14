@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn, slugify } from "~/lib/utils";
 
 interface props {
   title: string;
   children: string;
-  imageURL: string;
+  imageURL: StaticImageData;
   className?: string;
 }
 

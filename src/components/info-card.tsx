@@ -5,7 +5,7 @@ import { cn } from "~/lib/utils";
 interface props {
   title: string;
   reversed?: boolean;
-  imageURL: string;
+  imageURL: StaticImageData;
   children: ReactNode;
   className?: string;
 }

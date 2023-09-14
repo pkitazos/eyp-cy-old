@@ -1,3 +1,14 @@
+import { Metadata } from "next";
+import {
+  ncHr,
+  ncNatco1,
+  ncNatco2,
+  ncPr,
+  ncPresi,
+  ncSecretary,
+  ncTreasurer,
+  ncVp,
+} from "~/assets";
 import {
   Container,
   NCMemberCard,
@@ -5,55 +16,55 @@ import {
   Title,
 } from "~/components";
 import { previousBoardData } from "./previous-boards";
-import { Metadata } from "next";
+
+export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "National Committee",
+};
 
 const ncMembers = [
   {
     name: "Lazaros Hadjiforados",
     title: "President",
-    imageURL: "/assets/nc-presi.jpg",
+    imageURL: ncPresi,
   },
   {
     name: "Polyna Antoniou",
     title: "Vice-President",
-    imageURL: "/assets/nc-vp.jpg",
+    imageURL: ncVp,
   },
   {
     name: "Andrea Soteriou",
     title: "Secretary",
-    imageURL: "/assets/nc-secretary.png",
+    imageURL: ncSecretary,
   },
   {
     name: "Georgios Papaconstantinou",
     title: "Treasurer",
-    imageURL: "/assets/nc-treasurer.jpg",
+    imageURL: ncTreasurer,
   },
   {
     name: "Antreas Psaltis",
     title: "Head of Human Resources",
-    imageURL: "/assets/nc-hr.png",
+    imageURL: ncHr,
   },
   {
     name: "Kornelia Kitazou",
     title: "Head of Public Relations",
-    imageURL: "/assets/nc-pr.jpg",
+    imageURL: ncPr,
   },
   {
     name: "Athina Stavrou",
     title: "National Coordinator",
-    imageURL: "/assets/nc-natco-1.jpg",
+    imageURL: ncNatco1,
   },
   {
     name: "Theodoulos Hadjimatheou",
     title: "National Coordinator",
-    imageURL: "/assets/nc-natco-2.png",
+    imageURL: ncNatco2,
   },
 ];
-
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
-export const runtime = "edge";
 
 export default function NationalCommittee() {
   return (

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 interface props {
   title: string;
   info: string;
-  imageURL: string;
+  imageURL: StaticImageData;
   children: ReactNode;
 }
 

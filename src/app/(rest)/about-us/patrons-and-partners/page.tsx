@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { partnerAnt1, partnerBoc, partnerVmlyr } from "~/assets";
 import {
   Container,
   PartnerCard,
@@ -6,6 +7,12 @@ import {
   Title,
   WaveDivider,
 } from "~/components";
+
+export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "Patrons & Partners",
+};
 
 const patronData = [
   {
@@ -34,24 +41,19 @@ const partnerData = [
   {
     name: "BoC",
     description: "A short description about your partner BoC",
-    imageURL: "/assets/partner-boc.jpeg",
+    imageURL: partnerBoc,
   },
   {
     name: "Ant1",
     description: "A short description about your partner Ant1",
-    imageURL: "/assets/partner-ant1.jpeg",
+    imageURL: partnerAnt1,
   },
   {
     name: "VMLY&R",
     description: "A short description about your partner VMLY&R",
-    imageURL: "/assets/partner-vmlyr.png",
+    imageURL: partnerVmlyr,
   },
 ];
-
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
-export const runtime = "edge";
 
 export default function PatronsAndPartners() {
   return (
@@ -109,14 +111,14 @@ export default function PatronsAndPartners() {
             <PatronCard
               name="Ursula von der Leyen"
               title="President of the European Commission"
-              invert={true}
+              invert
             />
           </div>
           <div className="">
             <PatronCard
               name="Roberta Metsola"
               title="President of the European Parliament"
-              invert={true}
+              invert
             />
           </div>
         </div>

@@ -6,7 +6,7 @@ interface props {
   title: string;
   reverse?: boolean;
   children: ReactNode;
-  imageURL: string;
+  imageURL: StaticImageData;
   className?: string;
 }
 

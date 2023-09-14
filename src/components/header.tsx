@@ -2,6 +2,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
+import logo from "~/assets/logos/white-long.png";
 import { cn, debounce } from "~/lib/utils";
 import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
@@ -17,7 +18,7 @@ const HeaderLogo = () => {
         width={600}
         height={100}
         className="my-2 h-auto cursor-pointer "
-        src="/logos/white-long.png"
+        src={logo}
         alt="EYP Cyprus logo"
       />
     </a>
