@@ -1,4 +1,7 @@
 const plugin = require("tailwindcss/plugin");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -63,6 +66,7 @@ module.exports = {
           900: "#00B7FF",
         },
         accent: {
+          700: "#FFE876",
           800: "#FFDE4D",
           900: "#FFD200",
         },
@@ -94,81 +98,90 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
-      addUtilities({
-        ".diamond-mask": {
-          maskImage: "url('/diamond-mask.svg')",
-          maskSize: "contain",
-          maskRepeat: "no-repeat",
-          maskPosition: "center",
+    plugin(function ({ addUtilities, matchUtilities, theme }) {
+      matchUtilities(
+        {
+          dbg: (value) => ({
+            outline: "2px solid",
+            outlineColor: value,
+          }),
         },
-        // debug classes
-        ".--orange-500": {
-          outline: "2px solid",
-          outlineColor: "#f97316",
-        },
-        ".--orange-600": {
-          outline: "2px solid",
-          outlineColor: "#ea580c",
-        },
+        { values: flattenColorPalette(theme("color")), type: "color" }
+      ),
+        addUtilities({
+          ".diamond-mask": {
+            maskImage: "url('/diamond-mask.svg')",
+            maskSize: "contain",
+            maskRepeat: "no-repeat",
+            maskPosition: "center",
+          },
+          // debug classes
+          ".--orange-500": {
+            outline: "2px solid",
+            outlineColor: "#f97316",
+          },
+          ".--orange-600": {
+            outline: "2px solid",
+            outlineColor: "#ea580c",
+          },
 
-        ".--amber-500": {
-          outline: "2px solid",
-          outlineColor: "#f59e0b",
-        },
-        ".--amber-600": {
-          outline: "2px solid",
-          outlineColor: "#d97706",
-        },
-        ".--lime-500": {
-          outline: "2px solid",
-          outlineColor: "#84cc16",
-        },
-        ".--lime-600": {
-          outline: "2px solid",
-          outlineColor: "#65a30d",
-        },
-        ".--emerald-500": {
-          outline: "2px solid",
-          outlineColor: "#10b981",
-        },
-        ".--emerald-600": {
-          outline: "2px solid",
-          outlineColor: "#059669",
-        },
-        ".--sky-500": {
-          outline: "2px solid",
-          outlineColor: "#0ea5e9",
-        },
-        ".--sky-600": {
-          outline: "2px solid",
-          outlineColor: "#0284c7",
-        },
-        ".--blue-500": {
-          outline: "2px solid",
-          outlineColor: "#3b82f6",
-        },
-        ".--blue-600": {
-          outline: "2px solid",
-          outlineColor: "#2563eb",
-        },
-        ".--purple-500": {
-          outline: "2px solid",
-          outlineColor: "#a855f7",
-        },
-        ".--purple-600": {
-          outline: "2px solid",
-          outlineColor: "#9333ea",
-        },
-        ".--pink-500": {
-          outline: "2px solid",
-          outlineColor: "#ec4899",
-        },
-        ".--pink-600": {
-          outline: "2px solid",
-          outlineColor: "#db2777",
-        },
-      });
+          ".--amber-500": {
+            outline: "2px solid",
+            outlineColor: "#f59e0b",
+          },
+          ".--amber-600": {
+            outline: "2px solid",
+            outlineColor: "#d97706",
+          },
+          ".--lime-500": {
+            outline: "2px solid",
+            outlineColor: "#84cc16",
+          },
+          ".--lime-600": {
+            outline: "2px solid",
+            outlineColor: "#65a30d",
+          },
+          ".--emerald-500": {
+            outline: "2px solid",
+            outlineColor: "#10b981",
+          },
+          ".--emerald-600": {
+            outline: "2px solid",
+            outlineColor: "#059669",
+          },
+          ".--sky-500": {
+            outline: "2px solid",
+            outlineColor: "#0ea5e9",
+          },
+          ".--sky-600": {
+            outline: "2px solid",
+            outlineColor: "#0284c7",
+          },
+          ".--blue-500": {
+            outline: "2px solid",
+            outlineColor: "#3b82f6",
+          },
+          ".--blue-600": {
+            outline: "2px solid",
+            outlineColor: "#2563eb",
+          },
+          ".--purple-500": {
+            outline: "2px solid",
+            outlineColor: "#a855f7",
+          },
+          ".--purple-600": {
+            outline: "2px solid",
+            outlineColor: "#9333ea",
+          },
+          ".--pink-500": {
+            outline: "2px solid",
+            outlineColor: "#ec4899",
+          },
+          ".--pink-600": {
+            outline: "2px solid",
+            outlineColor: "#db2777",
+          },
+        });
     }),
   ],
 };

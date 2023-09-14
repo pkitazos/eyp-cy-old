@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import { Footer, Toaster } from "~/components";
 import "./app.css";

@@ -78,7 +78,7 @@ export default function Home() {
       <section className="flex h-screen w-full flex-col justify-center gap-6">
         <div className="flex flex-col gap-10 px-6 xs:px-10 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0">
           <div className="flex w-full justify-start sm:col-start-2 sm:row-start-1 sm:w-max">
-            <h2 className="text-5xl font-bold text-white sm:text-6xl md-lg:text-7xl">
+            <h2 className="text-5xl font-bold text-accent-700 md:text-white sm:text-6xl md-lg:text-7xl">
               Welcome to
             </h2>
           </div>
@@ -136,7 +136,8 @@ export default function Home() {
         <div className="flex justify-center md:justify-end">
           <Title text="Upcoming Events" order="h2" theme="light" />
         </div>
-        <ul className="no-scrollbar py-10 flex w-full overflow-x-scroll justify-start gap-6 lg-xl:justify-evenly">
+
+        <ul className="py-10 flex flex-col sm:grid sm:grid-cols-2 lg:flex-row lg:flex gap-8 sm:gap-16 lg:gap-6 lg:justify-evenly lg:px-10">
           {upcomingEvents.map((event, i) => (
             <UpcomingEventCard
               key={i}
