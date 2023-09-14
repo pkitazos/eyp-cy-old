@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import logo from "~/assets/logos/white-long.png";
 import { cn, debounce } from "~/lib/utils";
-import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
+import { Menu, X } from "lucide-react";
 
 const HeaderLogo = () => {
   return (
@@ -29,7 +29,7 @@ function MobileNav() {
   return (
     <Popover className="block lg:hidden">
       <Popover.Button>
-        <MenuIcon className="w-6 text-white" />
+        <Menu className="w-6 text-white" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -58,7 +58,7 @@ function MobileNav() {
           >
             <Popover.Button>
               <button className="absolute -top-[5vh] right-4">
-                <CloseIcon className="w-6 text-white" />
+                <X className="w-6 text-white" />
               </button>
             </Popover.Button>
             <nav className="flex flex-col gap-5">

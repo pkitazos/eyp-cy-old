@@ -1,7 +1,7 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "~/lib/utils";
-import { CaretLeft, CaretRight } from "./SVGs";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface props {
   children: ReactNode;
@@ -59,7 +59,7 @@ export const Carousel = ({ children }: props) => {
           state !== "idle" && "text-gray-200"
         )}
       >
-        <CaretLeft className="w-6" />
+        <ChevronLeft className="w-10 h-10" />
       </button>
       <div
         className="w-full max-w-4xl rounded-lg overflow-hidden transition-all duration-500"
@@ -85,7 +85,7 @@ export const Carousel = ({ children }: props) => {
           state !== "idle" && "text-gray-200"
         )}
       >
-        <CaretRight className="w-6" />
+        <ChevronRight className="w-10 h-10" />
       </button>
     </div>
   );

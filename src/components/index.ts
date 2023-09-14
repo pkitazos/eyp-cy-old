@@ -1,18 +1,4 @@
 export {
-  BookIcon,
-  CaretLeft,
-  CaretRight,
-  ChevronDown,
-  CloseIcon,
-  ConversationIcon,
-  FacebookIcon,
-  InstagramIcon,
-  MenuIcon,
-  NetworkIcon,
-  PenIcon,
-  Underline,
-} from "./SVGs";
-export {
   Accordion,
   AccordionContent,
   AccordionItem,
