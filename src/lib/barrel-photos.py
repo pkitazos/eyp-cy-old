@@ -18,32 +18,28 @@ def generate_ts_for_directory(directory_path, child_exports={}):
         imports.append(f'import {camel_case_name} from "./{image_file}";')
         exports.append(camel_case_name)
     
-    # Writing the imports and exports to index.ts
     with open(os.path.join(directory_path, 'index.ts'), 'w') as f:
         for imp in imports:
             f.write(imp + '\n')
         
         f.write('\n')
         
-        if exports:  # if the current directory has its own exports
+        if exports:
             f.write('export { ' + ', '.join(exports) + ' };\n')
         
         for subdir, subdir_exports in child_exports.items():
             f.write(f'export {{ {", ".join(subdir_exports)} }} from "./{subdir}";\n')
 
-    # Return dictionary with the current directory's exports
     return {directory_path.split('/')[-1]: exports}
 
 def process_directory(directory_path):
     subdirs = [d for d in os.listdir(directory_path) if os.path.isdir(os.path.join(directory_path, d))]
     all_exports = {}
     
-    # Recursively process the subdirectories first
     for subdir in subdirs:
         child_exports = process_directory(os.path.join(directory_path, subdir))
         all_exports.update(child_exports)
     
-    # Process the current directory
     exports = generate_ts_for_directory(directory_path, all_exports)
     return exports
 
