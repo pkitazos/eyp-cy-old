@@ -1,14 +1,12 @@
 "use client";
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
-import { wavePaths } from "~/data";
 import { cn, debounce } from "~/lib/utils";
-import { CloseIcon, MenuIcon } from "./SVGs";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
-import { WaveDivider } from "./wave-divider";
+import { Menu, X } from "lucide-react";
+import { whiteLong } from "~/assets";
 
 const HeaderLogo = () => {
   return (
@@ -17,10 +15,10 @@ const HeaderLogo = () => {
       className="w-3/4 max-w-[15rem] xs:w-3/5 xs:max-w-[17rem] sm:w-2/5 sm:max-w-none md:w-1/3 lg:w-1/5 lg-xl:w-80 xl:w-80"
     >
       <Image
-        width={400}
+        width={600}
         height={100}
         className="my-2 h-auto cursor-pointer "
-        src="/logos/white-long.png"
+        src={whiteLong}
         alt="EYP Cyprus logo"
       />
     </a>
@@ -31,9 +29,7 @@ function MobileNav() {
   return (
     <Popover className="block lg:hidden">
       <Popover.Button>
-        <button>
-          <MenuIcon className="w-6 text-white" />
-        </button>
+        <Menu className="w-6 text-white" />
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -62,7 +58,7 @@ function MobileNav() {
           >
             <Popover.Button>
               <button className="absolute -top-[5vh] right-4">
-                <CloseIcon className="w-6 text-white" />
+                <X className="w-6 text-white" />
               </button>
             </Popover.Button>
             <nav className="flex flex-col gap-5">
@@ -117,7 +113,6 @@ function DesktopNav() {
         ]}
       />
       {/* <Dropdown mainItem="Public Relations" items={["Press Releases"]} /> */}
-
       <a
         className="cursor-pointer rounded-4xl bg-accent-900 px-6 py-3 text-black transition-all duration-300 hover:scale-[1.05] hover:rounded-2xl"
         href="/get-involved"
@@ -129,11 +124,12 @@ function DesktopNav() {
 }
 
 export function Header() {
-  const home = usePathname() == "/";
-
   const [isDocked, setIsDocked] = useState(true);
 
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    setIsMounted(true);
     const storeScroll = () => setIsDocked(window.scrollY === 0);
     const cb = debounce(storeScroll);
 
@@ -143,32 +139,18 @@ export function Header() {
     return () => document.removeEventListener("scroll", cb);
   }, []);
 
+  if (!isMounted) return null;
+
   return (
-    <>
-      {home && (
-        <div className="absolute left-0 -z-10 w-full">
-          <WaveDivider
-            waveLayers={wavePaths.headerDiagonal}
-            viewBox="0 0 1000 650"
-          />
-        </div>
+    <div
+      className={cn(
+        "fixed top-0 z-50 flex h-[10vh] max-h-32 w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
+        !isDocked && "bg-primary-800 shadow-md"
       )}
-      <div
-        className={cn(
-          "fixed top-0 z-50 flex h-[10vh] w-full flex-row items-center justify-between px-4 transition-all duration-150 xl:px-16",
-          !isDocked && "bg-primary-800 shadow-md"
-        )}
-      >
-        <HeaderLogo />
-        <DesktopNav />
-        <MobileNav />
-      </div>
-      {!home && (
-        <div className="-mb-40">
-          <div className="h-12 bg-primary-800">&nbsp;</div>
-          <WaveDivider waveLayers={wavePaths.headerHorizontal} />
-        </div>
-      )}
-    </>
+    >
+      <HeaderLogo />
+      <DesktopNav />
+      <MobileNav />
+    </div>
   );
 }

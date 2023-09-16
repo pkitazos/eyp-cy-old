@@ -1,5 +1,5 @@
 import { cn } from "~/lib/utils";
-import { Underline } from "./SVGs";
+import Underline from "./underline";
 
 interface props {
   text: string;

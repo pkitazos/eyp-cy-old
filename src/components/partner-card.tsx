@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface props {
   name: string;
   description: string;
-  imageURL: string;
+  imageURL: StaticImageData;
 }
 
 export function PartnerCard({ name, description, imageURL }: props) {

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import { cn } from "~/lib/utils";
 
 interface props {
   title: string;
   reversed?: boolean;
-  imageURL: string;
+  imageURL: StaticImageData;
   children: ReactNode;
   className?: string;
 }

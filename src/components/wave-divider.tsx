@@ -1,3 +1,6 @@
+import { wavePaths } from "~/lib/wave-paths";
+import { cn } from "~/lib/utils";
+
 const hashCode = (str: string) => {
   let hash = 0;
   for (let i = 0, len = str.length; i < len; i++) {
@@ -21,6 +24,19 @@ const generateKeyTimes: (n: number) => string = (n) => {
   return `${keyTimesString} 1`;
 };
 
+interface singleWave {
+  layers: string[][];
+  colors: string[];
+}
+
+const getWaveData = (w: singleWave) => {
+  let layers = w.layers;
+  let colors = w.colors;
+  return layers.map(function (layer, i) {
+    return [layer, colors[i]] as [string[], string];
+  });
+};
+
 interface waveProps {
   pathArr: string[];
   fill: string;
@@ -42,26 +58,19 @@ const Wave = ({ pathArr, fill }: waveProps) => {
   );
 };
 
-interface waveDividerProps {
+interface waveDividerProps extends React.SVGProps<SVGElement> {
   waveLayers: singleWave;
   viewBox?: string;
 }
 
-const getWaveData = (w: singleWave) => {
-  let layers = w.layers;
-  let colors = w.colors;
-  return layers.map(function (layer, i) {
-    return [layer, colors[i]] as [string[], string];
-  });
-};
-
-export const WaveDivider = ({
+const WaveStack = ({
+  className,
   waveLayers,
   viewBox = "0 0 1000 300",
 }: waveDividerProps) => {
   return (
     <>
-      <svg id="visual" viewBox={viewBox}>
+      <svg className={cn(className)} id="visual" viewBox={viewBox}>
         {getWaveData(waveLayers).map(([path, color]) => (
           <Wave key={hashCode(path[0])} fill={color} pathArr={path} />
         ))}
@@ -69,3 +78,59 @@ export const WaveDivider = ({
     </>
   );
 };
+
+const headerDiagonal = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack
+    className={className}
+    waveLayers={wavePaths.headerDiagonal}
+    viewBox="0 0 1000 650"
+  />
+);
+const headerHorizontal = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.headerHorizontal} />
+);
+const footer = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack
+    className={className}
+    waveLayers={wavePaths.footer}
+    viewBox="0 0 1000 250"
+  />
+);
+const homeTop = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.homeTop} />
+);
+const homeBottom = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.homeBottom} />
+);
+const eventsTop = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.eventsTop} />
+);
+const eventsBottom = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.eventsBottom} />
+);
+const patronsTop = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.patronsTop} />
+);
+const patronsBottom = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.patronsBottom} />
+);
+const aboutTop = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.aboutTop} />
+);
+const aboutBottom = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack className={className} waveLayers={wavePaths.aboutBottom} />
+);
+
+export const WaveDivider = {
+  headerDiagonal,
+  headerHorizontal,
+  footer,
+  homeTop,
+  homeBottom,
+  eventsTop,
+  eventsBottom,
+  patronsTop,
+  patronsBottom,
+  aboutTop,
+  aboutBottom,
+} as const;

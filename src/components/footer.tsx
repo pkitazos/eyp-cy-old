@@ -1,16 +1,24 @@
 "use client";
-import { wavePaths } from "~/data";
-import { FacebookIcon, InstagramIcon } from "./SVGs";
 import { WaveDivider } from "./wave-divider";
+import { Container } from "./container";
+import { Facebook, Instagram } from "lucide-react";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
 
+const contactDetails = {
+  email: "info@eypcyprus.com",
+  address: "123 Addres Street, City",
+};
+
 export function Footer() {
   return (
     <div className="bottom-0 w-full">
-      <WaveDivider waveLayers={wavePaths.footer} viewBox="0 0 1000 250" />
-      <div className="page-padding grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 bg-primary-800 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0">
+      <WaveDivider.footer />
+      <Container
+        backdrop="bg-primary-800"
+        className="grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0"
+      >
         <div className="w-max">
           <h3 className="mb-2 text-2xl font-semibold text-white">Contact us</h3>
           <p className="ml-1 text-slate-100">
@@ -18,10 +26,10 @@ export function Footer() {
             <span
               className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
               onClick={() => {
-                navigator.clipboard.writeText("info@eypcyprus.com");
+                navigator.clipboard.writeText(contactDetails.email);
               }}
             >
-              info@eypcyprus.com
+              {contactDetails.email}
             </span>
           </p>
           <p className="ml-1 text-slate-100">
@@ -29,10 +37,10 @@ export function Footer() {
             <span
               className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
               onClick={() => {
-                navigator.clipboard.writeText("123 Addres Street, City");
+                navigator.clipboard.writeText(contactDetails.address);
               }}
             >
-              123 Addres Street, City
+              {contactDetails.address}
             </span>
           </p>
         </div>
@@ -40,14 +48,14 @@ export function Footer() {
           <h3 className="text-2xl font-semibold text-white">Follow us</h3>
           <div className="ml-1 mt-3 flex gap-4">
             <a href="https://www.instagram.com/eypcyprus/" target="_blank">
-              <InstagramIcon className="w-7 text-white hover:text-secondary-700" />
+              <Instagram className="w-7 text-white hover:text-secondary-700" />
             </a>
             <a href="https://www.facebook.com/eyp.cyprus" target="_blank">
-              <FacebookIcon className="w-7 cursor-pointer text-white hover:text-secondary-700" />
+              <Facebook className="w-7 cursor-pointer text-white hover:text-secondary-700" />
             </a>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

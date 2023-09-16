@@ -1,5 +1,12 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "~/lib/utils";
+
+interface imageObj {
+  src: StaticImageData;
+  alt: string;
+}
+
+type gridFlow = "lhs" | "rhs";
 
 interface focusGridProps {
   images: [imageObj, imageObj, imageObj];
@@ -25,7 +32,7 @@ const Focus = ({ images, flow }: focusGridProps) => {
           <Image
             src={image.src}
             alt={image.alt}
-            className="masked-image"
+            className="diamond-mask"
             width={300 * ratio[i]}
             height={300 * ratio[i]}
           />
@@ -57,7 +64,7 @@ const Regular = ({ images, flow }: regularGridProps) => {
           <Image
             src={image.src}
             alt={image.alt}
-            className="masked-image"
+            className="diamond-mask"
             width={300}
             height={300}
           />
@@ -74,7 +81,7 @@ const Test = () => {
         <Image
           src={"/assets/test-image.png"}
           alt={""}
-          className="masked-image"
+          className="diamond-mask"
           width={300}
           height={300}
         />
@@ -83,7 +90,7 @@ const Test = () => {
         <Image
           src={"/assets/test-image.png"}
           alt={""}
-          className="masked-image"
+          className="diamond-mask"
           width={600}
           height={600}
         />
@@ -92,7 +99,7 @@ const Test = () => {
         <Image
           src={"/assets/test-image.png"}
           alt={""}
-          className="masked-image"
+          className="diamond-mask"
           width={300}
           height={300}
         />

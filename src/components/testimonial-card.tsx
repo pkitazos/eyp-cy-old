@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 
 function QuoteIcon({ className }: { className: string }) {
@@ -13,7 +13,7 @@ interface props {
   name: string;
   description: string;
   children: ReactNode;
-  imageURL: string;
+  imageURL: StaticImageData;
 }
 
 export function TestimonialCard({
@@ -34,7 +34,7 @@ export function TestimonialCard({
             {name}
           </div>
           <div className="h-0.5 w-8 bg-accent-900">&nbsp;</div>
-          <div className="mt-1 text-sm text-slate-500">{description}d</div>
+          <div className="mt-1 text-sm text-slate-500">{description}</div>
         </div>
         <div className="overflow-hidden shrink-0 rounded-full bg-slate-50">
           <Image
