@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import {
-  d22,
-  d44,
-  d46,
+  dWhoWeAre1,
+  dWhoWeAre3,
+  dWhoWeAre2,
   events1,
   events2,
   events3,
   events4,
-  testImage,
   testimonialElena,
   testimonialMaddie,
   testimonialTheo,
@@ -136,9 +135,9 @@ export default function Home() {
           <ImageGrid.Focus
             flow={"rhs"}
             images={[
-              { src: d22, alt: "" },
-              { src: d44, alt: "" },
-              { src: d46, alt: "" },
+              { src: dWhoWeAre1, alt: "" },
+              { src: dWhoWeAre3, alt: "" },
+              { src: dWhoWeAre2, alt: "" },
             ]}
           />
         </div>

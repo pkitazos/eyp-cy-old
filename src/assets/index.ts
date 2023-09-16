@@ -1,18 +1,64 @@
-import testImage from "./test-image.webp";
-
-export { testImage };
-export { d46, d22, d44 } from "./home";
-export { testimonialTheo, testimonialElena, testimonialMaddie } from "./testimonials";
-export { dOurMission1, dAboutUs2, dHowWeDoWhatWeDo2, dAboutUs3, dHowWeDoWhatWeDo1, dAboutUs1, dOurMission2, dOurMission3 } from "./about-us";
-export { events4, events2, events3, events1 } from "./upcoming-events";
-export { patron5, patron4 } from "./patrons";
-export { nsLogo, nsGeneralAssembly, nsEveningActivity, nsCommitteeWork, nsTeamBuilding, nsDiscussingEurope } from "./national-session";
-export { whiteShort, whiteLong } from "./logos";
-export { ncTreasurer, ncVp, ncNatco2, ncNatco1, ncPr, ncHr, ncSecretary, ncPresi } from "./nc";
-export { partnerBoc, partnerAnt1, partnerVmlyr } from "./partners";
-export { daysGeneralAssembly, daysTeamBuilding, daysCommitteeWork, daysLogo } from "./days";
-export { ysDiscussingEurope, ysLogo, ysGeneralAssembly, ysTeamBuilding, ysCommitteeWork } from "./youth-summit";
-export { eventsTeamBuilding, eventsCommitteeWork, eventsGeneralAssembly } from "./events";
-export { preselsTeamBuilding, preselsLogo, preselsGeneralAssembly } from "./presels";
-export { impact3, impact2, impact5, impact4, impact6, impact1 } from "./impact";
-export { whatWeDo1, whatWeDo3, whatWeDo2, whatWeDo4 } from "./what-we-do";
+export {
+  dAboutUs1,
+  dAboutUs2,
+  dAboutUs3,
+  dHowWeDoWhatWeDo1,
+  dHowWeDoWhatWeDo2,
+  dHowWeDoWhatWeDoTemp,
+  dOurMission1,
+  dOurMission2,
+  dOurMission3,
+} from "./about-us";
+export {
+  daysCommitteeWork,
+  daysGeneralAssembly,
+  daysLogo,
+  daysTeamBuilding,
+} from "./days";
+export {
+  eventsCommitteeWork,
+  eventsGeneralAssembly,
+  eventsTeamBuilding,
+} from "./events";
+export { dWhoWeAre1, dWhoWeAre2, dWhoWeAre3 } from "./home";
+export { impact1, impact2, impact3, impact4, impact5, impact6 } from "./impact";
+export { whiteLong, whiteShort } from "./logos";
+export {
+  nsCommitteeWork,
+  nsDiscussingEurope,
+  nsEveningActivity,
+  nsGeneralAssembly,
+  nsLogo,
+  nsTeamBuilding,
+} from "./national-session";
+export {
+  ncHr,
+  ncNatco1,
+  ncNatco2,
+  ncPr,
+  ncPresi,
+  ncSecretary,
+  ncTreasurer,
+  ncVp,
+} from "./nc";
+export { partnerAnt1, partnerBoc, partnerVmlyr } from "./partners";
+export { patron4, patron5 } from "./patrons";
+export {
+  preselsGeneralAssembly,
+  preselsLogo,
+  preselsTeamBuilding,
+} from "./presels";
+export {
+  testimonialElena,
+  testimonialMaddie,
+  testimonialTheo,
+} from "./testimonials";
+export { events1, events2, events3, events4 } from "./upcoming-events";
+export { whatWeDo1, whatWeDo2, whatWeDo3, whatWeDo4 } from "./what-we-do";
+export {
+  ysCommitteeWork,
+  ysDiscussingEurope,
+  ysGeneralAssembly,
+  ysLogo,
+  ysTeamBuilding,
+} from "./youth-summit";

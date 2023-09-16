@@ -6,10 +6,10 @@ import {
   dAboutUs3,
   dHowWeDoWhatWeDo1,
   dHowWeDoWhatWeDo2,
+  dHowWeDoWhatWeDoTemp,
   dOurMission1,
   dOurMission2,
   dOurMission3,
-  testImage,
   whatWeDo1,
   whatWeDo2,
   whatWeDo3,
@@ -175,7 +175,7 @@ export default function AboutUs() {
             images={[
               { src: dHowWeDoWhatWeDo1, alt: "" },
               { src: dHowWeDoWhatWeDo2, alt: "" },
-              { src: testImage, alt: "" },
+              { src: dHowWeDoWhatWeDoTemp, alt: "" },
             ]}
           />
         </div>
