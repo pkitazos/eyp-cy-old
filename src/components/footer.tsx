@@ -8,7 +8,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 const contactDetails = {
   email: "info@eypcyprus.com",
-  address: "123 Addres Street, City",
+  address: "PO Box 42253, Larnaca, Cyprus 6532",
 };
 
 export function Footer() {
