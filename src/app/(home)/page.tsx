@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import {
+  d22,
+  d44,
+  d46,
   events1,
   events2,
   events3,
@@ -133,9 +136,9 @@ export default function Home() {
           <ImageGrid.Focus
             flow={"rhs"}
             images={[
-              { src: testImage, alt: "" },
-              { src: testImage, alt: "" },
-              { src: testImage, alt: "" },
+              { src: d22, alt: "" },
+              { src: d44, alt: "" },
+              { src: d46, alt: "" },
             ]}
           />
         </div>
