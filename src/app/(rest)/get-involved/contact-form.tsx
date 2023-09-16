@@ -26,7 +26,7 @@ export function ContactForm() {
   const onSubmit = (data: formData) => {
     const { name, email, subject, text } = data;
 
-    fetch(`http://localhost:3000/api/email`, {
+    fetch(`/api/email`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
