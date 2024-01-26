@@ -97,7 +97,6 @@ export function ContactForm() {
         disabled={isSubmitting}
         text="Send"
         variant="button"
-        onClick={() => {}}
       />
     </form>
   );
