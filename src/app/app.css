@@ -2,6 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 97.65%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+
+    --ocean-600: 231 100% 61%;
+    --ocean-700: 231 65% 48%;
+    --ocean-800: 231 65% 42%;
+    --ocean-900: 231 65% 35%;
+
+    --wave-700: 197 100% 70%;
+    --wave-800: 197 100% 60%;
+    --wave-900: 197 100% 50%;
+
+    --sun-700: 50 100% 73%;
+    --sun-800: 49 100% 65%;
+    --sun-900: 49 100% 50%;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+
+    --ocean-600: 231 100% 61%;
+    --ocean-700: 231 65% 48%;
+    --ocean-800: 231 65% 42%;
+    --ocean-900: 231 65% 35%;
+
+    --wave-700: 197 100% 70%;
+    --wave-800: 197 100% 60%;
+    --wave-900: 197 100% 50%;
+
+    --sun-700: 50 100% 73%;
+    --sun-800: 49 100% 65%;
+    --sun-900: 49 100% 50%;
+  }
+}
+
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
@@ -12,9 +102,5 @@
   .no-scrollbar::-webkit-scrollbar,
   .no-scrollbar::-webkit-scrollbar {
     display: none;
-  }
-
-  .media-debug {
-    @apply bg-lime-300 xs:bg-amber-300 sm:bg-orange-400 md:bg-red-500 md-lg:bg-fuchsia-300 lg:bg-purple-500 lg-xl:bg-sky-400 xl:bg-teal-400 2xl:bg-emerald-500 3xl:bg-green-500;
   }
 }
