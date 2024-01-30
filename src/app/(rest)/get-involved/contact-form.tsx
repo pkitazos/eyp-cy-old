@@ -2,7 +2,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { ActionButton, Input, Textarea, useToast } from "~/components";
+import { Input, Textarea, useToast } from "@/components";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   name: z.string().min(2, "Please enter a Name"),
@@ -63,41 +64,41 @@ export function ContactForm() {
       className="flex flex-col items-center"
     >
       <div className="flex w-full flex-col md:flex-row md:gap-5">
-        <div className="flex flex-col w-full h-20 justify-end">
+        <div className="flex h-20 w-full flex-col justify-end">
           {errors.name && (
-            <p className="text-red-600 mb-1">{errors.name.message}</p>
+            <p className="mb-1 text-red-600">{errors.name.message}</p>
           )}
           <Input type="text" placeholder="Name" {...register("name")} />
         </div>
-        <div className="flex flex-col w-full h-20 justify-end">
+        <div className="flex h-20 w-full flex-col justify-end">
           {errors.email && (
-            <p className="text-red-600 mb-1">{errors.email.message}</p>
+            <p className="mb-1 text-red-600">{errors.email.message}</p>
           )}
           <Input type="email" placeholder="Email" {...register("email")} />
         </div>
       </div>
-      <div className="flex flex-col w-full h-20 justify-end">
+      <div className="flex h-20 w-full flex-col justify-end">
         {errors.subject && (
-          <p className="w-full text-left text-red-600 mb-1">
+          <p className="mb-1 w-full text-left text-red-600">
             {errors.subject.message}
           </p>
         )}
         <Input placeholder="Subject" {...register("subject")} />
       </div>
-      <div className="flex flex-col w-full h-[7.5rem] justify-end">
+      <div className="flex h-[7.5rem] w-full flex-col justify-end">
         {errors.text && (
-          <p className="w-full text-left text-red-600 mb-1">
+          <p className="mb-1 w-full text-left text-red-600">
             {errors.text.message}
           </p>
         )}
         <Textarea placeholder="Message" {...register("text")} />
       </div>
-      <ActionButton
+      <Button
         className="mt-10 disabled:bg-gray-300 disabled:text-gray-500"
         disabled={isSubmitting}
-        text="Send"
-        variant="button"
-      />
+      >
+        Send
+      </Button>
     </form>
   );
 }

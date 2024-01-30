@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { CategoryCard, Container, Divider, Title } from "~/components";
+import { CategoryCard, Container, Divider, Title } from "@/components";
 import { ContactForm } from "./contact-form";
 
 export const runtime = "edge";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function GetInvolved() {
   return (
     <>
-      <Container className="mt-40 md:mt-20 lg:mt-16 mb-28 flex flex-col px-5 items-center">
+      <Container className="mb-28 mt-40 flex flex-col items-center px-5 md:mt-20 lg:mt-16">
         <div className="max-w-7xl">
           <div className="flex justify-center">
             <Title text="Get Involved" order="h1" underline="rotate-[190deg]" />
@@ -29,7 +29,7 @@ export default function GetInvolved() {
           </p>
         </div>
       </Container>
-      <Container className="lg-xl:px-28 mb-32 grid grid-cols-1 gap-7 md-lg:gap-10 2xl:gap-16 md:grid-cols-2">
+      <Container className="mb-32 grid grid-cols-1 gap-7 md:grid-cols-2 md-lg:gap-10 lg-xl:px-28 2xl:gap-16">
         <CategoryCard title="High School Students">
           If you are a High-School Student aged 15-18, you can register
           individually to attend our EYP Day. If your school is interested in
@@ -68,7 +68,7 @@ export default function GetInvolved() {
           </p>
         </div>
       </Container>
-      <Divider className="mt-40 mb-32" />
+      <Divider className="mb-32 mt-40" />
       <Container className="mb-20 flex flex-col">
         <Title
           text="Contact Us"

@@ -30,10 +30,10 @@ export function TestimonialCard({
       </blockquote>
       <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6 gap-4">
         <div>
-          <div className="font-display text-xl font-semibold text-primary-800">
+          <div className="font-display text-xl font-semibold text-ocean-800">
             {name}
           </div>
-          <div className="h-0.5 w-8 bg-accent-900">&nbsp;</div>
+          <div className="h-0.5 w-8 bg-sun-900">&nbsp;</div>
           <div className="mt-1 text-sm text-slate-500">{description}</div>
         </div>
         <div className="overflow-hidden shrink-0 rounded-full bg-slate-50">

@@ -1,6 +1,6 @@
 import { Source_Sans_3 } from "next/font/google";
-import { Footer, Toaster } from "~/components";
-import "./app.css";
+import { Footer, Toaster } from "@/components";
+import "@/styles/app.css";
 
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
@@ -11,7 +11,7 @@ const sourceSans3 = Source_Sans_3({
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sourceSans3.className}>
-      <body className="bg-base-white">
+      <body className="bg-background">
         {children}
         <Footer />
         <Toaster />

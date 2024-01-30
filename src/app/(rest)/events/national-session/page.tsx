@@ -7,8 +7,8 @@ import {
   nsDiscussingEurope,
   nsLogo,
   nsEveningActivity,
-} from "~/assets";
-import { Container, Divider, SessionElementCard, Title } from "~/components";
+} from "@/assets";
+import { Container, Divider, SessionElementCard, Title } from "@/components";
 
 export const runtime = "edge";
 
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 export default function NationalSession() {
   return (
     <>
-      <Container className="mt-40 md:mt-20 lg:mt-16 flex justify-center">
-        <div className="flex flex-col items-center gap-5 w-5/6 xl:w-2/3">
+      <Container className="mt-40 flex justify-center md:mt-20 lg:mt-16">
+        <div className="flex w-5/6 flex-col items-center gap-5 xl:w-2/3">
           <Image
             className="mb-5 w-48 md-lg:w-60"
             width={200}
@@ -52,7 +52,7 @@ export default function NationalSession() {
           </p>
         </div>
       </Container>
-      <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
+      <Divider className="mb-20 mt-20 md:mb-32 md:mt-28 xl:mt-32" />
 
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
         <div className="mb-3 flex justify-center">
@@ -60,7 +60,7 @@ export default function NationalSession() {
         </div>
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
-            className="w-full md-lg:w-5/6 max-w-5xl"
+            className="w-full max-w-5xl md-lg:w-5/6"
             title="Teambuilding"
             imageURL={nsTeamBuilding}
           >
@@ -74,7 +74,7 @@ export default function NationalSession() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className="w-full md-lg:w-5/6 max-w-5xl"
+            className="w-full max-w-5xl md-lg:w-5/6"
             title="Committee Work"
             imageURL={nsCommitteeWork}
             reverse
@@ -87,7 +87,7 @@ export default function NationalSession() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className="w-full md-lg:w-5/6 max-w-5xl"
+            className="w-full max-w-5xl md-lg:w-5/6"
             title="Evening Activities"
             imageURL={nsEveningActivity}
           >
@@ -98,7 +98,7 @@ export default function NationalSession() {
           </SessionElementCard>
           <SessionElementCard
             title="Discussing Europe"
-            className="w-full md-lg:w-5/6 max-w-5xl"
+            className="w-full max-w-5xl md-lg:w-5/6"
             imageURL={nsDiscussingEurope}
             reverse
           >
@@ -109,7 +109,7 @@ export default function NationalSession() {
             in the field, as well as experienced political figures.
           </SessionElementCard>
           <SessionElementCard
-            className="w-full md-lg:w-5/6 max-w-5xl"
+            className="w-full max-w-5xl md-lg:w-5/6"
             title="General Assembly"
             imageURL={nsGeneralAssembly}
           >

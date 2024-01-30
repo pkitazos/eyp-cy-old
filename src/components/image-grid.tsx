@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface imageObj {
   src: StaticImageData;
@@ -26,7 +26,7 @@ const Focus = ({ images, flow }: focusGridProps) => {
           key={i}
           className={cn(
             `col-span-${spans[i]} col-start-${cols[i]} row-span-${spans[i]} row-start-${rows[i]}`,
-            zIndex[i]
+            zIndex[i],
           )}
         >
           <Image
@@ -58,7 +58,7 @@ const Regular = ({ images, flow }: regularGridProps) => {
           key={i}
           className={cn(
             `col-span-4 col-start-${cols[i]} row-span-4 row-start-${rows[i]}`,
-            zIndex[i]
+            zIndex[i],
           )}
         >
           <Image

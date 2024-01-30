@@ -1,4 +1,4 @@
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import Underline from "./underline";
 
 interface props {
@@ -25,8 +25,8 @@ export function Title({
             order === "h1" && "text-3xl xs:text-4xl md-lg:text-5xl",
             order === "h2" && "text-2xl xs:text-3xl md-lg:text-4xl",
             order === "h3" && "text-xl xs:text-2xl md-lg:text-3xl",
-            theme === "dark" ? "text-primary-900" : "text-white",
-            className
+            theme === "dark" ? "text-ocean-900" : "text-white",
+            className,
           )}
         >
           {text}
@@ -37,7 +37,7 @@ export function Title({
             order === "h1" && "w-12 xs:w-14 md-lg:w-16",
             order === "h2" && "w-10 xs:w-12 md-lg:w-14",
             order === "h3" && "w-9 xs:w-10 md-lg:w-12",
-            underline
+            underline,
           )}
         />
       </div>

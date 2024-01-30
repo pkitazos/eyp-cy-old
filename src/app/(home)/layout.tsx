@@ -1,4 +1,4 @@
-import { Header, WaveDivider } from "~/components";
+import { Header, WaveDivider } from "@/components";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

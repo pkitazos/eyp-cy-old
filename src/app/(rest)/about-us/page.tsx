@@ -14,7 +14,7 @@ import {
   whatWeDo2,
   whatWeDo3,
   whatWeDo4,
-} from "~/assets";
+} from "@/assets";
 import {
   Container,
   Divider,
@@ -22,7 +22,7 @@ import {
   Title,
   WaveDivider,
   WhatWeDoCard,
-} from "~/components";
+} from "@/components";
 
 export const runtime = "edge";
 
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <>
-      <Container className="mb-0 mt-40 md-lg:mt-32 2xl:mt-0 flex items-center">
+      <Container className="mb-0 mt-40 flex items-center md-lg:mt-32 2xl:mt-0">
         <div className="z-20 w-full md-lg:w-2/3">
           <div className=" flex justify-center">
             <Title text="About Us" order="h1" underline="rotate-[190deg]" />
@@ -50,7 +50,7 @@ export default function AboutUs() {
             organisation.
           </p>
         </div>
-        <div className="hidden ml-20 md-lg:grid w-[35%] place-items-center">
+        <div className="ml-20 hidden w-[35%] place-items-center md-lg:grid">
           <ImageGrid.Focus
             flow="lhs"
             images={[
@@ -61,7 +61,7 @@ export default function AboutUs() {
           />
         </div>
       </Container>
-      <Container className="block mt-16 sm:hidden">
+      <Container className="mt-16 block sm:hidden">
         <Image
           className="w-full"
           width={200}
@@ -70,9 +70,9 @@ export default function AboutUs() {
           alt=""
         />
       </Container>
-      <Divider className="mt-20 mb-32" />
+      <Divider className="mb-32 mt-20" />
       <Container className="mb-20 flex items-center">
-        <div className="hidden mr-20 md-lg:grid w-[35%] place-items-center">
+        <div className="mr-20 hidden w-[35%] place-items-center md-lg:grid">
           <ImageGrid.Focus
             flow="rhs"
             images={[
@@ -96,7 +96,7 @@ export default function AboutUs() {
         </div>
       </Container>
       <WaveDivider.aboutTop />
-      <Container backdrop="bg-primary-600" className="pb-20 pt-8 xl:px-20">
+      <Container backdrop="bg-ocean-600" className="pb-20 pt-8 xl:px-20">
         <div className="mb-10 flex justify-center">
           <Title
             text="What We Do"
@@ -105,7 +105,7 @@ export default function AboutUs() {
             underline="rotate-[190deg]"
           />
         </div>
-        <div className="grid grid-cols-1 place-items-center gap-10 xl:flex justify-evenly">
+        <div className="grid grid-cols-1 place-items-center justify-evenly gap-10 xl:flex">
           <WhatWeDoCard
             title="Open Forum for Youth"
             info="We provide a forum for young people to develop and express their opinions on European political and social issues in an open and welcoming environment."
@@ -140,7 +140,7 @@ export default function AboutUs() {
         </div>
       </Container>
       <WaveDivider.aboutBottom />
-      <Container className="mt-8 max-h-max mb-0 md:mb-28 lg-xl:mb-0 pb-16 flex items-center">
+      <Container className="mb-0 mt-8 flex max-h-max items-center pb-16 md:mb-28 lg-xl:mb-0">
         <div className="z-20 w-full md-lg:w-2/3">
           <div className=" flex justify-center">
             <Title
@@ -169,7 +169,7 @@ export default function AboutUs() {
             in more than 500 EYP events organised across Europe every year.
           </p>
         </div>
-        <div className="hidden ml-20 md-lg:grid w-[35%] place-items-center">
+        <div className="ml-20 hidden w-[35%] place-items-center md-lg:grid">
           <ImageGrid.Focus
             flow="lhs"
             images={[
@@ -180,7 +180,7 @@ export default function AboutUs() {
           />
         </div>
       </Container>
-      <Container className="block mt-4 xs:mt-10 mb-16 sm:hidden">
+      <Container className="mb-16 mt-4 block xs:mt-10 sm:hidden">
         <Image
           className="w-full"
           width={200}
@@ -189,10 +189,10 @@ export default function AboutUs() {
           alt=""
         />
       </Container>
-      <div className="flex sm:hidden lg-xl:flex justify-center mt-20 lg-xl:mt-14 mb-32">
-        <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
+      <div className="mb-32 mt-20 flex justify-center sm:hidden lg-xl:mt-14 lg-xl:flex">
+        <div className="w-1/2 border-t-2 border-gray-300/50">&nbsp;</div>
       </div>
-      <Container className="mb-16 sm:mb-28 lg-xl:20 mt-16 sm:mt-8">
+      <Container className="lg-xl:20 mb-16 mt-16 sm:mb-28 sm:mt-8">
         <div className="">
           <div className="flex justify-center">
             <Title

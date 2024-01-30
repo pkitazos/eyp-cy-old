@@ -16,7 +16,7 @@ export function Footer() {
     <div className="bottom-0 w-full">
       <WaveDivider.footer />
       <Container
-        backdrop="bg-primary-800"
+        backdrop="bg-ocean-800"
         className="grid max-h-max min-h-[10rem] place-content-center items-start gap-y-6 py-8 xs:flex xs:flex-row xs:justify-between xs:pb-0 sm:pt-5 md:pt-0"
       >
         <div className="w-max">
@@ -24,7 +24,7 @@ export function Footer() {
           <p className="ml-1 text-slate-100">
             Email:{" "}
             <span
-              className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
+              className="ml-2 hover:text-wave-700 hover:underline cursor-pointer"
               onClick={() => {
                 navigator.clipboard.writeText(contactDetails.email);
               }}
@@ -35,7 +35,7 @@ export function Footer() {
           <p className="ml-1 text-slate-100">
             P.O. Box:{" "}
             <span
-              className="ml-2 hover:text-secondary-700 hover:underline cursor-pointer"
+              className="ml-2 hover:text-wave-700 hover:underline cursor-pointer"
               onClick={() => {
                 navigator.clipboard.writeText(contactDetails.address);
               }}
@@ -48,10 +48,10 @@ export function Footer() {
           <h3 className="text-2xl font-semibold text-white">Follow us</h3>
           <div className="ml-1 mt-3 flex gap-4">
             <a href="https://www.instagram.com/eypcyprus/" target="_blank">
-              <Instagram className="w-7 text-white hover:text-secondary-700" />
+              <Instagram className="w-7 text-white hover:text-wave-700" />
             </a>
             <a href="https://www.facebook.com/eyp.cyprus" target="_blank">
-              <Facebook className="w-7 cursor-pointer text-white hover:text-secondary-700" />
+              <Facebook className="w-7 cursor-pointer text-white hover:text-wave-700" />
             </a>
           </div>
         </div>

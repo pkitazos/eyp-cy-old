@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import {
   dWhoWeAre1,
   dWhoWeAre3,
@@ -10,7 +11,7 @@ import {
   testimonialElena,
   testimonialMaddie,
   testimonialTheo,
-} from "~/assets";
+} from "@/assets";
 import {
   Carousel,
   Container,
@@ -19,7 +20,8 @@ import {
   Title,
   UpcomingEventCard,
   WaveDivider,
-} from "~/components";
+} from "@/components";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -92,23 +94,20 @@ export default function Home() {
       <section className="flex h-screen w-full flex-col justify-center gap-6">
         <div className="flex flex-col gap-10 px-6 xs:px-10 sm:grid sm:grid-cols-12 sm:grid-rows-2 sm:px-0">
           <div className="flex w-full justify-start sm:col-start-2 sm:row-start-1 sm:w-max">
-            <h2 className="text-5xl font-bold text-accent-700 md:text-white sm:text-6xl md-lg:text-7xl">
+            <h2 className="text-5xl font-bold text-sun-700 sm:text-6xl md:text-white md-lg:text-7xl">
               Welcome to
             </h2>
           </div>
           <div className="flex w-full justify-end sm:col-start-3 sm:row-start-2 sm:w-max">
-            <h2 className="text-5xl font-bold text-accent-900 sm:text-6xl md-lg:text-7xl">
+            <h2 className="text-5xl font-bold text-sun-900 sm:text-6xl md-lg:text-7xl">
               Young Europe
             </h2>
           </div>
         </div>
-        <div className="mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32">
-          <a
-            href="/get-involved"
-            className="mx-auto w-max cursor-pointer rounded-full bg-accent-900 px-9 py-5 text-xl font-semibold text-black transition-all duration-300 hover:scale-110 md:px-9 md:py-6  md:text-2xl lg:px-10 lg:py-7 lg:text-2xl xl:px-10 xl:py-7 xl:text-3xl"
-          >
-            Join Us
-          </a>
+        <div className="mx-auto mt-28 flex items-center sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-32">
+          <Link href="/get-involved">
+            <Button size="lg">Join Us</Button>
+          </Link>
         </div>
       </section>
       <Container className="flex items-center">
@@ -131,7 +130,7 @@ export default function Home() {
             events and activities catered towards the youth of Cyprus.
           </p>
         </div>
-        <div className="ml-20 md-lg:grid w-[45%] place-items-center hidden">
+        <div className="ml-20 hidden w-[45%] place-items-center md-lg:grid">
           <ImageGrid.Focus
             flow={"rhs"}
             images={[
@@ -144,14 +143,14 @@ export default function Home() {
       </Container>
       <WaveDivider.homeTop />
       <Container
-        backdrop="bg-primary-600"
+        backdrop="bg-ocean-600"
         className="flex flex-col items-center lg-xl:px-0"
       >
         <div className="flex justify-center md:justify-end">
           <Title text="Upcoming Events" order="h2" theme="light" />
         </div>
 
-        <ul className="py-10 flex flex-col sm:grid sm:grid-cols-2 lg:flex-row lg:flex gap-8 sm:gap-16 lg:gap-6 lg:justify-evenly lg:px-10">
+        <ul className="flex flex-col gap-8 py-10 sm:grid sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-row lg:justify-evenly lg:gap-6 lg:px-10">
           {upcomingEvents.map((event, i) => (
             <UpcomingEventCard
               key={i}
@@ -164,7 +163,7 @@ export default function Home() {
         </ul>
       </Container>
       <WaveDivider.homeBottom />
-      <Container className="mb-12 min-h-[40rem] h-max">
+      <Container className="mb-12 h-max min-h-[40rem]">
         <div className="flex flex-col gap-5">
           <div className=" flex justify-center md:justify-start">
             <Title

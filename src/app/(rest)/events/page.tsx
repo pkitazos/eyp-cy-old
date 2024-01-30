@@ -7,15 +7,15 @@ import {
   nsLogo,
   preselsLogo,
   ysLogo,
-} from "~/assets";
+} from "@/assets";
 import {
-  ActionButton,
   Container,
   EventTypeCard,
   SessionElementCard,
   Title,
   WaveDivider,
-} from "~/components";
+} from "@/components";
+import { Button } from "@/components/ui/button";
 
 export const runtime = "edge";
 
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 export default function Events() {
   return (
     <>
-      <Container className="mb-20 xl:mb-10 mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
-        <div className=" mb-10 md:mb-3 flex justify-center lg:justify-start">
+      <Container className="mb-20 mt-40 flex flex-col items-center md:mt-20 lg:mt-16 xl:mb-10">
+        <div className=" mb-10 flex justify-center md:mb-3 lg:justify-start">
           <Title text="Our Events" order="h1" />
         </div>
         <div className="flex shrink flex-col items-center gap-16 xl:grid xl:grid-cols-12 xl:grid-rows-4">
@@ -67,7 +67,7 @@ export default function Events() {
       </Container>
       <WaveDivider.eventsTop />
       <Container
-        backdrop="bg-primary-700"
+        backdrop="bg-ocean-700"
         className="flex h-[30rem] flex-col justify-around pt-10"
       >
         <div className=" flex justify-center">
@@ -79,8 +79,9 @@ export default function Events() {
           />
         </div>
         <div className="flex flex-row justify-center gap-8 md:gap-14 lg-xl:gap-24">
-          <ActionButton variant="link" text="School" href="/get-involved" />
-          <ActionButton variant="link" text="Individual" href="/get-involved" />
+          {/* // TODO: link to Google forms  */}
+          <Button>School</Button>
+          <Button>Individual</Button>
         </div>
       </Container>
       <WaveDivider.eventsBottom />
@@ -91,7 +92,7 @@ export default function Events() {
 
         <div className="flex flex-col items-center justify-center gap-20 xl:gap-40">
           <SessionElementCard
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full max-w-5xl md-lg:w-5/6"
             title="Teambuilding"
             imageURL={eventsTeamBuilding}
           >
@@ -105,7 +106,7 @@ export default function Events() {
             each other and begin functioning as a group.
           </SessionElementCard>
           <SessionElementCard
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full max-w-5xl md-lg:w-5/6"
             title="Committee Work"
             imageURL={eventsCommitteeWork}
             reverse
@@ -118,7 +119,7 @@ export default function Events() {
             debated upon during the General Assembly.
           </SessionElementCard>
           <SessionElementCard
-            className=" w-full md-lg:w-5/6 max-w-5xl"
+            className=" w-full max-w-5xl md-lg:w-5/6"
             title="General Assembly"
             imageURL={eventsGeneralAssembly}
           >

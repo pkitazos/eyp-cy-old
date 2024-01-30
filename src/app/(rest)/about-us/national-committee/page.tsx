@@ -8,13 +8,13 @@ import {
   ncSecretary,
   ncTreasurer,
   ncVp,
-} from "~/assets";
+} from "@/assets";
 import {
   Container,
   NCMemberCard,
   PreviousBoardButton,
   Title,
-} from "~/components";
+} from "@/components";
 import { previousBoardData } from "./previous-boards";
 
 export const runtime = "edge";
@@ -70,7 +70,7 @@ export default function NationalCommittee() {
   return (
     <>
       <>
-        <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col pb-16">
+        <Container className="mt-40 flex flex-col pb-16 md:mt-20 lg:mt-16">
           <div className="item-center flex flex-col items-center gap-6">
             <div className="">
               <Title
@@ -103,10 +103,10 @@ export default function NationalCommittee() {
             ))}
           </div>
         </Container>
-        <div className="flex justify-center mt-20 mb-24">
-          <div className="border-t-2 w-1/2 border-gray-300/50">&nbsp;</div>
+        <div className="mb-24 mt-20 flex justify-center">
+          <div className="w-1/2 border-t-2 border-gray-300/50">&nbsp;</div>
         </div>
-        <Container className="mt-16 mb-20 flex flex-col justify-center gap-2">
+        <Container className="mb-20 mt-16 flex flex-col justify-center gap-2">
           <div className=" flex justify-center">
             <Title text="Past Boards" order="h2" underline="rotate-[190deg]" />
           </div>

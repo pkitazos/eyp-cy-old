@@ -4,7 +4,6 @@ export {
   AccordionItem,
   AccordionTrigger,
 } from "./accordion";
-export { ActionButton } from "./action-button";
 export { Carousel } from "./carousel";
 export { CategoryCard } from "./category-card";
 export { Container } from "./container";

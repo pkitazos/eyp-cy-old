@@ -19,7 +19,7 @@ export function WhatWeDoCard({ title, info, imageURL, children: icon }: props) {
         alt=""
       />
       <div className="backdrop-blur-xl bg-white/50 relative mx-2 rounded-xl px-4 xs:px-8 py-6 transition-all duration-200 group-hover:scale-[1.02] h-60 xl:h-96 ml-0 sm:-ml-4 xl:-mx-1 xl:-mt-14 flex flex-col items-center justify-center">
-        <div className="absolute -left-3 -top-3 flex h-max items-center rounded-full bg-accent-900 p-4 sm:hidden">
+        <div className="absolute -left-3 -top-3 flex h-max items-center rounded-full bg-sun-900 p-4 sm:hidden">
           {icon}
         </div>
         <h3 className="self-center px-7 pb-4 text-center text-xl font-semibold sm:px-0">

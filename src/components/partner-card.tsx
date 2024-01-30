@@ -17,9 +17,7 @@ export function PartnerCard({ name, description, imageURL }: props) {
         alt=""
       />
       <div className="flex w-60 flex-col gap-5">
-        <h2 className="text-xl sm:text-2xl font-bold text-primary-700">
-          {name}
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-ocean-700">{name}</h2>
         <p className="text-lg">{description}</p>
       </div>
     </div>

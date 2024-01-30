@@ -1,6 +1,6 @@
 "use client";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface props {
@@ -50,26 +50,26 @@ export const Carousel = ({ children }: props) => {
   };
 
   return (
-    <div className="flex flex-row gap-10 items-center">
+    <div className="flex flex-row items-center gap-10">
       <button
         onClick={goPrev}
         disabled={state !== "idle"}
         className={cn(
           "rounded-sm p-2 py-0 text-gray-600",
-          state !== "idle" && "text-gray-200"
+          state !== "idle" && "text-gray-200",
         )}
       >
-        <ChevronLeft className="w-10 h-10" />
+        <ChevronLeft className="h-10 w-10" />
       </button>
       <div
-        className="w-full max-w-4xl rounded-lg overflow-hidden transition-all duration-500"
+        className="w-full max-w-4xl overflow-hidden rounded-lg transition-all duration-500"
         style={{ height: height }}
       >
         <div
           className={cn(
-            "w-[300%] grid-cols-3 grid items-start duration-500",
+            "grid w-[300%] grid-cols-3 items-start duration-500",
             state === "idle" && "-translate-x-1/3 transition-none",
-            state === "next" && "-translate-x-2/3"
+            state === "next" && "-translate-x-2/3",
           )}
         >
           <div ref={prevDiv}>{childs.at(prev)}</div>
@@ -82,10 +82,10 @@ export const Carousel = ({ children }: props) => {
         disabled={state !== "idle"}
         className={cn(
           "rounded-sm p-2 py-0 text-gray-600",
-          state !== "idle" && "text-gray-200"
+          state !== "idle" && "text-gray-200",
         )}
       >
-        <ChevronRight className="w-10 h-10" />
+        <ChevronRight className="h-10 w-10" />
       </button>
     </div>
   );

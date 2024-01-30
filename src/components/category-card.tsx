@@ -8,21 +8,21 @@ interface props {
   action?: () => void;
 }
 
-export const CategoryCard = ({ title, children: info, action }: props) => {
+export function CategoryCard({ title, children: info, action }: props) {
   return (
-    <div className=" h-max flex flex-col shadow-sm items-center gap-4 bg-gray-200/50 hover:bg-gray-300/50 px-4 py-6 sm:px-8 sm:py-12 rounded-md">
-      <div className="flex justify-start w-full">
+    <div className=" flex h-max flex-col items-center gap-4 rounded-md bg-gray-200/50 px-4 py-6 shadow-sm hover:bg-gray-300/50 sm:px-8 sm:py-12">
+      <div className="flex w-full justify-start">
         <Title
           className="font-semibold"
           text={title}
           order="h3"
-          underline="text-secondary-800 rotate-[176deg]"
+          underline="text-wave-800 rotate-[176deg]"
         />
       </div>
       <p className="mb-4 text-justify text-lg md:text-xl">{info}</p>
       {/* <div className="flex justify-end md:justify-center 3xl:justify-end w-full 3xl:pr-20">
-        <ActionButton text="Join" onClick={action} />
+        <Button onClick={action} >Join</Button>
       </div> */}
     </div>
   );
-};
+}

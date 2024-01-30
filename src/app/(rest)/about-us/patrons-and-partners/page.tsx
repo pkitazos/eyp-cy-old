@@ -1,12 +1,12 @@
 import { Metadata } from "next";
-import { partnerAnt1, partnerBoc, partnerVmlyr } from "~/assets";
+import { partnerAnt1, partnerBoc, partnerVmlyr } from "@/assets";
 import {
   Container,
   PartnerCard,
   PatronCard,
   Title,
   WaveDivider,
-} from "~/components";
+} from "@/components";
 
 export const runtime = "edge";
 
@@ -58,7 +58,7 @@ const partnerData = [
 export default function PatronsAndPartners() {
   return (
     <>
-      <Container className="mt-40 md:mt-20 lg:mt-16 flex flex-col items-center">
+      <Container className="mt-40 flex flex-col items-center md:mt-20 lg:mt-16">
         <div className=" mb-6 flex justify-center">
           <Title text="Our Patrons & Partners" order="h1" />
         </div>
@@ -72,7 +72,7 @@ export default function PatronsAndPartners() {
             includes
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-16 max-w-5xl">
+        <div className="flex max-w-5xl flex-wrap justify-center gap-16">
           {patronData.map((patron, i) => (
             <div key={i} className="">
               <PatronCard
@@ -92,8 +92,8 @@ export default function PatronsAndPartners() {
       </Container>
       <WaveDivider.patronsTop />
       <Container
-        backdrop="bg-primary-700"
-        className="pb-24 pt-3 flex flex-col items-center"
+        backdrop="bg-ocean-700"
+        className="flex flex-col items-center pb-24 pt-3"
       >
         <div className="">
           <div className="flex justify-center sm:justify-start">
@@ -110,7 +110,7 @@ export default function PatronsAndPartners() {
             its activities.
           </p>
         </div>
-        <div className="flex flex-wrap justify-evenly gap-x-5 gap-y-14 w-full max-w-8xl">
+        <div className="flex w-full max-w-8xl flex-wrap justify-evenly gap-x-5 gap-y-14">
           <div className="">
             <PatronCard
               name="Ursula von der Leyen"
@@ -130,7 +130,7 @@ export default function PatronsAndPartners() {
         </div>
       </Container>
       <WaveDivider.patronsBottom />
-      <Container className="flex flex-col items-center mb-24">
+      <Container className="mb-24 flex flex-col items-center">
         <div className="flex justify-center sm:justify-start">
           <Title text="Our Partners" order="h2" underline="rotate-12" />
         </div>
