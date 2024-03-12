@@ -43,42 +43,49 @@ const testimonials = [
 ];
 
 const upcomingEvents = [
+  // {
+  //   title: "Annual General Meeting",
+  //   description: "Where members meet for an overview of the organisation's past year and upcoming plans. A once-a-year opportunity: fun reunions, intense debates and exciting elections all in one event!",
+  //   date: "28/12/2023",
+  //   imageURL: events4,
+  // },
+  // {
+  //   title: "Pre-Selection Days",
+  //   description: "A small-scale annual event welcoming diverse school delegations to a day of vibrant debate!",
+  //   date: "01-03/03/2024",
+  //   imageURL: events1,
+  // },
+
   {
-    title: "Annual General Meeting",
-    description: "Short text about AGM goes here.",
-    date: "28/12/2023",
-    imageURL: events4,
-  },
-  {
-    title: "Pre-Selection Days",
-    description: "Short text about Pre-Selection Days goes here.",
-    date: "01-03/03/2024",
-    imageURL: events1,
+    title: "Discussion Forum",
+    description: "Rountables & Panel discussion on the upcoming EU elections!",
+    date: "31/03/2024",
+    imageURL: events2,
+    actionText: "Sign Up Now",
+    actionURL:
+      "https://docs.google.com/forms/d/1XzDQTFDot7hFkGjYk6wA9nc8W1WZCVw-AY5Vwokpgug/edit",
   },
   {
     title: "Days of EYP",
-    description: "Short text about Days of EYP goes here.",
+    description:
+      "An outreach event for any individual aged 15-17, wishing to participate in an EYP Cyprus event. Join us for a day of Team-Building, Committee Work and General Assembly!",
     date: "05-07/04/2024",
-    imageURL: events2,
+    imageURL: events1,
   },
-  // {
-  //   title: "Discussion Forum",
-  //   description: "Short text about Days of EYP goes here.",
-  //   date: "To Be Announced",
-  //   imageURL: events2,
-  // },
   {
     title: "8th Youth Summit",
-    description: "Short text about Youth Summit goes here.",
+    description:
+      "A 3-day conference inviting  individuals from 17-25 years old, to come together, discuss current affairs, exchange ideas and debate. No prior experience needed!",
     date: "25-28/07/2024",
     imageURL: events3,
   },
-  // {
-  //   title: "National Session",
-  //   description: "Short text about National Session goes here.",
-  //   date: "27/08/2024 - 31/08/2024",
-  //   imageURL: events4,
-  // },
+  {
+    title: "National Session",
+    description:
+      "EYP Cyprus' annual flagship event, welcoming over 200 participants to an intercultural space of interactive activities, productive dialogue and community!",
+    date: "27/08/2024 - 31/08/2024",
+    imageURL: events4,
+  },
 ];
 
 export const metadata: Metadata = {
@@ -159,6 +166,8 @@ export default function Home() {
               description={event.description}
               date={event.date}
               imageURL={event.imageURL}
+              actionText={event.actionText}
+              actionURL={event.actionURL}
             />
           ))}
         </ul>

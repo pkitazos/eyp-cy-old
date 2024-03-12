@@ -25,7 +25,7 @@ export function ActionButton(props: actionButtonProps) {
         {text}
       </a>
     );
-  } else if (props.variant === "button") {
+  } else {
     const { className, text, onClick, disabled } = props;
     return (
       <button

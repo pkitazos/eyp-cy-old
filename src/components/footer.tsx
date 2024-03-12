@@ -2,6 +2,8 @@
 import { WaveDivider } from "./wave-divider";
 import { Container } from "./container";
 import { Facebook, Instagram } from "lucide-react";
+import { XTwitterIcon } from "./icons/x-twitter-icon";
+import { DiscordIcon } from "./icons/discord-icon";
 
 // TODO: make phone number and email get copied to clipboard when clicked
 // TODO: try out icons instead of text in Contact us section
@@ -46,7 +48,13 @@ export function Footer() {
         </div>
         <div className="w-max">
           <h3 className="text-2xl font-semibold text-white">Follow us</h3>
-          <div className="ml-1 mt-3 flex gap-4">
+          <div className="ml-1 mt-3 flex items-center gap-4">
+            <a href="https://discord.com/invite/G69mWVPtX3" target="_blank">
+              <DiscordIcon className="w-7 text-white hover:text-secondary-700" />
+            </a>
+            <a href="https://twitter.com/EYP_Cyprus" target="_blank">
+              <XTwitterIcon className="w-7 text-white hover:text-secondary-700" />
+            </a>
             <a href="https://www.instagram.com/eypcyprus/" target="_blank">
               <Instagram className="w-7 text-white hover:text-secondary-700" />
             </a>

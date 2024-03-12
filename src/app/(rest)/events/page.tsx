@@ -36,32 +36,28 @@ export default function Events() {
             title="Pre-Selection Days"
             imageURL={preselsLogo}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            A small-scale annual event welcoming diverse school delegations to a day of vibrant debate!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Days of EYP"
             imageURL={daysLogo}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+           An outreach event for any individual aged 15-17, wishing to participate in an EYP Cyprus event. Join us for a day of interactive Team-Building, immersive Committee Work and an engaging General Assembly! An outreach event for any individual aged 15-17, wishing to participate in an EYP Cyprus event. Join us for a day of interactive Team-Building, immersive Committee Work and an engaging General Assembly!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Youth Summit"
             imageURL={ysLogo}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          A 3-day conference inviting young individuals from 17-25 years old, to come together, discuss current affairs, exchange ideas and debate. No prior EYP experience is needed!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="National Session"
             imageURL={nsLogo}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+           EYP Cyprus annual flagship event, welcoming over 200 participants to an intercultural space of interactive activities, productive dialogue and community!
           </EventTypeCard>
         </div>
       </Container>
