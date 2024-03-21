@@ -59,7 +59,7 @@ const upcomingEvents = [
   {
     title: "Discussion Forum",
     description: "Rountables & Panel discussion on the upcoming EU elections!",
-    date: "31/03/2024",
+    date: "30/03/2024",
     imageURL: events2,
     actionText: "Sign Up Now",
     actionURL:
