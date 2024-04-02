@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
+import { TestimonialDetails } from "~/app/(home)/content/testimonials";
 
 function QuoteIcon({ className }: { className: string }) {
   return (
@@ -9,19 +10,13 @@ function QuoteIcon({ className }: { className: string }) {
   );
 }
 
-interface props {
-  name: string;
-  description: string;
-  children: ReactNode;
-  imageURL: StaticImageData;
-}
-
 export function TestimonialCard({
-  name,
-  description,
+  testimonial: { name, description, imageURL },
   children: quote,
-  imageURL,
-}: props) {
+}: {
+  testimonial: TestimonialDetails;
+  children: ReactNode;
+}) {
   return (
     <figure className="relative rounded-2xl bg-white p-6">
       <QuoteIcon className="absolute left-6 top-6 fill-slate-100" />

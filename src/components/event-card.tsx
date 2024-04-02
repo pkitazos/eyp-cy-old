@@ -17,7 +17,7 @@ export function EventTypeCard({
   return (
     <>
       <a
-        href={`/events${slugify(title)}`}
+        href={`/events/${slugify(title)}`}
         className={cn(
           "flex h-max flex-col items-center gap-5 transition-all duration-300 hover:-translate-y-2.5 sm:flex-row xs:hover:translate-y-0",
           className

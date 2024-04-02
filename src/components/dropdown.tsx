@@ -11,7 +11,7 @@ export function Dropdown({ mainItem, items }: props) {
       <div className="group relative inline-block">
         <a
           className="cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black"
-          href={slugify(mainItem)}
+          href={`/${slugify(mainItem)}`}
         >
           {mainItem}
         </a>
@@ -21,7 +21,7 @@ export function Dropdown({ mainItem, items }: props) {
               <a
                 key={i}
                 className="block w-max cursor-pointer rounded-xl px-5 py-2 hover:bg-accent-900 hover:text-black"
-                href={`${slugify(mainItem)}${slugify(item)}`}
+                href={`/${slugify(mainItem)}/${slugify(item)}`}
               >
                 {item}
               </a>

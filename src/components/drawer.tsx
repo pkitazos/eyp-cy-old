@@ -16,7 +16,7 @@ export function Drawer({ mainItem, items }: props) {
     <Accordion type="single" collapsible className="w-full min-w-[16rem]">
       <AccordionItem value="item-1">
         <AccordionTrigger>
-          <a className="text-white text-2xl" href={slugify(mainItem)}>
+          <a className="text-white text-2xl" href={`/${slugify(mainItem)}`}>
             {mainItem}
           </a>
         </AccordionTrigger>
@@ -26,7 +26,7 @@ export function Drawer({ mainItem, items }: props) {
               <li key={item}>
                 <a
                   className="text-white text-xl"
-                  href={`${slugify(mainItem)}/${slugify(item)}`}
+                  href={`/${slugify(mainItem)}/${slugify(item)}`}
                 >
                   {item}
                 </a>

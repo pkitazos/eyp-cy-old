@@ -1,14 +1,14 @@
 import plugin from "tailwindcss/plugin";
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     screens: {
@@ -30,7 +30,6 @@ const config = {
       },
     },
     extend: {
-      
       colors: {
         "base-white": "#f9f9f9",
 
@@ -86,9 +85,9 @@ const config = {
       },
 
       backgroundImage: {
-        "underliner-secondary":
+        "gradient-secondary":
           "linear-gradient(transparent calc(100% - 10px), #33C5FF 5px);",
-        "underliner-orange":
+        "gradient-orange":
           "linear-gradient(transparent calc(100% - 10px), orange 5px);",
       },
 
@@ -128,7 +127,6 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
         "4xl": "2rem",
-
       },
       keyframes: {
         "accordion-down": {
@@ -146,15 +144,19 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), plugin(function ({addUtilities}){
-    addUtilities({
-      ".diamond-mask": {
-        maskImage: "url('/diamond-mask.svg')",
-        maskSize: "contain",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-      }})
-  })],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".diamond-mask": {
+          maskImage: "url('/diamond-mask.svg')",
+          maskSize: "contain",
+          maskRepeat: "no-repeat",
+          maskPosition: "center",
+        },
+      });
+    }),
+  ],
+} satisfies Config;
 
-export default config
+export default config;

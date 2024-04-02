@@ -5,7 +5,6 @@ export {
   AccordionTrigger,
 } from "./accordion";
 export { ActionButton } from "./action-button";
-export { Carousel } from "./carousel";
 export { CategoryCard } from "./category-card";
 export { Container } from "./container";
 export { DebugOverlay } from "./debug-overlay";
@@ -32,7 +31,6 @@ export { PartnerCard } from "./partner-card";
 export { PatronCard } from "./patron-card";
 export { PreviousBoardButton } from "./previous-board-button";
 export { SessionElementCard } from "./session-element-card";
-export { TestimonialCard } from "./testimonial-card";
 export { Textarea } from "./text-area";
 export { Title } from "./title";
 export {
@@ -47,7 +45,6 @@ export {
   type ToastProps,
 } from "./toast";
 export { Toaster } from "./toaster";
-export { UpcomingEventCard } from "./upcoming-event-card";
 export { reducer, toast, useToast } from "./use-toast";
 export { WaveDivider } from "./wave-divider";
 export { WhatWeDoCard } from "./what-we-do-card";
