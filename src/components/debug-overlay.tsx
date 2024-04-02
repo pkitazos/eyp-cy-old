@@ -1,6 +1,6 @@
 export function DebugOverlay() {
   return (
-    <div className="fixed z-50 top-5 left-5 media-debug py-2 px-3 rounded-xl grid place-items-center font-semibold">
+    <div className="fixed z-[99] top-5 left-5 media-debug py-2 px-3 rounded-xl grid place-items-center font-semibold">
       <h1 className="block xs:hidden">-</h1>
       <h1 className="hidden xs:block sm:hidden">xs</h1>
       <h1 className="hidden sm:block md:hidden">sm</h1>

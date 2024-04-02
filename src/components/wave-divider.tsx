@@ -86,6 +86,20 @@ const headerDiagonal = ({ className }: React.SVGProps<SVGElement>) => (
     viewBox="0 0 1000 650"
   />
 );
+const headerDiagonalSm = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack
+    className={className}
+    waveLayers={wavePaths.headerDiagonalSm}
+    viewBox="0 0 640 850"
+  />
+);
+const headerDiagonalXs = ({ className }: React.SVGProps<SVGElement>) => (
+  <WaveStack
+    className={className}
+    waveLayers={wavePaths.headerDiagonalXs}
+    viewBox="0 0 333 570"
+  />
+);
 const headerHorizontal = ({ className }: React.SVGProps<SVGElement>) => (
   <WaveStack className={className} waveLayers={wavePaths.headerHorizontal} />
 );
@@ -123,6 +137,8 @@ const aboutBottom = ({ className }: React.SVGProps<SVGElement>) => (
 
 export const WaveDivider = {
   headerDiagonal,
+  headerDiagonalSm,
+  headerDiagonalXs,
   headerHorizontal,
   footer,
   homeTop,

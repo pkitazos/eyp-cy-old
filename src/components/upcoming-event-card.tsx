@@ -30,25 +30,26 @@ export const UpcomingEventCard = ({
         className="hidden sm:block h-2/5 w-full object-cover"
         alt=""
       />
-      <div className="relative sm:h-3/5 p-6">
-        <span className="bg-underliner-orange bg-[length:0%_105%] group-hover:bg-[length:100%_105%] bg-no-repeat transition-[background-size] duration-500">
-          <span className="w-max text-xl font-semibold text-primary-800">
-            {title}
+      <div className="flex flex-col justify-between sm:h-3/5 p-6">
+        <div>
+          <span className="bg-underliner-orange bg-[length:0%_105%] group-hover:bg-[length:100%_105%] bg-no-repeat transition-[background-size] duration-500">
+            <span className="w-max text-xl font-semibold text-primary-800">
+              {title}
+            </span>
+            <br />
+            <span className="font-semibold">{date}</span>
           </span>
-          <br />
-          <span className="font-semibold">{date}</span>
-        </span>
-        <div className="block sm:hidden mt-1 h-1 w-8 bg-orange-500">&nbsp;</div>
-        <p className="mt-2 sm:mt-3 pb-6 leading-normal text-justify tracking-tight">
-          {description}
-        </p>
+          <div className="block sm:hidden mt-1 h-1 w-8 bg-orange-500">
+            &nbsp;
+          </div>
+          <p className="mt-2 sm:mt-3 pb-6 leading-normal text-justify tracking-tight">
+            {description}
+          </p>
+        </div>
         {actionText && actionURL && (
-          <Link
-            className="absolute left-0 bottom-8 w-full mt-3 flex justify-center"
-            href={actionURL}
-          >
+          <Link className="w-full mt-3 flex justify-center" href={actionURL}>
             <Button
-              className="bg-accent-900 rounded-md font-bold hover:bg-accent-800 text-white text-lg w-5/6"
+              className="w-full bg-accent-900 rounded-md font-bold hover:bg-accent-800 text-white text-lg"
               size="lg"
               variant="destructive"
             >
