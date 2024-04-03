@@ -1,6 +1,6 @@
 "use client";
 import type { ReactNode } from "react";
-import { Title } from "./title";
+import { Title } from "~/components/title";
 
 interface props {
   title: string;
@@ -20,9 +20,6 @@ export const CategoryCard = ({ title, children: info, action }: props) => {
         />
       </div>
       <p className="mb-4 text-justify text-lg md:text-xl">{info}</p>
-      {/* <div className="flex justify-end md:justify-center 3xl:justify-end w-full 3xl:pr-20">
-        <ActionButton text="Join" onClick={action} />
-      </div> */}
     </div>
   );
 };

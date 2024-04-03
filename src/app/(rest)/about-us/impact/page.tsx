@@ -1,12 +1,10 @@
 import { Metadata } from "next";
 import { impact1, impact2, impact3, impact4, impact5, impact6 } from "~/assets";
-import { Container, Divider, InfoCard, Title } from "~/components";
+import { Container, Divider, Title } from "~/components";
+import { InfoCard } from "./_components/info-card";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Impact",
-};
+export const metadata: Metadata = { title: "Impact" };
 
 export default function Impact() {
   return (

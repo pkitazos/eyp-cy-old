@@ -7,13 +7,11 @@ import {
   ysLogo,
   ysTeamBuilding,
 } from "~/assets";
-import { Container, Divider, SessionElementCard, Title } from "~/components";
+import { Container, Divider, Title } from "~/components";
+import { SessionElementCard } from "../_components";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Youth Summt",
-};
+export const metadata: Metadata = { title: "Youth Summt" };
 
 export default function YouthSummit() {
   return (

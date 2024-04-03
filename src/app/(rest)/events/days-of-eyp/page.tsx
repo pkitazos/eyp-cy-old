@@ -6,13 +6,12 @@ import {
   daysLogo,
   daysTeamBuilding,
 } from "~/assets";
-import { Container, Divider, SessionElementCard, Title } from "~/components";
+import { Container, Divider, Title } from "~/components";
+import { SessionElementCard } from "../_components";
 
 export const runtime = "edge";
 
-export const metadata: Metadata = {
-  title: "Days of EYP",
-};
+export const metadata: Metadata = { title: "Days of EYP" };
 
 export default function DaysOfEYP() {
   return (

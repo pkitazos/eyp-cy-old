@@ -1,7 +1,7 @@
 "use client";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Children, ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "~/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface props {
   children: ReactNode;

@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-import { ReactNode } from "react";
 import { testimonialElena, testimonialMaddie, testimonialTheo } from "~/assets";
 
 export type TestimonialDetails = {

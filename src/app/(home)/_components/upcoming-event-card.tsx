@@ -1,18 +1,16 @@
-import { StaticImageData } from "next/image";
 import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
+import { Button } from "~/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { UpcomingEvent } from "../content/upcoming-events";
 import { toDateString } from "~/lib/utils/to-date-string";
-import Link from "next/link";
-import { Button } from "~/components/ui/button";
-import { ReactNode } from "react";
+import { UpcomingEvent } from "../_content/upcoming-events";
 
 export function UpcomingEventCard({
   event: { title, date, description, imageURL, actionText, actionURL },

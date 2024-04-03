@@ -1,4 +1,4 @@
-export const previousBoardData = [
+export const previousNationalCommittees = [
   {
     year: "2007",
     members: [

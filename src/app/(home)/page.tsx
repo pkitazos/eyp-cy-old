@@ -3,7 +3,7 @@ import Link from "next/link";
 import { dWhoWeAre1, dWhoWeAre2, dWhoWeAre3 } from "~/assets";
 import { Container, ImageGrid, Title, WaveDivider } from "~/components";
 import { Carousel, TestimonialCard, UpcomingEventCard } from "./_components";
-import { testimonials, upcomingEvents } from "./content";
+import { testimonials, upcomingEvents } from "./_content";
 
 export const metadata: Metadata = {
   title: "EYP CY - Home",

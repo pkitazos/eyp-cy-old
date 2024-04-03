@@ -1,12 +1,9 @@
 import { Metadata } from "next";
-import { CategoryCard, Container, Divider, Title } from "~/components";
-import { ContactForm } from "./contact-form";
+import { Container, Divider, Title } from "~/components";
+import { CategoryCard, ContactForm } from "./_components";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Get Involved",
-};
+export const metadata: Metadata = { title: "Get Involved" };
 
 export default function GetInvolved() {
   return (

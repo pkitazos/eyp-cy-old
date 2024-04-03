@@ -5,13 +5,11 @@ import {
   preselsLogo,
   preselsTeamBuilding,
 } from "~/assets";
-import { Container, Divider, SessionElementCard, Title } from "~/components";
+import { Container, Divider, Title } from "~/components";
+import { SessionElementCard } from "../_components";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Pre-Selection Days",
-};
+export const metadata: Metadata = { title: "Pre-Selection Days" };
 
 export default function PreSelectionDays() {
   return (

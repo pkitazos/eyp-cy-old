@@ -1,59 +1,10 @@
 import { Metadata } from "next";
-import { partnerAnt1, partnerBoc, partnerVmlyr } from "~/assets";
-import {
-  Container,
-  PartnerCard,
-  PatronCard,
-  Title,
-  WaveDivider,
-} from "~/components";
+import { Container, Title, WaveDivider } from "~/components";
+import { PartnerCard, PatronCard } from "./_components";
+import { partnerData, patronData } from "./_content";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Patrons & Partners",
-};
-
-const patronData = [
-  {
-    name: "Mr. Andreas Kettis",
-    title: "Head of the European Parliament Liaison Office in Cyprus",
-  },
-  {
-    name: "Ambassador Kornelios Korneliou",
-    title: "Permanent Secretary at the Ministry of Foreign Affairs",
-  },
-  {
-    name: "Ms. Antigoni Papaphilippou",
-    title: "Head of Public Relations of Antenna and President of THOC",
-  },
-  {
-    name: "Mr. Constantinos Yiorkadjis",
-    title: "Mayor of Nicosia",
-  },
-  {
-    name: "Mr. Panayiotis Sentonas",
-    title: "Commissioner for the Citizen",
-  },
-];
-
-const partnerData = [
-  {
-    name: "BoC",
-    description: "A short description about your partner BoC",
-    imageURL: partnerBoc,
-  },
-  {
-    name: "Ant1",
-    description: "A short description about your partner Ant1",
-    imageURL: partnerAnt1,
-  },
-  // {
-  //   name: "VMLY&R",
-  //   description: "A short description about your partner VMLY&R",
-  //   imageURL: partnerVmlyr,
-  // },
-];
+export const metadata: Metadata = { title: "Patrons & Partners" };
 
 export default function PatronsAndPartners() {
   return (

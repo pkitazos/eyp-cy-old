@@ -1,6 +1,6 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import type { ReactNode } from "react";
-import { TestimonialDetails } from "~/app/(home)/content/testimonials";
+import { TestimonialDetails } from "../_content/testimonials";
 
 function QuoteIcon({ className }: { className: string }) {
   return (

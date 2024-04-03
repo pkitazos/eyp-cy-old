@@ -8,20 +8,11 @@ import {
   preselsLogo,
   ysLogo,
 } from "~/assets";
-import {
-  ActionButton,
-  Container,
-  EventTypeCard,
-  SessionElementCard,
-  Title,
-  WaveDivider,
-} from "~/components";
+import { ActionButton, Container, Title, WaveDivider } from "~/components";
+import { EventTypeCard, SessionElementCard } from "./_components";
 
 export const runtime = "edge";
-
-export const metadata: Metadata = {
-  title: "Events",
-};
+export const metadata: Metadata = { title: "Events" };
 
 export default function Events() {
   return (
@@ -36,28 +27,39 @@ export default function Events() {
             title="Pre-Selection Days"
             imageURL={preselsLogo}
           >
-            A small-scale annual event welcoming diverse school delegations to a day of vibrant debate!
+            A small-scale annual event welcoming diverse school delegations to a
+            day of vibrant debate!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-2 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Days of EYP"
             imageURL={daysLogo}
           >
-           An outreach event for any individual aged 15-17, wishing to participate in an EYP Cyprus event. Join us for a day of interactive Team-Building, immersive Committee Work and an engaging General Assembly! An outreach event for any individual aged 15-17, wishing to participate in an EYP Cyprus event. Join us for a day of interactive Team-Building, immersive Committee Work and an engaging General Assembly!
+            An outreach event for any individual aged 15-17, wishing to
+            participate in an EYP Cyprus event. Join us for a day of interactive
+            Team-Building, immersive Committee Work and an engaging General
+            Assembly! An outreach event for any individual aged 15-17, wishing
+            to participate in an EYP Cyprus event. Join us for a day of
+            interactive Team-Building, immersive Committee Work and an engaging
+            General Assembly!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-3 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="Youth Summit"
             imageURL={ysLogo}
           >
-          A 3-day conference inviting young individuals from 17-25 years old, to come together, discuss current affairs, exchange ideas and debate. No prior EYP experience is needed!
+            A 3-day conference inviting young individuals from 17-25 years old,
+            to come together, discuss current affairs, exchange ideas and
+            debate. No prior EYP experience is needed!
           </EventTypeCard>
           <EventTypeCard
             className=" col-span-9 col-start-4 row-span-1 xl:max-w-4xl 2xl:max-w-5xl"
             title="National Session"
             imageURL={nsLogo}
           >
-           EYP Cyprus annual flagship event, welcoming over 200 participants to an intercultural space of interactive activities, productive dialogue and community!
+            EYP Cyprus annual flagship event, welcoming over 200 participants to
+            an intercultural space of interactive activities, productive
+            dialogue and community!
           </EventTypeCard>
         </div>
       </Container>

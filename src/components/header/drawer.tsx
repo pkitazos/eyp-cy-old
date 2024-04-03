@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./accordion";
+} from "../accordion";
 
 interface props {
   mainItem: string;
