@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { dWhoWeAre1, dWhoWeAre2, dWhoWeAre3 } from "~/assets";
 import { Container, ImageGrid, Title, WaveDivider } from "~/components";
+import { dWhoWeAre1, dWhoWeAre2, dWhoWeAre3 } from "./_assets/who-we-are";
 import { Carousel, TestimonialCard, UpcomingEventCard } from "./_components";
 import { testimonials, upcomingEvents } from "./_content";
 

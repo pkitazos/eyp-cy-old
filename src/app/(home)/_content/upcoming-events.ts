@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import { events1, events2, events3, events4 } from "~/assets";
 import { DateRange, SingleDate } from "~/lib/utils/to-date-string";
+import { events3, events4 } from "../_assets/upcoming-events";
 
 export type UpcomingEvent = {
   title: string;

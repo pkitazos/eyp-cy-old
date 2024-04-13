@@ -1,18 +1,26 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { Container, Divider, Title } from "~/components";
+import { nsLogo } from "../_assets/logos";
 import {
   nsCommitteeWork,
+  nsDiscussingEurope,
+  nsEveningActivity,
   nsGeneralAssembly,
   nsTeamBuilding,
-  nsDiscussingEurope,
-  nsLogo,
-  nsEveningActivity,
-} from "~/assets";
-import { Container, Divider, Title } from "~/components";
+} from "../_assets/session-elements";
 import { SessionElementCard } from "../_components";
+import {
+  COMMITTEE_WORK,
+  DISCUSSING_EUROPE,
+  EVENING_ACTIVITY,
+  GENERAL_ASSEMBLY,
+  NATIONAL_SESSION,
+  TEAMBUILDING,
+} from "../_content";
 
-export const runtime = "edge";
 export const metadata: Metadata = { title: "National Session" };
+export const runtime = "edge";
 
 export default function NationalSession() {
   return (
@@ -30,28 +38,11 @@ export default function NationalSession() {
             <Title text="National Session" order="h1" />
           </div>
           <p className="text-justify text-lg leading-relaxed md:text-xl">
-            National Sessions are our flagship, annual event which welcomes
-            approximately 200 participants from all over Cyprus as well as
-            participants from all over Europe. The conference takes place over 5
-            days where young participants have the opportunity to discuss
-            amongst teams, but also with experts and high profile decision
-            makers, topics that Cyprus and Europe currently face. With the
-            National Session being the biggest annual event organised by EYP
-            Cyprus, its activities highlight the importance of teamwork,
-            dialogue and cooperation and provide the young participants with an
-            invaluable, eye-opening experience. The students, who are divided
-            into 10 committees, are given a unique educational opportunity to
-            discuss current European topics and come up with their own
-            resolutions to these problems. This experience enables them to gain
-            and develop invaluable skills as well as understand how policy
-            making works at a European level. The event is supported by the
-            European Parliament Office in Cyprus. This year the National Session
-            will take place in July! You can get information by contacting us.
+            {NATIONAL_SESSION}
           </p>
         </div>
       </Container>
       <Divider className="mt-20 md:mt-28 xl:mt-32 mb-20 md:mb-32" />
-
       <Container className="mb-16 xl:mb-20 2xl:mb-32">
         <div className="mb-3 flex justify-center">
           <Title text="Session Program" order="h2" />
@@ -62,14 +53,7 @@ export default function NationalSession() {
             title="Teambuilding"
             imageURL={nsTeamBuilding}
           >
-            Team building in the context of the European Youth Parliament, means
-            communication training, focused on group dynamics. The fundamental
-            purpose of team building is to get a disparate group of individuals
-            working as a team, through a series of physical, theoretical and
-            problem-solving activities. Under the guidance of their committee
-            Chairperson, the delegates will participate in a series of group
-            dynamic exercises and problem-solving tasks, in order to get to know
-            each other and begin functioning as a group.
+            {TEAMBUILDING}
           </SessionElementCard>
           <SessionElementCard
             className="w-full md-lg:w-5/6 max-w-5xl"
@@ -77,22 +61,14 @@ export default function NationalSession() {
             imageURL={nsCommitteeWork}
             reverse
           >
-            This is the central part of any EYP session. After team-building,
-            the delegates come together to discuss their allocated topics, and
-            will explore the skills needed to discuss, debate and communicate
-            effectively within their committee. The goal of Committee work is
-            the production of a strong and meaningful resolution, that will be
-            debated upon during the General Assembly.
+            {COMMITTEE_WORK}
           </SessionElementCard>
           <SessionElementCard
             className="w-full md-lg:w-5/6 max-w-5xl"
             title="Evening Activities"
             imageURL={nsEveningActivity}
           >
-            To complement the academic elements of our sessions, our organising
-            teams prepare unique evening programmes each year which engage
-            participants and aim to provide a space for socialising and fun
-            inter-team interactions
+            {EVENING_ACTIVITY}
           </SessionElementCard>
           <SessionElementCard
             title="Discussing Europe"
@@ -100,21 +76,14 @@ export default function NationalSession() {
             imageURL={nsDiscussingEurope}
             reverse
           >
-            Discussing Europe has been established as an annual happening at our
-            sessions - an event welcoming various guests in a panel discussion
-            centred around the session theme. During this event, participants
-            have the opportunity to interact with professionals with expertise
-            in the field, as well as experienced political figures.
+            {DISCUSSING_EUROPE}
           </SessionElementCard>
           <SessionElementCard
             className="w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
             imageURL={nsGeneralAssembly}
           >
-            The General Assembly reunites all the participants of the session to
-            consider the results of committee work. Each committee presents and
-            defends their motion for a resolution, which is then debated
-            according to the current model of the European Parliament.
+            {GENERAL_ASSEMBLY}
           </SessionElementCard>
         </div>
       </Container>

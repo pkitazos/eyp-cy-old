@@ -1,15 +1,13 @@
 import { Metadata } from "next";
+import { ActionButton, Container, Title, WaveDivider } from "~/components";
 import {
-  daysLogo,
   eventsCommitteeWork,
   eventsGeneralAssembly,
   eventsTeamBuilding,
-  nsLogo,
-  preselsLogo,
-  ysLogo,
-} from "~/assets";
-import { ActionButton, Container, Title, WaveDivider } from "~/components";
+} from "./_assets/session-elements/events";
+import { daysLogo, nsLogo, preselsLogo, ysLogo } from "./_assets/logos";
 import { EventTypeCard, SessionElementCard } from "./_components";
+import { COMMITTEE_WORK, GENERAL_ASSEMBLY, TEAMBUILDING } from "./_content";
 
 export const runtime = "edge";
 export const metadata: Metadata = { title: "Events" };
@@ -93,14 +91,7 @@ export default function Events() {
             title="Teambuilding"
             imageURL={eventsTeamBuilding}
           >
-            Team building in the context of the European Youth Parliament, means
-            communication training, focused on group dynamics. The fundamental
-            purpose of team building is to get a disparate group of individuals
-            working as a team, through a series of physical, theoretical and
-            problem-solving activities. Under the guidance of their committee
-            Chairperson, the delegates will participate in a series of group
-            dynamic exercises and problem-solving tasks, in order to get to know
-            each other and begin functioning as a group.
+            {TEAMBUILDING}
           </SessionElementCard>
           <SessionElementCard
             className=" w-full md-lg:w-5/6 max-w-5xl"
@@ -108,22 +99,14 @@ export default function Events() {
             imageURL={eventsCommitteeWork}
             reverse
           >
-            This is the central part of any EYP session. After team-building,
-            the delegates come together to discuss their allocated topics, and
-            will explore the skills needed to discuss, debate and communicate
-            effectively within their committee. The goal of Committee work is
-            the production of a strong and meaningful resolution, that will be
-            debated upon during the General Assembly.
+            {COMMITTEE_WORK}
           </SessionElementCard>
           <SessionElementCard
             className=" w-full md-lg:w-5/6 max-w-5xl"
             title="General Assembly"
             imageURL={eventsGeneralAssembly}
           >
-            The General Assembly reunites all the participants of the session to
-            consider the results of committee work. Each committee presents and
-            defends their motion for a resolution, which is then debated
-            according to the current model of the European Parliament.
+            {GENERAL_ASSEMBLY}
           </SessionElementCard>
         </div>
       </Container>

@@ -1,5 +1,9 @@
 import { StaticImageData } from "next/image";
-import { testimonialElena, testimonialMaddie, testimonialTheo } from "~/assets";
+import {
+  testimonialElena,
+  testimonialMaddie,
+  testimonialTheo,
+} from "../_assets/testimonials";
 
 export type TestimonialDetails = {
   name: string;
