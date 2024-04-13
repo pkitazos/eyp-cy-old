@@ -2,15 +2,16 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
-import { whiteLong } from "~/assets/logos";
+import { whiteLong } from "~/assets";
 import { cn, debounce } from "~/lib/utils";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
 
 const HeaderLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="w-3/4 max-w-[15rem] xs:w-3/5 xs:max-w-[17rem] sm:w-2/5 sm:max-w-none md:w-1/3 lg:w-1/5 lg-xl:w-80 xl:w-80"
     >
@@ -21,7 +22,7 @@ const HeaderLogo = () => {
         src={whiteLong}
         alt="EYP Cyprus logo"
       />
-    </a>
+    </Link>
   );
 };
 
@@ -62,9 +63,9 @@ function MobileNav() {
               </button>
             </Popover.Button>
             <nav className="flex flex-col gap-5">
-              <a className="text-white text-2xl" href="/">
+              <Link className="text-white text-2xl" href="/">
                 Home
-              </a>
+              </Link>
               <Drawer
                 mainItem="About Us"
                 items={["Patrons & Partners", "Impact", "National Committee"]}
@@ -79,9 +80,9 @@ function MobileNav() {
                 ]}
               />
               {/* <Drawer mainItem="Public Relations" items={["Press Releases"]} /> */}
-              <a className="text-white text-2xl" href="/get-involved">
+              <Link className="text-white text-2xl" href="/get-involved">
                 Get Involved
-              </a>
+              </Link>
             </nav>
           </Popover.Panel>
         </Transition.Child>

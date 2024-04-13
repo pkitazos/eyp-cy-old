@@ -1,5 +1,6 @@
 import { Source_Sans_3 } from "next/font/google";
-import { Footer, Toaster } from "~/components";
+import { Toaster } from "sonner";
+import { Footer } from "~/components";
 import "./app.css";
 
 const sourceSans3 = Source_Sans_3({

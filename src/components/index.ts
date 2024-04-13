@@ -23,17 +23,4 @@ export { ImageGrid } from "./image-grid";
 export { Input } from "./input";
 export { Textarea } from "./text-area";
 export { Title } from "./title";
-export {
-  Toast,
-  ToastAction,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastTitle,
-  ToastViewport,
-  type ToastActionElement,
-  type ToastProps,
-} from "./toast";
-export { Toaster } from "./toaster";
-export { reducer, toast, useToast } from "./use-toast";
 export { WaveDivider } from "./wave-divider";

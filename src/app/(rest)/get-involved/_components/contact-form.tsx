@@ -1,8 +1,9 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
-import { ActionButton, Input, Textarea, useToast } from "~/components";
+import { ActionButton, Input, Textarea } from "~/components";
 
 const formSchema = z.object({
   name: z.string().min(2, "Please enter a Name"),
@@ -14,8 +15,6 @@ const formSchema = z.object({
 type formData = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const { toast } = useToast();
-
   const {
     register,
     handleSubmit,
@@ -40,19 +39,12 @@ export function ContactForm() {
     })
       .then((message) => {
         console.log(message);
-        toast({
-          variant: "success",
-          title: "Sent",
-          description: "Message delivered successfully.",
-        });
+        toast.success("Message delivered successfully.");
       })
       .catch(() => {
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description:
-            "Something went wrong while sending your mesasge. Please try again later.",
-        });
+        toast.error(
+          "Something went wrong while sending your mesasge. Please try again later."
+        );
       });
 
     reset();
