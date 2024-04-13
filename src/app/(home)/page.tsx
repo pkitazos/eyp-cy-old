@@ -5,9 +5,7 @@ import { Container, ImageGrid, Title, WaveDivider } from "~/components";
 import { Carousel, TestimonialCard, UpcomingEventCard } from "./_components";
 import { testimonials, upcomingEvents } from "./_content";
 
-export const metadata: Metadata = {
-  title: "EYP CY - Home",
-};
+export const metadata: Metadata = { title: "EYP CY - Home" };
 export const runtime = "edge";
 
 export default function Home() {
@@ -49,7 +47,7 @@ export default function Home() {
             <br />
             <br />
             The European Youth Parliament Cyprus is a non-governmental,
-            non-partisan organisation and one of the 41 National Committees that
+            non-partisan organisation and one of the 38 National Committees that
             come under the umbrella of the Pan-European EYP Network. EYP Cyprus
             was established in 2006 and has been actively working to organise
             events and activities catered towards the youth of Cyprus.
@@ -71,10 +69,10 @@ export default function Home() {
         backdrop="bg-primary-600"
         className="flex flex-col items-center lg-xl:px-0"
       >
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-start md:max-w-7xl w-full">
           <Title text="Upcoming Events" order="h2" theme="light" />
         </div>
-        <div className="no-scrollbar relative w-full max-w-5xl overflow-x-scroll py-10 gap-10 items-center sm:items-stretch flex flex-col sm:grid sm:grid-cols-2 sm:justify-items-center sm:gap-y-16 lg:flex-row lg:flex lg:gap-6 lg:justify-evenly">
+        <div className="no-scrollbar relative w-full max-w-7xl overflow-x-scroll py-10 gap-10 items-center sm:grid sm:grid-cols-2 xl:flex xl:items-stretch flex flex-col justify-center sm:gap-y-16 xl:flex-row xl:gap-6 xl:justify-start">
           {upcomingEvents.map((event, i) => (
             <UpcomingEventCard key={i} event={event} />
           ))}
@@ -83,7 +81,7 @@ export default function Home() {
       <WaveDivider.homeBottom />
       <Container className="mb-12 min-h-[40rem] h-max">
         <div className="flex flex-col gap-5">
-          <div className=" flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start">
             <Title
               text="Testimonials"
               order="h2"

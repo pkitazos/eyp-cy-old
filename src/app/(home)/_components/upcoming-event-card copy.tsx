@@ -19,15 +19,15 @@ export function UpcomingEventCard({
 }) {
   return (
     <Wrapper hasAction={!!actionText} actionURL={actionURL}>
-      <Card className="max-w-lg w-full xl:max-w-none shrink-0 border-none cursor-default group xl:w-72 flex flex-col overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]">
+      <Card className="max-w-lg w-full sm:max-w-none shrink-0 border-none cursor-default group sm:w-60 flex flex-col overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-all duration-300 hover:scale-[1.02]">
         <Image
           width={200}
           height={150}
           src={imageURL}
-          className="hidden xl:block h-[14rem] w-full object-cover"
+          className="hidden sm:block h-2/5 w-full object-cover"
           alt=""
         />
-        <div className="flex flex-col justify-start xl:h-3/5">
+        <div className="flex flex-col justify-start sm:h-3/5">
           <CardHeader>
             <CardTitle>
               <span className="bg-gradient-orange bg-[length:0%_105%] group-hover:bg-[length:100%_105%] bg-no-repeat transition-[background-size] duration-500">
@@ -38,11 +38,11 @@ export function UpcomingEventCard({
               {toDateString(date)}
             </CardDescription>
           </CardHeader>
-          <div className="ml-6 block xl:hidden mt-1 mb-2.5 h-1 w-8 bg-orange-500">
+          <div className="ml-6 block sm:hidden mt-1 mb-2.5 h-1 w-8 bg-orange-500">
             &nbsp;
           </div>
           <CardContent className="flex flex-col justify-between">
-            <p className="mt-2 xl:mt-3 pb-6 leading-normal text-justify tracking-tight">
+            <p className="mt-2 sm:mt-3 pb-6 leading-normal text-justify tracking-tight">
               {description}
             </p>
             {actionText && (
@@ -79,7 +79,7 @@ function Wrapper({
 
   return (
     <Link
-      className="block xl:flex cursor-pointer shrink-0 group max-w-lg xl:w-72"
+      className="block sm:flex cursor-pointer shrink-0 group max-w-lg sm:w-60"
       href={actionURL}
     >
       {children}
