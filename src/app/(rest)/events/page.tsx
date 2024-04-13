@@ -4,13 +4,13 @@ import {
   eventsCommitteeWork,
   eventsGeneralAssembly,
   eventsTeamBuilding,
-} from "./_assets/session-elements/events";
+} from "./_assets/session-elements";
 import { daysLogo, nsLogo, preselsLogo, ysLogo } from "./_assets/logos";
 import { EventTypeCard, SessionElementCard } from "./_components";
 import { COMMITTEE_WORK, GENERAL_ASSEMBLY, TEAMBUILDING } from "./_content";
 
-export const runtime = "edge";
 export const metadata: Metadata = { title: "Events" };
+export const runtime = "edge";
 
 export default function Events() {
   return (

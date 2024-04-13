@@ -3,8 +3,8 @@ import { Container, Title, WaveDivider } from "~/components";
 import { PartnerCard, PatronCard } from "./_components";
 import { partnerData, patronData } from "./_content";
 
-export const runtime = "edge";
 export const metadata: Metadata = { title: "Patrons & Partners" };
+export const runtime = "edge";
 
 export default function PatronsAndPartners() {
   return (

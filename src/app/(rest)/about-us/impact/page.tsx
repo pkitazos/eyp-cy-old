@@ -8,7 +8,7 @@ import {
   impact5,
   impact6,
 } from "./_assets";
-import { InfoCard } from "./_components/info-card";
+import { InfoCard } from "./_components";
 
 export const metadata: Metadata = { title: "Impact" };
 export const runtime = "edge";

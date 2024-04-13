@@ -25,8 +25,8 @@ import {
 } from "./_assets";
 import { WhatWeDoCard } from "./_components";
 
-export const runtime = "edge";
 export const metadata: Metadata = { title: "About Us" };
+export const runtime = "edge";
 
 export default function AboutUs() {
   return (

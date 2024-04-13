@@ -3,8 +3,8 @@ import { Container, Title } from "~/components";
 import { NCMemberCard, PreviousBoardButton } from "./_components";
 import { nationalCommittee, previousNationalCommittees } from "./_content";
 
-export const runtime = "edge";
 export const metadata: Metadata = { title: "National Committee" };
+export const runtime = "edge";
 
 export default function NationalCommittee() {
   return (

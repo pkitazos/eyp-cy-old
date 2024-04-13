@@ -3,7 +3,7 @@ import {
   testimonialElena,
   testimonialMaddie,
   testimonialTheo,
-} from "../_assets/testimonials";
+} from "../_assets";
 
 export type TestimonialDetails = {
   name: string;
