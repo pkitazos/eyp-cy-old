@@ -1,6 +1,13 @@
-import { BookIcon, NetworkIcon, PenIcon } from "lucide-react";
+import { BookIcon, Globe, MessageCircle, PenIcon } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import {
+  Container,
+  Divider,
+  ImageGrid,
+  Title,
+  WaveDivider,
+} from "~/components";
 import {
   dAboutUs1,
   dAboutUs2,
@@ -15,16 +22,8 @@ import {
   whatWeDo2,
   whatWeDo3,
   whatWeDo4,
-} from "~/assets";
-import {
-  Container,
-  Divider,
-  ImageGrid,
-  Title,
-  WaveDivider,
-} from "~/components";
+} from "./_assets";
 import { WhatWeDoCard } from "./_components";
-import { ChatIcon } from "./_components/icons";
 
 export const runtime = "edge";
 export const metadata: Metadata = { title: "About Us" };
@@ -118,7 +117,7 @@ export default function AboutUs() {
             info="Through the EYP international network, we support intercultural understanding and peacebuilding by connecting young Cypriots with other Europeans from different backgrounds to share ideas, opinions and practices."
             imageURL={whatWeDo2}
           >
-            <ChatIcon className="w-7 p-0.5 text-white" />
+            <MessageCircle className="w-7 p-0.5 text-white" />
           </WhatWeDoCard>
 
           <WhatWeDoCard
@@ -134,7 +133,7 @@ export default function AboutUs() {
             info="We create a network of the next generation of diverse, young changemakers, equipped with the knowledge and skills needed to positively shape the world around them."
             imageURL={whatWeDo4}
           >
-            <NetworkIcon className="w-7 p-0.5 text-white" />
+            <Globe className="w-7 p-0.5 text-white" />
           </WhatWeDoCard>
         </div>
       </Container>

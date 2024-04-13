@@ -1,4 +1,4 @@
-import { partnerAnt1, partnerBoc, partnerVmlyr } from "~/assets";
+import { partnerAnt1, partnerBoc, partnerVmlyr } from "../_assets/partners";
 
 export const partnerData = [
   {

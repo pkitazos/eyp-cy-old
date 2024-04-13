@@ -1,12 +1,12 @@
 "use client";
 import { Popover, Transition } from "@headlessui/react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
+import { whiteLong } from "~/assets/logos";
 import { cn, debounce } from "~/lib/utils";
 import { Drawer } from "./drawer";
 import { Dropdown } from "./dropdown";
-import { Menu, X } from "lucide-react";
-import { whiteLong } from "~/assets";
 
 const HeaderLogo = () => {
   return (
