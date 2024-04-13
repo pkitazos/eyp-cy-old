@@ -31,16 +31,6 @@ export {
   nsLogo,
   nsTeamBuilding,
 } from "./national-session";
-export {
-  ncHr,
-  ncNatco1,
-  ncNatco2,
-  ncPr,
-  ncPresi,
-  ncSecretary,
-  ncTreasurer,
-  ncVp,
-} from "./nc";
 export { partnerAnt1, partnerBoc, partnerVmlyr } from "./partners";
 export { patron4, patron5 } from "./patrons";
 export {

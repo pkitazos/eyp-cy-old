@@ -30,13 +30,7 @@ export default function NationalCommittee() {
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-16">
           {nationalCommittee.map((member, i) => (
-            <div key={i} className="">
-              <NCMemberCard
-                name={member.name}
-                title={member.title}
-                imageURL={member.imageURL}
-              />
-            </div>
+            <NCMemberCard key={i} member={member} />
           ))}
         </div>
       </Container>

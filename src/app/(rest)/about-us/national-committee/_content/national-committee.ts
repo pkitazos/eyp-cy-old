@@ -1,53 +1,60 @@
+import { StaticImageData } from "next/image";
 import {
-  ncHr,
   ncNatco1,
   ncNatco2,
+  ncOutreach,
   ncPr,
   ncPresi,
   ncSecretary,
   ncTreasurer,
   ncVp,
-} from "~/assets";
+} from "../_assets";
 
-export const nationalCommittee = [
+export type CommitteeMember = {
+  name: string;
+  position: string;
+  imageURL?: StaticImageData;
+};
+
+export const nationalCommittee: CommitteeMember[] = [
   {
-    name: "Lazaros Hadjiforados",
-    title: "President",
+    name: "Athina Stavrou",
+    position: "President",
     imageURL: ncPresi,
   },
   {
-    name: "Polyna Antoniou",
-    title: "Vice-President",
+    name: "Antreas Xydas",
+    position: "Vice-President",
     imageURL: ncVp,
   },
   {
-    name: "Andrea Soteriou",
-    title: "Secretary",
+    name: "Christia Spyrou",
+    position: "Secretary & Members Officer",
     imageURL: ncSecretary,
   },
   {
     name: "Georgios Papaconstantinou",
-    title: "Treasurer",
+    position: "Treasurer",
     imageURL: ncTreasurer,
   },
   {
-    name: "Antreas Psaltis",
-    title: "Head of Human Resources",
-    imageURL: ncHr,
-  },
-  {
-    name: "Kornelia Kitazou",
-    title: "Head of Public Relations",
+    name: "Andreas Psaltis",
+    position: "Head of Public Relations",
     imageURL: ncPr,
   },
   {
-    name: "Athina Stavrou",
-    title: "National Coordinator",
+    name: "Stella Piperidou",
+    position: "Outreach & Communications Officer",
+    imageURL: ncOutreach,
+  },
+  {
+    name: "Kornelia Kitazou",
+    position: "National Coordinator",
     imageURL: ncNatco1,
   },
   {
-    name: "Theodoulos Hadjimatheou",
-    title: "National Coordinator",
+    name: "Stefan Stankovic",
+    position: "National Coordinator",
     imageURL: ncNatco2,
   },
 ];

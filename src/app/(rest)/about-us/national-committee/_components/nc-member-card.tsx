@@ -1,12 +1,11 @@
 import Image, { StaticImageData } from "next/image";
+import { CommitteeMember } from "../_content/national-committee";
 
-interface props {
-  name: string;
-  title: string;
-  imageURL: StaticImageData;
-}
-
-export function NCMemberCard({ name, title, imageURL }: props) {
+export function NCMemberCard({
+  member: { name, position, imageURL },
+}: {
+  member: CommitteeMember;
+}) {
   return (
     <>
       <div className="flex w-60 flex-col">
@@ -14,11 +13,11 @@ export function NCMemberCard({ name, title, imageURL }: props) {
           className="mb-4 h-60 w-60 rounded-full object-cover object-center"
           width={200}
           height={200}
-          src={imageURL}
+          src={imageURL ?? ""}
           alt="..."
         />
         <div className="mb-3 text-center text-lg">{name}</div>
-        <div className="break-normal text-center text-sm">{title}</div>
+        <div className="break-normal text-center text-sm">{position}</div>
       </div>
     </>
   );
