@@ -1,8 +1,15 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Container, ImageGrid, Title, WaveDivider } from "~/components";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "~/components/ui/carousel";
 import { dWhoWeAre1, dWhoWeAre2, dWhoWeAre3 } from "./_assets";
-import { Carousel, TestimonialCard, UpcomingEventCard } from "./_components";
+import { TestimonialCard, UpcomingEventCard } from "./_components";
 import { testimonials, upcomingEvents } from "./_content";
 
 export const metadata: Metadata = { title: "EYP CY - Home" };
@@ -67,15 +74,32 @@ export default function Home() {
       <WaveDivider.homeTop />
       <Container
         backdrop="bg-primary-600"
-        className="flex flex-col items-center lg-xl:px-0"
+        className="flex flex-col items-center xl:px-6"
       >
         <div className="flex justify-center md:justify-start md:max-w-7xl w-full">
           <Title text="Upcoming Events" order="h2" theme="light" />
         </div>
-        <div className="no-scrollbar relative w-full max-w-7xl overflow-x-scroll py-10 gap-10 items-center sm:grid sm:grid-cols-2 xl:flex xl:items-stretch flex flex-col justify-center sm:gap-y-16 xl:flex-row xl:gap-6 xl:justify-start">
+
+        <div className="hidden no-scrollbar relative w-full max-w-7xl overflow-x-scroll py-10 items-stretch xl:flex flex-row gap-6 justify-start">
           {upcomingEvents.map((event, i) => (
             <UpcomingEventCard key={i} event={event} />
           ))}
+        </div>
+        <div className="xl:hidden no-scrollbar relative w-full max-w-7xl overflow-x-scroll py-10 gap-8 place-items-center items-center justify-center grid grid-cols-1 sm:grid-cols-2">
+          <div className="col-span-1 flex flex-col items-start gap-8 h-full">
+            {upcomingEvents
+              .filter((_, i) => i % 2 === 0)
+              .map((event, i) => (
+                <UpcomingEventCard key={i} event={event} />
+              ))}
+          </div>
+          <div className="col-span-1 flex flex-col items-start gap-8 h-full">
+            {upcomingEvents
+              .filter((_, i) => i % 2 === 1)
+              .map((event, i) => (
+                <UpcomingEventCard key={i} event={event} />
+              ))}
+          </div>
         </div>
       </Container>
       <WaveDivider.homeBottom />
@@ -88,25 +112,26 @@ export default function Home() {
               underline="text-orange-600 rotate-12"
             />
           </div>
-          <div className="hidden md:block">
-            <Carousel>
-              {testimonials.map((testimonial, testimonialIndex) => (
-                <TestimonialCard
-                  key={testimonialIndex}
-                  testimonial={testimonial}
-                >
-                  {testimonial.quote}
-                </TestimonialCard>
-              ))}
-            </Carousel>
-          </div>
-          <div className="flex flex-col gap-8 sm:gap-10 md:hidden">
+          <div className="flex flex-col gap-10 lg:hidden">
             {testimonials.map((testimonial, testimonialIndex) => (
               <TestimonialCard key={testimonialIndex} testimonial={testimonial}>
                 {testimonial.quote}
               </TestimonialCard>
             ))}
           </div>
+          <Carousel className="hidden lg:block">
+            <CarouselContent>
+              {testimonials.map((testimonial, testimonialIndex) => (
+                <CarouselItem key={testimonialIndex}>
+                  <TestimonialCard testimonial={testimonial}>
+                    {testimonial.quote}
+                  </TestimonialCard>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </Container>
     </>

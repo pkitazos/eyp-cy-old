@@ -27,7 +27,7 @@ export const upcomingEvents: UpcomingEvent[] = [
   },
   {
     title: "Discussion Forum",
-    description: "Rountables & Panel discussion on the upcoming EU elections!",
+    description: "Roundtables & Panel discussion on the upcoming EU elections!",
     date: [new Date(2024, 2, 30)],
     imageURL: events2,
     actionText: "Sign Up Now",

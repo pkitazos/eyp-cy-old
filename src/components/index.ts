@@ -1,12 +1,17 @@
+export { ActionButton } from "./action-button";
+export { Container } from "./container";
+export { DebugOverlay } from "./debug-overlay";
+export { Divider } from "./divider";
+export { Footer } from "./footer";
+export { Header } from "./header";
+export { ImageGrid } from "./image-grid";
+export { Title } from "./title";
 export {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./accordion";
-export { ActionButton } from "./action-button";
-export { Container } from "./container";
-export { DebugOverlay } from "./debug-overlay";
+} from "./ui/accordion";
 export {
   Dialog,
   DialogContent,
@@ -15,12 +20,7 @@ export {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./dialog";
-export { Divider } from "./divider";
-export { Footer } from "./footer";
-export { Header } from "./header";
-export { ImageGrid } from "./image-grid";
-export { Input } from "./input";
-export { Textarea } from "./text-area";
-export { Title } from "./title";
+} from "./ui/dialog";
+export { Input } from "./ui/input";
+export { Textarea } from "./ui/text-area";
 export { WaveDivider } from "./wave-divider";

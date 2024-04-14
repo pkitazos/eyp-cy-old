@@ -25,19 +25,10 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1536px",
-      },
+      screens: { "2xl": "1536px" },
     },
     extend: {
       colors: {
-        "base-white": "#f9f9f9",
-
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
           600: "#3654FF",
           700: "#2B43CC",
@@ -54,26 +45,20 @@ const config = {
           800: "#FFDE4D",
           900: "#FFD200",
         },
-        // primary: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
-        // secondary: {
-        //   DEFAULT: "hsl(var(--secondary))",
-        //   foreground: "hsl(var(--secondary-foreground))",
-        // },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        "base-white": "#f9f9f9",
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        // accent: {
-        //   DEFAULT: "hsl(var(--accent))",
-        //   foreground: "hsl(var(--accent-foreground))",
-        // },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -83,17 +68,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-
-      backgroundImage: {
-        "gradient-secondary":
-          "linear-gradient(transparent calc(100% - 10px), #33C5FF 5px);",
-        "gradient-orange":
-          "linear-gradient(transparent calc(100% - 10px), orange 5px);",
-      },
-
-      fontFamily: {
-        sans: ["var(--font-source-sans-3)"],
-      },
+      fontFamily: { sans: ["var(--font-source-sans-3)"] },
       maxWidth: {
         "8xl": "88rem",
         "9xl": "96rem",
@@ -122,12 +97,17 @@ const config = {
         11: "11",
         12: "12",
       },
-
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
         "4xl": "2rem",
+      },
+      backgroundImage: {
+        "gradient-secondary":
+          "linear-gradient(transparent calc(100% - 10px), #33C5FF 5px);",
+        "gradient-orange":
+          "linear-gradient(transparent calc(100% - 10px), orange 5px);",
       },
       keyframes: {
         "accordion-down": {

@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../accordion";
+} from "../ui/accordion";
 import Link from "next/link";
 
 interface props {

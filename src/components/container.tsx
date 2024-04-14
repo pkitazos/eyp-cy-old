@@ -8,8 +8,6 @@ interface props {
   children: ReactNode;
 }
 
-// mx-5 sm:mx-7 md:mx-10 md-lg:mx-20 lg:mx-28 lg-xl:mx-40 xl:mx-60 2xl:mx-80 3xl:mx-96;
-
 export function Container({ className, backdrop, children }: props) {
   return (
     <div className={backdrop}>
